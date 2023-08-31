@@ -1,0 +1,51 @@
+{
+  "name": "@rightcapital/frontend-style-guide",
+  "version": "5.0.0",
+  "description": "RightCapital's frontend style guide.",
+  "type": "commonjs",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git"
+  },
+  "packageManager": "pnpm@8.6.9",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "commit": "cz",
+    "lint": "concurrently pnpm:lint:*",
+    "lint:eslint": "eslint --max-warnings=0 .",
+    "lint:prettier": "prettier -c .",
+    "fix": "pnpm run fix:eslint && pnpm run fix:prettier",
+    "fix:eslint": "eslint --fix .",
+    "fix:prettier": "prettier --write --list-different .",
+    "test": "pnpm --aggregate-output --filter './specs/*' test",
+    "test:update-snapshots": "pnpm --aggregate-output --filter './specs/*' test -- -u",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "change": "beachball change --no-commit",
+    "check": "beachball check"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.7.1",
+    "@commitlint/config-conventional": "17.7.0",
+    "@commitlint/cz-commitlint": "17.7.1",
+    "@rightcapital/eslint-config-javascript": "workspace:*",
+    "@rightcapital/prettier-config": "workspace:*",
+    "beachball": "2.36.0",
+    "commitizen": "4.3.0",
+    "concurrently": "8.2.1",
+    "eslint": "8.48.0",
+    "husky": "8.0.3",
+    "inquirer": "9.2.10",
+    "prettier": "3.0.2"
+  },
+  "dependencies": {}
+}

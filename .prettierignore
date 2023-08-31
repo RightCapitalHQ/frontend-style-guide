@@ -1,0 +1,7 @@
+# beachball managed files
+CHANGELOG.json
+CHANGELOG.md
+/change/
+
+# pnpm managed files
+pnpm-lock.yaml

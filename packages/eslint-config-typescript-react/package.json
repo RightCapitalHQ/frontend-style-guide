@@ -1,0 +1,39 @@
+{
+  "name": "@rightcapital/eslint-config-typescript-react",
+  "version": "7.0.0",
+  "description": "TypeScript + React ESLint Config for RightCapital",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "./index.js",
+  "exports": "./index.js",
+  "packageManager": "pnpm@8.6.9",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
+    "directory": "packages/eslint-config-typescript-react"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {
+    "@rightcapital/eslint-config-typescript": "workspace:*",
+    "eslint-config-prettier": "9.0.0",
+    "@rushstack/eslint-patch": "1.3.2",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react": "7.32.2"
+  },
+  "peerDependencies": {
+    "eslint": "^8.23.1",
+    "typescript": "^5.0.0"
+  }
+}

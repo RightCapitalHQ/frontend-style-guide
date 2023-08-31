@@ -1,0 +1,30 @@
+{
+  "name": "@rightcapital/prettier-config",
+  "version": "6.0.0",
+  "description": "Prettier Config for RightCapital",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "./index.js",
+  "exports": "./index.js",
+  "packageManager": "pnpm@8.6.9",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
+    "directory": "packages/prettier-config"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
