@@ -66,7 +66,8 @@
           "git add --all",
           "npx beachball change --nofetch --no-commit --type major --message '{{{commitMessage}}}'",
           "git reset"
-        ]
+        ],
+        "fileFilters": ["change/*.json"]
       }
     },
     {
@@ -77,7 +78,7 @@
       "postUpgradeTasks": {
         "commands": [
           "git add --all",
-          "npx beachball@latest change --no-fetch --no-commit --type none --message '{{{commitMessage}}}'",
+          "npx beachball change --no-fetch --no-commit --type none --message '{{{commitMessage}}}'",
           "git reset"
         ],
         "fileFilters": ["change/*.json"],
@@ -86,9 +87,9 @@
       "automerge": false
     },
     {
-      "description": "Group all private packages (non-major) together",
-      "groupName": "Private packages (non-major)",
-      "groupSlug": "auto-merge-private-packages-non-major-updates",
+      "description": "Group all RightCapital packages (non-major) together",
+      "groupName": "RightCapital packages (non-major)",
+      "groupSlug": "auto-merge-rightcapital-packages-non-major-updates",
       "matchUpdateTypes": ["minor", "patch"],
       "matchPackagePrefixes": ["@rightcapital"],
       "automerge": false
