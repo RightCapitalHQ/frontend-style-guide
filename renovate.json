@@ -11,7 +11,7 @@
   "postUpgradeTasks": {
     "commands": [
       "git add --all",
-      "npx beachball@latest change --no-fetch --no-commit --type patch --message '{{{commitMessage}}}'",
+      "npx beachball change --no-fetch --no-commit --type patch --message '{{{commitMessage}}}'",
       "git reset"
     ],
     "fileFilters": ["change/*.json"],
@@ -23,7 +23,7 @@
     "postUpgradeTasks": {
       "commands": [
         "git add --all",
-        "npx beachball@latest change --nofetch --no-commit --type none --message '{{{commitMessage}}}'",
+        "npx beachball change --nofetch --no-commit --type none --message '{{{commitMessage}}}'",
         "git reset"
       ],
       "fileFilters": ["change/*.json"],
@@ -50,7 +50,7 @@
       "postUpgradeTasks": {
         "commands": [
           "git add --all",
-          "npx beachball@latest change --nofetch --no-commit --type major --message '{{{commitMessage}}}'",
+          "npx beachball change --nofetch --no-commit --type major --message '{{{commitMessage}}}'",
           "git reset"
         ],
         "fileFilters": ["change/*.json"],
@@ -64,7 +64,7 @@
       "postUpgradeTasks": {
         "commands": [
           "git add --all",
-          "npx beachball@latest change --nofetch --no-commit --type major --message '{{{commitMessage}}}'",
+          "npx beachball change --nofetch --no-commit --type major --message '{{{commitMessage}}}'",
           "git reset"
         ]
       }
