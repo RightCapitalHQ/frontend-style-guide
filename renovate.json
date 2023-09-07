@@ -23,7 +23,7 @@
     "postUpgradeTasks": {
       "commands": [
         "git add --all",
-        "npx beachball change --nofetch --no-commit --type none --message '{{{commitMessage}}}'",
+        "npx beachball change --no-fetch --no-commit --type none --message '{{{commitMessage}}}'",
         "git reset"
       ],
       "fileFilters": ["change/*.json"],
