@@ -1,6 +1,12 @@
 // @ts-check
 /** @type {import('beachball').BeachballConfig} */
 module.exports = {
+  groups: [
+    {
+      name: 'ESLint config packages',
+      include: ['packages/eslint-config*'],
+    },
+  ],
   registry: 'https://registry.npmjs.org',
   ignorePatterns: [
     '.*ignore',
