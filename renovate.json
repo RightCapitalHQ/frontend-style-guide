@@ -47,7 +47,8 @@
       "matchPackagePrefixes": [
         "@typescript-eslint/",
         "eslint-config-",
-        "eslint-plugin-"
+        "eslint-plugin-",
+        "eslint-import-resolver-typescript"
       ],
       "postUpgradeTasks": {
         "commands": [
