@@ -41,6 +41,8 @@
     },
     {
       "description": "Mark rule and plugin updates as breaking changes",
+      "groupName": "ESLint rule and plugin updates",
+      "groupSlug": "eslint-rule-and-plugin-updates",
       "matchDepTypes": ["dependencies"],
       "matchPackagePrefixes": [
         "@typescript-eslint/",
@@ -59,6 +61,8 @@
     },
     {
       "description": "Mark peerDependencies's major updates as breaking changes",
+      "groupName": "PeerDependencies(major)",
+      "groupSlug": "peer-dependencies-major-updates",
       "matchDepTypes": ["peerDependencies"],
       "matchUpdateTypes": ["major"],
       "postUpgradeTasks": {
