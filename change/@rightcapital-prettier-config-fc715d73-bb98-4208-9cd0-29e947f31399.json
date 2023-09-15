@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "fix(deps): update dependencies (non-major)",
-  "packageName": "@rightcapital/prettier-config",
-  "email": "email not defined",
-  "dependentChangeType": "patch"
-}
