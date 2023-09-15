@@ -44,11 +44,12 @@
       "groupName": "ESLint rule and plugin updates",
       "groupSlug": "eslint-rule-and-plugin-updates",
       "matchDepTypes": ["dependencies"],
-      "matchPackagePrefixes": [
-        "@typescript-eslint/",
-        "eslint-config-",
-        "eslint-plugin-",
-        "eslint-import-resolver-typescript"
+      "matchPackagePatterns": [
+        "^@rushstack/eslint-patch$",
+        "^@typescript-eslint/",
+        "^eslint-config-",
+        "^eslint-import-resolver-typescript$",
+        "^eslint-plugin-"
       ],
       "postUpgradeTasks": {
         "commands": [
