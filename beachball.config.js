@@ -1,6 +1,7 @@
 // @ts-check
 /** @type {import('beachball').BeachballConfig} */
 module.exports = {
+  access: 'public',
   groups: [
     {
       name: 'ESLint config packages',
