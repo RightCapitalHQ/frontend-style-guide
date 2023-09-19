@@ -49,7 +49,10 @@ jobs:
         with:
           node-version-file: .node-version
           cache: pnpm
-      - run: scripts/renovate-auto-changefile.js
+      - run: pnpm install
+
+      - name: Check and generate changefile for Renovate
+        run: scripts/renovate-auto-changefile.js
 
   publish:
     needs: [test, check-renovate-changefile]
