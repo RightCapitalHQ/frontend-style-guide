@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const shell = require('shelljs');
-const { inspect } = require('node:util');
 
 const beachballCheckResult = shell.exec('pnpm -w exec beachball check');
 

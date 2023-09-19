@@ -13,6 +13,9 @@ module.exports = {
       files: ['./*.{js,cjs}', 'scripts/**/*.{js,cjs}'],
       extends: '@rightcapital/javascript',
       env: { node: true, commonjs: true },
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
     },
   ],
 };
