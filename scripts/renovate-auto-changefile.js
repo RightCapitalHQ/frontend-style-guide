@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 const shell = require('shelljs');
 
+shell.config.verbose = true;
+
 const beachballCheckResult = shell.exec('pnpm -w exec beachball check');
 
 let shouldGenerateChangefile = false;
