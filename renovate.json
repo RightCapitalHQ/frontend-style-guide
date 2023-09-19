@@ -8,27 +8,11 @@
   "assignees": ["frantic1048"],
   "reviewers": ["frantic1048"],
   "labels": ["Upgrade Dependencies"],
-  "postUpgradeTasks": {
-    "commands": [
-      "git add --all",
-      "npx beachball change --no-fetch --no-commit --type patch --message '{{{commitMessage}}}'",
-      "git reset"
-    ],
-    "fileFilters": ["change/*.json"],
-    "executionMode": "branch"
-  },
+  "commitBody": "Beachball-bump-type: patch",
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": false,
-    "postUpgradeTasks": {
-      "commands": [
-        "git add --all",
-        "npx beachball change --no-fetch --no-commit --type none --message '{{{commitMessage}}}'",
-        "git reset"
-      ],
-      "fileFilters": ["change/*.json"],
-      "executionMode": "branch"
-    }
+    "commitBody": "Beachball-bump-type: none"
   },
   "packageRules": [
     {
@@ -51,15 +35,7 @@
         "^eslint-import-resolver-typescript$",
         "^eslint-plugin-"
       ],
-      "postUpgradeTasks": {
-        "commands": [
-          "git add --all",
-          "npx beachball change --no-fetch --no-commit --type major --message '{{{commitMessage}}}'",
-          "git reset"
-        ],
-        "fileFilters": ["change/*.json"],
-        "executionMode": "branch"
-      }
+      "commitBody": "Beachball-bump-type: major"
     },
     {
       "description": "Mark peerDependencies's major updates as breaking changes",
@@ -67,29 +43,14 @@
       "groupSlug": "peer-dependencies-major-updates",
       "matchDepTypes": ["peerDependencies"],
       "matchUpdateTypes": ["major"],
-      "postUpgradeTasks": {
-        "commands": [
-          "git add --all",
-          "npx beachball change --no-fetch --no-commit --type major --message '{{{commitMessage}}}'",
-          "git reset"
-        ],
-        "fileFilters": ["change/*.json"]
-      }
+      "commitBody": "Beachball-bump-type: major"
     },
     {
       "description": "Group all DevDependencies together",
       "groupName": "DevDependencies",
       "groupSlug": "auto-merge-dev-dependencies-updates",
       "matchDepTypes": ["devDependencies"],
-      "postUpgradeTasks": {
-        "commands": [
-          "git add --all",
-          "npx beachball change --no-fetch --no-commit --type none --message '{{{commitMessage}}}'",
-          "git reset"
-        ],
-        "fileFilters": ["change/*.json"],
-        "executionMode": "branch"
-      },
+      "commitBody": "Beachball-bump-type: none",
       "automerge": false
     },
     {

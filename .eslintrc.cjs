@@ -9,8 +9,8 @@ module.exports = {
       env: { commonjs: true },
     },
     {
-      // config files
-      files: ['./*.{js,cjs}'],
+      // config files, scripts
+      files: ['./*.{js,cjs}', 'scripts/**/*.{js,cjs}'],
       extends: '@rightcapital/javascript',
       env: { node: true, commonjs: true },
     },
