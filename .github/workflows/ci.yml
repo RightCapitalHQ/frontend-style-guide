@@ -52,7 +52,7 @@ jobs:
       - run: pnpm install
 
       - name: Check and generate changefile for Renovate
-        run: scripts/renovate-auto-changefile.js
+        run: scripts/renovate-auto-changefile.mjs
 
   publish:
     needs: [test, check-renovate-changefile]
