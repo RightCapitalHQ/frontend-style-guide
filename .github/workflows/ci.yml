@@ -55,6 +55,7 @@ jobs:
         run: scripts/renovate-auto-changefile.mjs
 
   publish:
+    if: ${{ always() && !failure() && !cancelled() }}
     needs: [test, check-renovate-changefile]
     runs-on: ubuntu-latest
     steps:
