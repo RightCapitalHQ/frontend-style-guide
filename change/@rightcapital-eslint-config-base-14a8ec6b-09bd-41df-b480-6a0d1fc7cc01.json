@@ -1,7 +1,0 @@
-{
-  "comment": "feat: use eslint-plugin-i to replace eslint-plugin-import for faster linting",
-  "type": "patch",
-  "packageName": "@rightcapital/eslint-config-base",
-  "email": "i@frantic1048.com",
-  "dependentChangeType": "patch"
-}

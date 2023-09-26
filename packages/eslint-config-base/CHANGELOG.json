@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-base",
   "entries": [
     {
+      "date": "Tue, 26 Sep 2023 07:35:05 GMT",
+      "version": "6.0.2",
+      "tag": "@rightcapital/eslint-config-base_v6.0.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "i@frantic1048.com",
+            "package": "@rightcapital/eslint-config-base",
+            "commit": "6bf4d0e9b71f6f6ed8df70deffcaf2b874d22acf",
+            "comment": "feat: use eslint-plugin-i to replace eslint-plugin-import for faster linting"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 15 Sep 2023 08:53:02 GMT",
       "version": "6.0.1",
       "tag": "@rightcapital/eslint-config-base_v6.0.1",
