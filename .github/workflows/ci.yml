@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
       - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v3
         with:
