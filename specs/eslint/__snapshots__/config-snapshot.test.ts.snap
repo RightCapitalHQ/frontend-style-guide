@@ -101,6 +101,7 @@ exports[`resolved config matches snapshot javascript.js 1`] = `
       "error",
       {
         "allowImplicit": true,
+        "allowVoid": false,
         "checkForEach": false,
       },
     ],
@@ -2421,6 +2422,7 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
       "error",
       {
         "allowImplicit": true,
+        "allowVoid": false,
         "checkForEach": false,
       },
     ],
@@ -4754,6 +4756,7 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
       "error",
       {
         "allowImplicit": true,
+        "allowVoid": false,
         "checkForEach": false,
       },
     ],
