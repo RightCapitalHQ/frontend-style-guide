@@ -34,9 +34,9 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "17.8.1",
-    "@commitlint/config-conventional": "17.8.1",
-    "@commitlint/cz-commitlint": "17.8.1",
+    "@commitlint/cli": "18.2.0",
+    "@commitlint/config-conventional": "18.1.0",
+    "@commitlint/cz-commitlint": "18.2.0",
     "@rightcapital/eslint-config-javascript": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
     "beachball": "2.39.0",
