@@ -1,8 +1,12 @@
 # Change Log - @rightcapital/eslint-config-typescript-react
 
-This log was last generated on Tue, 26 Sep 2023 08:20:39 GMT and should not be manually modified.
+This log was last generated on Thu, 26 Oct 2023 08:49:17 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+### [8.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/@rightcapital/eslint-config-typescript-react_v8.0.1) (2023-10-26)
+
+- chore(deps): update pnpm to v8.8.0 ([86a6d34](https://github.com/RightCapitalHQ/frontend-style-guide/commit/86a6d34dfbe421661b58a276da3a4180a481e02f))
 
 ## [8.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/@rightcapital/eslint-config-typescript-react_v8.0.0) (2023-9-26)
 
