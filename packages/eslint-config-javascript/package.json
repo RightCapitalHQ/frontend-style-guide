@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/eslint-config-javascript",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "description": "Plain JavaScript ESLint Config for RightCapital",
   "license": "MIT",
   "type": "commonjs",

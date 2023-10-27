@@ -1,8 +1,12 @@
 # Change Log - @rightcapital/eslint-config-javascript
 
-This log was last generated on Thu, 26 Oct 2023 08:49:17 GMT and should not be manually modified.
+This log was last generated on Fri, 27 Oct 2023 01:43:09 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+### [8.0.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/@rightcapital/eslint-config-javascript_v8.0.2) (2023-10-27)
+
+- chore(deps): update pnpm to v8.9.2 ([b6ead84](https://github.com/RightCapitalHQ/frontend-style-guide/commit/b6ead8470ba7225dd8bb4b797c3b562758655952))
 
 ### [8.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/@rightcapital/eslint-config-javascript_v8.0.1) (2023-10-26)
 
