@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "fix(deps): update dependency eslint-plugin-import to v2.29.0",
+  "packageName": "@rightcapital/eslint-config-base",
+  "email": "29139614+renovate[bot]@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
