@@ -25,7 +25,7 @@
   "devDependencies": {},
   "dependencies": {
     "@rightcapital/eslint-config-base": "workspace:*",
-    "@rushstack/eslint-patch": "1.4.0",
+    "@rushstack/eslint-patch": "1.5.1",
     "eslint-config-prettier": "9.0.0"
   },
   "peerDependencies": {
