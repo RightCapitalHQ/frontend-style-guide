@@ -1,13 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "dependencyDashboard": false,
-  "extends": ["config:base", ":pinAllExceptPeerDependencies"],
-  "platformAutomerge": true,
-  "automergeType": "pr",
-  "prCreation": "immediate",
+  "extends": ["github>RightCapitalHQ/renovate-config"],
   "assignees": ["frantic1048"],
   "reviewers": ["frantic1048"],
-  "labels": ["Upgrade Dependencies"],
   "commitBody": "Beachball-bump-type: patch",
   "lockFileMaintenance": {
     "enabled": true,
