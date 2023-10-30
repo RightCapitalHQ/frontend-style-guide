@@ -1,8 +1,12 @@
 # Change Log - @rightcapital/eslint-config-base
 
-This log was last generated on Fri, 27 Oct 2023 03:04:45 GMT and should not be manually modified.
+This log was last generated on Mon, 30 Oct 2023 08:52:41 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [9.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/@rightcapital/eslint-config-base_v9.0.0) (2023-10-30)
+
+- fix(deps): update dependency eslint-plugin-import to v2.29.0 ([e390c45](https://github.com/RightCapitalHQ/frontend-style-guide/commit/e390c45f6c7e29e4248158e7ca71896db4a392e7))
 
 ## [8.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/@rightcapital/eslint-config-base_v8.0.0) (2023-10-27)
 
