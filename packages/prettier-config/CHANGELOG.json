@@ -2,6 +2,21 @@
   "name": "@rightcapital/prettier-config",
   "entries": [
     {
+      "date": "Mon, 30 Oct 2023 03:47:33 GMT",
+      "version": "6.0.4",
+      "tag": "@rightcapital/prettier-config_v6.0.4",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/prettier-config",
+            "commit": "bc5247d1d7f80111f99417a5ea01219664fa254b",
+            "comment": "chore(deps): lock file maintenance non-major updates"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 27 Oct 2023 01:43:09 GMT",
       "version": "6.0.4",
       "tag": "@rightcapital/prettier-config_v6.0.4",
