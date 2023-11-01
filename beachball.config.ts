@@ -65,11 +65,12 @@ const config: BeachballConfig = {
       const currentChangelog = changelog.entries.find(
         (entry) => entry.version === version,
       );
-      if (!currentChangelog) {
-        throw new Error(`Cannot find changelog for package ${name}@${gitTag}`);
-      }
       const changeTypes: ChangeType[] = ['major', 'minor', 'patch', 'none'];
-      const releaseNotes = `## What's Changed
+      let releaseNotes: string;
+      if (!currentChangelog) {
+        releaseNotes = `Version bump only for package ${name}`;
+      } else {
+        releaseNotes = `## What's Changed
 
 ${changeTypes
   .map((changeType) => {
@@ -91,9 +92,10 @@ ${changeTypes
   .join('\n\n')}
 
 **Full Changelog**: ${repoBlobUrl}/${relative(
-        __dirname,
-        packagePath,
-      )}/CHANGELOG.md`;
+          __dirname,
+          packagePath,
+        )}/CHANGELOG.md`;
+      }
 
       const releaseJson: IReleaseJson = {
         name,
