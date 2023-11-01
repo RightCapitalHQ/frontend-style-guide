@@ -86,3 +86,4 @@ jobs:
           git config --local user.email "npm-publisher@rightcapital.com"
           git config --local user.name "GitHub Actions[bot]"
           pnpm beachball publish --yes -m 'chore(release): applying package updates'
+          pnpm -r exec create-release

@@ -38,13 +38,17 @@
     "@commitlint/config-conventional": "18.1.0",
     "@commitlint/cz-commitlint": "18.2.0",
     "@rightcapital/eslint-config-javascript": "workspace:*",
+    "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
+    "@rightcapital/scripts": "workspace:*",
+    "@types/node": "20.8.10",
     "beachball": "2.39.0",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "eslint": "8.52.0",
     "husky": "8.0.3",
     "prettier": "3.0.3",
+    "tsx": "3.14.0",
     "zx": "7.2.3"
   }
 }

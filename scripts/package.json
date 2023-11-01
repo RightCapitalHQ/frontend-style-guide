@@ -1,0 +1,10 @@
+{
+  "name": "@rightcapital/scripts",
+  "private": true,
+  "bin": {
+    "create-release": "create-release.ts"
+  },
+  "dependencies": {
+    "zx": "7.2.3"
+  }
+}

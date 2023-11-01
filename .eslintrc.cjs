@@ -19,6 +19,15 @@ module.exports = {
       },
     },
     {
+      // config files, scripts (TypeScript)
+      files: ['./*.{ts,cts,mts}', 'scripts/**/*.{ts,cts,mts}'],
+      extends: '@rightcapital/typescript',
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        EXPERIMENTAL_useSourceOfProjectReferenceRedirect: true,
+      },
+    },
+    {
       files: ['./*.mjs', 'scripts/**/*.mjs'],
       env: { node: true, commonjs: false },
     },
