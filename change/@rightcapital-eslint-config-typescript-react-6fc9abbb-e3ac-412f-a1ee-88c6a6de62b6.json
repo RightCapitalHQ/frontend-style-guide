@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "fix(deps): update dependency eslint-plugin-jsx-a11y to v6.8.0",
-  "packageName": "@rightcapital/eslint-config-typescript-react",
-  "email": "29139614+renovate[bot]@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

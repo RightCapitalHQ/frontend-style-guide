@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Thu, 02 Nov 2023 02:01:28 GMT",
+      "version": "13.0.0",
+      "tag": "@rightcapital/eslint-config-typescript-react_v13.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "04e9f46a36a03b9e062e62891fcff3a2d1ee006c",
+            "comment": "fix(deps): update dependency eslint-plugin-jsx-a11y to v6.8.0"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 30 Oct 2023 03:47:33 GMT",
       "version": "9.0.0",
       "tag": "@rightcapital/eslint-config-typescript-react_v9.0.0",

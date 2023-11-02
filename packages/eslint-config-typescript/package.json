@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/eslint-config-typescript",
-  "version": "12.0.0",
+  "version": "13.0.0",
   "description": "Plain TypeScript ESLint Config for RightCapital",
   "license": "MIT",
   "type": "commonjs",
