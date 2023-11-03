@@ -60,6 +60,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
       - uses: pnpm/action-setup@v2
       - uses: actions/setup-node@v4
         with:
@@ -86,4 +88,3 @@ jobs:
           git config --local user.email "npm-publisher@rightcapital.com"
           git config --local user.name "GitHub Actions[bot]"
           pnpm beachball publish --yes -m 'chore(release): applying package updates'
-          pnpm -r exec create-release

@@ -1,11 +1,4 @@
-import { writeFile } from 'node:fs/promises';
-import { relative } from 'node:path';
-import type { BeachballConfig, ChangelogJson, ChangeType } from 'beachball';
-import type { IReleaseJson } from '@rightcapital/scripts';
-
-const repoUrl: string =
-  'https://github.com/RightCapitalHQ/frontend-style-guide';
-const repoBlobUrl: string = `${repoUrl}/blob/main`;
+import type { BeachballConfig } from 'beachball';
 
 const config: BeachballConfig = {
   access: 'public',
@@ -52,61 +45,6 @@ const config: BeachballConfig = {
           entry.commit
         }))`;
       },
-    },
-  },
-  hooks: {
-    postpublish: async (packagePath, name, version) => {
-      // for each published package, generate a RELEASE.json
-      const gitTag = `${name}_v${version}`;
-      // eslint-disable-next-line import/no-dynamic-require, global-require, @typescript-eslint/no-var-requires
-      const changelog = require(
-        `${packagePath}/CHANGELOG.json`,
-      ) as ChangelogJson;
-      const currentChangelog = changelog.entries.find(
-        (entry) => entry.version === version,
-      );
-      const changeTypes: ChangeType[] = ['major', 'minor', 'patch', 'none'];
-      let releaseNotes: string;
-      if (!currentChangelog) {
-        releaseNotes = `Version bump only for package ${name}`;
-      } else {
-        releaseNotes = `## What's Changed
-
-${changeTypes
-  .map((changeType) => {
-    const entryList = currentChangelog.comments[changeType];
-    if (entryList) {
-      return entryList
-        .map((changelogEntry) => {
-          const { commit, comment } = changelogEntry;
-          const commitLink =
-            commit === 'not available'
-              ? ''
-              : ` [${commit.substring(0, 8)}](${repoUrl}/commit/${commit}) `;
-          return `* ${commitLink}${comment}`;
-        })
-        .join('\n');
-    }
-    return '';
-  })
-  .join('\n\n')}
-
-**Full Changelog**: ${repoBlobUrl}/${relative(
-          __dirname,
-          packagePath,
-        )}/CHANGELOG.md`;
-      }
-
-      const releaseJson: IReleaseJson = {
-        name,
-        packagePath,
-        gitTag,
-        releaseNotes,
-      };
-      await writeFile(
-        `${packagePath}/RELEASE.json`,
-        JSON.stringify(releaseJson),
-      );
     },
   },
 };

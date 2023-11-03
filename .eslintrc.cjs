@@ -16,6 +16,8 @@ module.exports = {
       rules: {
         'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
         'import/no-extraneous-dependencies': 'off',
+        'no-console': 'off',
+        'no-void': ['error', { allowAsStatement: true }],
       },
     },
     {
@@ -25,6 +27,12 @@ module.exports = {
       parserOptions: {
         tsconfigRootDir: __dirname,
         EXPERIMENTAL_useSourceOfProjectReferenceRedirect: true,
+      },
+      rules: {
+        'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
+        'import/no-extraneous-dependencies': 'off',
+        'no-console': 'off',
+        'no-void': ['error', { allowAsStatement: true }],
       },
     },
     {

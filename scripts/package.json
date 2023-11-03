@@ -5,6 +5,14 @@
     "create-release": "create-release.ts"
   },
   "dependencies": {
-    "zx": "7.2.3"
+    "@types/node": "20.8.10",
+    "@actions/glob": "0.4.0",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "beachball": "2.39.0"
+  },
+  "peerDependencies": {
+    "tsx": ">=3.14.0"
   }
 }
