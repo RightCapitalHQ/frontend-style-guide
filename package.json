@@ -45,7 +45,7 @@
     "beachball": "2.39.0",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
-    "eslint": "8.52.0",
+    "eslint": "8.53.0",
     "husky": "8.0.3",
     "prettier": "3.0.3",
     "tsx": "3.14.0",
