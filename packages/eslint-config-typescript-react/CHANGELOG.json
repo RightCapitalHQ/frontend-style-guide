@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Mon, 06 Nov 2023 02:25:57 GMT",
+      "version": "13.0.0",
+      "tag": "@rightcapital/eslint-config-typescript-react_v13.0.0",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "3d7fbc96249c18cd76fabc8806265290eb52cd43",
+            "comment": "chore(deps): lock file maintenance non-major updates"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 02 Nov 2023 02:01:28 GMT",
       "version": "13.0.0",
       "tag": "@rightcapital/eslint-config-typescript-react_v13.0.0",
