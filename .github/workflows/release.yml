@@ -8,21 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-      - uses: actions/setup-node@v4
+      - uses: rightcapitalhq/action-beachball-release@main
         with:
-          node-version-file: .node-version
-          cache: pnpm
-      - run: pnpm install
-
-      - run: echo "Releasing ${{ github.ref_name }}"
-
-      - name: generate release notes
-        run: pnpm -w exec generate-release-notes-for-tag ${{ github.ref_name }} release-notes.txt
-        env:
-          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
-
-      - name: create release
-        run: gh release create ${{ github.ref_name }} --title ${{ github.ref_name }} -F release-notes.txt
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+          repo-url: ${{ github.server_url }}/${{ github.repository }}
+          token: ${{ secrets.GITHUB_TOKEN }}
