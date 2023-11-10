@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>RightCapitalHQ/renovate-config"],
+  "extends": ["github>RightCapitalHQ/renovate-config:library"],
   "assignees": ["frantic1048"],
   "reviewers": ["frantic1048"],
   "commitBody": "Beachball-bump-type: patch",
