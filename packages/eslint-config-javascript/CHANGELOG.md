@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/eslint-config-javascript
 
-This log was last generated on Fri, 27 Oct 2023 03:04:45 GMT and should not be manually modified.
+This log was last generated on Mon, 13 Nov 2023 07:57:22 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 14.0.1
+
+Mon, 13 Nov 2023 07:57:22 GMT
+
+### [14.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/@rightcapital/eslint-config-javascript_v14.0.1) (2023-11-13)
+
+- fix(deps): update dependencies (non-major) ([e9ed3c3](https://github.com/RightCapitalHQ/frontend-style-guide/commit/e9ed3c325409336a04423b8aa46b6b9151d5f955))
 
 ## [9.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/@rightcapital/eslint-config-javascript_v9.0.0) (2023-10-27)
 
