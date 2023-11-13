@@ -34,20 +34,20 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "18.2.0",
-    "@commitlint/config-conventional": "18.1.0",
-    "@commitlint/cz-commitlint": "18.2.0",
+    "@commitlint/cli": "18.4.1",
+    "@commitlint/config-conventional": "18.4.0",
+    "@commitlint/cz-commitlint": "18.4.1",
     "@rightcapital/eslint-config-javascript": "workspace:*",
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
     "@rightcapital/scripts": "workspace:*",
-    "@types/node": "20.8.10",
+    "@types/node": "20.9.0",
     "beachball": "2.39.0",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "eslint": "8.53.0",
     "husky": "8.0.3",
-    "prettier": "3.0.3",
+    "prettier": "3.1.0",
     "tsx": "4.1.1",
     "zx": "7.2.3"
   }
