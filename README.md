@@ -1,5 +1,14 @@
 # RightCapital Frontend Style Guide
 
+<!-- Badges area start -->
+
+[![made by RightCapital](https://img.shields.io/badge/made_by-RightCapital-5070e6)](https://rightcapital.com)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/RightCapitalHQ/frontend-style-guide/ci.yml)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+[![RightCapital frontend style guide](https://img.shields.io/badge/code_style-RightCapital-5c4c64?labelColor=f0ede8)](https://github.com/RightCapitalHQ/frontend-style-guide)
+
+<!-- Badges area end -->
+
 RightCapital's frontend style guide.
 
 ## Introduction
@@ -23,7 +32,8 @@ They can be used independently or combined together according to your project's 
 
 ### Usage
 
-> Note: make sure `eslint` is installed in your project.
+> [!NOTE]  
+> make sure `eslint` is installed in your project.
 >
 > And install `typescript` to your project if you want to use the config supporting TypeScript(`@rightcapital/eslint-config-typescript*`).
 
@@ -39,11 +49,32 @@ In your `.eslintrc.cjs`([or equivalent](https://eslint.org/docs/latest/use/confi
 1. [using `overrides` to group different types of files](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-based-on-glob-patterns), and extends the corresponding config.
 2. Add proper `env` and other configs if needed.
 
-_Applying same config to all files in the project could be error-prone. Not recommended._
+```js .eslintrc.cjs
+/** @type {import("eslint").Linter.Config} */
+module.exports = {
+  // use overrides to group different types of files
+  // see https://eslint.org/docs/latest/use/configure/configuration-files#configuration-based-on-glob-patterns
+  overrides: [
+    {
+      // typical TypeScript React code, running in browser
+      files: ['src/**/*.{ts,tsx}'],
+      excludedFiles: ['src/**/*.test.{ts,tsx}'], // exclude test files
+      extends: ['@rightcapital/typescript-react'],
+      env: { browser: true },
+    },
+  ],
+};
+```
 
-### Showcase
+> [!NOTE]  
+> Applying same config to all files in the project could be error-prone. Not recommended.
 
+#### Complete Showcase
+
+<details>
+<summary>
 For example, we have a project with the following structure:
+</summary>
 
 ```
 .
@@ -55,8 +86,8 @@ For example, we have a project with the following structure:
 │   ├── make-latte.mjs
 │   └── print-project-stats.tsx
 └── src
-├── App.test.ts  <---------------- Jest test file
-└── App.tsx      <---------------- TypeScript React component
+    ├── App.test.ts  <------------ Jest test file
+    └── App.tsx      <------------ TypeScript React component
 ```
 
 The `.eslintrc.cjs` could look like this:
@@ -86,19 +117,22 @@ module.exports = {
     },
     {
       // JavaScript config and scripts
-      files: ['./**/*.{js,cjs,mjs,jsx}'],
+      files: ['./*.{js,cjs,mjs,jsx}', 'scripts/**/*.{js,cjs,mjs,jsx}'],
       excludedFiles: ['src/**'],
       extends: ['@rightcapital/javascript'],
       env: { node: true },
     },
     {
       // TypeScript config and scripts
-      files: ['./**/*.{ts,cts,mts,tsx}'],
+      files: ['./*.{ts,cts,mts,tsx}', 'scripts/**/*.{ts,cts,mts,tsx}'],
       excludedFiles: ['src/**'],
+      env: { node: true },
     },
   ],
 };
 ```
+
+</details>
 
 ## Prettier
 
@@ -119,3 +153,7 @@ In your project's `prettier.config.cjs`:
 ```js
 module.exports = require('@rightcapital/prettier-config');
 ```
+
+## License
+
+[MIT License](LICENSE) © 2023-Present
