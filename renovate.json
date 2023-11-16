@@ -55,6 +55,11 @@
       "matchUpdateTypes": ["minor", "patch"],
       "matchPackagePrefixes": ["@rightcapital"],
       "automerge": false
+    },
+    {
+      "description": "Skip problematic eslint-plugin-jsx-a11y@6.8.0 version",
+      "matchPackageNames": ["eslint-plugin-jsx-a11y"],
+      "allowedVersions": ">6.8.0"
     }
   ]
 }
