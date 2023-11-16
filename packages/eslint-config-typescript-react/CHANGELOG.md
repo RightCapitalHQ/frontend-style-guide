@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/eslint-config-typescript-react
 
-This log was last generated on Tue, 14 Nov 2023 06:12:57 GMT and should not be manually modified.
+This log was last generated on Thu, 16 Nov 2023 03:49:51 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 15.0.0
+
+Thu, 16 Nov 2023 03:49:51 GMT
+
+## [15.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/@rightcapital/eslint-config-typescript-react_v15.0.0) (2023-11-16)
+
+- fix!: avoid `eslint-plugin-jsx-a11y@6.8.0` ([446dc9c](https://github.com/RightCapitalHQ/frontend-style-guide/commit/446dc9c503b04fa1eff6366b3a2e5a377e935c92))
 
 ## 14.0.2
 

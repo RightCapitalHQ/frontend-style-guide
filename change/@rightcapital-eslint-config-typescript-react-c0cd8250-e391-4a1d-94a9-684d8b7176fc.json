@@ -1,7 +1,0 @@
-{
-  "comment": "fix!: avoid `eslint-plugin-jsx-a11y@6.8.0`",
-  "type": "major",
-  "packageName": "@rightcapital/eslint-config-typescript-react",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}

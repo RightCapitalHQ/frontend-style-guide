@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Thu, 16 Nov 2023 03:49:51 GMT",
+      "version": "15.0.0",
+      "tag": "@rightcapital/eslint-config-typescript-react_v15.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "446dc9c503b04fa1eff6366b3a2e5a377e935c92",
+            "comment": "fix!: avoid `eslint-plugin-jsx-a11y@6.8.0`"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 14 Nov 2023 06:12:57 GMT",
       "version": "14.0.2",
       "tag": "@rightcapital/eslint-config-typescript-react_v14.0.2",
