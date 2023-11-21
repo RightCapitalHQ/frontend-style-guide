@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/prettier-config
 
-This log was last generated on Tue, 14 Nov 2023 06:12:57 GMT and should not be manually modified.
+This log was last generated on Tue, 21 Nov 2023 02:52:14 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 6.0.7
+
+Tue, 21 Nov 2023 02:52:14 GMT
+
+### [6.0.7](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Fprettier-config_v6.0.7) (2023-11-21)
+
+- fix(deps): update dependencies (non-major) ([5690b6f](https://github.com/RightCapitalHQ/frontend-style-guide/commit/5690b6fbe666a7cbc327fc4e08c04913521edc0b))
 
 ## 6.0.6
 
