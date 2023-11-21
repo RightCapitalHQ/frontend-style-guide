@@ -6,7 +6,7 @@
   "type": "commonjs",
   "main": "./index.js",
   "exports": "./index.js",
-  "packageManager": "pnpm@8.10.4",
+  "packageManager": "pnpm@8.10.5",
   "engines": {
     "node": ">=16.0.0"
   },
