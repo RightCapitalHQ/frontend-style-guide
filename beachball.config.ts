@@ -29,7 +29,11 @@ const config: BeachballConfig = {
           .replace(/\//g, '-');
         const heading =
           changeType === 'major' || changeType === 'minor' ? '##' : '###';
-        return `${heading} [${renderInfo.newVersionChangelog.version}](https://github.com/RightCapitalHQ/frontend-style-guide/tree/${renderInfo.newVersionChangelog.tag}) (${changelogDate})`;
+        return `${heading} [${
+          renderInfo.newVersionChangelog.version
+        }](https://github.com/RightCapitalHQ/frontend-style-guide/tree/${encodeURIComponent(
+          renderInfo.newVersionChangelog.tag,
+        )}) (${changelogDate})`;
       },
       // Original template: https://github.com/microsoft/beachball/blob/aefbc1ac37ee85961cc787133c827f1fd3925550/src/changelog/renderPackageChangelog.ts#L93
       // eslint-disable-next-line @typescript-eslint/require-await
