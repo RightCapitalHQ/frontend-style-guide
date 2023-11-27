@@ -2215,6 +2215,19 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
     "@typescript-eslint/comma-spacing": [
       "off",
     ],
+    "@typescript-eslint/consistent-type-exports": [
+      "error",
+      {
+        "fixMixedExportsWithInlineTypeSpecifier": true,
+      },
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "fixStyle": "inline-type-imports",
+        "prefer": "type-imports",
+      },
+    ],
     "@typescript-eslint/func-call-spacing": [
       "off",
     ],
@@ -2283,6 +2296,9 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
       "error",
     ],
     "@typescript-eslint/no-implied-eval": [
+      "error",
+    ],
+    "@typescript-eslint/no-import-type-side-effects": [
       "error",
     ],
     "@typescript-eslint/no-loss-of-precision": [
@@ -2790,6 +2806,9 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
     ],
     "import/no-duplicates": [
       "error",
+      {
+        "prefer-inline": true,
+      },
     ],
     "import/no-dynamic-require": [
       "error",
@@ -4549,6 +4568,19 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     "@typescript-eslint/comma-spacing": [
       "off",
     ],
+    "@typescript-eslint/consistent-type-exports": [
+      "error",
+      {
+        "fixMixedExportsWithInlineTypeSpecifier": true,
+      },
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "fixStyle": "inline-type-imports",
+        "prefer": "type-imports",
+      },
+    ],
     "@typescript-eslint/func-call-spacing": [
       "off",
     ],
@@ -4617,6 +4649,9 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
       "error",
     ],
     "@typescript-eslint/no-implied-eval": [
+      "error",
+    ],
+    "@typescript-eslint/no-import-type-side-effects": [
       "error",
     ],
     "@typescript-eslint/no-loss-of-precision": [
@@ -5124,6 +5159,9 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     ],
     "import/no-duplicates": [
       "error",
+      {
+        "prefer-inline": true,
+      },
     ],
     "import/no-dynamic-require": [
       "error",

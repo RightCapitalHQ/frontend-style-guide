@@ -1,0 +1,7 @@
+{
+  "comment": "feat(typescript)!: add consistent type import and export related rules",
+  "type": "major",
+  "packageName": "@rightcapital/eslint-config-typescript",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
