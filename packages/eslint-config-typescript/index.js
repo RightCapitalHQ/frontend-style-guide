@@ -99,5 +99,20 @@ module.exports = {
         typedefs: false,
       },
     ],
+
+    // https://github.com/RightCapitalHQ/frontend-style-guide/issues/55
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      {
+        prefer: 'type-imports',
+        fixStyle: 'inline-type-imports',
+      },
+    ],
+    '@typescript-eslint/consistent-type-exports': [
+      'error',
+      { fixMixedExportsWithInlineTypeSpecifier: true },
+    ],
+    '@typescript-eslint/no-import-type-side-effects': 'error',
+    'import/no-duplicates': ['error', { 'prefer-inline': true }],
   },
 };
