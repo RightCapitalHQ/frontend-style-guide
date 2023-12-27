@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/eslint-config-typescript
 
-This log was last generated on Mon, 27 Nov 2023 07:31:40 GMT and should not be manually modified.
+This log was last generated on Wed, 27 Dec 2023 08:12:14 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 17.0.0
+
+Wed, 27 Dec 2023 08:12:14 GMT
+
+## [17.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v17.0.0) (2023-12-27)
+
+- feat(typescript)!: add consistent type import and export related rules ([7aed4ec](https://github.com/RightCapitalHQ/frontend-style-guide/commit/7aed4ec3cb9fbd6df1eaf0203728cd59ca861d01))
 
 ## 16.0.1
 

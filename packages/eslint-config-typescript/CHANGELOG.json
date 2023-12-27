@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript",
   "entries": [
     {
+      "date": "Wed, 27 Dec 2023 08:12:14 GMT",
+      "version": "17.0.0",
+      "tag": "@rightcapital/eslint-config-typescript_v17.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config-typescript",
+            "commit": "7aed4ec3cb9fbd6df1eaf0203728cd59ca861d01",
+            "comment": "feat(typescript)!: add consistent type import and export related rules"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 27 Nov 2023 07:31:40 GMT",
       "version": "16.0.1",
       "tag": "@rightcapital/eslint-config-typescript_v16.0.1",
