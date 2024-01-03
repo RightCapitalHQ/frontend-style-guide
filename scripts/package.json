@@ -3,9 +3,9 @@
   "private": true,
   "bin": {},
   "dependencies": {
-    "@types/node": "20.10.3",
+    "@types/node": "20.10.6",
     "@actions/glob": "0.4.0",
-    "typescript": "5.3.2"
+    "typescript": "5.3.3"
   },
   "devDependencies": {
     "beachball": "2.39.0"
