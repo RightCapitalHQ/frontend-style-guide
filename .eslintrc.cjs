@@ -22,7 +22,11 @@ module.exports = {
     },
     {
       // config files, scripts (TypeScript)
-      files: ['./*.{ts,cts,mts}', 'scripts/**/*.{ts,cts,mts}'],
+      files: [
+        './*.{ts,cts,mts}',
+        'scripts/**/*.{ts,cts,mts}',
+        'packages/**/*.{ts,cts,mts}',
+      ],
       extends: '@rightcapital/typescript',
       parserOptions: {
         tsconfigRootDir: __dirname,
@@ -38,6 +42,10 @@ module.exports = {
     {
       files: ['./*.mjs', 'scripts/**/*.mjs'],
       env: { node: true, commonjs: false },
+    },
+    {
+      files: ['packages/eslint-plugin/**/*.ts'],
+      extends: ['plugin:eslint-plugin/recommended'],
     },
   ],
 };

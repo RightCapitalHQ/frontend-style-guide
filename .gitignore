@@ -2,6 +2,11 @@
 # Created by https://www.gitignore.io/api/node,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,visualstudiocode
 
+lib
+
+# sys junks
+.DS_Store
+
 ### Node ###
 # Logs
 logs
