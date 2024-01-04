@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/eslint-config-typescript
 
-This log was last generated on Wed, 27 Dec 2023 08:12:14 GMT and should not be manually modified.
+This log was last generated on Thu, 04 Jan 2024 05:17:02 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 17.0.1
+
+Thu, 04 Jan 2024 05:17:02 GMT
+
+### [17.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v17.0.1) (2024-1-4)
+
+- fix(deps): update dependencies (non-major) ([a092881](https://github.com/RightCapitalHQ/frontend-style-guide/commit/a09288138aa0609be88429db61a44a6db4acedd9))
 
 ## 17.0.0
 
