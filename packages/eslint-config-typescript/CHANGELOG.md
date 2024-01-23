@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/eslint-config-typescript
 
-This log was last generated on Thu, 11 Jan 2024 03:12:31 GMT and should not be manually modified.
+This log was last generated on Tue, 23 Jan 2024 02:25:14 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 17.0.3
+
+Tue, 23 Jan 2024 02:25:14 GMT
+
+### [17.0.3](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v17.0.3) (2024-1-23)
+
+- chore(deps): update pnpm to v8.14.2 ([918c627](https://github.com/RightCapitalHQ/frontend-style-guide/commit/918c6275bd8b2aac8e12440fccaa74daa58454ee))
 
 ## 17.0.2
 

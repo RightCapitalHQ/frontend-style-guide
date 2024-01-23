@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/prettier-config
 
-This log was last generated on Thu, 11 Jan 2024 03:12:31 GMT and should not be manually modified.
+This log was last generated on Tue, 23 Jan 2024 02:25:14 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 6.0.11
+
+Tue, 23 Jan 2024 02:25:14 GMT
+
+### [6.0.11](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Fprettier-config_v6.0.11) (2024-1-23)
+
+- chore(deps): update pnpm to v8.14.2 ([918c627](https://github.com/RightCapitalHQ/frontend-style-guide/commit/918c6275bd8b2aac8e12440fccaa74daa58454ee))
 
 ## 6.0.10
 

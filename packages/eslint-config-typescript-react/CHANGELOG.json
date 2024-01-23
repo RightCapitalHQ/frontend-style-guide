@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Tue, 23 Jan 2024 02:25:14 GMT",
+      "version": "17.0.3",
+      "tag": "@rightcapital/eslint-config-typescript-react_v17.0.3",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "918c6275bd8b2aac8e12440fccaa74daa58454ee",
+            "comment": "chore(deps): update pnpm to v8.14.2"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 11 Jan 2024 03:12:31 GMT",
       "version": "17.0.2",
       "tag": "@rightcapital/eslint-config-typescript-react_v17.0.2",
