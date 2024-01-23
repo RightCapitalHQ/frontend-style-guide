@@ -1988,6 +1988,9 @@ exports[`resolved config matches snapshot javascript.js 1`] = `
     "unicorn/number-literal-case": [
       "off",
     ],
+    "unicorn/template-indent": [
+      0,
+    ],
     "use-isnan": [
       "error",
     ],
@@ -4327,6 +4330,9 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
     ],
     "unicorn/number-literal-case": [
       "off",
+    ],
+    "unicorn/template-indent": [
+      0,
     ],
     "use-isnan": [
       "error",
@@ -7426,6 +7432,9 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     ],
     "unicorn/number-literal-case": [
       "off",
+    ],
+    "unicorn/template-indent": [
+      0,
     ],
     "use-isnan": [
       "error",
