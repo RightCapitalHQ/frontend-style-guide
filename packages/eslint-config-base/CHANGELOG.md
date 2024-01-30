@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/eslint-config-base
 
-This log was last generated on Tue, 23 Jan 2024 03:19:49 GMT and should not be manually modified.
+This log was last generated on Tue, 30 Jan 2024 03:43:18 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 18.0.1
+
+Tue, 30 Jan 2024 03:43:18 GMT
+
+### [18.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-base_v18.0.1) (2024-1-30)
+
+- fix(deps): update dependencies (non-major) ([daddd15](https://github.com/RightCapitalHQ/frontend-style-guide/commit/daddd15726b607accef5acf1f85dd25dca2052cf))
 
 ## 18.0.0
 
