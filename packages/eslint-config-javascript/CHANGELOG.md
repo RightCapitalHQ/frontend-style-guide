@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/eslint-config-javascript
 
-This log was last generated on Tue, 30 Jan 2024 03:43:18 GMT and should not be manually modified.
+This log was last generated on Tue, 30 Jan 2024 05:55:09 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 19.0.0
+
+Tue, 30 Jan 2024 05:55:09 GMT
+
+## [19.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-javascript_v19.0.0) (2024-1-30)
+
+- fix(deps): update eslint rule and plugin updates ([95f1ca3](https://github.com/RightCapitalHQ/frontend-style-guide/commit/95f1ca3e267cedd89ae3ca1768915d3c6845a097))
 
 ## 18.0.1
 

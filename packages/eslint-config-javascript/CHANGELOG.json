@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-javascript",
   "entries": [
     {
+      "date": "Tue, 30 Jan 2024 05:55:09 GMT",
+      "version": "19.0.0",
+      "tag": "@rightcapital/eslint-config-javascript_v19.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-javascript",
+            "commit": "95f1ca3e267cedd89ae3ca1768915d3c6845a097",
+            "comment": "fix(deps): update eslint rule and plugin updates"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 30 Jan 2024 03:43:18 GMT",
       "version": "18.0.1",
       "tag": "@rightcapital/eslint-config-javascript_v18.0.1",
