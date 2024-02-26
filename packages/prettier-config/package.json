@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/prettier-config",
-  "version": "6.0.13",
+  "version": "6.0.14",
   "description": "Prettier Config for RightCapital",
   "license": "MIT",
   "type": "commonjs",
