@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript",
   "entries": [
     {
+      "date": "Tue, 27 Feb 2024 02:49:44 GMT",
+      "version": "20.0.0",
+      "tag": "@rightcapital/eslint-config-typescript_v20.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript",
+            "commit": "66e603834787d48fcb2c778d173e56f4a8ebfff0",
+            "comment": "fix(deps): update eslint rule and plugin updates to v7"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 26 Feb 2024 05:50:35 GMT",
       "version": "19.0.2",
       "tag": "@rightcapital/eslint-config-typescript_v19.0.2",
