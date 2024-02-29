@@ -44,6 +44,31 @@ jobs:
         with:
           args: -color
 
+  check-beachball-changefile:
+    needs: install
+    if: github.base_ref == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Prepare Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+
+      - name: Check
+        run: |
+          pnpm exec beachball check
+
   check-renovate-changefile:
     needs: install
     if: startsWith(github.event.pull_request.head.ref, 'renovate/') && github.base_ref == github.event.repository.default_branch
