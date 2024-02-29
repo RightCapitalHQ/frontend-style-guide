@@ -3,7 +3,7 @@
   "private": true,
   "bin": {},
   "dependencies": {
-    "@types/node": "20.11.21",
+    "@types/node": "20.11.24",
     "@actions/glob": "0.4.0",
     "typescript": "5.3.3"
   },
