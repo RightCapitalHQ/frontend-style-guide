@@ -14,6 +14,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "build": "pnpm run --aggregate-output --filter './packages/*' build",
     "commit": "cz",
     "lint": "concurrently pnpm:lint:*",
     "lint:eslint": "eslint --max-warnings=0 .",
@@ -46,6 +47,7 @@
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
+    "eslint-plugin-eslint-plugin": "^5.2.1",
     "husky": "9.0.11",
     "prettier": "3.2.5",
     "tsx": "4.7.1",

@@ -4544,6 +4544,7 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     "react-hooks",
     "import",
     "@typescript-eslint",
+    "@rightcapital",
   ],
   "reportUnusedDisableDirectives": true,
   "rules": {
@@ -4552,6 +4553,12 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     ],
     "@babel/semi": [
       "off",
+    ],
+    "@rightcapital/jsx-no-unused-expressions": [
+      "error",
+    ],
+    "@rightcapital/no-ignore-return-value-of-react-hooks": [
+      "error",
     ],
     "@typescript-eslint/await-thenable": [
       "error",

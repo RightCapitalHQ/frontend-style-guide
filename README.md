@@ -27,6 +27,7 @@ This repo provides the following ESLint config packages:
 - `@rightcapital/eslint-config-javascript`: for JavaScript files
 - `@rightcapital/eslint-config-typescript`: for TypeScript files
 - `@rightcapital/eslint-config-typescript-react`: for TypeScript + React files
+- `@rightcapital/eslint-plugin`
 
 They can be used independently or combined together according to your project's needs.
 

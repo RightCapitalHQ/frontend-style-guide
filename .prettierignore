@@ -5,3 +5,6 @@ CHANGELOG.md
 
 # pnpm managed files
 pnpm-lock.yaml
+
+# build output
+/packages/*/lib

@@ -1,0 +1,11 @@
+{
+  "extends": "@rightcapital/tsconfig",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "verbatimModuleSyntax": false
+  },
+  "include": ["./src"]
+}

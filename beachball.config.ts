@@ -5,7 +5,7 @@ const config: BeachballConfig = {
   groups: [
     {
       name: 'ESLint config packages',
-      include: ['packages/eslint-config*'],
+      include: ['packages/eslint-config*', 'packages/eslint-plugin*'],
       disallowedChangeTypes: null,
     },
   ],

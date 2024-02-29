@@ -2,6 +2,9 @@
 # Created by https://www.gitignore.io/api/node,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,visualstudiocode
 
+# sys junks
+.DS_Store
+
 ### Node ###
 # Logs
 logs
@@ -107,3 +110,6 @@ public/
 .history
 
 # End of https://www.gitignore.io/api/node,visualstudiocode
+
+# build output
+/packages/*/lib
