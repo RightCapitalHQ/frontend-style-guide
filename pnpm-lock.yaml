@@ -200,8 +200,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/prettier-config
       '@types/react':
-        specifier: 18.2.62
-        version: 18.2.62
+        specifier: 18.2.63
+        version: 18.2.63
       concurrently:
         specifier: 8.2.2
         version: 8.2.2
@@ -2298,8 +2298,8 @@ packages:
     resolution: {integrity: sha512-3LU5a3EZYI1/HvvOkQmmVGrdXopwKXpr3K5cxlZ0zRiP0QzW7IH0o1z4UDI7KdnyQnpPfYHXOOqflEXIl23LFw==}
     dev: true
 
-  /@types/react@18.2.62:
-    resolution: {integrity: sha512-l3f57BbaEKP0xcFzf+5qRG8/PXykZiuVM6eEoPtqBPCp6dxO3HhDkLIgIyXPhPKNAeXn3KO2pEaNgzaEo/asaw==}
+  /@types/react@18.2.63:
+    resolution: {integrity: sha512-ppaqODhs15PYL2nGUOaOu2RSCCB4Difu4UFrP4I3NHLloXC/ESQzQMi9nvjfT1+rudd0d2L3fQPJxRSey+rGlQ==}
     dependencies:
       '@types/prop-types': 15.7.10
       '@types/scheduler': 0.16.6
