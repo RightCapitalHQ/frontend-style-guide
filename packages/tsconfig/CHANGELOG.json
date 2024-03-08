@@ -1,0 +1,20 @@
+{
+  "name": "@rightcapital/tsconfig",
+  "entries": [
+    {
+      "date": "Fri, 08 Mar 2024 05:27:27 GMT",
+      "version": "1.1.0",
+      "tag": "@rightcapital/tsconfig_v1.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/tsconfig",
+            "commit": "2a43c2375aa0e9c6c69af3c4e576b5cf136034e1",
+            "comment": "feat: add new packages `eslint-plugin` and `tsconfig`"
+          }
+        ]
+      }
+    }
+  ]
+}
