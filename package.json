@@ -35,9 +35,9 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "18.6.1",
-    "@commitlint/config-conventional": "18.6.2",
-    "@commitlint/cz-commitlint": "18.6.1",
+    "@commitlint/cli": "19.1.0",
+    "@commitlint/config-conventional": "19.1.0",
+    "@commitlint/cz-commitlint": "19.1.0",
     "@rightcapital/eslint-config-javascript": "workspace:*",
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
