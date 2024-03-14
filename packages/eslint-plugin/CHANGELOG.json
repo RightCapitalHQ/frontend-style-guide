@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Thu, 14 Mar 2024 02:16:42 GMT",
+      "version": "20.1.0",
+      "tag": "@rightcapital/eslint-plugin_v20.1.0",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "b390673c1444961dff787cbaea9223b7c812cd76",
+            "comment": "chore(deps): pin dependencies"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 08 Mar 2024 05:27:27 GMT",
       "version": "20.1.0",
       "tag": "@rightcapital/eslint-plugin_v20.1.0",
