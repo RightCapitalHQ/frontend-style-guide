@@ -9,7 +9,7 @@
     ".": "./src/tsconfig.json",
     "./package.json": "./package.json"
   },
-  "packageManager": "pnpm@8.14.1",
+  "packageManager": "pnpm@8.15.5",
   "engines": {
     "node": ">=16.0.0"
   },
