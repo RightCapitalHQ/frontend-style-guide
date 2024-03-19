@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript",
   "entries": [
     {
+      "date": "Tue, 19 Mar 2024 01:43:17 GMT",
+      "version": "20.1.1",
+      "tag": "@rightcapital/eslint-config-typescript_v20.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript",
+            "commit": "b0454355fb6d49ab507b77501289a0f8867ccc5c",
+            "comment": "fix(deps): update dependencies (non-major)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 27 Feb 2024 02:49:44 GMT",
       "version": "20.0.0",
       "tag": "@rightcapital/eslint-config-typescript_v20.0.0",

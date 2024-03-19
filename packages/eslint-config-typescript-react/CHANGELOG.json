@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Tue, 19 Mar 2024 01:43:17 GMT",
+      "version": "20.1.1",
+      "tag": "@rightcapital/eslint-config-typescript-react_v20.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "b0454355fb6d49ab507b77501289a0f8867ccc5c",
+            "comment": "fix(deps): update dependencies (non-major)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 08 Mar 2024 05:27:27 GMT",
       "version": "20.1.0",
       "tag": "@rightcapital/eslint-config-typescript-react_v20.1.0",
