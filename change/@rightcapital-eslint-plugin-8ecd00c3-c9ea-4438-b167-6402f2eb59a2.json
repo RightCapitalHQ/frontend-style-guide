@@ -1,7 +1,0 @@
-{
-  "comment": "build: add missing build output for eslint-plugin",
-  "type": "patch",
-  "packageName": "@rightcapital/eslint-plugin",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}

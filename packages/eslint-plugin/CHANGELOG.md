@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/eslint-plugin
 
-This log was last generated on Tue, 19 Mar 2024 01:43:17 GMT and should not be manually modified.
+This log was last generated on Wed, 20 Mar 2024 09:56:53 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 20.1.2
+
+Wed, 20 Mar 2024 09:56:53 GMT
+
+### [20.1.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v20.1.2) (2024-3-20)
+
+- build: add missing build output for eslint-plugin ([aeab279](https://github.com/RightCapitalHQ/frontend-style-guide/commit/aeab27920216a32a49924cb91dd4a5209c17c8e7))
 
 ## 20.1.1
 
