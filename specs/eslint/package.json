@@ -13,14 +13,14 @@
     "typescript": "5.4.2"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.24.0",
-    "@babel/preset-typescript": "7.23.3",
+    "@babel/preset-env": "7.24.3",
+    "@babel/preset-typescript": "7.24.1",
     "@jest/globals": "29.7.0",
     "@rightcapital/eslint-config-javascript": "workspace:*",
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/eslint-config-typescript-react": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
-    "@types/react": "18.2.67",
+    "@types/react": "18.2.70",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
     "execa": "8.0.1",
