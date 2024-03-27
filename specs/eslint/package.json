@@ -20,7 +20,7 @@
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/eslint-config-typescript-react": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
-    "@types/react": "18.2.70",
+    "@types/react": "18.2.73",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
     "execa": "8.0.1",
