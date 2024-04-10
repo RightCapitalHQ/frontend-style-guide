@@ -42,16 +42,16 @@
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
     "@rightcapital/scripts": "workspace:*",
-    "@types/node": "20.12.3",
-    "beachball": "2.41.0",
+    "@types/node": "20.12.7",
+    "beachball": "2.43.0",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
-    "eslint-plugin-eslint-plugin": "5.5.0",
+    "eslint-plugin-eslint-plugin": "5.5.1",
     "husky": "9.0.11",
     "prettier": "3.2.5",
-    "tsx": "4.7.1",
-    "typescript": "5.4.3",
+    "tsx": "4.7.2",
+    "typescript": "5.4.4",
     "zx": "7.2.3"
   }
 }
