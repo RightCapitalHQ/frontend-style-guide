@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/eslint-config-javascript
 
-This log was last generated on Thu, 11 Apr 2024 02:47:15 GMT and should not be manually modified.
+This log was last generated on Thu, 11 Apr 2024 02:57:31 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 22.0.1
+
+Thu, 11 Apr 2024 02:57:31 GMT
+
+### [22.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-javascript_v22.0.1) (2024-4-11)
+
+- fix(deps): update dependencies (non-major) ([1df49a6](https://github.com/RightCapitalHQ/frontend-style-guide/commit/1df49a6c4347bc93298ca0e9de2ee7fce4b54295))
 
 ## 22.0.0
 

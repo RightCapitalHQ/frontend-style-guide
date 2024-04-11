@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/eslint-config-base",
-  "version": "22.0.0",
+  "version": "22.0.1",
   "description": "Base ESLint Config for RightCapital",
   "license": "MIT",
   "type": "commonjs",
