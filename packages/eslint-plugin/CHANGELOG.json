@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Thu, 11 Apr 2024 02:52:15 GMT",
+      "version": "22.0.0",
+      "tag": "@rightcapital/eslint-plugin_v22.0.0",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "55e5814a8dc11d7988ffb98b1f57e7416943ab71",
+            "comment": "chore(deps): update devdependency typescript to v5.4.5"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 10 Apr 2024 08:24:45 GMT",
       "version": "21.0.0",
       "tag": "@rightcapital/eslint-plugin_v21.0.0",
