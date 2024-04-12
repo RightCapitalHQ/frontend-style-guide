@@ -2,10 +2,10 @@
   "name": "@rightcapital/style-guide-spec-eslint",
   "private": true,
   "scripts": {
-    "lint:prettier-eslint": "prettier -c .",
-    "lint:eslint": "eslint --report-unused-disable-directives --max-warnings=0 .",
-    "lint": "concurrently pnpm:lint:*",
     "fix": "eslint --fix . && prettier --write .",
+    "lint": "concurrently pnpm:lint:*",
+    "lint:eslint": "eslint --report-unused-disable-directives --max-warnings=0 .",
+    "lint:prettier-eslint": "prettier -c .",
     "test": "jest"
   },
   "dependencies": {

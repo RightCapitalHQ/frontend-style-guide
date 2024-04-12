@@ -2,22 +2,15 @@
   "name": "@rightcapital/prettier-config",
   "version": "6.0.16",
   "description": "Prettier Config for RightCapital",
-  "license": "MIT",
-  "type": "commonjs",
-  "main": "./index.js",
-  "exports": "./index.js",
-  "packageManager": "pnpm@8.15.6",
-  "engines": {
-    "node": ">=16.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
     "directory": "packages/prettier-config"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
+  "license": "MIT",
+  "type": "commonjs",
+  "exports": "./index.js",
+  "main": "./index.js",
   "files": [
     "index.js"
   ],
@@ -27,5 +20,12 @@
   },
   "peerDependencies": {
     "prettier": "^3.0.0"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
