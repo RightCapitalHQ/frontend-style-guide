@@ -22,8 +22,9 @@
     "index.js"
   ],
   "scripts": {},
-  "devDependencies": {},
-  "dependencies": {},
+  "dependencies": {
+    "prettier-plugin-packagejson": "^2.5.0"
+  },
   "peerDependencies": {
     "prettier": "^3.0.0"
   }
