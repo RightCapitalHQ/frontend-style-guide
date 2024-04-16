@@ -1,0 +1,7 @@
+{
+  "type": "none",
+  "comment": "style: sort package.json files",
+  "packageName": "@rightcapital/eslint-plugin",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "none"
+}

@@ -2,13 +2,6 @@
   "name": "@rightcapital/eslint-plugin",
   "version": "22.0.1",
   "description": "ESLint plugin for RightCapital",
-  "license": "MIT",
-  "main": "./lib/index.js",
-  "exports": "./lib/index.js",
-  "packageManager": "pnpm@8.15.6",
-  "engines": {
-    "node": ">=16.0.0"
-  },
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -19,18 +12,15 @@
     "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
     "directory": "packages/eslint-config"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
+  "license": "MIT",
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "tsc --build --clean && tsc --build",
+    "prepack": "pnpm run build",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "update:eslint-docs": "pnpm run build && eslint-doc-generator && prettier --write src/rules/**/*.md",
-    "prepack": "pnpm run build"
-  },
-  "peerDependencies": {
-    "eslint": ">=8.0.0"
+    "update:eslint-docs": "pnpm run build && eslint-doc-generator && prettier --write src/rules/**/*.md"
   },
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
@@ -41,5 +31,15 @@
     "eslint-doc-generator": "1.7.0",
     "typescript": "5.4.5",
     "vitest": "1.5.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
