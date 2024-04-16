@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "chore(deps): update peerdependency eslint to v9",
+  "packageName": "@rightcapital/eslint-config-typescript",
+  "email": "29139614+renovate[bot]@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
