@@ -2,6 +2,21 @@
   "name": "@rightcapital/prettier-config",
   "entries": [
     {
+      "date": "Tue, 16 Apr 2024 01:58:14 GMT",
+      "version": "7.0.0",
+      "tag": "@rightcapital/prettier-config_v7.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/prettier-config",
+            "commit": "e09d211bfa9b6a55977905575a434c86ec438844",
+            "comment": "feat(prettier-config): add packagejson plugin"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 11 Apr 2024 02:57:31 GMT",
       "version": "6.0.16",
       "tag": "@rightcapital/prettier-config_v6.0.16",

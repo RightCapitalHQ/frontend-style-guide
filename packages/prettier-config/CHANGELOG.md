@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/prettier-config
 
-This log was last generated on Thu, 11 Apr 2024 02:57:31 GMT and should not be manually modified.
+This log was last generated on Tue, 16 Apr 2024 01:58:14 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.0
+
+Tue, 16 Apr 2024 01:58:14 GMT
+
+## [7.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Fprettier-config_v7.0.0) (2024-4-16)
+
+- feat(prettier-config): add packagejson plugin ([e09d211](https://github.com/RightCapitalHQ/frontend-style-guide/commit/e09d211bfa9b6a55977905575a434c86ec438844))
 
 ## 6.0.16
 

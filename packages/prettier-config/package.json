@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/prettier-config",
-  "version": "6.0.16",
+  "version": "7.0.0",
   "description": "Prettier Config for RightCapital",
   "repository": {
     "type": "git",

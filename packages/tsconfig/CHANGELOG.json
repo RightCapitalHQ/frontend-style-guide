@@ -2,6 +2,21 @@
   "name": "@rightcapital/tsconfig",
   "entries": [
     {
+      "date": "Tue, 16 Apr 2024 01:58:14 GMT",
+      "version": "1.1.2",
+      "tag": "@rightcapital/tsconfig_v1.1.2",
+      "comments": {
+        "none": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/tsconfig",
+            "commit": "e09d211bfa9b6a55977905575a434c86ec438844",
+            "comment": "style: sort package.json files"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 11 Apr 2024 02:57:31 GMT",
       "version": "1.1.2",
       "tag": "@rightcapital/tsconfig_v1.1.2",

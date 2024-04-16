@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "feat(prettier-config): add packagejson plugin",
-  "packageName": "@rightcapital/prettier-config",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}
