@@ -16,7 +16,7 @@
   ],
   "scripts": {},
   "dependencies": {
-    "prettier-plugin-packagejson": "^2.5.0"
+    "prettier-plugin-packagejson": "2.5.0"
   },
   "peerDependencies": {
     "prettier": "^3.0.0"
