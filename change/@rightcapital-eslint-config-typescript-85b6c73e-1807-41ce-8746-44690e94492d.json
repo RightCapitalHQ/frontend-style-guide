@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "chore(deps): update pnpm to v9",
+  "packageName": "@rightcapital/eslint-config-typescript",
+  "email": "29139614+renovate[bot]@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
