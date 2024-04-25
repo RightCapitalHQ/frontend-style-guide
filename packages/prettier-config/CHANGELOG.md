@@ -1,8 +1,16 @@
 # Change Log - @rightcapital/prettier-config
 
-This log was last generated on Tue, 16 Apr 2024 01:58:14 GMT and should not be manually modified.
+This log was last generated on Thu, 25 Apr 2024 05:29:31 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 7.0.1
+
+Thu, 25 Apr 2024 05:29:31 GMT
+
+### [7.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Fprettier-config_v7.0.1) (2024-4-25)
+
+- fix(deps): pin dependency prettier-plugin-packagejson to 2.5.0 ([a3a7202](https://github.com/RightCapitalHQ/frontend-style-guide/commit/a3a7202c799004bf4f789adc99dba0c96f93e4b0))
 
 ## 7.0.0
 

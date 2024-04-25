@@ -2,6 +2,21 @@
   "name": "@rightcapital/prettier-config",
   "entries": [
     {
+      "date": "Thu, 25 Apr 2024 05:29:31 GMT",
+      "version": "7.0.1",
+      "tag": "@rightcapital/prettier-config_v7.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/prettier-config",
+            "commit": "a3a7202c799004bf4f789adc99dba0c96f93e4b0",
+            "comment": "fix(deps): pin dependency prettier-plugin-packagejson to 2.5.0"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 16 Apr 2024 01:58:14 GMT",
       "version": "7.0.0",
       "tag": "@rightcapital/prettier-config_v7.0.0",
