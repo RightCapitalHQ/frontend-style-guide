@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/tsconfig
 
-This log was last generated on Thu, 11 Apr 2024 02:57:31 GMT and should not be manually modified.
+This log was last generated on Fri, 26 Apr 2024 05:31:27 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [1.1.3](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Ftsconfig_v1.1.3) (2024-4-26)
+
+### Patches
+
+- chore(deps): update pnpm to v9 ([f553292](https://github.com/RightCapitalHQ/frontend-style-guide/commit/f553292d1d6343570e43fdd07f51adcbd47e7a9b))
 
 ## 1.1.2
 

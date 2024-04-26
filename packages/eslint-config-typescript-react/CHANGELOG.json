@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Fri, 26 Apr 2024 05:31:27 GMT",
+      "version": "22.0.2",
+      "tag": "@rightcapital/eslint-config-typescript-react_v22.0.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "f553292d1d6343570e43fdd07f51adcbd47e7a9b",
+            "comment": "chore(deps): update pnpm to v9"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 16 Apr 2024 01:58:14 GMT",
       "version": "22.0.1",
       "tag": "@rightcapital/eslint-config-typescript-react_v22.0.1",
