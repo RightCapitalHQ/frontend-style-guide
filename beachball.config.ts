@@ -23,18 +23,17 @@ const config: BeachballConfig = {
   changelog: {
     customRenderers: {
       // eslint-disable-next-line @typescript-eslint/require-await
-      async renderChangeTypeHeader(changeType, renderInfo) {
+      async renderHeader(renderInfo) {
         const changelogDate = renderInfo.newVersionChangelog.date
           .toLocaleDateString('zh-CN')
           .replace(/\//g, '-');
-        const heading =
-          changeType === 'major' || changeType === 'minor' ? '##' : '###';
-        return `${heading} [${
+        return `## [${
           renderInfo.newVersionChangelog.version
         }](https://github.com/RightCapitalHQ/frontend-style-guide/tree/${encodeURIComponent(
           renderInfo.newVersionChangelog.tag,
         )}) (${changelogDate})`;
       },
+
       // Original template: https://github.com/microsoft/beachball/blob/aefbc1ac37ee85961cc787133c827f1fd3925550/src/changelog/renderPackageChangelog.ts#L93
       // eslint-disable-next-line @typescript-eslint/require-await
       async renderEntry(entry) {
