@@ -6,6 +6,7 @@ import { getDocumentUrl } from '../../helpers/get-document-url';
 // https://react.dev/reference/react/hooks
 // https://react.dev/reference/react-dom/hooks
 const hooksToCheck = [
+  'useActionState',
   'useCallback',
   'useContext',
   'useDeferredValue',
@@ -17,7 +18,6 @@ const hooksToCheck = [
   'useState',
   'useSyncExternalStore',
   'useTransition',
-  'useFormState',
   'useFormStatus',
 ];
 

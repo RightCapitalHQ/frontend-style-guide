@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "feat: update React hook names for checking",
+  "packageName": "@rightcapital/eslint-plugin",
+  "email": "45930107+PinkChampagne17@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
