@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Mon, 29 Apr 2024 02:06:08 GMT",
+      "version": "22.1.0",
+      "tag": "@rightcapital/eslint-plugin_v22.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "1799a3c7e92c5035f22aa6d216c961616d5fdf51",
+            "comment": "feat: update React hook names for checking"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 26 Apr 2024 05:38:31 GMT",
       "version": "22.0.2",
       "tag": "@rightcapital/eslint-plugin_v22.0.2",

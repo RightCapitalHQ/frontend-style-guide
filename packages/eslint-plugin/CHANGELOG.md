@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-plugin
 
-This log was last generated on Fri, 26 Apr 2024 05:31:27 GMT and should not be manually modified.
+This log was last generated on Mon, 29 Apr 2024 02:06:08 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [22.1.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v22.1.0) (2024-4-29)
+
+### Minor changes
+
+- feat: update React hook names for checking ([1799a3c](https://github.com/RightCapitalHQ/frontend-style-guide/commit/1799a3c7e92c5035f22aa6d216c961616d5fdf51))
 
 ## [22.0.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v22.0.2) (2024-4-26)
 
