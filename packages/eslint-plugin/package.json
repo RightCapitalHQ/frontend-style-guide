@@ -25,12 +25,12 @@
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "8.56.10",
-    "@types/node": "20.12.7",
-    "@vitest/ui": "1.5.2",
+    "@types/node": "20.12.10",
+    "@vitest/ui": "1.6.0",
     "eslint": "8.57.0",
     "eslint-doc-generator": "1.7.0",
     "typescript": "5.4.5",
-    "vitest": "1.5.2"
+    "vitest": "1.6.0"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0"
