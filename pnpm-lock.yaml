@@ -197,8 +197,8 @@ importers:
         specifier: 0.4.0
         version: 0.4.0
       '@types/node':
-        specifier: 20.12.10
-        version: 20.12.10
+        specifier: 20.12.11
+        version: 20.12.11
       tsx:
         specifier: '>=3.14.0'
         version: 4.9.3
