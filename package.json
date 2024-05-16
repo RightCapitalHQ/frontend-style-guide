@@ -44,11 +44,11 @@
     "concurrently": "8.2.2",
     "eslint": "8.57.0",
     "eslint-plugin-eslint-plugin": "5.5.1",
+    "execa": "8.0.1",
     "husky": "9.0.11",
     "prettier": "3.2.5",
     "tsx": "4.9.3",
-    "typescript": "5.4.5",
-    "zx": "7.2.3"
+    "typescript": "5.4.5"
   },
   "packageManager": "pnpm@9.1.0",
   "engines": {

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { $, echo } from 'zx';
+import { $ } from 'execa';
 
 const bumpTypeHeader = 'Beachball-bump-type: ';
 
@@ -58,7 +58,7 @@ async function updateRenovateCommit({ message }) {
 
 async function main() {
   const isMissingChangefile =
-    (await $`pnpm -w exec beachball check`.exitCode) !== 0;
+    (await $`pnpm -w exec beachball check`).exitCode !== 0;
 
   await configureGitUser();
   const bumpTypeAndMessage = await parseBumpTypeAndMessage();
@@ -68,12 +68,12 @@ async function main() {
   // and trim `bumpTypeHeader` from the commit message
   if (!bumpTypeAndMessage) {
     if (isMissingChangefile) {
-      echo`Changefile is missing, and auto generating changefile failed.
-\tCannot find ${bumpTypeHeader} in the commit message`;
+      console.log(`Changefile is missing, and auto generating changefile failed.
+\tCannot find ${bumpTypeHeader} in the commit message`);
       process.exitCode = 1;
       return;
     }
-    echo`Everything is ok, nothing to do.`;
+    console.log(`Everything is ok, nothing to do.`);
     process.exitCode = 0;
     return;
   }
