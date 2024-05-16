@@ -2,6 +2,21 @@
   "name": "@rightcapital/prettier-config",
   "entries": [
     {
+      "date": "Thu, 16 May 2024 09:53:11 GMT",
+      "version": "7.0.4",
+      "tag": "@rightcapital/prettier-config_v7.0.4",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/prettier-config",
+            "commit": "491ecdd8e81b0b3272d4bb9bef2d4b2f51f14fbf",
+            "comment": "fix(deps): update dependencies (non-major)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 07 May 2024 08:11:23 GMT",
       "version": "7.0.3",
       "tag": "@rightcapital/prettier-config_v7.0.3",
