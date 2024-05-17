@@ -3492,6 +3492,9 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
     "no-new-func": [
       "error",
     ],
+    "no-new-native-nonconstructor": [
+      "off",
+    ],
     "no-new-object": [
       "error",
     ],
@@ -6125,6 +6128,9 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     ],
     "no-new-func": [
       "error",
+    ],
+    "no-new-native-nonconstructor": [
+      "off",
     ],
     "no-new-object": [
       "error",
