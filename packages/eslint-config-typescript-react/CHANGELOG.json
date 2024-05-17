@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Fri, 17 May 2024 02:05:46 GMT",
+      "version": "23.0.0",
+      "tag": "@rightcapital/eslint-config-typescript-react_v23.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "afab42e0837eb084efd6a6e79bdebac129515cf8",
+            "comment": "fix(deps): update eslint rule and plugin updates"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 16 May 2024 09:53:11 GMT",
       "version": "22.1.2",
       "tag": "@rightcapital/eslint-config-typescript-react_v22.1.2",

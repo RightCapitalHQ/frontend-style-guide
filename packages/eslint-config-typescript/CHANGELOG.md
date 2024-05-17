@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-typescript
 
-This log was last generated on Thu, 16 May 2024 09:53:11 GMT and should not be manually modified.
+This log was last generated on Fri, 17 May 2024 02:05:46 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [23.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v23.0.0) (2024-5-17)
+
+### Major changes
+
+- fix(deps): update eslint rule and plugin updates ([afab42e](https://github.com/RightCapitalHQ/frontend-style-guide/commit/afab42e0837eb084efd6a6e79bdebac129515cf8))
 
 ## [22.1.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v22.1.2) (2024-5-16)
 
