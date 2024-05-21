@@ -17,7 +17,7 @@
   "scripts": {},
   "dependencies": {
     "@rightcapital/eslint-config-base": "workspace:*",
-    "@rushstack/eslint-patch": "1.10.2",
+    "@rushstack/eslint-patch": "1.10.3",
     "eslint-config-prettier": "9.1.0"
   },
   "devDependencies": {},
