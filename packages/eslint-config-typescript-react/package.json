@@ -18,7 +18,7 @@
   "dependencies": {
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/eslint-plugin": "workspace:*",
-    "@rushstack/eslint-patch": "1.10.2",
+    "@rushstack/eslint-patch": "1.10.3",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jsx-a11y": "6.7.1",
