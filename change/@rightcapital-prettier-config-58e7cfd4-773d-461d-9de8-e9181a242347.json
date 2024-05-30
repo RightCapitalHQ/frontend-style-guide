@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "feat: add types to packages",
-  "packageName": "@rightcapital/prettier-config",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}

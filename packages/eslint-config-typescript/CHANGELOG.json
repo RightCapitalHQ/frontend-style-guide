@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript",
   "entries": [
     {
+      "date": "Thu, 30 May 2024 09:37:30 GMT",
+      "version": "25.1.0",
+      "tag": "@rightcapital/eslint-config-typescript_v25.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config-typescript",
+            "commit": "4a977eef2877106dffb34c5297589a6d70fdc87a",
+            "comment": "feat: add types to packages"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 29 May 2024 09:35:31 GMT",
       "version": "25.0.0",
       "tag": "@rightcapital/eslint-config-typescript_v25.0.0",

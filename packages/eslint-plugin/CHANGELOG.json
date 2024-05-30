@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Thu, 30 May 2024 09:37:30 GMT",
+      "version": "25.1.0",
+      "tag": "@rightcapital/eslint-plugin_v25.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "4a977eef2877106dffb34c5297589a6d70fdc87a",
+            "comment": "feat: add types to packages"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 16 May 2024 10:21:16 GMT",
       "version": "22.1.2",
       "tag": "@rightcapital/eslint-plugin_v22.1.2",

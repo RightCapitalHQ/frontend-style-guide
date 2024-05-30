@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/tsconfig
 
-This log was last generated on Thu, 16 May 2024 09:53:11 GMT and should not be manually modified.
+This log was last generated on Thu, 30 May 2024 09:37:30 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [1.2.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Ftsconfig_v1.2.0) (2024-5-30)
+
+### Minor changes
+
+- feat: add types to packages ([4a977ee](https://github.com/RightCapitalHQ/frontend-style-guide/commit/4a977eef2877106dffb34c5297589a6d70fdc87a))
 
 ## [1.1.5](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Ftsconfig_v1.1.5) (2024-5-16)
 
