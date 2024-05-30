@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "feat: add types to packages",
+  "packageName": "@rightcapital/tsconfig",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}

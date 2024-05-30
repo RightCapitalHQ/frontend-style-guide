@@ -80,6 +80,10 @@ importers:
       eslint-plugin-import:
         specifier: npm:eslint-plugin-i@2.29.1
         version: eslint-plugin-i@2.29.1(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+    devDependencies:
+      '@rightcapital/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
 
   packages/eslint-config-javascript:
     dependencies:
@@ -95,6 +99,10 @@ importers:
       eslint-config-prettier:
         specifier: 9.1.0
         version: 9.1.0(eslint@8.57.0)
+    devDependencies:
+      '@rightcapital/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
 
   packages/eslint-config-typescript:
     dependencies:
@@ -119,6 +127,10 @@ importers:
       typescript:
         specifier: ^5.0.0
         version: 5.4.5
+    devDependencies:
+      '@rightcapital/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
 
   packages/eslint-config-typescript-react:
     dependencies:
@@ -152,6 +164,10 @@ importers:
       typescript:
         specifier: ^5.0.0
         version: 5.4.5
+    devDependencies:
+      '@rightcapital/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
 
   packages/eslint-plugin:
     devDependencies:
@@ -188,6 +204,13 @@ importers:
       prettier-plugin-packagejson:
         specifier: 2.5.0
         version: 2.5.0(prettier@3.2.5)
+    devDependencies:
+      '@rightcapital/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
 
   packages/tsconfig: {}
 

@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "feat: add types to packages",
+  "packageName": "@rightcapital/eslint-config-base",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}

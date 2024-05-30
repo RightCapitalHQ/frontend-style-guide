@@ -1,8 +1,9 @@
+import type { Linter } from 'eslint';
+
 // Fix eslint shareable config (https://github.com/eslint/eslint/issues/3458)
 require('@rushstack/eslint-patch/modern-module-resolution');
 
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
+const config: Linter.Config = {
   extends: [require.resolve('eslint-config-airbnb-base')],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -89,3 +90,5 @@ module.exports = {
     'import/prefer-default-export': 'off',
   },
 };
+
+export = config;

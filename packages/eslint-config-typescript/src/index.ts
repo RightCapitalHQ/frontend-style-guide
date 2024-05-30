@@ -1,7 +1,8 @@
+import type { Linter } from 'eslint';
+
 require('@rushstack/eslint-patch/modern-module-resolution');
 
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
+const config: Linter.Config = {
   extends: [
     require.resolve('@rightcapital/eslint-config-base'),
     'plugin:@typescript-eslint/recommended-type-checked',
@@ -116,3 +117,5 @@ module.exports = {
     'import/no-duplicates': ['error', { 'prefer-inline': true }],
   },
 };
+
+export = config;

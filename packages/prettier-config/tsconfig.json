@@ -1,9 +1,7 @@
 {
   "extends": "@rightcapital/tsconfig",
   "compilerOptions": {
-    "outDir": "./lib",
     "rootDir": "./src",
-    "verbatimModuleSyntax": false
-  },
-  "include": ["./src"]
+    "outDir": "./lib"
+  }
 }

@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "feat: add types to packages",
+  "packageName": "@rightcapital/eslint-config-typescript-react",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
