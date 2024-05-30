@@ -1,5 +1,6 @@
-/** @type {import("prettier").Options} */
-const config = {
+import type { Options } from 'prettier';
+
+const config: Options = {
   arrowParens: 'always',
   printWidth: 80,
   semi: true,
@@ -9,4 +10,4 @@ const config = {
   plugins: ['prettier-plugin-packagejson'],
 };
 
-module.exports = config;
+export = config;

@@ -9,12 +9,17 @@
   },
   "license": "MIT",
   "type": "commonjs",
-  "exports": "./index.js",
-  "main": "./index.js",
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
-    "index.js"
+    "lib/index.js",
+    "lib/index.d.ts"
   ],
-  "scripts": {},
+  "scripts": {
+    "build": "tsc --build --clean && tsc --build",
+    "prepack": "pnpm run build"
+  },
   "dependencies": {
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/eslint-plugin": "workspace:*",
@@ -25,7 +30,9 @@
     "eslint-plugin-react": "7.34.2",
     "eslint-plugin-react-hooks": "4.6.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@rightcapital/tsconfig": "workspace:*"
+  },
   "peerDependencies": {
     "eslint": "^8.23.1",
     "typescript": "^5.0.0"

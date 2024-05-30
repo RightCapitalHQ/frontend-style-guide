@@ -1,7 +1,8 @@
+import type { Linter } from 'eslint';
+
 require('@rushstack/eslint-patch/modern-module-resolution');
 
-/** @type {import("eslint").Linter.Config} */
-module.exports = {
+const config: Linter.Config = {
   extends: [
     require.resolve('eslint-config-airbnb/rules/react'),
     require.resolve('eslint-config-airbnb/rules/react-a11y'),
@@ -25,3 +26,5 @@ module.exports = {
     'react/require-default-props': 'off',
   },
 };
+
+export = config;

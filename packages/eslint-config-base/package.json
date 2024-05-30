@@ -9,19 +9,26 @@
   },
   "license": "MIT",
   "type": "commonjs",
-  "exports": "./index.js",
-  "main": "./index.js",
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
-    "index.js"
+    "lib/index.js",
+    "lib/index.d.ts"
   ],
-  "scripts": {},
+  "scripts": {
+    "build": "tsc --build --clean && tsc --build",
+    "prepack": "pnpm run build"
+  },
   "dependencies": {
     "@rushstack/eslint-patch": "1.10.3",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "npm:eslint-plugin-i@2.29.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@rightcapital/tsconfig": "workspace:*"
+  },
   "peerDependencies": {
     "eslint": "^8.23.1"
   },
