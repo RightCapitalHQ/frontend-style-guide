@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-base",
   "entries": [
     {
+      "date": "Mon, 03 Jun 2024 03:14:58 GMT",
+      "version": "25.1.1",
+      "tag": "@rightcapital/eslint-config-base_v25.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-base",
+            "commit": "3396d7945e82abf6bf091d89ab32e0021a83c836",
+            "comment": "fix(deps): update dependencies (non-major)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 30 May 2024 09:37:30 GMT",
       "version": "25.1.0",
       "tag": "@rightcapital/eslint-config-base_v25.1.0",
