@@ -25,7 +25,7 @@
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "8.56.10",
-    "@types/node": "20.12.12",
+    "@types/node": "20.14.0",
     "@vitest/ui": "1.6.0",
     "eslint": "8.57.0",
     "eslint-doc-generator": "1.7.1",
