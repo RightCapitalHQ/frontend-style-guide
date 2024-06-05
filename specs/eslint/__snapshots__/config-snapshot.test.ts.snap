@@ -20,6 +20,8 @@ exports[`resolved config matches snapshot javascript.js 1`] = `
   },
   "plugins": [
     "import",
+    "unicorn",
+    "simple-import-sort",
   ],
   "reportUnusedDisableDirectives": true,
   "rules": {
@@ -242,7 +244,7 @@ exports[`resolved config matches snapshot javascript.js 1`] = `
       "error",
     ],
     "curly": [
-      0,
+      "error",
       "all",
     ],
     "default-case": [
@@ -577,35 +579,15 @@ exports[`resolved config matches snapshot javascript.js 1`] = `
       "error",
     ],
     "import/order": [
-      "error",
+      "off",
       {
-        "alphabetize": {
-          "caseInsensitive": true,
-          "order": "asc",
-          "orderImportKind": "ignore",
-        },
         "distinctGroup": true,
         "groups": [
-          "builtin",
-          "external",
-          "internal",
           [
-            "parent",
-            "sibling",
-            "index",
+            "builtin",
+            "external",
+            "internal",
           ],
-          "object",
-        ],
-        "newlines-between": "never",
-        "pathGroups": [
-          {
-            "group": "external",
-            "pattern": "react*",
-            "position": "before",
-          },
-        ],
-        "pathGroupsExcludedImportTypes": [
-          "builtin",
         ],
         "warnOnUnassignedImports": false,
       },
@@ -1843,6 +1825,12 @@ exports[`resolved config matches snapshot javascript.js 1`] = `
       "off",
       "last",
     ],
+    "simple-import-sort/exports": [
+      "error",
+    ],
+    "simple-import-sort/imports": [
+      "error",
+    ],
     "sort-imports": [
       "off",
       {
@@ -1988,8 +1976,14 @@ exports[`resolved config matches snapshot javascript.js 1`] = `
     "unicorn/number-literal-case": [
       "off",
     ],
+    "unicorn/prefer-node-protocol": [
+      "error",
+    ],
     "unicorn/template-indent": [
       0,
+    ],
+    "unicorn/text-encoding-identifier-case": [
+      "error",
     ],
     "use-isnan": [
       "error",
@@ -2187,6 +2181,8 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
   },
   "plugins": [
     "import",
+    "unicorn",
+    "simple-import-sort",
     "@typescript-eslint",
   ],
   "reportUnusedDisableDirectives": true,
@@ -2582,7 +2578,7 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
       "off",
     ],
     "curly": [
-      0,
+      "error",
       "all",
     ],
     "default-case": [
@@ -2920,35 +2916,15 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
       "error",
     ],
     "import/order": [
-      "error",
+      "off",
       {
-        "alphabetize": {
-          "caseInsensitive": true,
-          "order": "asc",
-          "orderImportKind": "ignore",
-        },
         "distinctGroup": true,
         "groups": [
-          "builtin",
-          "external",
-          "internal",
           [
-            "parent",
-            "sibling",
-            "index",
+            "builtin",
+            "external",
+            "internal",
           ],
-          "object",
-        ],
-        "newlines-between": "never",
-        "pathGroups": [
-          {
-            "group": "external",
-            "pattern": "react*",
-            "position": "before",
-          },
-        ],
-        "pathGroupsExcludedImportTypes": [
-          "builtin",
         ],
         "warnOnUnassignedImports": false,
       },
@@ -4189,6 +4165,12 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
       "off",
       "last",
     ],
+    "simple-import-sort/exports": [
+      "error",
+    ],
+    "simple-import-sort/imports": [
+      "error",
+    ],
     "sort-imports": [
       "off",
       {
@@ -4334,8 +4316,14 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
     "unicorn/number-literal-case": [
       "off",
     ],
+    "unicorn/prefer-node-protocol": [
+      "error",
+    ],
     "unicorn/template-indent": [
       0,
+    ],
+    "unicorn/text-encoding-identifier-case": [
+      "error",
     ],
     "use-isnan": [
       "error",
@@ -4546,6 +4534,8 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     "jsx-a11y",
     "react-hooks",
     "import",
+    "unicorn",
+    "simple-import-sort",
     "@typescript-eslint",
     "@rightcapital",
   ],
@@ -4948,7 +4938,7 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
       "off",
     ],
     "curly": [
-      0,
+      "error",
       "all",
     ],
     "default-case": [
@@ -5286,35 +5276,15 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
       "error",
     ],
     "import/order": [
-      "error",
+      "off",
       {
-        "alphabetize": {
-          "caseInsensitive": true,
-          "order": "asc",
-          "orderImportKind": "ignore",
-        },
         "distinctGroup": true,
         "groups": [
-          "builtin",
-          "external",
-          "internal",
           [
-            "parent",
-            "sibling",
-            "index",
+            "builtin",
+            "external",
+            "internal",
           ],
-          "object",
-        ],
-        "newlines-between": "never",
-        "pathGroups": [
-          {
-            "group": "external",
-            "pattern": "react*",
-            "position": "before",
-          },
-        ],
-        "pathGroupsExcludedImportTypes": [
-          "builtin",
         ],
         "warnOnUnassignedImports": false,
       },
@@ -7301,6 +7271,12 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
       "off",
       "last",
     ],
+    "simple-import-sort/exports": [
+      "error",
+    ],
+    "simple-import-sort/imports": [
+      "error",
+    ],
     "sort-imports": [
       "off",
       {
@@ -7446,8 +7422,14 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     "unicorn/number-literal-case": [
       "off",
     ],
+    "unicorn/prefer-node-protocol": [
+      "error",
+    ],
     "unicorn/template-indent": [
       0,
+    ],
+    "unicorn/text-encoding-identifier-case": [
+      "error",
     ],
     "use-isnan": [
       "error",

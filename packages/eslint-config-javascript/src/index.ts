@@ -4,10 +4,7 @@ import type { Linter } from 'eslint';
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 const config: Linter.Config = {
-  extends: [
-    require.resolve('@rightcapital/eslint-config-base'),
-    require.resolve('eslint-config-prettier'),
-  ],
+  extends: [require.resolve('@rightcapital/eslint-config-base')],
   reportUnusedDisableDirectives: true,
   rules: {},
   settings: {},

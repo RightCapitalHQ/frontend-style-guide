@@ -1,2 +1,3 @@
 # build output
 /packages/*/lib
+/specs

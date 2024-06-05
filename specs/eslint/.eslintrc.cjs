@@ -2,18 +2,11 @@
 module.exports = {
   root: true,
   overrides: [
-    { files: ['**/*.{js,cjs,mjs}'], extends: ['@rightcapital/javascript'] },
-    { files: ['**/*.{ts,cts,mts}'], extends: ['@rightcapital/typescript'] },
-    { files: ['**/*.tsx'], extends: ['@rightcapital/typescript-react'] },
+    { files: ['src/javascript.js'], extends: ['@rightcapital/javascript'] },
+    { files: ['src/typescript.ts'], extends: ['@rightcapital/typescript'] },
     {
-      files: ['./*.{js,cjs,mjs,ts,cts,mts}'],
-      rules: {
-        // not necessary for config,test files
-        'import/no-extraneous-dependencies': [
-          'error',
-          { devDependencies: true },
-        ],
-      },
+      files: ['src/typescript-react.tsx'],
+      extends: ['@rightcapital/typescript-react'],
     },
   ],
 };
