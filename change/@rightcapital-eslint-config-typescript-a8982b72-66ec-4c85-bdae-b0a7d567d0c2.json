@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "fix(deps): update eslint rule and plugin updates to v7.13.0",
-  "packageName": "@rightcapital/eslint-config-typescript",
-  "email": "29139614+renovate[bot]@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
