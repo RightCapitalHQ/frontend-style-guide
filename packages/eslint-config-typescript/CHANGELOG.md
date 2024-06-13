@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-typescript
 
-This log was last generated on Mon, 03 Jun 2024 03:14:58 GMT and should not be manually modified.
+This log was last generated on Thu, 13 Jun 2024 06:29:28 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [26.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v26.0.0) (2024-6-13)
+
+### Major changes
+
+- feat: enhance multiple rules for better consistency ([cea895e](https://github.com/RightCapitalHQ/frontend-style-guide/commit/cea895ea2bf23f2ba60f043e14a5df9964daca1d))
 
 ## [25.1.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v25.1.1) (2024-6-3)
 

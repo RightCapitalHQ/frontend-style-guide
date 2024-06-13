@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "feat: enhance multiple rules for better consistency",
-  "packageName": "@rightcapital/eslint-config-base",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}

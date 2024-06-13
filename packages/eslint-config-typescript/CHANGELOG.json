@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript",
   "entries": [
     {
+      "date": "Thu, 13 Jun 2024 06:29:28 GMT",
+      "version": "26.0.0",
+      "tag": "@rightcapital/eslint-config-typescript_v26.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config-typescript",
+            "commit": "cea895ea2bf23f2ba60f043e14a5df9964daca1d",
+            "comment": "feat: enhance multiple rules for better consistency"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 03 Jun 2024 03:14:58 GMT",
       "version": "25.1.1",
       "tag": "@rightcapital/eslint-config-typescript_v25.1.1",
