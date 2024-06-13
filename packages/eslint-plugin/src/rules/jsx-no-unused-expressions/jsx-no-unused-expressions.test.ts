@@ -1,6 +1,7 @@
-import { basename } from 'path';
-import { jsxNoUnusedExpressionsRule } from './jsx-no-unused-expressions';
+import { basename } from 'node:path';
+
 import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester';
+import { jsxNoUnusedExpressionsRule } from './jsx-no-unused-expressions';
 
 const ruleTester = new VitestRuleTester({
   parserOptions: {

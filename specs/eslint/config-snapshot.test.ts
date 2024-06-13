@@ -1,6 +1,7 @@
 import { readdirSync } from 'node:fs';
-import { resolve, basename } from 'node:path';
-import { test, describe, expect } from '@jest/globals';
+import { basename, resolve } from 'node:path';
+
+import { describe, expect, test } from '@jest/globals';
 import { execa } from 'execa';
 
 const eslintExec = resolve(__dirname, 'node_modules', '.bin', 'eslint');

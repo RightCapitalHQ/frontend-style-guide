@@ -1,6 +1,7 @@
-import { basename } from 'path';
-import { noIgnoreReturnValueOfReactHooksRule } from './no-ignore-return-value-of-react-hooks';
+import { basename } from 'node:path';
+
 import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester';
+import { noIgnoreReturnValueOfReactHooksRule } from './no-ignore-return-value-of-react-hooks';
 
 const ruleTester = new VitestRuleTester({
   parserOptions: {

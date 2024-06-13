@@ -4,7 +4,11 @@ import type { Linter } from 'eslint';
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 const config: Linter.Config = {
-  extends: [require.resolve('eslint-config-airbnb-base')],
+  extends: [
+    require.resolve('eslint-config-airbnb-base'),
+    require.resolve('eslint-config-prettier'),
+  ],
+  plugins: ['simple-import-sort', 'unicorn'],
   parserOptions: {
     ecmaVersion: 'latest',
     ecmaFeatures: { jsx: true },
@@ -55,6 +59,12 @@ const config: Linter.Config = {
         message: 'constructor name is not reliable, do not use it.',
       },
     ],
+
+    // MEMO: simple-import-sort/imports should not be used with import/order
+    'import/order': 'off',
+    'simple-import-sort/imports': 'error',
+
+    'simple-import-sort/exports': 'error',
     'import/extensions': [
       'warn',
       'ignorePackages',
@@ -65,29 +75,10 @@ const config: Linter.Config = {
         jsx: 'never',
       },
     ],
-    'import/order': [
-      'error',
-      {
-        alphabetize: { order: 'asc', caseInsensitive: true },
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          ['parent', 'sibling', 'index'],
-          'object',
-        ],
-        'newlines-between': 'never',
-        pathGroups: [
-          {
-            pattern: 'react*',
-            group: 'external',
-            position: 'before',
-          },
-        ],
-        pathGroupsExcludedImportTypes: ['builtin'],
-      },
-    ],
     'import/prefer-default-export': 'off',
+
+    'unicorn/prefer-node-protocol': 'error',
+    'unicorn/text-encoding-identifier-case': 'error',
   },
 };
 

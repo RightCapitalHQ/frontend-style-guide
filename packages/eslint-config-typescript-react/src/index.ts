@@ -8,7 +8,6 @@ const config: Linter.Config = {
     require.resolve('eslint-config-airbnb/rules/react-a11y'),
     require.resolve('eslint-config-airbnb/hooks'),
     require.resolve('@rightcapital/eslint-config-typescript'),
-    require.resolve('eslint-config-prettier'),
     'plugin:@rightcapital/recommended-react',
   ],
   plugins: ['@rightcapital'],

@@ -6,7 +6,6 @@ const config: Linter.Config = {
   extends: [
     require.resolve('@rightcapital/eslint-config-base'),
     'plugin:@typescript-eslint/recommended-type-checked',
-    require.resolve('eslint-config-prettier'),
   ],
   parser: require.resolve('@typescript-eslint/parser'),
   // https://typescript-eslint.io/packages/parser/#configuration

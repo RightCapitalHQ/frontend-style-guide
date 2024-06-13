@@ -1,5 +1,7 @@
-import { basename } from 'path';
+import { basename } from 'node:path';
+
 import type { Rule } from 'eslint';
+
 import { isCallOf } from '../../helpers/ast/function/is-call-of';
 import { getDocumentUrl } from '../../helpers/get-document-url';
 

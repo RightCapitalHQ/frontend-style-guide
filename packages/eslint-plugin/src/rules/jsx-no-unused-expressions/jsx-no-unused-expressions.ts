@@ -1,5 +1,7 @@
-import { basename } from 'path';
+import { basename } from 'node:path';
+
 import type { Rule } from 'eslint';
+
 import { getDocumentUrl } from '../../helpers/get-document-url';
 
 export const jsxNoUnusedExpressionsRule: Rule.RuleModule = {
