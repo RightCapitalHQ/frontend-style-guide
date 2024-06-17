@@ -84,8 +84,8 @@ importers:
         specifier: 12.1.0
         version: 12.1.0(eslint@8.57.0)
       eslint-plugin-unicorn:
-        specifier: 53.0.0
-        version: 53.0.0(eslint@8.57.0)
+        specifier: 54.0.0
+        version: 54.0.0(eslint@8.57.0)
     devDependencies:
       '@rightcapital/tsconfig':
         specifier: workspace:*
@@ -1544,9 +1544,6 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@20.14.0':
-    resolution: {integrity: sha512-5cHBxFGJx6L4s56Bubp4fglrEpmyJypsqI6RgzMfBHWUJQGWAAi8cWcgetEbZXHYXo9C2Fa4EEds/uSyS4cxmA==}
-
   '@types/node@20.14.2':
     resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
 
@@ -2400,8 +2397,8 @@ packages:
     peerDependencies:
       eslint: '>=5.0.0'
 
-  eslint-plugin-unicorn@53.0.0:
-    resolution: {integrity: sha512-kuTcNo9IwwUCfyHGwQFOK/HjJAYzbODHN3wP0PgqbW+jbXqpNWxNVpVhj2tO9SixBwuAdmal8rVcWKBxwFnGuw==}
+  eslint-plugin-unicorn@54.0.0:
+    resolution: {integrity: sha512-XxYLRiYtAWiAjPv6z4JREby1TAE2byBC7wlh0V4vWDCpccOSU1KovWV//jqPXF6bq3WKxqX9rdjoRQ1EhdmNdQ==}
     engines: {node: '>=18.18'}
     peerDependencies:
       eslint: '>=8.56.0'
@@ -5790,10 +5787,6 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@20.14.0':
-    dependencies:
-      undici-types: 5.26.5
-
   '@types/node@20.14.2':
     dependencies:
       undici-types: 5.26.5
@@ -6955,7 +6948,7 @@ snapshots:
     dependencies:
       eslint: 8.57.0
 
-  eslint-plugin-unicorn@53.0.0(eslint@8.57.0):
+  eslint-plugin-unicorn@54.0.0(eslint@8.57.0):
     dependencies:
       '@babel/helper-validator-identifier': 7.24.7
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
