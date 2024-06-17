@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-base
 
-This log was last generated on Thu, 13 Jun 2024 06:59:24 GMT and should not be manually modified.
+This log was last generated on Mon, 17 Jun 2024 01:47:58 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [28.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-base_v28.0.0) (2024-6-17)
+
+### Major changes
+
+- fix(deps): update dependency eslint-plugin-unicorn to v54 ([f900f53](https://github.com/RightCapitalHQ/frontend-style-guide/commit/f900f53a86c0337d5eaea0b39554388bbc25d748))
 
 ## [26.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-base_v26.0.1) (2024-6-13)
 

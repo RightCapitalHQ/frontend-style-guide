@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-base",
   "entries": [
     {
+      "date": "Mon, 17 Jun 2024 01:47:58 GMT",
+      "version": "28.0.0",
+      "tag": "@rightcapital/eslint-config-base_v28.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-base",
+            "commit": "f900f53a86c0337d5eaea0b39554388bbc25d748",
+            "comment": "fix(deps): update dependency eslint-plugin-unicorn to v54"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 13 Jun 2024 06:59:24 GMT",
       "version": "26.0.1",
       "tag": "@rightcapital/eslint-config-base_v26.0.1",

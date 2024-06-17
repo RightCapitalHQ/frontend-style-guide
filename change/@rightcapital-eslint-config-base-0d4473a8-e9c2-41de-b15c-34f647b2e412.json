@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "fix(deps): update dependency eslint-plugin-unicorn to v54",
-  "packageName": "@rightcapital/eslint-config-base",
-  "email": "29139614+renovate[bot]@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
