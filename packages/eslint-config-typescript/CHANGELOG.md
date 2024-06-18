@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-typescript
 
-This log was last generated on Tue, 18 Jun 2024 05:19:46 GMT and should not be manually modified.
+This log was last generated on Tue, 18 Jun 2024 05:21:56 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [28.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v28.0.1) (2024-6-18)
+
+### Major changes
+
+- fix(deps): update eslint rule and plugin updates to v7.13.1 ([56e35c3](https://github.com/RightCapitalHQ/frontend-style-guide/commit/56e35c3309e9bff272d95d7f2383e060d61a5ebb))
 
 ## [28.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v28.0.1) (2024-6-18)
 
