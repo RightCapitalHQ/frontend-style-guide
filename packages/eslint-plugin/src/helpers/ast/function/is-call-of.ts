@@ -1,6 +1,6 @@
-import type { Rule } from 'eslint';
+import { AST_NODE_TYPES, type TSESTree } from '@typescript-eslint/utils';
+import { isNodeOfType } from '@typescript-eslint/utils/ast-utils';
 
-type IESLintCallExpressionNode = Extract<Rule.Node, { type: 'CallExpression' }>;
 type Predicate = string | string[] | ((id: string) => boolean);
 
 const matchCalleeName = (predicate: Predicate, name: string) => {
@@ -14,12 +14,12 @@ const matchCalleeName = (predicate: Predicate, name: string) => {
 };
 
 export function isCallOf(
-  node: Rule.Node,
+  node: TSESTree.Node,
   predicate: Predicate,
-): node is IESLintCallExpressionNode {
+): node is TSESTree.CallExpression {
   return (
-    node.type === 'CallExpression' &&
-    node.callee.type === 'Identifier' &&
+    isNodeOfType(AST_NODE_TYPES.CallExpression)(node) &&
+    isNodeOfType(AST_NODE_TYPES.Identifier)(node.callee) &&
     matchCalleeName(predicate, node.callee.name)
   );
 }

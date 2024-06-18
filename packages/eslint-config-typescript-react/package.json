@@ -17,7 +17,9 @@
     "lib/index.d.ts"
   ],
   "scripts": {
-    "build": "tsc --build --clean && tsc --build",
+    "prebuild": "pnpm run clean",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "prepack": "pnpm run build"
   },
   "dependencies": {

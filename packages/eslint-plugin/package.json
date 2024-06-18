@@ -16,16 +16,23 @@
   "exports": "./lib/index.js",
   "main": "./lib/index.js",
   "scripts": {
-    "build": "tsc --build --clean && tsc --build",
+    "prebuild": "pnpm run clean",
+    "build": "tsc --build tsconfig.lib.json",
+    "clean": "tsc --build tsconfig.lib.json --clean",
     "prepack": "pnpm run build",
-    "test": "vitest",
+    "test": "vitest --coverage",
     "test:ui": "vitest --ui",
     "update:eslint-docs": "pnpm run build && eslint-doc-generator && prettier --write src/rules/**/*.md"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "7.13.1"
   },
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "8.56.10",
     "@types/node": "20.14.4",
+    "@typescript-eslint/rule-tester": "7.13.1",
+    "@vitest/coverage-v8": "1.6.0",
     "@vitest/ui": "1.6.0",
     "eslint": "8.57.0",
     "eslint-doc-generator": "1.7.1",

@@ -3,11 +3,7 @@ import { basename } from 'node:path';
 import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester';
 import { noIgnoreReturnValueOfReactHooksRule } from './no-ignore-return-value-of-react-hooks';
 
-const ruleTester = new VitestRuleTester({
-  parserOptions: {
-    ecmaVersion: 'latest',
-  },
-});
+const ruleTester = new VitestRuleTester();
 
 ruleTester.run(basename(__dirname), noIgnoreReturnValueOfReactHooksRule, {
   valid: [
@@ -44,22 +40,22 @@ ruleTester.run(basename(__dirname), noIgnoreReturnValueOfReactHooksRule, {
     {
       name: 'Not assigned to a variable',
       code: 'useState(0)',
-      errors: 1,
+      errors: [{ messageId: 'ignoreReturnValue' }],
     },
     {
       name: 'Not assigned to a variable in component',
       code: 'function Foo() { useState(0); }',
-      errors: 1,
+      errors: [{ messageId: 'ignoreReturnValue' }],
     },
     {
       name: 'Access the property of the return value',
       code: 'useState(0)[0];',
-      errors: 1,
+      errors: [{ messageId: 'ignoreReturnValue' }],
     },
     {
       name: 'Access the property of the return value with optional chaining',
       code: 'useState(0)[0]?.foo;',
-      errors: 1,
+      errors: [{ messageId: 'ignoreReturnValue' }],
     },
   ],
 });

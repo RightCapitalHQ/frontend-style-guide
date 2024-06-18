@@ -2170,13 +2170,13 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
   "ignorePatterns": [],
   "parser": "<OMITTED>",
   "parserOptions": {
+    "EXPERIMENTAL_useProjectService": true,
     "ecmaFeatures": {
       "generators": false,
       "jsx": true,
       "objectLiteralDuplicateProperties": false,
     },
     "ecmaVersion": "latest",
-    "project": true,
     "sourceType": "module",
   },
   "plugins": [
@@ -2184,6 +2184,7 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
     "unicorn",
     "simple-import-sort",
     "@typescript-eslint",
+    "@rightcapital",
   ],
   "reportUnusedDisableDirectives": true,
   "rules": {
@@ -2192,6 +2193,9 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
     ],
     "@babel/semi": [
       "off",
+    ],
+    "@rightcapital/no-explicit-type-on-function-component-identifier": [
+      "error",
     ],
     "@typescript-eslint/await-thenable": [
       "error",
@@ -4520,13 +4524,13 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
   "ignorePatterns": [],
   "parser": "<OMITTED>",
   "parserOptions": {
+    "EXPERIMENTAL_useProjectService": true,
     "ecmaFeatures": {
       "generators": false,
       "jsx": true,
       "objectLiteralDuplicateProperties": false,
     },
     "ecmaVersion": "latest",
-    "project": true,
     "sourceType": "module",
   },
   "plugins": [
@@ -4678,6 +4682,9 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
       "error",
     ],
     "@rightcapital/jsx-no-unused-expressions": [
+      "error",
+    ],
+    "@rightcapital/no-explicit-type-on-function-component-identifier": [
       "error",
     ],
     "@rightcapital/no-ignore-return-value-of-react-hooks": [

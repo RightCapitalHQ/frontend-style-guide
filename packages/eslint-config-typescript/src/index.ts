@@ -8,8 +8,11 @@ const config: Linter.Config = {
     'plugin:@typescript-eslint/recommended-type-checked',
   ],
   parser: require.resolve('@typescript-eslint/parser'),
+  plugins: ['@rightcapital'],
   // https://typescript-eslint.io/packages/parser/#configuration
-  parserOptions: { project: true },
+  parserOptions: {
+    EXPERIMENTAL_useProjectService: true,
+  },
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx'],
@@ -114,6 +117,7 @@ const config: Linter.Config = {
     ],
     '@typescript-eslint/no-import-type-side-effects': 'error',
     'import/no-duplicates': ['error', { 'prefer-inline': true }],
+    '@rightcapital/no-explicit-type-on-function-component-identifier': 'error',
   },
 };
 

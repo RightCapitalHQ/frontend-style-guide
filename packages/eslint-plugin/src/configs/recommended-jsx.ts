@@ -1,6 +1,6 @@
-import type { ESLint } from 'eslint';
+import type { ClassicConfig } from '@typescript-eslint/utils/ts-eslint';
 
-export const recommendedJsxConfig: ESLint.ConfigData = {
+export const recommendedJsxConfig: ClassicConfig.Config = {
   overrides: [
     {
       files: '**/*.{jsx,tsx}',

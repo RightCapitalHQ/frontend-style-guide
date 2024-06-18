@@ -28,10 +28,6 @@ module.exports = {
         'packages/**/*.{ts,cts,mts}',
       ],
       extends: '@rightcapital/typescript',
-      parserOptions: {
-        tsconfigRootDir: __dirname,
-        EXPERIMENTAL_useSourceOfProjectReferenceRedirect: true,
-      },
       rules: {
         'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
         'import/no-extraneous-dependencies': 'off',
