@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/eslint-config-typescript-react",
-  "version": "28.0.0",
+  "version": "28.0.1",
   "description": "TypeScript + React ESLint Config for RightCapital",
   "repository": {
     "type": "git",
