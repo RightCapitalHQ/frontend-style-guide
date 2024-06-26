@@ -4,8 +4,8 @@ import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester';
 import { jsxNoUnusedExpressionsRule } from './jsx-no-unused-expressions';
 
 const ruleTester = new VitestRuleTester({
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 'latest',
     ecmaFeatures: {
       jsx: true,
     },
@@ -31,7 +31,7 @@ ruleTester.run(basename(__dirname), jsxNoUnusedExpressionsRule, {
     {
       name: 'Not assigned to a variable',
       code: '<div />',
-      errors: 1,
+      errors: [{ messageId: 'unusedExpression' }],
     },
   ],
 });

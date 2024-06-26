@@ -1,26 +1,27 @@
 import { basename } from 'node:path';
 
-import type { Rule } from 'eslint';
+import { AST_NODE_TYPES } from '@typescript-eslint/utils';
+import { isNodeOfType } from '@typescript-eslint/utils/ast-utils';
 
-import { getDocumentUrl } from '../../helpers/get-document-url';
+import { createRule } from '../../helpers/create-rule';
 
-export const jsxNoUnusedExpressionsRule: Rule.RuleModule = {
+export const jsxNoUnusedExpressionsRule = createRule({
+  name: basename(__dirname),
   meta: {
     type: 'problem',
+    schema: [],
     docs: {
       description: 'Disallow unused JSX expressions',
-      url: getDocumentUrl(basename(__dirname)),
     },
-    schema: [],
     messages: {
       unusedExpression: 'Expected an assignment instead saw an JSX expression',
     },
   },
+  defaultOptions: [],
   create(context) {
     return {
       ExpressionStatement(node) {
-        // @ts-expect-error The type is missing `JSXElement` type.
-        if (node.expression.type === 'JSXElement') {
+        if (isNodeOfType(AST_NODE_TYPES.JSXElement)(node.expression)) {
           context.report({
             node,
             messageId: 'unusedExpression',
@@ -29,4 +30,4 @@ export const jsxNoUnusedExpressionsRule: Rule.RuleModule = {
       },
     };
   },
-};
+});

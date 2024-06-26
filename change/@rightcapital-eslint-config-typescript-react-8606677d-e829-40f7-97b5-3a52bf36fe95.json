@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "feat!: avoid explicit function component type",
+  "packageName": "@rightcapital/eslint-config-typescript-react",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}

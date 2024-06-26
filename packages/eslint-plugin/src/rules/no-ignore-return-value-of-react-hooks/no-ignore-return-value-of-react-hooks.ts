@@ -1,9 +1,13 @@
 import { basename } from 'node:path';
 
-import type { Rule } from 'eslint';
+import { AST_NODE_TYPES, type TSESTree } from '@typescript-eslint/utils';
+import {
+  isNodeOfType,
+  isNodeOfTypes,
+} from '@typescript-eslint/utils/ast-utils';
 
 import { isCallOf } from '../../helpers/ast/function/is-call-of';
-import { getDocumentUrl } from '../../helpers/get-document-url';
+import { createRule } from '../../helpers/create-rule';
 
 // https://react.dev/reference/react/hooks
 // https://react.dev/reference/react-dom/hooks
@@ -24,21 +28,29 @@ const hooksToCheck = [
 ];
 
 const getParentSkippingMemberExpressionChains = (
-  node: Rule.Node,
-): Rule.Node => {
+  node: TSESTree.Node,
+): TSESTree.Node => {
   const { parent } = node;
-  if (parent.type === 'MemberExpression' || parent.type === 'ChainExpression') {
+  if (!parent) {
+    return node;
+  }
+  if (
+    isNodeOfTypes([
+      AST_NODE_TYPES.MemberExpression,
+      AST_NODE_TYPES.ChainExpression,
+    ])(parent)
+  ) {
     return getParentSkippingMemberExpressionChains(parent);
   }
   return parent;
 };
 
-export const noIgnoreReturnValueOfReactHooksRule: Rule.RuleModule = {
+export const noIgnoreReturnValueOfReactHooksRule = createRule({
+  name: basename(__dirname),
   meta: {
     type: 'problem',
     docs: {
       description: 'Disallow ignoring return value of React hooks.',
-      url: getDocumentUrl(basename(__dirname)),
     },
     schema: [],
     messages: {
@@ -46,12 +58,13 @@ export const noIgnoreReturnValueOfReactHooksRule: Rule.RuleModule = {
         'The return value of the hook must be assigned to a variable or returned from a custom hook.',
     },
   },
+  defaultOptions: [],
   create(context) {
     return {
       CallExpression(node) {
         if (isCallOf(node, hooksToCheck)) {
           const parentNode = getParentSkippingMemberExpressionChains(node);
-          if (parentNode.type === 'ExpressionStatement') {
+          if (isNodeOfType(AST_NODE_TYPES.ExpressionStatement)(parentNode)) {
             context.report({
               node,
               messageId: 'ignoreReturnValue',
@@ -61,4 +74,4 @@ export const noIgnoreReturnValueOfReactHooksRule: Rule.RuleModule = {
       },
     };
   },
-};
+});

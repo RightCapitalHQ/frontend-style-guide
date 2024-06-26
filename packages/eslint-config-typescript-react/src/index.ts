@@ -16,6 +16,7 @@ const config: Linter.Config = {
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     '@eslint-react/no-useless-fragment': ['error'],
+    '@rightcapital/no-explicit-type-on-function-component-identifier': 'error',
   },
 };
 
