@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Wed, 26 Jun 2024 01:31:11 GMT",
+      "version": "30.0.0",
+      "tag": "@rightcapital/eslint-config-typescript-react_v30.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "38807139+liby@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "1ffcf25a55d22dd53b06656c46326c9cc1de0e6e",
+            "comment": "refactor!: migrate from eslint-plugin-react to eslint-react"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 18 Jun 2024 05:19:46 GMT",
       "version": "28.0.1",
       "tag": "@rightcapital/eslint-config-typescript-react_v28.0.1",

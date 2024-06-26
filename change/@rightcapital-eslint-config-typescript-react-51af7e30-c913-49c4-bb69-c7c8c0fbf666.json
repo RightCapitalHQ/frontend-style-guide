@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "refactor!: migrate from eslint-plugin-react to eslint-react",
-  "packageName": "@rightcapital/eslint-config-typescript-react",
-  "email": "38807139+liby@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
