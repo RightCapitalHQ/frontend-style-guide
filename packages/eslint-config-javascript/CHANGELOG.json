@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-javascript",
   "entries": [
     {
+      "date": "Wed, 26 Jun 2024 02:02:53 GMT",
+      "version": "31.0.0",
+      "tag": "@rightcapital/eslint-config-javascript_v31.0.0",
+      "comments": {
+        "none": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config-javascript",
+            "commit": "461a8d685637ea20e6d831430f87f971d20b7578",
+            "comment": "feat!: avoid explicit function component type"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 18 Jun 2024 05:19:46 GMT",
       "version": "28.0.1",
       "tag": "@rightcapital/eslint-config-javascript_v28.0.1",

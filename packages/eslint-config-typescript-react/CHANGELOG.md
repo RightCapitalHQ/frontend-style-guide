@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-typescript-react
 
-This log was last generated on Wed, 26 Jun 2024 01:31:11 GMT and should not be manually modified.
+This log was last generated on Wed, 26 Jun 2024 02:02:53 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [31.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v31.0.0) (2024-6-26)
+
+### Major changes
+
+- feat!: avoid explicit function component type ([461a8d6](https://github.com/RightCapitalHQ/frontend-style-guide/commit/461a8d685637ea20e6d831430f87f971d20b7578))
 
 ## [30.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v30.0.0) (2024-6-26)
 

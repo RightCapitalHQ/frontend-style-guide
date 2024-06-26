@@ -1,7 +1,0 @@
-{
-  "type": "none",
-  "comment": "feat!: avoid explicit function component type",
-  "packageName": "@rightcapital/eslint-config-typescript",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "none"
-}

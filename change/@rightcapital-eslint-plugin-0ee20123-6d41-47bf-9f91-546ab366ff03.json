@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "feat!: avoid explicit function component type",
-  "packageName": "@rightcapital/eslint-plugin",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}
