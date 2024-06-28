@@ -57,9 +57,9 @@
       "automerge": false
     },
     {
-      "description": "Skip problematic eslint-plugin-jsx-a11y@6.8.0 version",
+      "description": "Skip problematic eslint-plugin-jsx-a11y 6.8.0 and 6.9.0 versions",
       "matchPackageNames": ["eslint-plugin-jsx-a11y"],
-      "allowedVersions": ">6.8.0"
+      "allowedVersions": "!/^6\\.(8|9)\\./"
     }
   ]
 }
