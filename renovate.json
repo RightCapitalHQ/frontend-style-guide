@@ -22,7 +22,6 @@
       "description": "Mark rule and plugin updates as breaking changes",
       "groupName": "ESLint rule and plugin updates",
       "groupSlug": "eslint-rule-and-plugin-updates",
-      "matchDepTypes": ["dependencies"],
       "matchPackagePatterns": [
         "^@rushstack/eslint-patch$",
         "^@typescript-eslint/",
