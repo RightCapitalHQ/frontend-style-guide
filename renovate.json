@@ -23,11 +23,12 @@
       "groupName": "ESLint rule and plugin updates",
       "groupSlug": "eslint-rule-and-plugin-updates",
       "matchPackagePatterns": [
-        "^@rushstack/eslint-patch$",
-        "^@typescript-eslint/",
         "^eslint-config-",
-        "^eslint-import-resolver-typescript$",
-        "^eslint-plugin-"
+        "^eslint-plugin-",
+        "^@typescript-eslint/",
+        "^@eslint-react/",
+        "^@rushstack/eslint-patch$",
+        "^eslint-import-resolver-typescript$"
       ],
       "commitBody": "Beachball-bump-type: major"
     },
