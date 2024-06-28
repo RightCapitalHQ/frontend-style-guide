@@ -19,6 +19,22 @@
       "automerge": false
     },
     {
+      "description": "Group all DevDependencies together",
+      "groupName": "DevDependencies",
+      "groupSlug": "auto-merge-dev-dependencies-updates",
+      "matchDepTypes": ["devDependencies"],
+      "commitBody": "Beachball-bump-type: none",
+      "automerge": false
+    },
+    {
+      "description": "Mark peerDependencies's major updates as breaking changes",
+      "groupName": "PeerDependencies(major)",
+      "groupSlug": "peer-dependencies-major-updates",
+      "matchDepTypes": ["peerDependencies"],
+      "matchUpdateTypes": ["major"],
+      "commitBody": "Beachball-bump-type: major"
+    },
+    {
       "description": "Mark rule and plugin updates as breaking changes",
       "groupName": "ESLint rule and plugin updates",
       "groupSlug": "eslint-rule-and-plugin-updates",
@@ -31,22 +47,6 @@
         "^eslint-import-resolver-typescript$"
       ],
       "commitBody": "Beachball-bump-type: major"
-    },
-    {
-      "description": "Mark peerDependencies's major updates as breaking changes",
-      "groupName": "PeerDependencies(major)",
-      "groupSlug": "peer-dependencies-major-updates",
-      "matchDepTypes": ["peerDependencies"],
-      "matchUpdateTypes": ["major"],
-      "commitBody": "Beachball-bump-type: major"
-    },
-    {
-      "description": "Group all DevDependencies together",
-      "groupName": "DevDependencies",
-      "groupSlug": "auto-merge-dev-dependencies-updates",
-      "matchDepTypes": ["devDependencies"],
-      "commitBody": "Beachball-bump-type: none",
-      "automerge": false
     },
     {
       "description": "Group all RightCapital packages (non-major) together",
