@@ -4606,9 +4606,6 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     "@eslint-react/no-children-only": [
       "warn",
     ],
-    "@eslint-react/no-children-prop": [
-      "warn",
-    ],
     "@eslint-react/no-children-to-array": [
       "warn",
     ],
