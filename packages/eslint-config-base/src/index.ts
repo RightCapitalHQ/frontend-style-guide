@@ -5,10 +5,18 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 
 const config: Linter.Config = {
   extends: [
-    require.resolve('eslint-config-airbnb-base'),
+    require.resolve('./rules/best-practices'),
+    require.resolve('./rules/errors'),
+    require.resolve('./rules/node'),
+    require.resolve('./rules/style'),
+    require.resolve('./rules/variables'),
+    require.resolve('./rules/es6'),
+    require.resolve('./rules/imports'),
+    require.resolve('./rules/strict'),
     require.resolve('eslint-config-prettier'),
   ],
   plugins: ['simple-import-sort', 'unicorn'],
+  env: { es6: true },
   parserOptions: {
     ecmaVersion: 'latest',
     ecmaFeatures: { jsx: true },
