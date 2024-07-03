@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@rightcapital/eslint-config-base": "workspace:*",
+    "@rightcapital/eslint-plugin": "workspace:*",
     "@rushstack/eslint-patch": "1.10.3",
     "@typescript-eslint/eslint-plugin": "7.14.1",
     "@typescript-eslint/parser": "7.14.1",

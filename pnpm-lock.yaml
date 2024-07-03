@@ -115,6 +115,9 @@ importers:
       '@rightcapital/eslint-config-base':
         specifier: workspace:*
         version: link:../eslint-config-base
+      '@rightcapital/eslint-plugin':
+        specifier: workspace:*
+        version: link:../eslint-plugin
       '@rushstack/eslint-patch':
         specifier: 1.10.3
         version: 1.10.3
