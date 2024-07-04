@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript",
   "entries": [
     {
+      "date": "Thu, 04 Jul 2024 02:33:57 GMT",
+      "version": "32.0.1",
+      "tag": "@rightcapital/eslint-config-typescript_v32.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config-typescript",
+            "commit": "2c936bfcb6d1ada900bbfc42b39ebfbea56948c4",
+            "comment": "fix: add missing @rightcapital/eslint-plugin dependency"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 28 Jun 2024 09:37:08 GMT",
       "version": "32.0.0",
       "tag": "@rightcapital/eslint-config-typescript_v32.0.0",

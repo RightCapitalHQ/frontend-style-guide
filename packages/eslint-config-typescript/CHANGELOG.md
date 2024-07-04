@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-typescript
 
-This log was last generated on Fri, 28 Jun 2024 09:37:08 GMT and should not be manually modified.
+This log was last generated on Thu, 04 Jul 2024 02:33:57 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [32.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v32.0.1) (2024-7-4)
+
+### Patches
+
+- fix: add missing @rightcapital/eslint-plugin dependency ([2c936bf](https://github.com/RightCapitalHQ/frontend-style-guide/commit/2c936bfcb6d1ada900bbfc42b39ebfbea56948c4))
 
 ## [32.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript_v32.0.0) (2024-6-28)
 
