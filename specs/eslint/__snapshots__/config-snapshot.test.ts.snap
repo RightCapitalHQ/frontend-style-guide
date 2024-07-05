@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`resolved config matches snapshot javascript.js 1`] = `
+exports[`resolved config matches snapshot > javascript.js 1`] = `
 {
   "env": {
     "es6": true,
@@ -2160,7 +2160,7 @@ exports[`resolved config matches snapshot javascript.js 1`] = `
 }
 `;
 
-exports[`resolved config matches snapshot typescript.ts 1`] = `
+exports[`resolved config matches snapshot > typescript.ts 1`] = `
 {
   "env": {
     "es6": true,
@@ -4514,7 +4514,7 @@ exports[`resolved config matches snapshot typescript.ts 1`] = `
 }
 `;
 
-exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
+exports[`resolved config matches snapshot > typescript-react.tsx 1`] = `
 {
   "env": {
     "es6": true,
@@ -4539,7 +4539,6 @@ exports[`resolved config matches snapshot typescript-react.tsx 1`] = `
     "simple-import-sort",
     "@typescript-eslint",
     "react-hooks",
-    "react",
     "jsx-a11y",
     "@eslint-react",
     "@rightcapital",
