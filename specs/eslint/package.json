@@ -13,8 +13,6 @@
     "typescript": "5.5.2"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.24.7",
-    "@babel/preset-typescript": "7.24.7",
     "@rightcapital/eslint-config-javascript": "workspace:*",
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/eslint-config-typescript-react": "workspace:*",
