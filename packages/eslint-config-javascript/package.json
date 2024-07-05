@@ -13,8 +13,7 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
-    "lib/index.js",
-    "lib/index.d.ts"
+    "lib"
   ],
   "scripts": {
     "prebuild": "pnpm run clean",
@@ -24,8 +23,7 @@
   },
   "dependencies": {
     "@rightcapital/eslint-config-base": "workspace:*",
-    "@rushstack/eslint-patch": "1.10.3",
-    "eslint-config-prettier": "9.1.0"
+    "@rushstack/eslint-patch": "1.10.3"
   },
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*"
