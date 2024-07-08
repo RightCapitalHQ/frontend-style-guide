@@ -4539,6 +4539,7 @@ exports[`resolved config matches snapshot > typescript-react.tsx 1`] = `
     "simple-import-sort",
     "@typescript-eslint",
     "react-hooks",
+    "react",
     "jsx-a11y",
     "@eslint-react",
     "@rightcapital",
