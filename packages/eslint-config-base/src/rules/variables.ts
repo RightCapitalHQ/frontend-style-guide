@@ -6,12 +6,6 @@ import confusingBrowserGlobals = require('confusing-browser-globals');
 // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-base-v15.0.0/packages/eslint-config-airbnb-base/rules/variables.js
 const config: Linter.Config = {
   rules: {
-    // enforce or disallow variable initializations at definition
-    'init-declarations': 'off',
-
-    // disallow the catch clause parameter name being the same as a variable in the outer scope
-    'no-catch-shadow': 'off',
-
     // disallow deletion of variables
     'no-delete-var': 'error',
 
@@ -46,11 +40,6 @@ const config: Linter.Config = {
 
     // disallow use of undefined when initializing variables
     'no-undef-init': 'error',
-
-    // disallow use of undefined variable
-    // https://eslint.org/docs/rules/no-undefined
-    // TODO: enable?
-    'no-undefined': 'off',
 
     // disallow declaration of variables that are not used in the code
     'no-unused-vars': [

@@ -6,8 +6,6 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 const config: Linter.Config = {
   extends: [require.resolve('@rightcapital/eslint-config-base')],
   reportUnusedDisableDirectives: true,
-  rules: {},
-  settings: {},
 };
 
 export = config;

@@ -1,10 +1,14 @@
-Basic snapshot tests for the `@rightcapital/eslint-config-*` packages.
+Tests for the `@rightcapital/eslint-config-*` packages.
 
 ## Introduction
 
-We made snapshot tests for the `@rightcapital/eslint-config-*` packages to make sure we can observe the changes of the configs during dependency upgrades. See [config-snapshot.test.ts][] for details.
+We made tests(see [presets.test.mts][] for details.) for the `@rightcapital/eslint-config-*` packages to make sure we can:
 
-[config-snapshot.test.ts]: ./config-snapshot.test.ts
+1. Observe the changes of the configs during dependency upgrades.
+2. Ensure no rules are conflicting with Prettier.
+3. Ensure no deprecated rules are used, or at least we are aware of them.
+
+[presets.test.mts]: ./presets.test.mts
 
 ## Dealing with dependency upgrades
 

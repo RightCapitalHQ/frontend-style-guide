@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "module": "NodeNext"
   },
-  "include": ["./src/**/*", "./*.ts"]
+  "include": ["src/**/*", "*.mts", "*.ts"]
 }

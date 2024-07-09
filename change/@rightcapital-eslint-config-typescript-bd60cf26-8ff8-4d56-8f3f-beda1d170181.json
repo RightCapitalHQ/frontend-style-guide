@@ -1,0 +1,7 @@
+{
+  "comment": "feat: remove unnecessary rules, migrate deprecated rules and tweak configs",
+  "type": "major",
+  "packageName": "@rightcapital/eslint-config-typescript",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}

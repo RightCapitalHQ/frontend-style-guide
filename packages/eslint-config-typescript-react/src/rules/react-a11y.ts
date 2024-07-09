@@ -12,11 +12,6 @@ const config: Linter.Config = {
   },
 
   rules: {
-    // ensure emoji are accessible
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/accessible-emoji.md
-    // disabled: rule is deprecated
-    'jsx-a11y/accessible-emoji': 'off',
-
     // Enforce that all elements that require alternative text have meaningful information
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md
     'jsx-a11y/alt-text': [
@@ -33,17 +28,6 @@ const config: Linter.Config = {
     // Enforce that anchors have content
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-has-content.md
     'jsx-a11y/anchor-has-content': ['error', { components: [] }],
-
-    // ensure <a> tags are valid
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/0745af376cdc8686d85a361ce36952b1fb1ccf6e/docs/rules/anchor-is-valid.md
-    'jsx-a11y/anchor-is-valid': [
-      'error',
-      {
-        components: ['Link'],
-        specialLink: ['to'],
-        aspects: ['noHref', 'invalidHref', 'preferButton'],
-      },
-    ],
 
     // elements with aria-activedescendant must be tabbable
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-activedescendant-has-tabindex.md
@@ -65,19 +49,6 @@ const config: Linter.Config = {
     // properties do not have those attributes.
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-unsupported-elements.md
     'jsx-a11y/aria-unsupported-elements': 'error',
-
-    // Ensure the autocomplete attribute is correct and suitable for the form field it is used with
-    // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/29c68596b15c4ff0a40daae6d4a2670e36e37d35/docs/rules/autocomplete-valid.md
-    'jsx-a11y/autocomplete-valid': [
-      'off',
-      {
-        inputComponents: [],
-      },
-    ],
-
-    // require onClick be accompanied by onKeyUp/onKeyDown/onKeyPress
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/click-events-have-key-events.md
-    'jsx-a11y/click-events-have-key-events': 'error',
 
     // Enforce that a control (an interactive element) has a text label.
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/control-has-associated-label.md
@@ -244,10 +215,6 @@ const config: Linter.Config = {
       },
     ],
 
-    // require onBlur instead of onChange
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-onchange.md
-    'jsx-a11y/no-onchange': 'off',
-
     // ensure HTML elements do not specify redundant ARIA roles
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-redundant-roles.md
     'jsx-a11y/no-redundant-roles': 'error',
@@ -285,24 +252,6 @@ const config: Linter.Config = {
     // Enforce tabIndex value is not greater than zero.
     // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/tabindex-no-positive.md
     'jsx-a11y/tabindex-no-positive': 'error',
-
-    // ----------------------------------------------------
-    // Rules that no longer exist in eslint-plugin-jsx-a11y
-    // ----------------------------------------------------
-
-    // require that JSX labels use "htmlFor"
-    // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
-    // deprecated: replaced by `label-has-associated-control` rule
-    'jsx-a11y/label-has-for': [
-      'off',
-      {
-        components: [],
-        required: {
-          every: ['nesting', 'id'],
-        },
-        allowChildren: false,
-      },
-    ],
   },
 };
 
