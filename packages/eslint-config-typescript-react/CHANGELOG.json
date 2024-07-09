@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Tue, 09 Jul 2024 09:56:50 GMT",
+      "version": "33.0.0",
+      "tag": "@rightcapital/eslint-config-typescript-react_v33.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "e164a1e62c4d3c9697bd0b70b061e897b2a35448",
+            "comment": "feat: remove unnecessary rules, migrate deprecated rules and tweak configs"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 09 Jul 2024 06:52:09 GMT",
       "version": "32.0.2",
       "tag": "@rightcapital/eslint-config-typescript-react_v32.0.2",
