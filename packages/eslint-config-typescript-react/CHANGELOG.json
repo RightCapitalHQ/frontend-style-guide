@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Tue, 09 Jul 2024 06:52:09 GMT",
+      "version": "32.0.2",
+      "tag": "@rightcapital/eslint-config-typescript-react_v32.0.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "1dd301cb68e73d9d41f9db0bb78f622efc21d020",
+            "comment": "refactor: extract eslint-config-airbnb rules"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 28 Jun 2024 09:37:08 GMT",
       "version": "32.0.0",
       "tag": "@rightcapital/eslint-config-typescript-react_v32.0.0",

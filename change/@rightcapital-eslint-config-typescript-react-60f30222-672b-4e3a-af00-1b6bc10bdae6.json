@@ -1,7 +1,0 @@
-{
-  "comment": "refactor: extract eslint-config-airbnb rules",
-  "type": "patch",
-  "packageName": "@rightcapital/eslint-config-typescript-react",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}

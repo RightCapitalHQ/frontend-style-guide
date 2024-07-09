@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-typescript-react
 
-This log was last generated on Fri, 28 Jun 2024 09:37:08 GMT and should not be manually modified.
+This log was last generated on Tue, 09 Jul 2024 06:52:09 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [32.0.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v32.0.2) (2024-7-9)
+
+### Patches
+
+- refactor: extract eslint-config-airbnb rules ([1dd301c](https://github.com/RightCapitalHQ/frontend-style-guide/commit/1dd301cb68e73d9d41f9db0bb78f622efc21d020))
 
 ## [32.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v32.0.0) (2024-6-28)
 

@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Tue, 09 Jul 2024 06:52:09 GMT",
+      "version": "32.0.2",
+      "tag": "@rightcapital/eslint-plugin_v32.0.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "1dd301cb68e73d9d41f9db0bb78f622efc21d020",
+            "comment": "refactor: extract eslint-config-airbnb rules"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 08 Jul 2024 03:44:11 GMT",
       "version": "32.0.1",
       "tag": "@rightcapital/eslint-plugin_v32.0.1",
