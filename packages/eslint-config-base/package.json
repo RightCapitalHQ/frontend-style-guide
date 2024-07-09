@@ -24,14 +24,17 @@
   },
   "dependencies": {
     "@rushstack/eslint-patch": "1.10.3",
-    "eslint-config-airbnb-base": "15.0.0",
+    "confusing-browser-globals": "1.0.11",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "npm:eslint-plugin-i@2.29.1",
     "eslint-plugin-simple-import-sort": "12.1.0",
-    "eslint-plugin-unicorn": "54.0.0"
+    "eslint-plugin-unicorn": "54.0.0",
+    "semver": "7.6.2"
   },
   "devDependencies": {
-    "@rightcapital/tsconfig": "workspace:*"
+    "@rightcapital/tsconfig": "workspace:*",
+    "@types/confusing-browser-globals": "1.0.3",
+    "@types/semver": "7.5.8"
   },
   "peerDependencies": {
     "eslint": "^8.23.1"

@@ -5,8 +5,8 @@ require('@rushstack/eslint-patch/modern-module-resolution');
 const config: Linter.Config = {
   extends: [
     require.resolve('@rightcapital/eslint-config-typescript'),
-    require.resolve('eslint-config-airbnb/hooks'),
-    require.resolve('eslint-config-airbnb/rules/react-a11y'),
+    require.resolve('./rules/hooks'),
+    require.resolve('./rules/react-a11y'),
     'plugin:@rightcapital/recommended-react',
     'plugin:@eslint-react/recommended-legacy',
   ],

@@ -14,6 +14,7 @@
     "change": "beachball change --no-commit",
     "check": "beachball check",
     "commit": "cz",
+    "dev": "tsc --build --watch",
     "fix": "concurrently 'pnpm:fix:*' \"pnpm --filter './specs/*' fix\"",
     "fix:eslint": "eslint --fix .",
     "fix:prettier": "prettier --write --list-different .",

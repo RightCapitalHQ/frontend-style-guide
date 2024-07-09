@@ -1,0 +1,7 @@
+{
+  "comment": "refactor: extract eslint-config-airbnb rules",
+  "type": "patch",
+  "packageName": "@rightcapital/eslint-config-base",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}

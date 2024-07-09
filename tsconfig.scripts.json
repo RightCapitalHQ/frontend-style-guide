@@ -10,7 +10,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node16"
+    "moduleResolution": "node16",
+
+    "outDir": "./node_modules/.cache/rightcapital/frontend-style-guide-scripts"
   },
   "include": ["beachball.config.ts"]
 }

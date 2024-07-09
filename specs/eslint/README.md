@@ -8,7 +8,7 @@ We made snapshot tests for the `@rightcapital/eslint-config-*` packages to make 
 
 ## Dealing with dependency upgrades
 
-When upgrading dependencies, snapshot tests may fail because of the changes of the configs. e.g. `eslint-config-airbnb-base` changed some rules in a new version.
+When upgrading dependencies, snapshot tests may fail because of the changes of the configs. e.g. `plugin:@typescript-eslint/recommended-type-checked` changed some rules in a new version.
 
 In this case:
 
@@ -16,7 +16,7 @@ In this case:
 
 2.  Check if the changes are expected:
 
-    1. If yes, update the snapshot by running(the `-u` flag is Jest's [updateSnapshot](https://jestjs.io/docs/cli#--updatesnapshot) flag):
+    1. If yes, update the snapshot by running(the `-u` flag is Vitests's [snapshot updating](https://vitest.dev/guide/snapshot.html#updating-snapshots) flag):
 
        ```sh
        pnpm test -- -u
