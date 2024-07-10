@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-plugin
 
-This log was last generated on Tue, 09 Jul 2024 06:52:09 GMT and should not be manually modified.
+This log was last generated on Wed, 10 Jul 2024 09:30:56 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [33.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v33.0.1) (2024-7-10)
+
+### Patches
+
+- fix(deps): update dependencies (non-major) ([c3609db](https://github.com/RightCapitalHQ/frontend-style-guide/commit/c3609dbaa20c869be37ce146c1bf2080b4c73ec7))
 
 ## [32.0.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v32.0.2) (2024-7-9)
 
