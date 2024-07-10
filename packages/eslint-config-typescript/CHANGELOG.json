@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript",
   "entries": [
     {
+      "date": "Wed, 10 Jul 2024 09:35:56 GMT",
+      "version": "34.0.0",
+      "tag": "@rightcapital/eslint-config-typescript_v34.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript",
+            "commit": "660c8a4294ef3af44317f73ee1da1dac463ece82",
+            "comment": "fix(deps): update eslint rule and plugin updates"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 10 Jul 2024 09:30:56 GMT",
       "version": "33.0.1",
       "tag": "@rightcapital/eslint-config-typescript_v33.0.1",
