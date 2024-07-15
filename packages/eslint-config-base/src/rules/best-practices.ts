@@ -3,7 +3,7 @@ import type { Linter } from 'eslint';
 // extracted from eslint-config-airbnb-base@15.0.0
 // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-base-v15.0.0/packages/eslint-config-airbnb-base/rules/best-practices.js
 const config: Linter.Config = {
-  plugins: ['unicorn'],
+  plugins: ['lodash', 'unicorn'],
   rules: {
     // enforces return statements in callbacks of array's methods
     // https://eslint.org/docs/rules/array-callback-return
@@ -341,6 +341,9 @@ const config: Linter.Config = {
 
     // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/text-encoding-identifier-case.md
     'unicorn/text-encoding-identifier-case': 'error',
+
+    // https://github.com/RightCapitalHQ/frontend-style-guide/issues/171
+    'lodash/prop-shorthand': ['error', 'never'],
   },
 };
 

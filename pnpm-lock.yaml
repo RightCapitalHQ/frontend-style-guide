@@ -83,6 +83,9 @@ importers:
       eslint-plugin-import:
         specifier: npm:eslint-plugin-i@2.29.1
         version: eslint-plugin-i@2.29.1(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-plugin-lodash:
+        specifier: 8.0.0
+        version: 8.0.0(eslint@8.57.0)
       eslint-plugin-n:
         specifier: 17.9.0
         version: 17.9.0(eslint@8.57.0)
@@ -1552,6 +1555,12 @@ packages:
     engines: {node: '>=4.0'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
+
+  eslint-plugin-lodash@8.0.0:
+    resolution: {integrity: sha512-7DA8485FolmWRzh+8t4S8Pzin2TTuWfb0ZW3j/2fYElgk82ZanFz8vDcvc4BBPceYdX1p/za+tkbO68maDBGGw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      eslint: '>=9.0.0'
 
   eslint-plugin-n@17.9.0:
     resolution: {integrity: sha512-CPSaXDXdrT4nsrOrO4mT4VB6FMUkoySRkHWuuJJHVqsIEjIeZgMY1H7AzSwPbDScikBmLN82KeM1u7ixV7PzGg==}
@@ -4795,6 +4804,11 @@ snapshots:
       object.entries: 1.1.8
       object.fromentries: 2.0.8
       semver: 6.3.1
+
+  eslint-plugin-lodash@8.0.0(eslint@8.57.0):
+    dependencies:
+      eslint: 8.57.0
+      lodash: 4.17.21
 
   eslint-plugin-n@17.9.0(eslint@8.57.0):
     dependencies:
