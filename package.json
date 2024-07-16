@@ -39,7 +39,7 @@
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
     "@rightcapital/scripts": "workspace:*",
-    "@types/node": "20.14.10",
+    "@types/node": "20.14.11",
     "beachball": "2.43.1",
     "commitizen": "4.3.0",
     "concurrently": "8.2.2",
