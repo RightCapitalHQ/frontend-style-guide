@@ -21,7 +21,7 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "2.5.0"
+    "prettier-plugin-packagejson": "2.5.1"
   },
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
