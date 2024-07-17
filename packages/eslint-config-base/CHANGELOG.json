@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-base",
   "entries": [
     {
+      "date": "Wed, 17 Jul 2024 02:46:01 GMT",
+      "version": "34.1.0",
+      "tag": "@rightcapital/eslint-config-base_v34.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-base",
+            "commit": "8892bf9fb21a7ba61d7e49cb8c5c0f9fa2a029d2",
+            "comment": "add ESLint rule `lodash/prop-shorthand` to `eslint-config-base`"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 10 Jul 2024 09:35:56 GMT",
       "version": "34.0.0",
       "tag": "@rightcapital/eslint-config-base_v34.0.0",

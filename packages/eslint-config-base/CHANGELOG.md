@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-base
 
-This log was last generated on Wed, 10 Jul 2024 09:35:56 GMT and should not be manually modified.
+This log was last generated on Wed, 17 Jul 2024 02:46:01 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [34.1.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-base_v34.1.0) (2024-7-17)
+
+### Minor changes
+
+- add ESLint rule `lodash/prop-shorthand` to `eslint-config-base` ([8892bf9](https://github.com/RightCapitalHQ/frontend-style-guide/commit/8892bf9fb21a7ba61d7e49cb8c5c0f9fa2a029d2))
 
 ## [34.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-base_v34.0.0) (2024-7-10)
 

@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "add ESLint rule `lodash/prop-shorthand` to `eslint-config-base`",
-  "packageName": "@rightcapital/eslint-config-base",
-  "email": "45930107+PinkChampagne17@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}
