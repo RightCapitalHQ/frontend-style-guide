@@ -19,6 +19,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
   },
   "plugins": [
     "unicorn",
+    "lodash",
     "n",
     "@stylistic/js",
     "simple-import-sort",
@@ -268,6 +269,10 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     ],
     "import/order": [
       "off",
+    ],
+    "lodash/prop-shorthand": [
+      "error",
+      "never",
     ],
     "max-classes-per-file": [
       "error",
@@ -1005,6 +1010,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
   },
   "plugins": [
     "unicorn",
+    "lodash",
     "n",
     "@stylistic/js",
     "simple-import-sort",
@@ -1434,6 +1440,10 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     ],
     "import/order": [
       "off",
+    ],
+    "lodash/prop-shorthand": [
+      "error",
+      "never",
     ],
     "max-classes-per-file": [
       "error",
@@ -2187,6 +2197,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
   },
   "plugins": [
     "unicorn",
+    "lodash",
     "n",
     "@stylistic/js",
     "simple-import-sort",
@@ -2979,6 +2990,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "jsx-a11y/tabindex-no-positive": [
       "error",
+    ],
+    "lodash/prop-shorthand": [
+      "error",
+      "never",
     ],
     "max-classes-per-file": [
       "error",
