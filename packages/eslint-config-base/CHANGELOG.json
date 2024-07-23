@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-base",
   "entries": [
     {
+      "date": "Tue, 23 Jul 2024 02:13:25 GMT",
+      "version": "34.1.1",
+      "tag": "@rightcapital/eslint-config-base_v34.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-base",
+            "commit": "4e6d77f886969c5fc181306e600c407e68426d56",
+            "comment": "chore(deps): update pnpm to v9.6.0"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 17 Jul 2024 02:46:01 GMT",
       "version": "34.1.0",
       "tag": "@rightcapital/eslint-config-base_v34.1.0",
