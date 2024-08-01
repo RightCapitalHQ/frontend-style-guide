@@ -1,13 +1,17 @@
 import { basename } from 'node:path';
 
+import parser from '@typescript-eslint/parser';
+
 import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester';
 import { jsxNoUnusedExpressionsRule } from './jsx-no-unused-expressions';
 
 const ruleTester = new VitestRuleTester({
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+  languageOptions: {
+    parser,
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
     },
   },
 });

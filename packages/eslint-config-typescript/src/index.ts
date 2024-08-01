@@ -11,7 +11,7 @@ const config: Linter.Config = {
   plugins: ['@rightcapital'],
   // https://typescript-eslint.io/packages/parser/#configuration
   parserOptions: {
-    EXPERIMENTAL_useProjectService: true,
+    projectService: true,
   },
   settings: {
     'import/parsers': {
@@ -47,9 +47,6 @@ const config: Linter.Config = {
 
     // https://typescript-eslint.io/rules/no-non-null-assertion
     '@typescript-eslint/no-non-null-assertion': 'error',
-
-    // https://typescript-eslint.io/rules/no-empty-interface
-    '@typescript-eslint/no-empty-interface': 'error',
 
     '@typescript-eslint/naming-convention': [
       'error',
@@ -118,6 +115,11 @@ const config: Linter.Config = {
     '@typescript-eslint/no-import-type-side-effects': 'error',
     'import/no-duplicates': ['error', { 'prefer-inline': true }],
     '@rightcapital/no-explicit-type-on-function-component-identifier': 'error',
+
+    /**
+     * This rule enforces ES6 style imports, not applicable to CommonJS projects.
+     */
+    '@typescript-eslint/no-require-imports': 'off',
   },
 };
 
