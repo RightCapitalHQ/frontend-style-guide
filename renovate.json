@@ -41,6 +41,7 @@
       "matchPackagePatterns": [
         "^eslint-config-",
         "^eslint-plugin-",
+        "typescript-eslint",
         "^@typescript-eslint/",
         "^@eslint-react/",
         "^@rushstack/eslint-patch$",
