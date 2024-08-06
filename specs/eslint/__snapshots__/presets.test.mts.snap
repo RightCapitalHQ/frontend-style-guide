@@ -2304,6 +2304,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/no-create-ref": [
       "error",
     ],
+    "@eslint-react/no-default-props": [
+      "error",
+    ],
     "@eslint-react/no-direct-mutation-state": [
       "error",
     ],
@@ -2315,6 +2318,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "@eslint-react/no-nested-components": [
       "warn",
+    ],
+    "@eslint-react/no-prop-types": [
+      "error",
     ],
     "@eslint-react/no-redundant-should-component-update": [
       "error",
@@ -3764,6 +3770,16 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       "typescript": {
         "alwaysTryTypes": true,
       },
+    },
+    "react-x": {
+      "additionalHooks": {
+        "useLayoutEffect": [
+          "useIsomorphicLayoutEffect",
+        ],
+      },
+      "polymorphicPropName": "as",
+      "skipImportCheck": true,
+      "version": "detect",
     },
   },
 }
