@@ -1001,11 +1001,11 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
   "noInlineConfig": undefined,
   "parser": "<OMITTED>",
   "parserOptions": {
-    "EXPERIMENTAL_useProjectService": true,
     "ecmaFeatures": {
       "jsx": true,
     },
     "ecmaVersion": "latest",
+    "projectService": true,
     "sourceType": "module",
   },
   "plugins": [
@@ -1081,9 +1081,6 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "@typescript-eslint/ban-ts-comment": [
       "error",
     ],
-    "@typescript-eslint/ban-types": [
-      "error",
-    ],
     "@typescript-eslint/consistent-type-exports": [
       "error",
       {
@@ -1113,6 +1110,9 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "@typescript-eslint/no-array-constructor": [
       "error",
     ],
+    "@typescript-eslint/no-array-delete": [
+      "error",
+    ],
     "@typescript-eslint/no-base-to-string": [
       "error",
     ],
@@ -1125,7 +1125,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "@typescript-eslint/no-empty-function": [
       "error",
     ],
-    "@typescript-eslint/no-empty-interface": [
+    "@typescript-eslint/no-empty-object-type": [
       "error",
     ],
     "@typescript-eslint/no-explicit-any": [
@@ -1146,9 +1146,6 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "@typescript-eslint/no-import-type-side-effects": [
       "error",
     ],
-    "@typescript-eslint/no-loss-of-precision": [
-      "error",
-    ],
     "@typescript-eslint/no-misused-new": [
       "error",
     ],
@@ -1166,6 +1163,9 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     ],
     "@typescript-eslint/no-redundant-type-constituents": [
       "error",
+    ],
+    "@typescript-eslint/no-require-imports": [
+      "off",
     ],
     "@typescript-eslint/no-shadow": [
       "error",
@@ -1194,10 +1194,19 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "@typescript-eslint/no-unsafe-enum-comparison": [
       "error",
     ],
+    "@typescript-eslint/no-unsafe-function-type": [
+      "error",
+    ],
     "@typescript-eslint/no-unsafe-member-access": [
       "error",
     ],
     "@typescript-eslint/no-unsafe-return": [
+      "error",
+    ],
+    "@typescript-eslint/no-unsafe-unary-minus": [
+      "error",
+    ],
+    "@typescript-eslint/no-unused-expressions": [
       "error",
     ],
     "@typescript-eslint/no-unused-vars": [
@@ -1218,10 +1227,19 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "@typescript-eslint/no-useless-constructor": [
       "error",
     ],
-    "@typescript-eslint/no-var-requires": [
+    "@typescript-eslint/no-wrapper-object-types": [
+      "error",
+    ],
+    "@typescript-eslint/only-throw-error": [
       "error",
     ],
     "@typescript-eslint/prefer-as-const": [
+      "error",
+    ],
+    "@typescript-eslint/prefer-namespace-keyword": [
+      "error",
+    ],
+    "@typescript-eslint/prefer-promise-reject-errors": [
       "error",
     ],
     "@typescript-eslint/require-await": [
@@ -1638,7 +1656,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       "error",
     ],
     "no-loss-of-precision": [
-      "off",
+      "error",
     ],
     "no-misleading-character-class": [
       "error",
@@ -1908,7 +1926,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       "off",
     ],
     "no-throw-literal": [
-      "error",
+      "off",
     ],
     "no-undef": [
       "off",
@@ -1961,7 +1979,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-unused-expressions": [
-      "error",
+      "off",
       {
         "allowShortCircuit": false,
         "allowTaggedTemplates": false,
@@ -2078,7 +2096,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       "error",
     ],
     "prefer-promise-reject-errors": [
-      "error",
+      "off",
       {
         "allowEmptyReject": true,
       },
@@ -2188,11 +2206,11 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
   "noInlineConfig": undefined,
   "parser": "<OMITTED>",
   "parserOptions": {
-    "EXPERIMENTAL_useProjectService": true,
     "ecmaFeatures": {
       "jsx": true,
     },
     "ecmaVersion": "latest",
+    "projectService": true,
     "sourceType": "module",
   },
   "plugins": [
@@ -2404,9 +2422,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@typescript-eslint/ban-ts-comment": [
       "error",
     ],
-    "@typescript-eslint/ban-types": [
-      "error",
-    ],
     "@typescript-eslint/consistent-type-exports": [
       "error",
       {
@@ -2436,6 +2451,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@typescript-eslint/no-array-constructor": [
       "error",
     ],
+    "@typescript-eslint/no-array-delete": [
+      "error",
+    ],
     "@typescript-eslint/no-base-to-string": [
       "error",
     ],
@@ -2448,7 +2466,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@typescript-eslint/no-empty-function": [
       "error",
     ],
-    "@typescript-eslint/no-empty-interface": [
+    "@typescript-eslint/no-empty-object-type": [
       "error",
     ],
     "@typescript-eslint/no-explicit-any": [
@@ -2469,9 +2487,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@typescript-eslint/no-import-type-side-effects": [
       "error",
     ],
-    "@typescript-eslint/no-loss-of-precision": [
-      "error",
-    ],
     "@typescript-eslint/no-misused-new": [
       "error",
     ],
@@ -2489,6 +2504,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "@typescript-eslint/no-redundant-type-constituents": [
       "error",
+    ],
+    "@typescript-eslint/no-require-imports": [
+      "off",
     ],
     "@typescript-eslint/no-shadow": [
       "error",
@@ -2517,10 +2535,19 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@typescript-eslint/no-unsafe-enum-comparison": [
       "error",
     ],
+    "@typescript-eslint/no-unsafe-function-type": [
+      "error",
+    ],
     "@typescript-eslint/no-unsafe-member-access": [
       "error",
     ],
     "@typescript-eslint/no-unsafe-return": [
+      "error",
+    ],
+    "@typescript-eslint/no-unsafe-unary-minus": [
+      "error",
+    ],
+    "@typescript-eslint/no-unused-expressions": [
       "error",
     ],
     "@typescript-eslint/no-unused-vars": [
@@ -2541,10 +2568,19 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@typescript-eslint/no-useless-constructor": [
       "error",
     ],
-    "@typescript-eslint/no-var-requires": [
+    "@typescript-eslint/no-wrapper-object-types": [
+      "error",
+    ],
+    "@typescript-eslint/only-throw-error": [
       "error",
     ],
     "@typescript-eslint/prefer-as-const": [
+      "error",
+    ],
+    "@typescript-eslint/prefer-namespace-keyword": [
+      "error",
+    ],
+    "@typescript-eslint/prefer-promise-reject-errors": [
       "error",
     ],
     "@typescript-eslint/require-await": [
@@ -3188,7 +3224,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       "error",
     ],
     "no-loss-of-precision": [
-      "off",
+      "error",
     ],
     "no-misleading-character-class": [
       "error",
@@ -3458,7 +3494,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       "off",
     ],
     "no-throw-literal": [
-      "error",
+      "off",
     ],
     "no-undef": [
       "off",
@@ -3511,7 +3547,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-unused-expressions": [
-      "error",
+      "off",
       {
         "allowShortCircuit": false,
         "allowTaggedTemplates": false,
@@ -3628,7 +3664,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       "error",
     ],
     "prefer-promise-reject-errors": [
-      "error",
+      "off",
       {
         "allowEmptyReject": true,
       },

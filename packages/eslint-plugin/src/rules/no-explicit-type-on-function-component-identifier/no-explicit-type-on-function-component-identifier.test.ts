@@ -1,5 +1,6 @@
 import { basename } from 'node:path';
 
+import parser from '@typescript-eslint/parser';
 import type { InvalidTestCase } from '@typescript-eslint/rule-tester';
 
 import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester.js';
@@ -9,10 +10,12 @@ import {
 } from './no-explicit-type-on-function-component-identifier.js';
 
 const ruleTester = new VitestRuleTester({
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+  languageOptions: {
+    parser,
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
     },
   },
 });
