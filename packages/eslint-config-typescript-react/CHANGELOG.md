@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-typescript-react
 
-This log was last generated on Tue, 23 Jul 2024 02:13:25 GMT and should not be manually modified.
+This log was last generated on Tue, 06 Aug 2024 08:28:01 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [36.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v36.0.0) (2024-8-6)
+
+### Major changes
+
+- fix(deps): update eslint rule and plugin updates ([9836fa1](https://github.com/RightCapitalHQ/frontend-style-guide/commit/9836fa1ed1f4f90e113b188da3710da1aa8a54ae))
 
 ## [34.1.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v34.1.1) (2024-7-23)
 
