@@ -24,9 +24,9 @@
   "dependencies": {
     "@rightcapital/eslint-config-base": "workspace:*",
     "@rightcapital/eslint-plugin": "workspace:*",
-    "@rushstack/eslint-patch": "1.10.3",
-    "@typescript-eslint/eslint-plugin": "8.0.0",
-    "@typescript-eslint/parser": "8.0.0",
+    "@rushstack/eslint-patch": "1.10.4",
+    "@typescript-eslint/eslint-plugin": "8.0.1",
+    "@typescript-eslint/parser": "8.0.1",
     "eslint-config-prettier": "9.1.0"
   },
   "devDependencies": {
