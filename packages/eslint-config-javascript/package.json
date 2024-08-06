@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/eslint-config-javascript",
-  "version": "34.1.1",
+  "version": "35.0.0",
   "description": "Plain JavaScript ESLint Config for RightCapital",
   "repository": {
     "type": "git",
