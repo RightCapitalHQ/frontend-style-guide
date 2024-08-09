@@ -1,0 +1,50 @@
+{
+  "name": "@rightcapital/lint-eslint-config-rules",
+  "version": "1.0.0",
+  "description": "Check rule config issues in ESLint configuration",
+  "keywords": [
+    "eslint",
+    "eslint rule",
+    "eslint config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
+    "directory": "packages/lint-eslint-config-rules"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
+  "bin": {
+    "lint-eslint-config-rules": "./lib/cli.js"
+  },
+  "scripts": {
+    "prebuild": "pnpm run clean",
+    "build": "tsc --build tsconfig.lib.json",
+    "clean": "tsc --build tsconfig.lib.json --clean",
+    "prepack": "pnpm run build"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "3.1.0",
+    "@nodelib/fs.walk": "2.0.0",
+    "core-js": "3.38.0"
+  },
+  "devDependencies": {
+    "@rightcapital/tsconfig": "workspace:*",
+    "@types/eslint": "8.56.10",
+    "@types/eslint__eslintrc": "2.1.2",
+    "@types/node": "20.14.11",
+    "typescript": "5.5.3"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
