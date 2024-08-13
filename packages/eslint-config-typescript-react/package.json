@@ -26,6 +26,7 @@
     "@rightcapital/eslint-config-typescript": "workspace:*",
     "@rightcapital/eslint-plugin": "workspace:*",
     "@rushstack/eslint-patch": "1.10.4",
+    "@stylistic/eslint-plugin-jsx": "2.6.2",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.35.0",

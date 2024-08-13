@@ -10,11 +10,12 @@ const config: Linter.Config = {
     'plugin:@rightcapital/recommended-react',
     'plugin:@eslint-react/recommended-legacy',
   ],
-  plugins: ['@rightcapital'],
+  plugins: ['@rightcapital', '@stylistic/jsx'],
   reportUnusedDisableDirectives: true,
   rules: {
     '@eslint-react/no-useless-fragment': 'error',
     '@rightcapital/no-explicit-type-on-function-component-identifier': 'error',
+    '@stylistic/jsx/jsx-self-closing-comp': 'error',
   },
 };
 
