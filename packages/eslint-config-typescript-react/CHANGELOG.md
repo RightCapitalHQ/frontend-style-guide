@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-typescript-react
 
-This log was last generated on Tue, 06 Aug 2024 08:28:01 GMT and should not be manually modified.
+This log was last generated on Tue, 13 Aug 2024 07:37:51 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## [36.1.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v36.1.0) (2024-8-13)
+
+### Minor changes
+
+- feat: add `@stylistic/jsx-self-closing-comp` rule ([246edbb](https://github.com/RightCapitalHQ/frontend-style-guide/commit/246edbba5e76a770b8838efdf697f2459ad9d7f5))
 
 ## [36.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v36.0.0) (2024-8-6)
 

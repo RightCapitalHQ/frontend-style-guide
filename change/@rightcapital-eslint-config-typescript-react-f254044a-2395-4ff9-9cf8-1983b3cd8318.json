@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "feat: add `@stylistic/jsx-self-closing-comp` rule",
-  "packageName": "@rightcapital/eslint-config-typescript-react",
-  "email": "38807139+liby@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

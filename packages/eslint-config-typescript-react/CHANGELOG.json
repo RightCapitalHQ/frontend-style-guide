@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Tue, 13 Aug 2024 07:37:51 GMT",
+      "version": "36.1.0",
+      "tag": "@rightcapital/eslint-config-typescript-react_v36.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "38807139+liby@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "246edbba5e76a770b8838efdf697f2459ad9d7f5",
+            "comment": "feat: add `@stylistic/jsx-self-closing-comp` rule"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 06 Aug 2024 08:28:01 GMT",
       "version": "36.0.0",
       "tag": "@rightcapital/eslint-config-typescript-react_v36.0.0",
