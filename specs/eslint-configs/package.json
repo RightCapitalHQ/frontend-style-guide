@@ -1,5 +1,5 @@
 {
-  "name": "@rightcapital/style-guide-spec-eslint",
+  "name": "@rightcapital/style-guide-spec-eslint-configs",
   "private": true,
   "scripts": {
     "fix": "eslint --fix . && prettier --write .",

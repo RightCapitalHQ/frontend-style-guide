@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "feat: add `lint-eslint-config-rules` to check deprecated and unknown rule config",
+  "packageName": "@rightcapital/lint-eslint-config-rules",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
