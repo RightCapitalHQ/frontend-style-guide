@@ -2225,6 +2225,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "react",
     "jsx-a11y",
     "@eslint-react",
+    "@stylistic/jsx",
     "@rightcapital",
   ],
   "reportUnusedDisableDirectives": true,
@@ -2421,6 +2422,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
           ],
         },
       },
+    ],
+    "@stylistic/jsx/jsx-self-closing-comp": [
+      "error",
     ],
     "@typescript-eslint/await-thenable": [
       "error",
