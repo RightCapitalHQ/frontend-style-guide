@@ -61,6 +61,14 @@
       "description": "Skip problematic eslint-plugin-jsx-a11y 6.8.0 and 6.9.0 versions",
       "matchPackageNames": ["eslint-plugin-jsx-a11y"],
       "allowedVersions": "!/^6\\.(8|9)\\./"
+    },
+    {
+      "description": "lint-eslint-config-rules tests requires fixed eslint versions",
+      "matchFileNames": [
+        "specs/lint-eslint-config-rules/specs/**/package.json"
+      ],
+      "matchPackageNames": ["eslint"],
+      "enabled": false
     }
   ]
 }

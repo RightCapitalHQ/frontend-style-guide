@@ -1,0 +1,11 @@
+{
+  "name": "@rightcapital/lint-eslint-config-rules-specs",
+  "private": true,
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "5.5.3",
+    "vitest": "2.0.3"
+  }
+}

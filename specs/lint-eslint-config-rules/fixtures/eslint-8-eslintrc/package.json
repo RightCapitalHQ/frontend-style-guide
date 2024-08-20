@@ -1,0 +1,11 @@
+{
+  "name": "@rightcapital/lint-eslint-config-rules-spec-eslint-8-eslintrc",
+  "private": true,
+  "devDependencies": {
+    "@rightcapital/eslint-config-javascript": "workspace:*",
+    "@rightcapital/lint-eslint-config-rules": "workspace:*",
+    "eslint": "8.57.0",
+    "react": "18.3.1",
+    "typescript": "5.5.3"
+  }
+}
