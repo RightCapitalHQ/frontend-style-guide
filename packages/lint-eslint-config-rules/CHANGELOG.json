@@ -1,0 +1,20 @@
+{
+  "name": "@rightcapital/lint-eslint-config-rules",
+  "entries": [
+    {
+      "date": "Tue, 20 Aug 2024 07:28:50 GMT",
+      "version": "1.1.0",
+      "tag": "@rightcapital/lint-eslint-config-rules_v1.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/lint-eslint-config-rules",
+            "commit": "d187924faedc2247746ae81376b861c6387c38fb",
+            "comment": "feat: add `lint-eslint-config-rules` to check deprecated and unknown rule config"
+          }
+        ]
+      }
+    }
+  ]
+}
