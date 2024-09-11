@@ -8,7 +8,7 @@
     "typescript": "5.5.3"
   },
   "devDependencies": {
-    "beachball": "2.43.1"
+    "beachball": "2.47.1"
   },
   "peerDependencies": {
     "tsx": ">=3.14.0"
