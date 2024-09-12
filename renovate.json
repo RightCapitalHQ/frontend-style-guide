@@ -45,6 +45,7 @@
         "^@typescript-eslint/",
         "^@eslint-react/",
         "^@rushstack/eslint-patch$",
+        "^@stylistic/eslint-",
         "^eslint-import-resolver-typescript$"
       ],
       "commitBody": "Beachball-bump-type: major"
