@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-javascript",
   "entries": [
     {
+      "date": "Thu, 12 Sep 2024 03:12:14 GMT",
+      "version": "36.1.1",
+      "tag": "@rightcapital/eslint-config-javascript_v36.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-javascript",
+            "commit": "d39d5a49725baeb6c7a8e2672ca16463c41f8ba2",
+            "comment": "fix(deps): update dependencies (non-major)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 06 Aug 2024 08:28:01 GMT",
       "version": "36.0.0",
       "tag": "@rightcapital/eslint-config-javascript_v36.0.0",

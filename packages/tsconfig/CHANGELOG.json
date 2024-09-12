@@ -2,6 +2,21 @@
   "name": "@rightcapital/tsconfig",
   "entries": [
     {
+      "date": "Thu, 12 Sep 2024 03:12:14 GMT",
+      "version": "1.2.6",
+      "tag": "@rightcapital/tsconfig_v1.2.6",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/tsconfig",
+            "commit": "d39d5a49725baeb6c7a8e2672ca16463c41f8ba2",
+            "comment": "fix(deps): update dependencies (non-major)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 23 Jul 2024 02:13:25 GMT",
       "version": "1.2.5",
       "tag": "@rightcapital/tsconfig_v1.2.5",
