@@ -2266,6 +2266,19 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/ensure-forward-ref-using-ref": [
       "warn",
     ],
+    "@eslint-react/naming-convention/component-name": [
+      "error",
+      "PascalCase",
+    ],
+    "@eslint-react/naming-convention/filename": [
+      "error",
+      {
+        "rule": "kebab-case",
+      },
+    ],
+    "@eslint-react/naming-convention/use-state": [
+      "error",
+    ],
     "@eslint-react/no-access-state-in-setstate": [
       "error",
     ],
