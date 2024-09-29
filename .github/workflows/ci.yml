@@ -89,7 +89,7 @@ jobs:
       - run: pnpm install
 
       - name: Check and generate changefile for Renovate
-        run: scripts/renovate-auto-changefile.mjs
+        uses: ./.github/actions/renovate-auto-beachball-changefile
 
   publish:
     if: ${{ always() && !failure() && !cancelled() }}
