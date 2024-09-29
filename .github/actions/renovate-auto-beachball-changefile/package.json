@@ -1,0 +1,12 @@
+{
+  "name": "renovate-auto-beachball-changefile",
+  "scripts": {
+    "build": "ncc build renovate-auto-beachball-changefile.mjs -o dist"
+  },
+  "dependencies": {
+    "execa": "9.4.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.38.2"
+  }
+}

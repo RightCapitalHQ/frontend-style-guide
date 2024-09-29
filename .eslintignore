@@ -1,3 +1,4 @@
 # build output
 /packages/*/lib
 /specs
+/.github/actions/*/dist
