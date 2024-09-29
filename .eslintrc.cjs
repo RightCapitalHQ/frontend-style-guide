@@ -15,7 +15,7 @@ module.exports = {
       env: { node: true, commonjs: true },
       rules: {
         'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
-        'import/no-extraneous-dependencies': 'off',
+        'import-x/no-extraneous-dependencies': 'off',
         'no-console': 'off',
         'no-void': ['error', { allowAsStatement: true }],
       },
@@ -30,7 +30,7 @@ module.exports = {
       extends: '@rightcapital/typescript',
       rules: {
         'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
-        'import/no-extraneous-dependencies': 'off',
+        'import-x/no-extraneous-dependencies': 'off',
         'no-console': 'off',
         'no-void': ['error', { allowAsStatement: true }],
       },

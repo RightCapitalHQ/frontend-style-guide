@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/extensions
+// eslint-disable-next-line import-x/extensions
 import 'core-js/es/set/index.js'; // for Node.js <22.0.0
 
 import { cpus } from 'node:os';

@@ -23,7 +23,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     "n",
     "@stylistic/js",
     "simple-import-sort",
-    "import",
+    "import-x",
   ],
   "reportUnusedDisableDirectives": true,
   "rules": {
@@ -150,10 +150,10 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     "guard-for-in": [
       "error",
     ],
-    "import/export": [
+    "import-x/export": [
       "error",
     ],
-    "import/extensions": [
+    "import-x/extensions": [
       "warn",
       "ignorePackages",
       {
@@ -163,39 +163,34 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
         "tsx": "never",
       },
     ],
-    "import/first": [
+    "import-x/first": [
       "error",
     ],
-    "import/max-dependencies": [
+    "import-x/max-dependencies": [
       "off",
       {
         "max": 10,
       },
     ],
-    "import/named": [
+    "import-x/named": [
       "error",
     ],
-    "import/newline-after-import": [
+    "import-x/newline-after-import": [
       "error",
     ],
-    "import/no-absolute-path": [
+    "import-x/no-absolute-path": [
       "error",
     ],
-    "import/no-cycle": [
-      "error",
-      {
-        "allowUnsafeDynamicCyclicDependency": false,
-        "ignoreExternal": false,
-        "maxDepth": "∞",
-      },
-    ],
-    "import/no-duplicates": [
+    "import-x/no-cycle": [
       "error",
     ],
-    "import/no-dynamic-require": [
+    "import-x/no-duplicates": [
       "error",
     ],
-    "import/no-extraneous-dependencies": [
+    "import-x/no-dynamic-require": [
+      "error",
+    ],
+    "import-x/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
@@ -226,48 +221,47 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
         "optionalDependencies": false,
       },
     ],
-    "import/no-import-module-exports": [
+    "import-x/no-import-module-exports": [
       "error",
       {
         "exceptions": [],
       },
     ],
-    "import/no-mutable-exports": [
+    "import-x/no-mutable-exports": [
       "error",
     ],
-    "import/no-named-as-default": [
+    "import-x/no-named-as-default": [
       "error",
     ],
-    "import/no-named-as-default-member": [
+    "import-x/no-named-as-default-member": [
       "error",
     ],
-    "import/no-named-default": [
+    "import-x/no-named-default": [
       "error",
     ],
-    "import/no-relative-packages": [
+    "import-x/no-relative-packages": [
       "error",
     ],
-    "import/no-self-import": [
+    "import-x/no-self-import": [
       "error",
     ],
-    "import/no-unresolved": [
+    "import-x/no-unresolved": [
       "error",
       {
         "caseSensitive": true,
-        "caseSensitiveStrict": false,
         "commonjs": true,
       },
     ],
-    "import/no-useless-path-segments": [
+    "import-x/no-useless-path-segments": [
       "error",
       {
         "commonjs": true,
       },
     ],
-    "import/no-webpack-loader-syntax": [
+    "import-x/no-webpack-loader-syntax": [
       "error",
     ],
-    "import/order": [
+    "import-x/order": [
       "off",
     ],
     "lodash/prop-shorthand": [
@@ -966,17 +960,16 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     ],
   },
   "settings": {
-    "import/core-modules": [],
-    "import/extensions": [
+    "import-x/extensions": [
       ".js",
       ".mjs",
       ".jsx",
     ],
-    "import/ignore": [
+    "import-x/ignore": [
       "node_modules",
       "\\.(coffee|scss|css|less|hbs|svg|json)$",
     ],
-    "import/resolver": {
+    "import-x/resolver": {
       "node": {
         "extensions": [
           ".mjs",
@@ -1014,7 +1007,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "n",
     "@stylistic/js",
     "simple-import-sort",
-    "import",
+    "import-x",
     "@typescript-eslint",
     "@rightcapital",
   ],
@@ -1336,10 +1329,10 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "guard-for-in": [
       "error",
     ],
-    "import/export": [
+    "import-x/export": [
       "error",
     ],
-    "import/extensions": [
+    "import-x/extensions": [
       "warn",
       "ignorePackages",
       {
@@ -1349,42 +1342,37 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
         "tsx": "never",
       },
     ],
-    "import/first": [
+    "import-x/first": [
       "error",
     ],
-    "import/max-dependencies": [
+    "import-x/max-dependencies": [
       "off",
       {
         "max": 10,
       },
     ],
-    "import/named": [
+    "import-x/named": [
       "error",
     ],
-    "import/newline-after-import": [
+    "import-x/newline-after-import": [
       "error",
     ],
-    "import/no-absolute-path": [
+    "import-x/no-absolute-path": [
       "error",
     ],
-    "import/no-cycle": [
+    "import-x/no-cycle": [
       "error",
-      {
-        "allowUnsafeDynamicCyclicDependency": false,
-        "ignoreExternal": false,
-        "maxDepth": "∞",
-      },
     ],
-    "import/no-duplicates": [
+    "import-x/no-duplicates": [
       "error",
       {
         "prefer-inline": true,
       },
     ],
-    "import/no-dynamic-require": [
+    "import-x/no-dynamic-require": [
       "error",
     ],
-    "import/no-extraneous-dependencies": [
+    "import-x/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
@@ -1415,48 +1403,47 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
         "optionalDependencies": false,
       },
     ],
-    "import/no-import-module-exports": [
+    "import-x/no-import-module-exports": [
       "error",
       {
         "exceptions": [],
       },
     ],
-    "import/no-mutable-exports": [
+    "import-x/no-mutable-exports": [
       "error",
     ],
-    "import/no-named-as-default": [
+    "import-x/no-named-as-default": [
       "error",
     ],
-    "import/no-named-as-default-member": [
+    "import-x/no-named-as-default-member": [
       "error",
     ],
-    "import/no-named-default": [
+    "import-x/no-named-default": [
       "error",
     ],
-    "import/no-relative-packages": [
+    "import-x/no-relative-packages": [
       "error",
     ],
-    "import/no-self-import": [
+    "import-x/no-self-import": [
       "error",
     ],
-    "import/no-unresolved": [
+    "import-x/no-unresolved": [
       "error",
       {
         "caseSensitive": true,
-        "caseSensitiveStrict": false,
         "commonjs": true,
       },
     ],
-    "import/no-useless-path-segments": [
+    "import-x/no-useless-path-segments": [
       "error",
       {
         "commonjs": true,
       },
     ],
-    "import/no-webpack-loader-syntax": [
+    "import-x/no-webpack-loader-syntax": [
       "error",
     ],
-    "import/order": [
+    "import-x/order": [
       "off",
     ],
     "lodash/prop-shorthand": [
@@ -2161,17 +2148,16 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     ],
   },
   "settings": {
-    "import/core-modules": [],
-    "import/extensions": [
+    "import-x/extensions": [
       ".js",
       ".mjs",
       ".jsx",
     ],
-    "import/ignore": [
+    "import-x/ignore": [
       "node_modules",
       "\\.(coffee|scss|css|less|hbs|svg|json)$",
     ],
-    "import/parsers": {
+    "import-x/parsers": {
       "@typescript-eslint/parser": [
         ".ts",
         ".cts",
@@ -2179,7 +2165,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
         ".tsx",
       ],
     },
-    "import/resolver": {
+    "import-x/resolver": {
       "node": {
         "extensions": [
           ".mjs",
@@ -2219,7 +2205,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "n",
     "@stylistic/js",
     "simple-import-sort",
-    "import",
+    "import-x",
     "@typescript-eslint",
     "react-hooks",
     "react",
@@ -2687,10 +2673,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "guard-for-in": [
       "error",
     ],
-    "import/export": [
+    "import-x/export": [
       "error",
     ],
-    "import/extensions": [
+    "import-x/extensions": [
       "warn",
       "ignorePackages",
       {
@@ -2700,42 +2686,37 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         "tsx": "never",
       },
     ],
-    "import/first": [
+    "import-x/first": [
       "error",
     ],
-    "import/max-dependencies": [
+    "import-x/max-dependencies": [
       "off",
       {
         "max": 10,
       },
     ],
-    "import/named": [
+    "import-x/named": [
       "error",
     ],
-    "import/newline-after-import": [
+    "import-x/newline-after-import": [
       "error",
     ],
-    "import/no-absolute-path": [
+    "import-x/no-absolute-path": [
       "error",
     ],
-    "import/no-cycle": [
+    "import-x/no-cycle": [
       "error",
-      {
-        "allowUnsafeDynamicCyclicDependency": false,
-        "ignoreExternal": false,
-        "maxDepth": "∞",
-      },
     ],
-    "import/no-duplicates": [
+    "import-x/no-duplicates": [
       "error",
       {
         "prefer-inline": true,
       },
     ],
-    "import/no-dynamic-require": [
+    "import-x/no-dynamic-require": [
       "error",
     ],
-    "import/no-extraneous-dependencies": [
+    "import-x/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
@@ -2766,48 +2747,47 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         "optionalDependencies": false,
       },
     ],
-    "import/no-import-module-exports": [
+    "import-x/no-import-module-exports": [
       "error",
       {
         "exceptions": [],
       },
     ],
-    "import/no-mutable-exports": [
+    "import-x/no-mutable-exports": [
       "error",
     ],
-    "import/no-named-as-default": [
+    "import-x/no-named-as-default": [
       "error",
     ],
-    "import/no-named-as-default-member": [
+    "import-x/no-named-as-default-member": [
       "error",
     ],
-    "import/no-named-default": [
+    "import-x/no-named-default": [
       "error",
     ],
-    "import/no-relative-packages": [
+    "import-x/no-relative-packages": [
       "error",
     ],
-    "import/no-self-import": [
+    "import-x/no-self-import": [
       "error",
     ],
-    "import/no-unresolved": [
+    "import-x/no-unresolved": [
       "error",
       {
         "caseSensitive": true,
-        "caseSensitiveStrict": false,
         "commonjs": true,
       },
     ],
-    "import/no-useless-path-segments": [
+    "import-x/no-useless-path-segments": [
       "error",
       {
         "commonjs": true,
       },
     ],
-    "import/no-webpack-loader-syntax": [
+    "import-x/no-webpack-loader-syntax": [
       "error",
     ],
-    "import/order": [
+    "import-x/order": [
       "off",
     ],
     "jsx-a11y/alt-text": [
@@ -3745,17 +3725,16 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
   },
   "settings": {
-    "import/core-modules": [],
-    "import/extensions": [
+    "import-x/extensions": [
       ".js",
       ".mjs",
       ".jsx",
     ],
-    "import/ignore": [
+    "import-x/ignore": [
       "node_modules",
       "\\.(coffee|scss|css|less|hbs|svg|json)$",
     ],
-    "import/parsers": {
+    "import-x/parsers": {
       "@typescript-eslint/parser": [
         ".ts",
         ".cts",
@@ -3763,7 +3742,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         ".tsx",
       ],
     },
-    "import/resolver": {
+    "import-x/resolver": {
       "node": {
         "extensions": [
           ".mjs",

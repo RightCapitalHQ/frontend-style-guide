@@ -14,10 +14,10 @@ const config: Linter.Config = {
     projectService: true,
   },
   settings: {
-    'import/parsers': {
+    'import-x/parsers': {
       '@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx'],
     },
-    'import/resolver': {
+    'import-x/resolver': {
       typescript: { alwaysTryTypes: true },
     },
   },
@@ -113,7 +113,7 @@ const config: Linter.Config = {
       { fixMixedExportsWithInlineTypeSpecifier: true },
     ],
     '@typescript-eslint/no-import-type-side-effects': 'error',
-    'import/no-duplicates': ['error', { 'prefer-inline': true }],
+    'import-x/no-duplicates': ['error', { 'prefer-inline': true }],
     '@rightcapital/no-explicit-type-on-function-component-identifier': 'error',
 
     /**
