@@ -9902,7 +9902,7 @@ async function updateRenovateCommit({ message }) {
 
 async function main() {
   const isMissingChangefile =
-    (await $({ reject: false })`pnpm -w exec beachball check`).exitCode !== 0;
+    (await $({ reject: false })`pnpm exec beachball check`).exitCode !== 0;
 
   await configureGitUser();
   const bumpTypeAndMessage = await parseBumpTypeAndMessage();
