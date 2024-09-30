@@ -43,7 +43,7 @@ async function parseBumpTypeAndMessage() {
  * @returns {Promise<void>}
  */
 async function generateChangefile({ bumpType, message }) {
-  await $`npx beachball change --no-fetch --no-commit --type ${bumpType} --message ${message}`;
+  await $`npx beachball change --no-commit --type ${bumpType} --message ${message}`;
 }
 
 /**
