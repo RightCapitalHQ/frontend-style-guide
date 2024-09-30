@@ -1,0 +1,7 @@
+{
+  "comment": "feat: migrate to eslint-plugin-import-x",
+  "type": "minor",
+  "packageName": "@rightcapital/eslint-config-base",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
