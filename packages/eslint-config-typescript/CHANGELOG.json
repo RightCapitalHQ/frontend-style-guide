@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript",
   "entries": [
     {
+      "date": "Mon, 30 Sep 2024 08:30:34 GMT",
+      "version": "36.2.0",
+      "tag": "@rightcapital/eslint-config-typescript_v36.2.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config-typescript",
+            "commit": "7955bf4bc1e92198736e102e09d90437b0080a09",
+            "comment": "feat: migrate to eslint-plugin-import-x"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 12 Sep 2024 03:12:14 GMT",
       "version": "36.1.1",
       "tag": "@rightcapital/eslint-config-typescript_v36.1.1",

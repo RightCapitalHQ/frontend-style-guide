@@ -2,6 +2,21 @@
   "name": "@rightcapital/lint-eslint-config-rules",
   "entries": [
     {
+      "date": "Mon, 30 Sep 2024 08:30:34 GMT",
+      "version": "1.2.0",
+      "tag": "@rightcapital/lint-eslint-config-rules_v1.2.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/lint-eslint-config-rules",
+            "commit": "7955bf4bc1e92198736e102e09d90437b0080a09",
+            "comment": "feat: migrate to eslint-plugin-import-x"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 12 Sep 2024 03:12:14 GMT",
       "version": "1.1.1",
       "tag": "@rightcapital/lint-eslint-config-rules_v1.1.1",

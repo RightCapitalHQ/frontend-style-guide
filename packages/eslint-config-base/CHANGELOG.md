@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-base
 
-<!-- This log was last generated on Thu, 12 Sep 2024 03:12:14 GMT and should not be manually modified. -->
+<!-- This log was last generated on Mon, 30 Sep 2024 08:30:34 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [36.2.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-base_v36.2.0) (2024-9-30)
+
+### Minor changes
+
+- feat: migrate to eslint-plugin-import-x ([7955bf4](https://github.com/RightCapitalHQ/frontend-style-guide/commit/7955bf4bc1e92198736e102e09d90437b0080a09))
 
 ## [36.1.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-base_v36.1.1) (2024-9-12)
 
