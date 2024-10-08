@@ -13,6 +13,12 @@ const config: Linter.Config = {
   plugins: ['@rightcapital', '@stylistic/jsx'],
   reportUnusedDisableDirectives: true,
   rules: {
+    '@eslint-react/naming-convention/component-name': ['error', 'PascalCase'],
+    '@eslint-react/naming-convention/filename': [
+      'error',
+      { rule: 'kebab-case' },
+    ],
+    '@eslint-react/naming-convention/use-state': 'error',
     '@eslint-react/no-useless-fragment': 'error',
     '@rightcapital/no-explicit-type-on-function-component-identifier': 'error',
     '@stylistic/jsx/jsx-self-closing-comp': 'error',
