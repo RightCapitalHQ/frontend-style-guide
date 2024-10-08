@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config-typescript-react",
   "entries": [
     {
+      "date": "Tue, 08 Oct 2024 05:48:18 GMT",
+      "version": "36.3.0",
+      "tag": "@rightcapital/eslint-config-typescript-react_v36.3.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config-typescript-react",
+            "commit": "65cf4aebeeff230e6f237331a6bb3ef65a6db410",
+            "comment": "feat: naming convention for React"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 12 Sep 2024 03:12:14 GMT",
       "version": "36.1.1",
       "tag": "@rightcapital/eslint-config-typescript-react_v36.1.1",

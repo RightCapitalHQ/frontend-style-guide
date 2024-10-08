@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config-typescript-react
 
-<!-- This log was last generated on Thu, 12 Sep 2024 03:12:14 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 08 Oct 2024 05:48:18 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [36.3.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v36.3.0) (2024-10-8)
+
+### Minor changes
+
+- feat: naming convention for React ([65cf4ae](https://github.com/RightCapitalHQ/frontend-style-guide/commit/65cf4aebeeff230e6f237331a6bb3ef65a6db410))
 
 ## [36.1.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config-typescript-react_v36.1.1) (2024-9-12)
 
