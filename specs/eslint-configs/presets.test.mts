@@ -27,15 +27,22 @@ const parsedConfigs = await Promise.all(
  * Make snapshot for the result of parsed presets,
  * Thus we can easily inspect the upgrade of upstream configs.
  *
- * @see https://eslint.org/docs/v8.x/integrate/nodejs-api#-eslintcalculateconfigforfilefilepath
+ * @see https://eslint.org/docs/latest/integrate/nodejs-api#-eslintcalculateconfigforfilefilepath
  */
 describe('Resolved config matches snapshot', async () => {
   for (const [file, config] of parsedConfigs) {
     test.concurrent(file, async ({ expect }) => {
       expect({
         ...config,
-        // this field contains environment related path, which is not suitable for snapshot
+
+        // These fields contains unnecessary information for snapshot
         parser: '<OMITTED>',
+        plugins: '<OMITTED>',
+        language: '<OMITTED>',
+        languageOptions: {
+          ...config.languageOptions,
+          parser: '<OMITTED>',
+        },
       }).toMatchSnapshot();
     });
   }

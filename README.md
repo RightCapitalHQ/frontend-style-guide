@@ -22,7 +22,68 @@ Following tools are covered:
 
 ## ESLint
 
-This repo provides the following ESLint config packages:
+### Prerequisite
+
+- `eslint`(>=9)
+- `typescript`(optional, for TypeScript support)
+
+### Usage
+
+Install `@rightcapital/eslint-config` to your project.
+
+```sh
+pnpm add -D @rightcapital/eslint-config
+```
+
+In your `eslint.config.mjs`([or equivalent](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file-formats)):
+
+```js
+import eslintConfigRightcapital from '@rightcapital/eslint-config';
+
+const { config } = eslintConfigRightcapital.utils;
+
+export default config(
+  ...eslintConfigRightcapital.configs.recommended,
+
+  // add more configs for specific files or packages if needed
+  {
+    files: ['scripts/**/*.{js,cjs,mjs}'],
+    extends: [
+      ...eslintConfigRightcapital.configs.node,
+      ...eslintConfigRightcapital.configs.script,
+    ],
+  },
+);
+```
+
+### Exported configs and utils
+
+**`configs`**
+
+- `recommended`: the all-in-one config, contains multiple rules configs for different files.
+
+> [!NOTE]  
+> The following configs are designed to be used with `extends` option. They do have a preset [`files` option](https://eslint.org/docs/latest/use/configure/configuration-files#:~:text=files%20%2D%20An%20array%20of%20glob%20patterns%20indicating%20the%20files%20that%20the%20configuration%20object%20should%20apply%20to.%20If%20not%20specified%2C%20the%20configuration%20object%20applies%20to%20all%20files%20matched%20by%20any%20other%20configuration%20object.).
+
+- `js`: JavaScript specific config.
+- `ts`: TypeScript specific config.
+- `react`: React specific config.
+- `node`: Node.js specific config.
+- `script`: Script oriented config, with less strict rules.
+
+**`utils`**
+
+- `config`: reexported util from `typescript-eslint` for easier compositing ESLint config. (docs: https://typescript-eslint.io/packages/typescript-eslint#config)
+- `globals`: reexported util from [globals](https://github.com/sindresorhus/globals), useful for configuring [`languageOptions.globals`](https://eslint.org/docs/latest/use/configure/language-options#specifying-globals).
+
+---
+
+<details>
+<summary>
+<b>[Deprecated]</b> Usage for Legacy ESLint versions(&lt;9)
+</summary>
+
+There are following config packages for legacy ESLint versions(<9):
 
 - `@rightcapital/eslint-config-javascript`: for JavaScript files
 - `@rightcapital/eslint-config-typescript`: for TypeScript files
@@ -30,13 +91,6 @@ This repo provides the following ESLint config packages:
 - `@rightcapital/eslint-plugin`
 
 They can be used independently or combined together according to your project's needs.
-
-### Usage
-
-> [!NOTE]  
-> make sure `eslint` is installed in your project.
->
-> And install `typescript` to your project if you want to use the config supporting TypeScript(`@rightcapital/eslint-config-typescript*`).
 
 Install the config package(s) you need:
 
@@ -134,14 +188,15 @@ module.exports = {
 ```
 
 </details>
+</details>
 
 ## Prettier
 
-### Usage
+### Prerequisite
 
-> Note: Prettier is a peer dependency of the config package. You need to install it in the root of your project.
->
-> See: https://prettier.io/docs/en/install.html
+- `prettier`
+
+### Usage
 
 Install config package to your project:
 

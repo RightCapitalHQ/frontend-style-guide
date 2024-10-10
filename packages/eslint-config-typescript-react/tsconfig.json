@@ -1,7 +1,0 @@
-{
-  "extends": "@rightcapital/tsconfig",
-  "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./lib"
-  }
-}
