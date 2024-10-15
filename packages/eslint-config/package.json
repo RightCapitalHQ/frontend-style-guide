@@ -1,0 +1,63 @@
+{
+  "name": "@rightcapital/eslint-config",
+  "version": "36.3.0",
+  "description": "ESLint Config for RightCapital",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
+    "directory": "packages/eslint-config"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prebuild": "pnpm run clean",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "prepack": "pnpm run build"
+  },
+  "dependencies": {
+    "@eslint-react/eslint-plugin": "1.9.0",
+    "@rightcapital/eslint-plugin": "workspace:*",
+    "@stylistic/eslint-plugin": "2.9.0",
+    "@typescript-eslint/utils": "8.0.1",
+    "confusing-browser-globals": "1.0.11",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import-x": "4.3.1",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-lodash": "8.0.0",
+    "eslint-plugin-n": "17.10.2",
+    "eslint-plugin-react-hooks": "5.0.0",
+    "eslint-plugin-simple-import-sort": "12.1.1",
+    "eslint-plugin-unicorn": "55.0.0",
+    "globals": "15.10.0",
+    "typescript-eslint": "8.0.1"
+  },
+  "devDependencies": {
+    "@rightcapital/tsconfig": "workspace:*",
+    "@types/confusing-browser-globals": "1.0.3",
+    "@types/eslint-plugin-jsx-a11y": "6.9.0",
+    "@types/semver": "7.5.8"
+  },
+  "peerDependencies": {
+    "eslint": ">=9",
+    "typescript": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "packageManager": "pnpm@9.10.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}

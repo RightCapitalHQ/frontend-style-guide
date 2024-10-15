@@ -1,8 +1,8 @@
-Tests for the `@rightcapital/eslint-config-*` packages.
+Tests for the `@rightcapital/eslint-config` package.(targeted for ESLint v9)
 
 ## Introduction
 
-We made tests(see [presets.test.mts][] for details.) for the `@rightcapital/eslint-config-*` packages to make sure we can:
+We made tests(see [presets.test.mts][] for details.) for the `@rightcapital/eslint-config` package to make sure we can:
 
 1. Observe the changes of the configs during dependency upgrades.
 2. Ensure no rules are conflicting with Prettier.

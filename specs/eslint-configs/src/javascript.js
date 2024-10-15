@@ -1,3 +1,5 @@
+import process from 'node:process';
+
 await Promise.resolve('yay');
 
 if (Math.random() > 0.1)

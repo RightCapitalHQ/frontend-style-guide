@@ -64,11 +64,10 @@
       "allowedVersions": "!/^6\\.(8|9)\\./"
     },
     {
-      "description": "lint-eslint-config-rules tests requires fixed eslint versions",
-      "matchFileNames": [
-        "specs/lint-eslint-config-rules/specs/**/package.json"
-      ],
+      "description": "E2E tests require fixed eslint major versions",
+      "matchFileNames": ["specs/**/package.json"],
       "matchPackageNames": ["eslint"],
+      "matchUpdateTypes": ["major"],
       "enabled": false
     }
   ]

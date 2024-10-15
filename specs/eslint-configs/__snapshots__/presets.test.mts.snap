@@ -2,37 +2,25 @@
 
 exports[`Resolved config matches snapshot > javascript.js 1`] = `
 {
-  "env": {
-    "es2024": true,
-    "node": true,
-  },
-  "globals": {},
-  "ignorePatterns": [],
-  "noInlineConfig": undefined,
-  "parser": "<OMITTED>",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true,
-    },
+  "language": "<OMITTED>",
+  "languageOptions": {
     "ecmaVersion": "latest",
+    "parser": "<OMITTED>",
+    "parserOptions": {},
     "sourceType": "module",
   },
-  "plugins": [
-    "unicorn",
-    "lodash",
-    "n",
-    "@stylistic/js",
-    "simple-import-sort",
-    "import-x",
-  ],
-  "reportUnusedDisableDirectives": true,
+  "linterOptions": {
+    "reportUnusedDisableDirectives": 1,
+  },
+  "parser": "<OMITTED>",
+  "plugins": "<OMITTED>",
   "rules": {
-    "@stylistic/js/lines-between-class-members": [
-      "error",
+    "@stylistic/lines-between-class-members": [
+      2,
       "always",
     ],
-    "@stylistic/js/padding-line-between-statements": [
-      "error",
+    "@stylistic/padding-line-between-statements": [
+      2,
       {
         "blankLine": "always",
         "next": "*",
@@ -49,8 +37,8 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
         "prev": "directive",
       },
     ],
-    "@stylistic/js/spaced-comment": [
-      "error",
+    "@stylistic/spaced-comment": [
+      2,
       "always",
       {
         "block": {
@@ -80,7 +68,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "array-callback-return": [
-      "error",
+      2,
       {
         "allowImplicit": true,
         "allowVoid": false,
@@ -88,10 +76,10 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "block-scoped-var": [
-      "error",
+      2,
     ],
     "camelcase": [
-      "error",
+      2,
       {
         "ignoreDestructuring": false,
         "ignoreGlobals": false,
@@ -100,61 +88,61 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "consistent-return": [
-      "error",
+      2,
     ],
     "constructor-super": [
-      "error",
+      2,
     ],
     "curly": [
-      "error",
+      2,
       "all",
     ],
     "default-case": [
-      "error",
+      2,
       {
         "commentPattern": "^no default$",
       },
     ],
     "default-case-last": [
-      "error",
+      2,
     ],
     "dot-notation": [
-      "error",
+      2,
       {
         "allowKeywords": true,
         "allowPattern": "",
       },
     ],
     "eqeqeq": [
-      "error",
+      2,
       "always",
       {
         "null": "ignore",
       },
     ],
     "for-direction": [
-      "error",
+      2,
     ],
     "func-names": [
-      "warn",
+      1,
     ],
     "getter-return": [
-      "error",
+      2,
       {
         "allowImplicit": true,
       },
     ],
     "grouped-accessor-pairs": [
-      "error",
+      2,
     ],
     "guard-for-in": [
-      "error",
+      2,
     ],
     "import-x/export": [
-      "error",
+      2,
     ],
     "import-x/extensions": [
-      "warn",
+      1,
       "ignorePackages",
       {
         "js": "never",
@@ -164,125 +152,92 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "import-x/first": [
-      "error",
+      2,
     ],
     "import-x/max-dependencies": [
-      "off",
+      0,
       {
         "max": 10,
       },
     ],
     "import-x/named": [
-      "error",
+      2,
     ],
     "import-x/newline-after-import": [
-      "error",
+      2,
     ],
     "import-x/no-absolute-path": [
-      "error",
+      2,
     ],
     "import-x/no-cycle": [
-      "error",
+      2,
     ],
     "import-x/no-duplicates": [
-      "error",
+      2,
     ],
     "import-x/no-dynamic-require": [
-      "error",
+      2,
     ],
     "import-x/no-extraneous-dependencies": [
-      "error",
+      2,
       {
-        "devDependencies": [
-          "test/**",
-          "tests/**",
-          "spec/**",
-          "**/__tests__/**",
-          "**/__mocks__/**",
-          "test.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-          "test-*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-          "**/*{.,_}{test,spec}.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-          "**/jest.config.js",
-          "**/jest.setup.js",
-          "**/vue.config.js",
-          "**/webpack.config.js",
-          "**/webpack.config.*.js",
-          "**/rollup.config.js",
-          "**/rollup.config.*.js",
-          "**/gulpfile.js",
-          "**/gulpfile.*.js",
-          "**/Gruntfile{,.js}",
-          "**/protractor.conf.js",
-          "**/protractor.conf.*.js",
-          "**/karma.conf.js",
-          "**/.eslintrc.{js,cjs}",
-          "**/eslint.config.{js,cjs,mjs}",
-        ],
+        "devDependencies": false,
         "optionalDependencies": false,
       },
     ],
     "import-x/no-import-module-exports": [
-      "error",
+      2,
       {
         "exceptions": [],
       },
     ],
     "import-x/no-mutable-exports": [
-      "error",
+      2,
     ],
     "import-x/no-named-as-default": [
-      "error",
+      2,
     ],
     "import-x/no-named-as-default-member": [
-      "error",
+      2,
     ],
     "import-x/no-named-default": [
-      "error",
+      2,
     ],
     "import-x/no-relative-packages": [
-      "error",
+      2,
     ],
     "import-x/no-self-import": [
-      "error",
+      2,
     ],
     "import-x/no-unresolved": [
-      "error",
+      2,
       {
         "caseSensitive": true,
         "commonjs": true,
       },
     ],
     "import-x/no-useless-path-segments": [
-      "error",
+      2,
       {
         "commonjs": true,
       },
     ],
     "import-x/no-webpack-loader-syntax": [
-      "error",
+      2,
     ],
     "import-x/order": [
-      "off",
+      0,
     ],
     "lodash/prop-shorthand": [
-      "error",
+      2,
       "never",
     ],
     "max-classes-per-file": [
-      "error",
+      2,
       1,
     ],
-    "n/global-require": [
-      "error",
-    ],
-    "n/no-new-require": [
-      "error",
-    ],
-    "n/no-path-concat": [
-      "error",
-    ],
     "new-cap": [
-      "error",
+      2,
       {
         "capIsNew": false,
         "capIsNewExceptions": [
@@ -296,92 +251,89 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-alert": [
-      "warn",
+      1,
     ],
     "no-array-constructor": [
-      "error",
+      2,
     ],
     "no-async-promise-executor": [
-      "error",
+      2,
     ],
     "no-await-in-loop": [
-      "error",
+      2,
     ],
     "no-bitwise": [
-      "error",
-    ],
-    "no-buffer-constructor": [
-      "error",
+      2,
     ],
     "no-caller": [
-      "error",
+      2,
     ],
     "no-case-declarations": [
-      "error",
+      2,
     ],
     "no-class-assign": [
-      "error",
+      2,
     ],
     "no-compare-neg-zero": [
-      "error",
+      2,
     ],
     "no-cond-assign": [
-      "error",
+      2,
       "always",
     ],
     "no-console": [
-      "warn",
+      1,
     ],
     "no-const-assign": [
-      "error",
+      2,
     ],
     "no-constant-condition": [
-      "warn",
+      1,
     ],
     "no-constructor-return": [
-      "error",
+      2,
     ],
     "no-continue": [
-      "error",
+      2,
     ],
     "no-control-regex": [
-      "error",
+      2,
     ],
     "no-debugger": [
-      "error",
+      2,
     ],
     "no-delete-var": [
-      "error",
+      2,
     ],
     "no-dupe-args": [
-      "error",
+      2,
     ],
     "no-dupe-class-members": [
-      "error",
+      2,
     ],
     "no-dupe-else-if": [
-      "error",
+      2,
     ],
     "no-dupe-keys": [
-      "error",
+      2,
     ],
     "no-duplicate-case": [
-      "error",
+      2,
     ],
     "no-else-return": [
-      "error",
+      2,
       {
         "allowElseIf": false,
       },
     ],
     "no-empty": [
-      "error",
+      2,
     ],
     "no-empty-character-class": [
-      "error",
+      2,
     ],
     "no-empty-function": [
-      "error",
+      2,
       {
         "allow": [
           "arrowFunctions",
@@ -391,119 +343,119 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-empty-pattern": [
-      "error",
+      2,
     ],
     "no-eval": [
-      "error",
+      2,
     ],
     "no-ex-assign": [
-      "error",
+      2,
     ],
     "no-extend-native": [
-      "error",
+      2,
     ],
     "no-extra-bind": [
-      "error",
+      2,
     ],
     "no-extra-boolean-cast": [
-      "error",
+      2,
     ],
     "no-extra-label": [
-      "error",
+      2,
     ],
     "no-fallthrough": [
-      "error",
+      2,
     ],
     "no-func-assign": [
-      "error",
+      2,
     ],
     "no-global-assign": [
-      "error",
+      2,
       {
         "exceptions": [],
       },
     ],
     "no-implied-eval": [
-      "error",
+      2,
     ],
     "no-import-assign": [
-      "error",
+      2,
     ],
     "no-inner-declarations": [
-      "error",
+      2,
     ],
     "no-invalid-regexp": [
-      "error",
+      2,
     ],
     "no-irregular-whitespace": [
-      "error",
+      2,
     ],
     "no-iterator": [
-      "error",
+      2,
     ],
     "no-label-var": [
-      "error",
+      2,
     ],
     "no-labels": [
-      "error",
+      2,
       {
         "allowLoop": false,
         "allowSwitch": false,
       },
     ],
     "no-lone-blocks": [
-      "error",
+      2,
     ],
     "no-lonely-if": [
-      "error",
+      2,
     ],
     "no-loop-func": [
-      "error",
+      2,
     ],
     "no-loss-of-precision": [
-      "error",
+      2,
     ],
     "no-misleading-character-class": [
-      "error",
+      2,
     ],
     "no-multi-assign": [
-      "error",
+      2,
     ],
     "no-multi-str": [
-      "error",
+      2,
     ],
     "no-nested-ternary": [
-      "error",
+      2,
     ],
     "no-new": [
-      "error",
+      2,
     ],
     "no-new-func": [
-      "error",
+      2,
     ],
-    "no-new-symbol": [
-      "error",
+    "no-new-native-nonconstructor": [
+      2,
     ],
     "no-new-wrappers": [
-      "error",
+      2,
     ],
     "no-nonoctal-decimal-escape": [
-      "error",
+      2,
     ],
     "no-obj-calls": [
-      "error",
+      2,
     ],
     "no-object-constructor": [
-      "error",
+      2,
     ],
     "no-octal": [
-      "error",
+      2,
     ],
     "no-octal-escape": [
-      "error",
+      2,
     ],
     "no-param-reassign": [
-      "error",
+      2,
       {
         "ignorePropertyModificationsFor": [
           "acc",
@@ -522,25 +474,25 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-plusplus": [
-      "error",
+      2,
     ],
     "no-promise-executor-return": [
-      "error",
+      2,
     ],
     "no-proto": [
-      "error",
+      2,
     ],
     "no-prototype-builtins": [
-      "error",
+      2,
     ],
     "no-redeclare": [
-      "error",
+      2,
     ],
     "no-regex-spaces": [
-      "error",
+      2,
     ],
     "no-restricted-exports": [
-      "error",
+      2,
       {
         "restrictedNamedExports": [
           "default",
@@ -549,7 +501,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-restricted-globals": [
-      "error",
+      2,
       {
         "message": "Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite",
         "name": "isFinite",
@@ -618,7 +570,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       "top",
     ],
     "no-restricted-properties": [
-      "error",
+      2,
       {
         "message": "arguments.callee is deprecated",
         "object": "arguments",
@@ -669,7 +621,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-restricted-syntax": [
-      "error",
+      2,
       {
         "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
         "selector": "ForInStatement",
@@ -688,56 +640,56 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-return-assign": [
-      "error",
+      2,
       "always",
     ],
     "no-return-await": [
-      "error",
+      2,
     ],
     "no-script-url": [
-      "error",
+      2,
     ],
     "no-self-assign": [
-      "error",
+      2,
       {
         "props": true,
       },
     ],
     "no-self-compare": [
-      "error",
+      2,
     ],
     "no-sequences": [
-      "error",
+      2,
     ],
     "no-setter-return": [
-      "error",
+      2,
     ],
     "no-shadow": [
-      "error",
+      2,
     ],
     "no-shadow-restricted-names": [
-      "error",
+      2,
     ],
     "no-sparse-arrays": [
-      "error",
+      2,
     ],
     "no-template-curly-in-string": [
-      "error",
+      2,
     ],
     "no-this-before-super": [
-      "error",
+      2,
     ],
     "no-throw-literal": [
-      "error",
+      2,
     ],
     "no-undef": [
-      "error",
+      2,
     ],
     "no-undef-init": [
-      "error",
+      2,
     ],
     "no-underscore-dangle": [
-      "error",
+      2,
       {
         "allow": [],
         "allowAfterSuper": false,
@@ -751,37 +703,37 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-unexpected-multiline": [
-      "error",
+      2,
     ],
     "no-unneeded-ternary": [
-      "error",
+      2,
       {
         "defaultAssignment": false,
       },
     ],
     "no-unreachable": [
-      "error",
+      2,
     ],
     "no-unreachable-loop": [
-      "error",
+      2,
       {
         "ignore": [],
       },
     ],
     "no-unsafe-finally": [
-      "error",
+      2,
     ],
     "no-unsafe-negation": [
-      "error",
+      2,
     ],
     "no-unsafe-optional-chaining": [
-      "error",
+      2,
       {
         "disallowArithmeticOperators": true,
       },
     ],
     "no-unused-expressions": [
-      "error",
+      2,
       {
         "allowShortCircuit": false,
         "allowTaggedTemplates": false,
@@ -790,13 +742,13 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-unused-labels": [
-      "error",
+      2,
     ],
     "no-unused-private-class-members": [
-      "error",
+      2,
     ],
     "no-unused-vars": [
-      "error",
+      2,
       {
         "args": "after-used",
         "ignoreRestSiblings": true,
@@ -804,7 +756,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-use-before-define": [
-      "error",
+      2,
       {
         "classes": true,
         "functions": true,
@@ -812,25 +764,25 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-useless-backreference": [
-      "error",
+      2,
     ],
     "no-useless-catch": [
-      "error",
+      2,
     ],
     "no-useless-computed-key": [
-      "error",
+      2,
     ],
     "no-useless-concat": [
-      "error",
+      2,
     ],
     "no-useless-constructor": [
-      "error",
+      2,
     ],
     "no-useless-escape": [
-      "error",
+      2,
     ],
     "no-useless-rename": [
-      "error",
+      2,
       {
         "ignoreDestructuring": false,
         "ignoreExport": false,
@@ -838,19 +790,19 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "no-useless-return": [
-      "error",
+      2,
     ],
     "no-var": [
-      "error",
+      2,
     ],
     "no-void": [
-      "error",
+      2,
     ],
     "no-with": [
-      "error",
+      2,
     ],
     "object-shorthand": [
-      "error",
+      2,
       "always",
       {
         "avoidQuotes": true,
@@ -858,22 +810,22 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "one-var": [
-      "error",
+      2,
       "never",
     ],
     "operator-assignment": [
-      "error",
+      2,
       "always",
     ],
     "prefer-const": [
-      "error",
+      2,
       {
         "destructuring": "any",
         "ignoreReadBeforeAssign": true,
       },
     ],
     "prefer-destructuring": [
-      "error",
+      2,
       {
         "AssignmentExpression": {
           "array": true,
@@ -889,74 +841,74 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       },
     ],
     "prefer-exponentiation-operator": [
-      "error",
+      2,
     ],
     "prefer-numeric-literals": [
-      "error",
+      2,
     ],
     "prefer-object-spread": [
-      "error",
+      2,
     ],
     "prefer-promise-reject-errors": [
-      "error",
+      2,
       {
         "allowEmptyReject": true,
       },
     ],
     "prefer-regex-literals": [
-      "error",
+      2,
       {
         "disallowRedundantWrapping": true,
       },
     ],
     "prefer-rest-params": [
-      "error",
+      2,
     ],
     "prefer-spread": [
-      "error",
+      2,
     ],
     "prefer-template": [
-      "error",
+      2,
     ],
     "radix": [
-      "error",
+      2,
     ],
     "require-yield": [
-      "error",
+      2,
     ],
     "simple-import-sort/exports": [
-      "error",
+      2,
     ],
     "simple-import-sort/imports": [
-      "error",
+      2,
     ],
     "symbol-description": [
-      "error",
+      2,
     ],
     "unicode-bom": [
-      "error",
+      2,
       "never",
     ],
     "unicorn/prefer-node-protocol": [
-      "error",
+      2,
     ],
     "unicorn/text-encoding-identifier-case": [
-      "error",
+      2,
     ],
     "use-isnan": [
-      "error",
+      2,
     ],
     "valid-typeof": [
-      "error",
+      2,
       {
         "requireStringLiterals": true,
       },
     ],
     "vars-on-top": [
-      "error",
+      2,
     ],
     "yoda": [
-      "error",
+      2,
     ],
   },
   "settings": {
@@ -985,43 +937,30 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
 
 exports[`Resolved config matches snapshot > typescript.ts 1`] = `
 {
-  "env": {
-    "es2024": true,
-    "node": true,
-  },
-  "globals": {},
-  "ignorePatterns": [],
-  "noInlineConfig": undefined,
-  "parser": "<OMITTED>",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true,
-    },
+  "language": "<OMITTED>",
+  "languageOptions": {
     "ecmaVersion": "latest",
-    "projectService": true,
+    "parser": "<OMITTED>",
+    "parserOptions": {
+      "projectService": true,
+    },
     "sourceType": "module",
   },
-  "plugins": [
-    "unicorn",
-    "lodash",
-    "n",
-    "@stylistic/js",
-    "simple-import-sort",
-    "import-x",
-    "@typescript-eslint",
-    "@rightcapital",
-  ],
-  "reportUnusedDisableDirectives": true,
+  "linterOptions": {
+    "reportUnusedDisableDirectives": 1,
+  },
+  "parser": "<OMITTED>",
+  "plugins": "<OMITTED>",
   "rules": {
     "@rightcapital/no-explicit-type-on-function-component-identifier": [
-      "error",
+      2,
     ],
-    "@stylistic/js/lines-between-class-members": [
-      "error",
+    "@stylistic/lines-between-class-members": [
+      2,
       "always",
     ],
-    "@stylistic/js/padding-line-between-statements": [
-      "error",
+    "@stylistic/padding-line-between-statements": [
+      2,
       {
         "blankLine": "always",
         "next": "*",
@@ -1038,8 +977,8 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
         "prev": "directive",
       },
     ],
-    "@stylistic/js/spaced-comment": [
-      "error",
+    "@stylistic/spaced-comment": [
+      2,
       "always",
       {
         "block": {
@@ -1069,26 +1008,26 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "@typescript-eslint/await-thenable": [
-      "error",
+      2,
     ],
     "@typescript-eslint/ban-ts-comment": [
-      "error",
+      2,
     ],
     "@typescript-eslint/consistent-type-exports": [
-      "error",
+      2,
       {
         "fixMixedExportsWithInlineTypeSpecifier": true,
       },
     ],
     "@typescript-eslint/consistent-type-imports": [
-      "error",
+      2,
       {
         "fixStyle": "inline-type-imports",
         "prefer": "type-imports",
       },
     ],
     "@typescript-eslint/naming-convention": [
-      "error",
+      2,
       {
         "custom": {
           "match": true,
@@ -1101,115 +1040,115 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "@typescript-eslint/no-array-constructor": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-array-delete": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-base-to-string": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-duplicate-enum-values": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-duplicate-type-constituents": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-empty-function": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-empty-object-type": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-explicit-any": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-extra-non-null-assertion": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-floating-promises": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-for-in-array": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-implied-eval": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-import-type-side-effects": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-misused-new": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-misused-promises": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-namespace": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-non-null-asserted-optional-chain": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-non-null-assertion": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-redundant-type-constituents": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-require-imports": [
-      "off",
+      0,
     ],
     "@typescript-eslint/no-shadow": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-this-alias": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unnecessary-type-assertion": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unnecessary-type-constraint": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-argument": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-assignment": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-call": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-declaration-merging": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-enum-comparison": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-function-type": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-member-access": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-return": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-unary-minus": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unused-expressions": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unused-vars": [
-      "error",
+      2,
       {
         "argsIgnorePattern": "^_",
       },
     ],
     "@typescript-eslint/no-use-before-define": [
-      "error",
+      2,
       {
         "classes": false,
         "functions": false,
@@ -1218,31 +1157,31 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "@typescript-eslint/no-useless-constructor": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-wrapper-object-types": [
-      "error",
+      2,
     ],
     "@typescript-eslint/only-throw-error": [
-      "error",
+      2,
     ],
     "@typescript-eslint/prefer-as-const": [
-      "error",
+      2,
     ],
     "@typescript-eslint/prefer-namespace-keyword": [
-      "error",
+      2,
     ],
     "@typescript-eslint/prefer-promise-reject-errors": [
-      "error",
+      2,
     ],
     "@typescript-eslint/require-await": [
-      "error",
+      2,
     ],
     "@typescript-eslint/restrict-plus-operands": [
-      "error",
+      2,
     ],
     "@typescript-eslint/restrict-template-expressions": [
-      "error",
+      2,
       {
         "allowAny": true,
         "allowBoolean": true,
@@ -1253,13 +1192,13 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "@typescript-eslint/triple-slash-reference": [
-      "error",
+      2,
     ],
     "@typescript-eslint/unbound-method": [
-      "error",
+      2,
     ],
     "array-callback-return": [
-      "error",
+      2,
       {
         "allowImplicit": true,
         "allowVoid": false,
@@ -1267,10 +1206,10 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "block-scoped-var": [
-      "error",
+      2,
     ],
     "camelcase": [
-      "error",
+      2,
       {
         "ignoreDestructuring": false,
         "ignoreGlobals": false,
@@ -1279,61 +1218,61 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "consistent-return": [
-      "error",
+      2,
     ],
     "constructor-super": [
-      "off",
+      0,
     ],
     "curly": [
-      "error",
+      2,
       "all",
     ],
     "default-case": [
-      "error",
+      2,
       {
         "commentPattern": "^no default$",
       },
     ],
     "default-case-last": [
-      "error",
+      2,
     ],
     "dot-notation": [
-      "error",
+      2,
       {
         "allowKeywords": true,
         "allowPattern": "",
       },
     ],
     "eqeqeq": [
-      "error",
+      2,
       "always",
       {
         "null": "ignore",
       },
     ],
     "for-direction": [
-      "error",
+      2,
     ],
     "func-names": [
-      "warn",
+      1,
     ],
     "getter-return": [
-      "off",
+      0,
       {
         "allowImplicit": true,
       },
     ],
     "grouped-accessor-pairs": [
-      "error",
+      2,
     ],
     "guard-for-in": [
-      "error",
+      2,
     ],
     "import-x/export": [
-      "error",
+      2,
     ],
     "import-x/extensions": [
-      "warn",
+      1,
       "ignorePackages",
       {
         "js": "never",
@@ -1343,128 +1282,95 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "import-x/first": [
-      "error",
+      2,
     ],
     "import-x/max-dependencies": [
-      "off",
+      0,
       {
         "max": 10,
       },
     ],
     "import-x/named": [
-      "error",
+      0,
     ],
     "import-x/newline-after-import": [
-      "error",
+      2,
     ],
     "import-x/no-absolute-path": [
-      "error",
+      2,
     ],
     "import-x/no-cycle": [
-      "error",
+      2,
     ],
     "import-x/no-duplicates": [
-      "error",
+      2,
       {
         "prefer-inline": true,
       },
     ],
     "import-x/no-dynamic-require": [
-      "error",
+      2,
     ],
     "import-x/no-extraneous-dependencies": [
-      "error",
+      2,
       {
-        "devDependencies": [
-          "test/**",
-          "tests/**",
-          "spec/**",
-          "**/__tests__/**",
-          "**/__mocks__/**",
-          "test.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-          "test-*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-          "**/*{.,_}{test,spec}.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-          "**/jest.config.js",
-          "**/jest.setup.js",
-          "**/vue.config.js",
-          "**/webpack.config.js",
-          "**/webpack.config.*.js",
-          "**/rollup.config.js",
-          "**/rollup.config.*.js",
-          "**/gulpfile.js",
-          "**/gulpfile.*.js",
-          "**/Gruntfile{,.js}",
-          "**/protractor.conf.js",
-          "**/protractor.conf.*.js",
-          "**/karma.conf.js",
-          "**/.eslintrc.{js,cjs}",
-          "**/eslint.config.{js,cjs,mjs}",
-        ],
+        "devDependencies": false,
         "optionalDependencies": false,
       },
     ],
     "import-x/no-import-module-exports": [
-      "error",
+      2,
       {
         "exceptions": [],
       },
     ],
     "import-x/no-mutable-exports": [
-      "error",
+      2,
     ],
     "import-x/no-named-as-default": [
-      "error",
+      2,
     ],
     "import-x/no-named-as-default-member": [
-      "error",
+      2,
     ],
     "import-x/no-named-default": [
-      "error",
+      2,
     ],
     "import-x/no-relative-packages": [
-      "error",
+      2,
     ],
     "import-x/no-self-import": [
-      "error",
+      2,
     ],
     "import-x/no-unresolved": [
-      "error",
+      2,
       {
         "caseSensitive": true,
         "commonjs": true,
       },
     ],
     "import-x/no-useless-path-segments": [
-      "error",
+      2,
       {
         "commonjs": true,
       },
     ],
     "import-x/no-webpack-loader-syntax": [
-      "error",
+      2,
     ],
     "import-x/order": [
-      "off",
+      0,
     ],
     "lodash/prop-shorthand": [
-      "error",
+      2,
       "never",
     ],
     "max-classes-per-file": [
-      "error",
+      2,
       1,
     ],
-    "n/global-require": [
-      "error",
-    ],
-    "n/no-new-require": [
-      "error",
-    ],
-    "n/no-path-concat": [
-      "error",
-    ],
     "new-cap": [
-      "error",
+      2,
       {
         "capIsNew": false,
         "capIsNewExceptions": [
@@ -1478,92 +1384,89 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-alert": [
-      "warn",
+      1,
     ],
     "no-array-constructor": [
-      "off",
+      0,
     ],
     "no-async-promise-executor": [
-      "error",
+      2,
     ],
     "no-await-in-loop": [
-      "error",
+      2,
     ],
     "no-bitwise": [
-      "error",
-    ],
-    "no-buffer-constructor": [
-      "error",
+      2,
     ],
     "no-caller": [
-      "error",
+      2,
     ],
     "no-case-declarations": [
-      "error",
+      2,
     ],
     "no-class-assign": [
-      "error",
+      2,
     ],
     "no-compare-neg-zero": [
-      "error",
+      2,
     ],
     "no-cond-assign": [
-      "error",
+      2,
       "always",
     ],
     "no-console": [
-      "warn",
+      1,
     ],
     "no-const-assign": [
-      "off",
+      0,
     ],
     "no-constant-condition": [
-      "warn",
+      1,
     ],
     "no-constructor-return": [
-      "error",
+      2,
     ],
     "no-continue": [
-      "error",
+      2,
     ],
     "no-control-regex": [
-      "error",
+      2,
     ],
     "no-debugger": [
-      "error",
+      2,
     ],
     "no-delete-var": [
-      "error",
+      2,
     ],
     "no-dupe-args": [
-      "off",
+      0,
     ],
     "no-dupe-class-members": [
-      "off",
+      0,
     ],
     "no-dupe-else-if": [
-      "error",
+      2,
     ],
     "no-dupe-keys": [
-      "off",
+      0,
     ],
     "no-duplicate-case": [
-      "error",
+      2,
     ],
     "no-else-return": [
-      "error",
+      2,
       {
         "allowElseIf": false,
       },
     ],
     "no-empty": [
-      "error",
+      2,
     ],
     "no-empty-character-class": [
-      "error",
+      2,
     ],
     "no-empty-function": [
-      "off",
+      0,
       {
         "allow": [
           "arrowFunctions",
@@ -1573,122 +1476,122 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-empty-pattern": [
-      "error",
+      2,
     ],
     "no-eval": [
-      "error",
+      2,
     ],
     "no-ex-assign": [
-      "error",
+      2,
     ],
     "no-extend-native": [
-      "error",
+      2,
     ],
     "no-extra-bind": [
-      "error",
+      2,
     ],
     "no-extra-boolean-cast": [
-      "error",
+      2,
     ],
     "no-extra-label": [
-      "error",
+      2,
     ],
     "no-fallthrough": [
-      "error",
+      2,
     ],
     "no-func-assign": [
-      "off",
+      0,
     ],
     "no-global-assign": [
-      "error",
+      2,
       {
         "exceptions": [],
       },
     ],
     "no-implied-eval": [
-      "off",
+      0,
     ],
     "no-import-assign": [
-      "off",
+      0,
     ],
     "no-inner-declarations": [
-      "error",
+      2,
     ],
     "no-invalid-regexp": [
-      "error",
+      2,
     ],
     "no-irregular-whitespace": [
-      "error",
+      2,
     ],
     "no-iterator": [
-      "error",
+      2,
     ],
     "no-label-var": [
-      "error",
+      2,
     ],
     "no-labels": [
-      "error",
+      2,
       {
         "allowLoop": false,
         "allowSwitch": false,
       },
     ],
     "no-lone-blocks": [
-      "error",
+      2,
     ],
     "no-lonely-if": [
-      "error",
+      2,
     ],
     "no-loop-func": [
-      "error",
+      2,
     ],
     "no-loss-of-precision": [
-      "error",
+      2,
     ],
     "no-misleading-character-class": [
-      "error",
+      2,
     ],
     "no-multi-assign": [
-      "error",
+      2,
     ],
     "no-multi-str": [
-      "error",
+      2,
     ],
     "no-nested-ternary": [
-      "error",
+      2,
     ],
     "no-new": [
-      "error",
+      2,
     ],
     "no-new-func": [
-      "error",
+      2,
     ],
     "no-new-native-nonconstructor": [
-      "off",
+      0,
     ],
     "no-new-symbol": [
-      "off",
+      0,
     ],
     "no-new-wrappers": [
-      "error",
+      2,
     ],
     "no-nonoctal-decimal-escape": [
-      "error",
+      2,
     ],
     "no-obj-calls": [
-      "off",
+      0,
     ],
     "no-object-constructor": [
-      "error",
+      2,
     ],
     "no-octal": [
-      "error",
+      2,
     ],
     "no-octal-escape": [
-      "error",
+      2,
     ],
     "no-param-reassign": [
-      "error",
+      2,
       {
         "ignorePropertyModificationsFor": [
           "acc",
@@ -1707,25 +1610,25 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-plusplus": [
-      "error",
+      2,
     ],
     "no-promise-executor-return": [
-      "error",
+      2,
     ],
     "no-proto": [
-      "error",
+      2,
     ],
     "no-prototype-builtins": [
-      "error",
+      2,
     ],
     "no-redeclare": [
-      "off",
+      0,
     ],
     "no-regex-spaces": [
-      "error",
+      2,
     ],
     "no-restricted-exports": [
-      "error",
+      2,
       {
         "restrictedNamedExports": [
           "default",
@@ -1734,7 +1637,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-restricted-globals": [
-      "error",
+      2,
       {
         "message": "Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite",
         "name": "isFinite",
@@ -1803,7 +1706,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       "top",
     ],
     "no-restricted-properties": [
-      "error",
+      2,
       {
         "message": "arguments.callee is deprecated",
         "object": "arguments",
@@ -1854,7 +1757,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-restricted-syntax": [
-      "error",
+      2,
       {
         "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
         "selector": "ForInStatement",
@@ -1873,56 +1776,56 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-return-assign": [
-      "error",
+      2,
       "always",
     ],
     "no-return-await": [
-      "error",
+      2,
     ],
     "no-script-url": [
-      "error",
+      2,
     ],
     "no-self-assign": [
-      "error",
+      2,
       {
         "props": true,
       },
     ],
     "no-self-compare": [
-      "error",
+      2,
     ],
     "no-sequences": [
-      "error",
+      2,
     ],
     "no-setter-return": [
-      "off",
+      0,
     ],
     "no-shadow": [
-      "off",
+      0,
     ],
     "no-shadow-restricted-names": [
-      "error",
+      2,
     ],
     "no-sparse-arrays": [
-      "error",
+      2,
     ],
     "no-template-curly-in-string": [
-      "error",
+      2,
     ],
     "no-this-before-super": [
-      "off",
+      0,
     ],
     "no-throw-literal": [
-      "off",
+      0,
     ],
     "no-undef": [
-      "off",
+      0,
     ],
     "no-undef-init": [
-      "error",
+      2,
     ],
     "no-underscore-dangle": [
-      "error",
+      2,
       {
         "allow": [],
         "allowAfterSuper": false,
@@ -1936,52 +1839,51 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-unexpected-multiline": [
-      "error",
+      2,
     ],
     "no-unneeded-ternary": [
-      "error",
+      2,
       {
         "defaultAssignment": false,
       },
     ],
     "no-unreachable": [
-      "off",
+      0,
     ],
     "no-unreachable-loop": [
-      "error",
+      2,
       {
         "ignore": [],
       },
     ],
     "no-unsafe-finally": [
-      "error",
+      2,
     ],
     "no-unsafe-negation": [
-      "off",
+      0,
     ],
     "no-unsafe-optional-chaining": [
-      "error",
+      2,
       {
         "disallowArithmeticOperators": true,
       },
     ],
     "no-unused-expressions": [
-      "off",
+      0,
       {
         "allowShortCircuit": false,
         "allowTaggedTemplates": false,
         "allowTernary": false,
-        "enforceForJSX": false,
       },
     ],
     "no-unused-labels": [
-      "error",
+      2,
     ],
     "no-unused-private-class-members": [
-      "error",
+      2,
     ],
     "no-unused-vars": [
-      "off",
+      0,
       {
         "args": "after-used",
         "ignoreRestSiblings": true,
@@ -1989,7 +1891,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-use-before-define": [
-      "off",
+      0,
       {
         "classes": true,
         "functions": true,
@@ -1997,25 +1899,25 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-useless-backreference": [
-      "error",
+      2,
     ],
     "no-useless-catch": [
-      "error",
+      2,
     ],
     "no-useless-computed-key": [
-      "error",
+      2,
     ],
     "no-useless-concat": [
-      "error",
+      2,
     ],
     "no-useless-constructor": [
-      "off",
+      0,
     ],
     "no-useless-escape": [
-      "error",
+      2,
     ],
     "no-useless-rename": [
-      "error",
+      2,
       {
         "ignoreDestructuring": false,
         "ignoreExport": false,
@@ -2023,19 +1925,19 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-useless-return": [
-      "error",
+      2,
     ],
     "no-var": [
-      "error",
+      2,
     ],
     "no-void": [
-      "error",
+      2,
     ],
     "no-with": [
-      "error",
+      2,
     ],
     "object-shorthand": [
-      "error",
+      2,
       "always",
       {
         "avoidQuotes": true,
@@ -2043,22 +1945,22 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "one-var": [
-      "error",
+      2,
       "never",
     ],
     "operator-assignment": [
-      "error",
+      2,
       "always",
     ],
     "prefer-const": [
-      "error",
+      2,
       {
         "destructuring": "any",
         "ignoreReadBeforeAssign": true,
       },
     ],
     "prefer-destructuring": [
-      "error",
+      2,
       {
         "AssignmentExpression": {
           "array": true,
@@ -2074,88 +1976,93 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "prefer-exponentiation-operator": [
-      "error",
+      2,
     ],
     "prefer-numeric-literals": [
-      "error",
+      2,
     ],
     "prefer-object-spread": [
-      "error",
+      2,
     ],
     "prefer-promise-reject-errors": [
-      "off",
+      0,
       {
         "allowEmptyReject": true,
       },
     ],
     "prefer-regex-literals": [
-      "error",
+      2,
       {
         "disallowRedundantWrapping": true,
       },
     ],
     "prefer-rest-params": [
-      "error",
+      2,
     ],
     "prefer-spread": [
-      "error",
+      2,
     ],
     "prefer-template": [
-      "error",
+      2,
     ],
     "radix": [
-      "error",
+      2,
     ],
     "require-await": [
-      "off",
+      0,
     ],
     "require-yield": [
-      "error",
+      2,
     ],
     "simple-import-sort/exports": [
-      "error",
+      2,
     ],
     "simple-import-sort/imports": [
-      "error",
+      2,
     ],
     "symbol-description": [
-      "error",
+      2,
     ],
     "unicode-bom": [
-      "error",
+      2,
       "never",
     ],
     "unicorn/prefer-node-protocol": [
-      "error",
+      2,
     ],
     "unicorn/text-encoding-identifier-case": [
-      "error",
+      2,
     ],
     "use-isnan": [
-      "error",
+      2,
     ],
     "valid-typeof": [
-      "error",
+      2,
       {
         "requireStringLiterals": true,
       },
     ],
     "vars-on-top": [
-      "error",
+      2,
     ],
     "yoda": [
-      "error",
+      2,
     ],
   },
   "settings": {
     "import-x/extensions": [
       ".js",
-      ".mjs",
       ".jsx",
+      ".cjs",
+      ".mjs",
+      ".ts",
+      ".cts",
+      ".mts",
+      ".tsx",
     ],
-    "import-x/ignore": [
+    "import-x/external-module-folders": [
       "node_modules",
-      "\\.(coffee|scss|css|less|hbs|svg|json)$",
+      "node_modules/@types",
     ],
     "import-x/parsers": {
       "@typescript-eslint/parser": [
@@ -2166,13 +2073,6 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       ],
     },
     "import-x/resolver": {
-      "node": {
-        "extensions": [
-          ".mjs",
-          ".js",
-          ".json",
-        ],
-      },
       "typescript": {
         "alwaysTryTypes": true,
       },
@@ -2183,199 +2083,1307 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
 
 exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
 {
-  "env": {
-    "es2024": true,
-    "node": true,
-  },
-  "globals": {},
-  "ignorePatterns": [],
-  "noInlineConfig": undefined,
-  "parser": "<OMITTED>",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true,
-    },
+  "language": "<OMITTED>",
+  "languageOptions": {
     "ecmaVersion": "latest",
-    "projectService": true,
+    "globals": {
+      "AI": false,
+      "AITextSession": false,
+      "AbortController": false,
+      "AbortSignal": false,
+      "AbsoluteOrientationSensor": false,
+      "AbstractRange": false,
+      "Accelerometer": false,
+      "AnalyserNode": false,
+      "Animation": false,
+      "AnimationEffect": false,
+      "AnimationEvent": false,
+      "AnimationPlaybackEvent": false,
+      "AnimationTimeline": false,
+      "Attr": false,
+      "Audio": false,
+      "AudioBuffer": false,
+      "AudioBufferSourceNode": false,
+      "AudioContext": false,
+      "AudioData": false,
+      "AudioDecoder": false,
+      "AudioDestinationNode": false,
+      "AudioEncoder": false,
+      "AudioListener": false,
+      "AudioNode": false,
+      "AudioParam": false,
+      "AudioParamMap": false,
+      "AudioProcessingEvent": false,
+      "AudioScheduledSourceNode": false,
+      "AudioSinkInfo": false,
+      "AudioWorklet": false,
+      "AudioWorkletGlobalScope": false,
+      "AudioWorkletNode": false,
+      "AudioWorkletProcessor": false,
+      "AuthenticatorAssertionResponse": false,
+      "AuthenticatorAttestationResponse": false,
+      "AuthenticatorResponse": false,
+      "BackgroundFetchManager": false,
+      "BackgroundFetchRecord": false,
+      "BackgroundFetchRegistration": false,
+      "BarProp": false,
+      "BarcodeDetector": false,
+      "BaseAudioContext": false,
+      "BatteryManager": false,
+      "BeforeUnloadEvent": false,
+      "BiquadFilterNode": false,
+      "Blob": false,
+      "BlobEvent": false,
+      "Bluetooth": false,
+      "BluetoothCharacteristicProperties": false,
+      "BluetoothDevice": false,
+      "BluetoothRemoteGATTCharacteristic": false,
+      "BluetoothRemoteGATTDescriptor": false,
+      "BluetoothRemoteGATTServer": false,
+      "BluetoothRemoteGATTService": false,
+      "BluetoothUUID": false,
+      "BroadcastChannel": false,
+      "BrowserCaptureMediaStreamTrack": false,
+      "ByteLengthQueuingStrategy": false,
+      "CDATASection": false,
+      "CSS": false,
+      "CSSAnimation": false,
+      "CSSConditionRule": false,
+      "CSSContainerRule": false,
+      "CSSCounterStyleRule": false,
+      "CSSFontFaceRule": false,
+      "CSSFontFeatureValuesRule": false,
+      "CSSFontPaletteValuesRule": false,
+      "CSSGroupingRule": false,
+      "CSSImageValue": false,
+      "CSSImportRule": false,
+      "CSSKeyframeRule": false,
+      "CSSKeyframesRule": false,
+      "CSSKeywordValue": false,
+      "CSSLayerBlockRule": false,
+      "CSSLayerStatementRule": false,
+      "CSSMathClamp": false,
+      "CSSMathInvert": false,
+      "CSSMathMax": false,
+      "CSSMathMin": false,
+      "CSSMathNegate": false,
+      "CSSMathProduct": false,
+      "CSSMathSum": false,
+      "CSSMathValue": false,
+      "CSSMatrixComponent": false,
+      "CSSMediaRule": false,
+      "CSSNamespaceRule": false,
+      "CSSNumericArray": false,
+      "CSSNumericValue": false,
+      "CSSPageDescriptors": false,
+      "CSSPageRule": false,
+      "CSSPerspective": false,
+      "CSSPositionTryDescriptors": false,
+      "CSSPositionTryRule": false,
+      "CSSPositionValue": false,
+      "CSSPropertyRule": false,
+      "CSSRotate": false,
+      "CSSRule": false,
+      "CSSRuleList": false,
+      "CSSScale": false,
+      "CSSScopeRule": false,
+      "CSSSkew": false,
+      "CSSSkewX": false,
+      "CSSSkewY": false,
+      "CSSStartingStyleRule": false,
+      "CSSStyleDeclaration": false,
+      "CSSStyleRule": false,
+      "CSSStyleSheet": false,
+      "CSSStyleValue": false,
+      "CSSSupportsRule": false,
+      "CSSTransformComponent": false,
+      "CSSTransformValue": false,
+      "CSSTransition": false,
+      "CSSTranslate": false,
+      "CSSUnitValue": false,
+      "CSSUnparsedValue": false,
+      "CSSVariableReferenceValue": false,
+      "CSSViewTransitionRule": false,
+      "Cache": false,
+      "CacheStorage": false,
+      "CanvasCaptureMediaStream": false,
+      "CanvasCaptureMediaStreamTrack": false,
+      "CanvasGradient": false,
+      "CanvasPattern": false,
+      "CanvasRenderingContext2D": false,
+      "CaptureController": false,
+      "CaretPosition": false,
+      "ChannelMergerNode": false,
+      "ChannelSplitterNode": false,
+      "ChapterInformation": false,
+      "CharacterBoundsUpdateEvent": false,
+      "CharacterData": false,
+      "Clipboard": false,
+      "ClipboardEvent": false,
+      "ClipboardItem": false,
+      "CloseEvent": false,
+      "CloseWatcher": false,
+      "Comment": false,
+      "CompositionEvent": false,
+      "CompressionStream": false,
+      "ConstantSourceNode": false,
+      "ContentVisibilityAutoStateChangeEvent": false,
+      "ConvolverNode": false,
+      "CookieChangeEvent": false,
+      "CookieDeprecationLabel": false,
+      "CookieStore": false,
+      "CookieStoreManager": false,
+      "CountQueuingStrategy": false,
+      "Credential": false,
+      "CredentialsContainer": false,
+      "CropTarget": false,
+      "Crypto": false,
+      "CryptoKey": false,
+      "CustomElementRegistry": false,
+      "CustomEvent": false,
+      "CustomStateSet": false,
+      "DOMError": false,
+      "DOMException": false,
+      "DOMImplementation": false,
+      "DOMMatrix": false,
+      "DOMMatrixReadOnly": false,
+      "DOMParser": false,
+      "DOMPoint": false,
+      "DOMPointReadOnly": false,
+      "DOMQuad": false,
+      "DOMRect": false,
+      "DOMRectList": false,
+      "DOMRectReadOnly": false,
+      "DOMStringList": false,
+      "DOMStringMap": false,
+      "DOMTokenList": false,
+      "DataTransfer": false,
+      "DataTransferItem": false,
+      "DataTransferItemList": false,
+      "DecompressionStream": false,
+      "DelayNode": false,
+      "DelegatedInkTrailPresenter": false,
+      "DeviceMotionEvent": false,
+      "DeviceMotionEventAcceleration": false,
+      "DeviceMotionEventRotationRate": false,
+      "DeviceOrientationEvent": false,
+      "Document": false,
+      "DocumentFragment": false,
+      "DocumentPictureInPicture": false,
+      "DocumentPictureInPictureEvent": false,
+      "DocumentTimeline": false,
+      "DocumentType": false,
+      "DragEvent": false,
+      "DynamicsCompressorNode": false,
+      "EditContext": false,
+      "Element": false,
+      "ElementInternals": false,
+      "EncodedAudioChunk": false,
+      "EncodedVideoChunk": false,
+      "ErrorEvent": false,
+      "Event": false,
+      "EventCounts": false,
+      "EventSource": false,
+      "EventTarget": false,
+      "External": false,
+      "EyeDropper": false,
+      "FeaturePolicy": false,
+      "FederatedCredential": false,
+      "Fence": false,
+      "FencedFrameConfig": false,
+      "FetchLaterResult": false,
+      "File": false,
+      "FileList": false,
+      "FileReader": false,
+      "FileSystem": false,
+      "FileSystemDirectoryEntry": false,
+      "FileSystemDirectoryHandle": false,
+      "FileSystemDirectoryReader": false,
+      "FileSystemEntry": false,
+      "FileSystemFileEntry": false,
+      "FileSystemFileHandle": false,
+      "FileSystemHandle": false,
+      "FileSystemWritableFileStream": false,
+      "Float16Array": false,
+      "FocusEvent": false,
+      "FontData": false,
+      "FontFace": false,
+      "FontFaceSet": false,
+      "FontFaceSetLoadEvent": false,
+      "FormData": false,
+      "FormDataEvent": false,
+      "FragmentDirective": false,
+      "GPU": false,
+      "GPUAdapter": false,
+      "GPUAdapterInfo": false,
+      "GPUBindGroup": false,
+      "GPUBindGroupLayout": false,
+      "GPUBuffer": false,
+      "GPUBufferUsage": false,
+      "GPUCanvasContext": false,
+      "GPUColorWrite": false,
+      "GPUCommandBuffer": false,
+      "GPUCommandEncoder": false,
+      "GPUCompilationInfo": false,
+      "GPUCompilationMessage": false,
+      "GPUComputePassEncoder": false,
+      "GPUComputePipeline": false,
+      "GPUDevice": false,
+      "GPUDeviceLostInfo": false,
+      "GPUError": false,
+      "GPUExternalTexture": false,
+      "GPUInternalError": false,
+      "GPUMapMode": false,
+      "GPUOutOfMemoryError": false,
+      "GPUPipelineError": false,
+      "GPUPipelineLayout": false,
+      "GPUQuerySet": false,
+      "GPUQueue": false,
+      "GPURenderBundle": false,
+      "GPURenderBundleEncoder": false,
+      "GPURenderPassEncoder": false,
+      "GPURenderPipeline": false,
+      "GPUSampler": false,
+      "GPUShaderModule": false,
+      "GPUShaderStage": false,
+      "GPUSupportedFeatures": false,
+      "GPUSupportedLimits": false,
+      "GPUTexture": false,
+      "GPUTextureUsage": false,
+      "GPUTextureView": false,
+      "GPUUncapturedErrorEvent": false,
+      "GPUValidationError": false,
+      "GainNode": false,
+      "Gamepad": false,
+      "GamepadAxisMoveEvent": false,
+      "GamepadButton": false,
+      "GamepadButtonEvent": false,
+      "GamepadEvent": false,
+      "GamepadHapticActuator": false,
+      "GamepadPose": false,
+      "Geolocation": false,
+      "GeolocationCoordinates": false,
+      "GeolocationPosition": false,
+      "GeolocationPositionError": false,
+      "GravitySensor": false,
+      "Gyroscope": false,
+      "HID": false,
+      "HIDConnectionEvent": false,
+      "HIDDevice": false,
+      "HIDInputReportEvent": false,
+      "HTMLAllCollection": false,
+      "HTMLAnchorElement": false,
+      "HTMLAreaElement": false,
+      "HTMLAudioElement": false,
+      "HTMLBRElement": false,
+      "HTMLBaseElement": false,
+      "HTMLBodyElement": false,
+      "HTMLButtonElement": false,
+      "HTMLCanvasElement": false,
+      "HTMLCollection": false,
+      "HTMLDListElement": false,
+      "HTMLDataElement": false,
+      "HTMLDataListElement": false,
+      "HTMLDetailsElement": false,
+      "HTMLDialogElement": false,
+      "HTMLDirectoryElement": false,
+      "HTMLDivElement": false,
+      "HTMLDocument": false,
+      "HTMLElement": false,
+      "HTMLEmbedElement": false,
+      "HTMLFencedFrameElement": false,
+      "HTMLFieldSetElement": false,
+      "HTMLFontElement": false,
+      "HTMLFormControlsCollection": false,
+      "HTMLFormElement": false,
+      "HTMLFrameElement": false,
+      "HTMLFrameSetElement": false,
+      "HTMLHRElement": false,
+      "HTMLHeadElement": false,
+      "HTMLHeadingElement": false,
+      "HTMLHtmlElement": false,
+      "HTMLIFrameElement": false,
+      "HTMLImageElement": false,
+      "HTMLInputElement": false,
+      "HTMLLIElement": false,
+      "HTMLLabelElement": false,
+      "HTMLLegendElement": false,
+      "HTMLLinkElement": false,
+      "HTMLMapElement": false,
+      "HTMLMarqueeElement": false,
+      "HTMLMediaElement": false,
+      "HTMLMenuElement": false,
+      "HTMLMetaElement": false,
+      "HTMLMeterElement": false,
+      "HTMLModElement": false,
+      "HTMLOListElement": false,
+      "HTMLObjectElement": false,
+      "HTMLOptGroupElement": false,
+      "HTMLOptionElement": false,
+      "HTMLOptionsCollection": false,
+      "HTMLOutputElement": false,
+      "HTMLParagraphElement": false,
+      "HTMLParamElement": false,
+      "HTMLPictureElement": false,
+      "HTMLPreElement": false,
+      "HTMLProgressElement": false,
+      "HTMLQuoteElement": false,
+      "HTMLScriptElement": false,
+      "HTMLSelectElement": false,
+      "HTMLSlotElement": false,
+      "HTMLSourceElement": false,
+      "HTMLSpanElement": false,
+      "HTMLStyleElement": false,
+      "HTMLTableCaptionElement": false,
+      "HTMLTableCellElement": false,
+      "HTMLTableColElement": false,
+      "HTMLTableElement": false,
+      "HTMLTableRowElement": false,
+      "HTMLTableSectionElement": false,
+      "HTMLTemplateElement": false,
+      "HTMLTextAreaElement": false,
+      "HTMLTimeElement": false,
+      "HTMLTitleElement": false,
+      "HTMLTrackElement": false,
+      "HTMLUListElement": false,
+      "HTMLUnknownElement": false,
+      "HTMLVideoElement": false,
+      "HashChangeEvent": false,
+      "Headers": false,
+      "Highlight": false,
+      "HighlightRegistry": false,
+      "History": false,
+      "IDBCursor": false,
+      "IDBCursorWithValue": false,
+      "IDBDatabase": false,
+      "IDBFactory": false,
+      "IDBIndex": false,
+      "IDBKeyRange": false,
+      "IDBObjectStore": false,
+      "IDBOpenDBRequest": false,
+      "IDBRequest": false,
+      "IDBTransaction": false,
+      "IDBVersionChangeEvent": false,
+      "IIRFilterNode": false,
+      "IdentityCredential": false,
+      "IdentityCredentialError": false,
+      "IdentityProvider": false,
+      "IdleDeadline": false,
+      "IdleDetector": false,
+      "Image": false,
+      "ImageBitmap": false,
+      "ImageBitmapRenderingContext": false,
+      "ImageCapture": false,
+      "ImageData": false,
+      "ImageDecoder": false,
+      "ImageTrack": false,
+      "ImageTrackList": false,
+      "Ink": false,
+      "InputDeviceCapabilities": false,
+      "InputDeviceInfo": false,
+      "InputEvent": false,
+      "IntersectionObserver": false,
+      "IntersectionObserverEntry": false,
+      "Iterator": false,
+      "Keyboard": false,
+      "KeyboardEvent": false,
+      "KeyboardLayoutMap": false,
+      "KeyframeEffect": false,
+      "LargestContentfulPaint": false,
+      "LaunchParams": false,
+      "LaunchQueue": false,
+      "LayoutShift": false,
+      "LayoutShiftAttribution": false,
+      "LinearAccelerationSensor": false,
+      "Location": false,
+      "Lock": false,
+      "LockManager": false,
+      "MIDIAccess": false,
+      "MIDIConnectionEvent": false,
+      "MIDIInput": false,
+      "MIDIInputMap": false,
+      "MIDIMessageEvent": false,
+      "MIDIOutput": false,
+      "MIDIOutputMap": false,
+      "MIDIPort": false,
+      "MathMLElement": false,
+      "MediaCapabilities": false,
+      "MediaCapabilitiesInfo": false,
+      "MediaDeviceInfo": false,
+      "MediaDevices": false,
+      "MediaElementAudioSourceNode": false,
+      "MediaEncryptedEvent": false,
+      "MediaError": false,
+      "MediaKeyError": false,
+      "MediaKeyMessageEvent": false,
+      "MediaKeySession": false,
+      "MediaKeyStatusMap": false,
+      "MediaKeySystemAccess": false,
+      "MediaKeys": false,
+      "MediaList": false,
+      "MediaMetadata": false,
+      "MediaQueryList": false,
+      "MediaQueryListEvent": false,
+      "MediaRecorder": false,
+      "MediaRecorderErrorEvent": false,
+      "MediaSession": false,
+      "MediaSource": false,
+      "MediaSourceHandle": false,
+      "MediaStream": false,
+      "MediaStreamAudioDestinationNode": false,
+      "MediaStreamAudioSourceNode": false,
+      "MediaStreamEvent": false,
+      "MediaStreamTrack": false,
+      "MediaStreamTrackAudioSourceNode": false,
+      "MediaStreamTrackAudioStats": false,
+      "MediaStreamTrackEvent": false,
+      "MediaStreamTrackGenerator": false,
+      "MediaStreamTrackProcessor": false,
+      "MediaStreamTrackVideoStats": false,
+      "MessageChannel": false,
+      "MessageEvent": false,
+      "MessagePort": false,
+      "MimeType": false,
+      "MimeTypeArray": false,
+      "ModelGenericSession": false,
+      "ModelManager": false,
+      "MouseEvent": false,
+      "MutationEvent": false,
+      "MutationObserver": false,
+      "MutationRecord": false,
+      "NamedNodeMap": false,
+      "NavigateEvent": false,
+      "Navigation": false,
+      "NavigationActivation": false,
+      "NavigationCurrentEntryChangeEvent": false,
+      "NavigationDestination": false,
+      "NavigationHistoryEntry": false,
+      "NavigationPreloadManager": false,
+      "NavigationTransition": false,
+      "Navigator": false,
+      "NavigatorLogin": false,
+      "NavigatorManagedData": false,
+      "NavigatorUAData": false,
+      "NetworkInformation": false,
+      "Node": false,
+      "NodeFilter": false,
+      "NodeIterator": false,
+      "NodeList": false,
+      "NotRestoredReasonDetails": false,
+      "NotRestoredReasons": false,
+      "Notification": false,
+      "NotifyPaintEvent": false,
+      "OTPCredential": false,
+      "OfflineAudioCompletionEvent": false,
+      "OfflineAudioContext": false,
+      "OffscreenCanvas": false,
+      "OffscreenCanvasRenderingContext2D": false,
+      "Option": false,
+      "OrientationSensor": false,
+      "OscillatorNode": false,
+      "OverconstrainedError": false,
+      "PERSISTENT": false,
+      "PageRevealEvent": false,
+      "PageSwapEvent": false,
+      "PageTransitionEvent": false,
+      "PannerNode": false,
+      "PasswordCredential": false,
+      "Path2D": false,
+      "PaymentAddress": false,
+      "PaymentManager": false,
+      "PaymentMethodChangeEvent": false,
+      "PaymentRequest": false,
+      "PaymentRequestUpdateEvent": false,
+      "PaymentResponse": false,
+      "Performance": false,
+      "PerformanceElementTiming": false,
+      "PerformanceEntry": false,
+      "PerformanceEventTiming": false,
+      "PerformanceLongAnimationFrameTiming": false,
+      "PerformanceLongTaskTiming": false,
+      "PerformanceMark": false,
+      "PerformanceMeasure": false,
+      "PerformanceNavigation": false,
+      "PerformanceNavigationTiming": false,
+      "PerformanceObserver": false,
+      "PerformanceObserverEntryList": false,
+      "PerformancePaintTiming": false,
+      "PerformanceResourceTiming": false,
+      "PerformanceScriptTiming": false,
+      "PerformanceServerTiming": false,
+      "PerformanceTiming": false,
+      "PeriodicSyncManager": false,
+      "PeriodicWave": false,
+      "PermissionStatus": false,
+      "Permissions": false,
+      "PictureInPictureEvent": false,
+      "PictureInPictureWindow": false,
+      "Plugin": false,
+      "PluginArray": false,
+      "PointerEvent": false,
+      "PopStateEvent": false,
+      "Presentation": false,
+      "PresentationAvailability": false,
+      "PresentationConnection": false,
+      "PresentationConnectionAvailableEvent": false,
+      "PresentationConnectionCloseEvent": false,
+      "PresentationConnectionList": false,
+      "PresentationReceiver": false,
+      "PresentationRequest": false,
+      "PressureObserver": false,
+      "PressureRecord": false,
+      "ProcessingInstruction": false,
+      "Profiler": false,
+      "ProgressEvent": false,
+      "PromiseRejectionEvent": false,
+      "ProtectedAudience": false,
+      "PublicKeyCredential": false,
+      "PushManager": false,
+      "PushSubscription": false,
+      "PushSubscriptionOptions": false,
+      "RTCCertificate": false,
+      "RTCDTMFSender": false,
+      "RTCDTMFToneChangeEvent": false,
+      "RTCDataChannel": false,
+      "RTCDataChannelEvent": false,
+      "RTCDtlsTransport": false,
+      "RTCEncodedAudioFrame": false,
+      "RTCEncodedVideoFrame": false,
+      "RTCError": false,
+      "RTCErrorEvent": false,
+      "RTCIceCandidate": false,
+      "RTCIceTransport": false,
+      "RTCPeerConnection": false,
+      "RTCPeerConnectionIceErrorEvent": false,
+      "RTCPeerConnectionIceEvent": false,
+      "RTCRtpReceiver": false,
+      "RTCRtpScriptTransform": false,
+      "RTCRtpSender": false,
+      "RTCRtpTransceiver": false,
+      "RTCSctpTransport": false,
+      "RTCSessionDescription": false,
+      "RTCStatsReport": false,
+      "RTCTrackEvent": false,
+      "RadioNodeList": false,
+      "Range": false,
+      "ReadableByteStreamController": false,
+      "ReadableStream": false,
+      "ReadableStreamBYOBReader": false,
+      "ReadableStreamBYOBRequest": false,
+      "ReadableStreamDefaultController": false,
+      "ReadableStreamDefaultReader": false,
+      "RelativeOrientationSensor": false,
+      "RemotePlayback": false,
+      "ReportingObserver": false,
+      "Request": false,
+      "ResizeObserver": false,
+      "ResizeObserverEntry": false,
+      "ResizeObserverSize": false,
+      "Response": false,
+      "SVGAElement": false,
+      "SVGAngle": false,
+      "SVGAnimateElement": false,
+      "SVGAnimateMotionElement": false,
+      "SVGAnimateTransformElement": false,
+      "SVGAnimatedAngle": false,
+      "SVGAnimatedBoolean": false,
+      "SVGAnimatedEnumeration": false,
+      "SVGAnimatedInteger": false,
+      "SVGAnimatedLength": false,
+      "SVGAnimatedLengthList": false,
+      "SVGAnimatedNumber": false,
+      "SVGAnimatedNumberList": false,
+      "SVGAnimatedPreserveAspectRatio": false,
+      "SVGAnimatedRect": false,
+      "SVGAnimatedString": false,
+      "SVGAnimatedTransformList": false,
+      "SVGAnimationElement": false,
+      "SVGCircleElement": false,
+      "SVGClipPathElement": false,
+      "SVGComponentTransferFunctionElement": false,
+      "SVGDefsElement": false,
+      "SVGDescElement": false,
+      "SVGElement": false,
+      "SVGEllipseElement": false,
+      "SVGFEBlendElement": false,
+      "SVGFEColorMatrixElement": false,
+      "SVGFEComponentTransferElement": false,
+      "SVGFECompositeElement": false,
+      "SVGFEConvolveMatrixElement": false,
+      "SVGFEDiffuseLightingElement": false,
+      "SVGFEDisplacementMapElement": false,
+      "SVGFEDistantLightElement": false,
+      "SVGFEDropShadowElement": false,
+      "SVGFEFloodElement": false,
+      "SVGFEFuncAElement": false,
+      "SVGFEFuncBElement": false,
+      "SVGFEFuncGElement": false,
+      "SVGFEFuncRElement": false,
+      "SVGFEGaussianBlurElement": false,
+      "SVGFEImageElement": false,
+      "SVGFEMergeElement": false,
+      "SVGFEMergeNodeElement": false,
+      "SVGFEMorphologyElement": false,
+      "SVGFEOffsetElement": false,
+      "SVGFEPointLightElement": false,
+      "SVGFESpecularLightingElement": false,
+      "SVGFESpotLightElement": false,
+      "SVGFETileElement": false,
+      "SVGFETurbulenceElement": false,
+      "SVGFilterElement": false,
+      "SVGForeignObjectElement": false,
+      "SVGGElement": false,
+      "SVGGeometryElement": false,
+      "SVGGradientElement": false,
+      "SVGGraphicsElement": false,
+      "SVGImageElement": false,
+      "SVGLength": false,
+      "SVGLengthList": false,
+      "SVGLineElement": false,
+      "SVGLinearGradientElement": false,
+      "SVGMPathElement": false,
+      "SVGMarkerElement": false,
+      "SVGMaskElement": false,
+      "SVGMatrix": false,
+      "SVGMetadataElement": false,
+      "SVGNumber": false,
+      "SVGNumberList": false,
+      "SVGPathElement": false,
+      "SVGPatternElement": false,
+      "SVGPoint": false,
+      "SVGPointList": false,
+      "SVGPolygonElement": false,
+      "SVGPolylineElement": false,
+      "SVGPreserveAspectRatio": false,
+      "SVGRadialGradientElement": false,
+      "SVGRect": false,
+      "SVGRectElement": false,
+      "SVGSVGElement": false,
+      "SVGScriptElement": false,
+      "SVGSetElement": false,
+      "SVGStopElement": false,
+      "SVGStringList": false,
+      "SVGStyleElement": false,
+      "SVGSwitchElement": false,
+      "SVGSymbolElement": false,
+      "SVGTSpanElement": false,
+      "SVGTextContentElement": false,
+      "SVGTextElement": false,
+      "SVGTextPathElement": false,
+      "SVGTextPositioningElement": false,
+      "SVGTitleElement": false,
+      "SVGTransform": false,
+      "SVGTransformList": false,
+      "SVGUnitTypes": false,
+      "SVGUseElement": false,
+      "SVGViewElement": false,
+      "Scheduler": false,
+      "Scheduling": false,
+      "Screen": false,
+      "ScreenDetailed": false,
+      "ScreenDetails": false,
+      "ScreenOrientation": false,
+      "ScriptProcessorNode": false,
+      "ScrollTimeline": false,
+      "SecurityPolicyViolationEvent": false,
+      "Selection": false,
+      "Sensor": false,
+      "SensorErrorEvent": false,
+      "Serial": false,
+      "SerialPort": false,
+      "ServiceWorker": false,
+      "ServiceWorkerContainer": false,
+      "ServiceWorkerRegistration": false,
+      "ShadowRoot": false,
+      "SharedStorage": false,
+      "SharedStorageWorklet": false,
+      "SharedWorker": false,
+      "SnapEvent": false,
+      "SourceBuffer": false,
+      "SourceBufferList": false,
+      "SpeechSynthesis": false,
+      "SpeechSynthesisErrorEvent": false,
+      "SpeechSynthesisEvent": false,
+      "SpeechSynthesisUtterance": false,
+      "SpeechSynthesisVoice": false,
+      "StaticRange": false,
+      "StereoPannerNode": false,
+      "Storage": false,
+      "StorageBucket": false,
+      "StorageBucketManager": false,
+      "StorageEvent": false,
+      "StorageManager": false,
+      "StylePropertyMap": false,
+      "StylePropertyMapReadOnly": false,
+      "StyleSheet": false,
+      "StyleSheetList": false,
+      "SubmitEvent": false,
+      "SubtleCrypto": false,
+      "SyncManager": false,
+      "TEMPORARY": false,
+      "TaskAttributionTiming": false,
+      "TaskController": false,
+      "TaskPriorityChangeEvent": false,
+      "TaskSignal": false,
+      "Text": false,
+      "TextDecoder": false,
+      "TextDecoderStream": false,
+      "TextEncoder": false,
+      "TextEncoderStream": false,
+      "TextEvent": false,
+      "TextFormat": false,
+      "TextFormatUpdateEvent": false,
+      "TextMetrics": false,
+      "TextTrack": false,
+      "TextTrackCue": false,
+      "TextTrackCueList": false,
+      "TextTrackList": false,
+      "TextUpdateEvent": false,
+      "TimeEvent": false,
+      "TimeRanges": false,
+      "ToggleEvent": false,
+      "Touch": false,
+      "TouchEvent": false,
+      "TouchList": false,
+      "TrackEvent": false,
+      "TransformStream": false,
+      "TransformStreamDefaultController": false,
+      "TransitionEvent": false,
+      "TreeWalker": false,
+      "TrustedHTML": false,
+      "TrustedScript": false,
+      "TrustedScriptURL": false,
+      "TrustedTypePolicy": false,
+      "TrustedTypePolicyFactory": false,
+      "UIEvent": false,
+      "URL": false,
+      "URLPattern": false,
+      "URLSearchParams": false,
+      "USB": false,
+      "USBAlternateInterface": false,
+      "USBConfiguration": false,
+      "USBConnectionEvent": false,
+      "USBDevice": false,
+      "USBEndpoint": false,
+      "USBInTransferResult": false,
+      "USBInterface": false,
+      "USBIsochronousInTransferPacket": false,
+      "USBIsochronousInTransferResult": false,
+      "USBIsochronousOutTransferPacket": false,
+      "USBIsochronousOutTransferResult": false,
+      "USBOutTransferResult": false,
+      "UserActivation": false,
+      "VTTCue": false,
+      "VTTRegion": false,
+      "ValidityState": false,
+      "VideoColorSpace": false,
+      "VideoDecoder": false,
+      "VideoEncoder": false,
+      "VideoFrame": false,
+      "VideoPlaybackQuality": false,
+      "ViewTimeline": false,
+      "ViewTransition": false,
+      "ViewTransitionTypeSet": false,
+      "VirtualKeyboard": false,
+      "VirtualKeyboardGeometryChangeEvent": false,
+      "VisibilityStateEntry": false,
+      "VisualViewport": false,
+      "WGSLLanguageFeatures": false,
+      "WakeLock": false,
+      "WakeLockSentinel": false,
+      "WaveShaperNode": false,
+      "WebAssembly": false,
+      "WebGL2RenderingContext": false,
+      "WebGLActiveInfo": false,
+      "WebGLBuffer": false,
+      "WebGLContextEvent": false,
+      "WebGLFramebuffer": false,
+      "WebGLObject": false,
+      "WebGLProgram": false,
+      "WebGLQuery": false,
+      "WebGLRenderbuffer": false,
+      "WebGLRenderingContext": false,
+      "WebGLSampler": false,
+      "WebGLShader": false,
+      "WebGLShaderPrecisionFormat": false,
+      "WebGLSync": false,
+      "WebGLTexture": false,
+      "WebGLTransformFeedback": false,
+      "WebGLUniformLocation": false,
+      "WebGLVertexArrayObject": false,
+      "WebSocket": false,
+      "WebSocketError": false,
+      "WebSocketStream": false,
+      "WebTransport": false,
+      "WebTransportBidirectionalStream": false,
+      "WebTransportDatagramDuplexStream": false,
+      "WebTransportError": false,
+      "WebTransportReceiveStream": false,
+      "WebTransportSendStream": false,
+      "WheelEvent": false,
+      "Window": false,
+      "WindowControlsOverlay": false,
+      "WindowControlsOverlayGeometryChangeEvent": false,
+      "Worker": false,
+      "Worklet": false,
+      "WorkletGlobalScope": false,
+      "WritableStream": false,
+      "WritableStreamDefaultController": false,
+      "WritableStreamDefaultWriter": false,
+      "XMLDocument": false,
+      "XMLHttpRequest": false,
+      "XMLHttpRequestEventTarget": false,
+      "XMLHttpRequestUpload": false,
+      "XMLSerializer": false,
+      "XPathEvaluator": false,
+      "XPathExpression": false,
+      "XPathResult": false,
+      "XRAnchor": false,
+      "XRAnchorSet": false,
+      "XRBoundedReferenceSpace": false,
+      "XRCPUDepthInformation": false,
+      "XRCamera": false,
+      "XRDOMOverlayState": false,
+      "XRDepthInformation": false,
+      "XRFrame": false,
+      "XRHitTestResult": false,
+      "XRHitTestSource": false,
+      "XRInputSource": false,
+      "XRInputSourceArray": false,
+      "XRInputSourceEvent": false,
+      "XRInputSourcesChangeEvent": false,
+      "XRLayer": false,
+      "XRLightEstimate": false,
+      "XRLightProbe": false,
+      "XRPose": false,
+      "XRRay": false,
+      "XRReferenceSpace": false,
+      "XRReferenceSpaceEvent": false,
+      "XRRenderState": false,
+      "XRRigidTransform": false,
+      "XRSession": false,
+      "XRSessionEvent": false,
+      "XRSpace": false,
+      "XRSystem": false,
+      "XRTransientInputHitTestResult": false,
+      "XRTransientInputHitTestSource": false,
+      "XRView": false,
+      "XRViewerPose": false,
+      "XRViewport": false,
+      "XRWebGLBinding": false,
+      "XRWebGLDepthInformation": false,
+      "XRWebGLLayer": false,
+      "XSLTProcessor": false,
+      "addEventListener": false,
+      "ai": false,
+      "alert": false,
+      "atob": false,
+      "blur": false,
+      "btoa": false,
+      "caches": false,
+      "cancelAnimationFrame": false,
+      "cancelIdleCallback": false,
+      "clearInterval": false,
+      "clearTimeout": false,
+      "clientInformation": false,
+      "close": false,
+      "closed": false,
+      "confirm": false,
+      "console": false,
+      "cookieStore": false,
+      "createImageBitmap": false,
+      "credentialless": false,
+      "crossOriginIsolated": false,
+      "crypto": false,
+      "currentFrame": false,
+      "currentTime": false,
+      "customElements": false,
+      "devicePixelRatio": false,
+      "dispatchEvent": false,
+      "document": false,
+      "documentPictureInPicture": false,
+      "event": false,
+      "external": false,
+      "fence": false,
+      "fetch": false,
+      "fetchLater": false,
+      "find": false,
+      "focus": false,
+      "frameElement": false,
+      "frames": false,
+      "getComputedStyle": false,
+      "getScreenDetails": false,
+      "getSelection": false,
+      "history": false,
+      "indexedDB": false,
+      "innerHeight": false,
+      "innerWidth": false,
+      "isSecureContext": false,
+      "launchQueue": false,
+      "length": false,
+      "localStorage": false,
+      "location": true,
+      "locationbar": false,
+      "matchMedia": false,
+      "menubar": false,
+      "model": false,
+      "moveBy": false,
+      "moveTo": false,
+      "name": false,
+      "navigation": false,
+      "navigator": false,
+      "offscreenBuffering": false,
+      "onabort": true,
+      "onafterprint": true,
+      "onanimationcancel": true,
+      "onanimationend": true,
+      "onanimationiteration": true,
+      "onanimationstart": true,
+      "onappinstalled": true,
+      "onauxclick": true,
+      "onbeforeinput": true,
+      "onbeforeinstallprompt": true,
+      "onbeforematch": true,
+      "onbeforeprint": true,
+      "onbeforetoggle": true,
+      "onbeforeunload": true,
+      "onbeforexrselect": true,
+      "onblur": true,
+      "oncancel": true,
+      "oncanplay": true,
+      "oncanplaythrough": true,
+      "onchange": true,
+      "onclick": true,
+      "onclose": true,
+      "oncontentvisibilityautostatechange": true,
+      "oncontextlost": true,
+      "oncontextmenu": true,
+      "oncontextrestored": true,
+      "oncopy": true,
+      "oncuechange": true,
+      "oncut": true,
+      "ondblclick": true,
+      "ondevicemotion": true,
+      "ondeviceorientation": true,
+      "ondeviceorientationabsolute": true,
+      "ondrag": true,
+      "ondragend": true,
+      "ondragenter": true,
+      "ondragleave": true,
+      "ondragover": true,
+      "ondragstart": true,
+      "ondrop": true,
+      "ondurationchange": true,
+      "onemptied": true,
+      "onended": true,
+      "onerror": true,
+      "onfocus": true,
+      "onformdata": true,
+      "ongamepadconnected": true,
+      "ongamepaddisconnected": true,
+      "ongotpointercapture": true,
+      "onhashchange": true,
+      "oninput": true,
+      "oninvalid": true,
+      "onkeydown": true,
+      "onkeypress": true,
+      "onkeyup": true,
+      "onlanguagechange": true,
+      "onload": true,
+      "onloadeddata": true,
+      "onloadedmetadata": true,
+      "onloadstart": true,
+      "onlostpointercapture": true,
+      "onmessage": true,
+      "onmessageerror": true,
+      "onmousedown": true,
+      "onmouseenter": true,
+      "onmouseleave": true,
+      "onmousemove": true,
+      "onmouseout": true,
+      "onmouseover": true,
+      "onmouseup": true,
+      "onmousewheel": true,
+      "onoffline": true,
+      "ononline": true,
+      "onpagehide": true,
+      "onpagereveal": true,
+      "onpageshow": true,
+      "onpageswap": true,
+      "onpaste": true,
+      "onpause": true,
+      "onplay": true,
+      "onplaying": true,
+      "onpointercancel": true,
+      "onpointerdown": true,
+      "onpointerenter": true,
+      "onpointerleave": true,
+      "onpointermove": true,
+      "onpointerout": true,
+      "onpointerover": true,
+      "onpointerrawupdate": true,
+      "onpointerup": true,
+      "onpopstate": true,
+      "onprogress": true,
+      "onratechange": true,
+      "onrejectionhandled": true,
+      "onreset": true,
+      "onresize": true,
+      "onscroll": true,
+      "onscrollend": true,
+      "onscrollsnapchange": true,
+      "onscrollsnapchanging": true,
+      "onsearch": true,
+      "onsecuritypolicyviolation": true,
+      "onseeked": true,
+      "onseeking": true,
+      "onselect": true,
+      "onselectionchange": true,
+      "onselectstart": true,
+      "onslotchange": true,
+      "onstalled": true,
+      "onstorage": true,
+      "onsubmit": true,
+      "onsuspend": true,
+      "ontimeupdate": true,
+      "ontoggle": true,
+      "ontransitioncancel": true,
+      "ontransitionend": true,
+      "ontransitionrun": true,
+      "ontransitionstart": true,
+      "onunhandledrejection": true,
+      "onunload": true,
+      "onvolumechange": true,
+      "onwaiting": true,
+      "onwheel": true,
+      "open": false,
+      "opener": false,
+      "origin": false,
+      "originAgentCluster": false,
+      "outerHeight": false,
+      "outerWidth": false,
+      "pageXOffset": false,
+      "pageYOffset": false,
+      "parent": false,
+      "performance": false,
+      "personalbar": false,
+      "postMessage": false,
+      "print": false,
+      "prompt": false,
+      "queryLocalFonts": false,
+      "queueMicrotask": false,
+      "registerProcessor": false,
+      "removeEventListener": false,
+      "reportError": false,
+      "requestAnimationFrame": false,
+      "requestIdleCallback": false,
+      "resizeBy": false,
+      "resizeTo": false,
+      "sampleRate": false,
+      "scheduler": false,
+      "screen": false,
+      "screenLeft": false,
+      "screenTop": false,
+      "screenX": false,
+      "screenY": false,
+      "scroll": false,
+      "scrollBy": false,
+      "scrollTo": false,
+      "scrollX": false,
+      "scrollY": false,
+      "scrollbars": false,
+      "self": false,
+      "sessionStorage": false,
+      "setInterval": false,
+      "setTimeout": false,
+      "sharedStorage": false,
+      "showDirectoryPicker": false,
+      "showOpenFilePicker": false,
+      "showSaveFilePicker": false,
+      "speechSynthesis": false,
+      "status": false,
+      "statusbar": false,
+      "stop": false,
+      "structuredClone": false,
+      "styleMedia": false,
+      "toolbar": false,
+      "top": false,
+      "trustedTypes": false,
+      "visualViewport": false,
+      "window": false,
+    },
+    "parser": "<OMITTED>",
+    "parserOptions": {
+      "projectService": true,
+    },
     "sourceType": "module",
   },
-  "plugins": [
-    "unicorn",
-    "lodash",
-    "n",
-    "@stylistic/js",
-    "simple-import-sort",
-    "import-x",
-    "@typescript-eslint",
-    "react-hooks",
-    "react",
-    "jsx-a11y",
-    "@eslint-react",
-    "@stylistic/jsx",
-    "@rightcapital",
-  ],
-  "reportUnusedDisableDirectives": true,
+  "linterOptions": {
+    "reportUnusedDisableDirectives": 1,
+  },
+  "parser": "<OMITTED>",
+  "plugins": "<OMITTED>",
   "rules": {
     "@eslint-react/dom/no-children-in-void-dom-elements": [
-      "warn",
+      1,
     ],
     "@eslint-react/dom/no-dangerously-set-innerhtml": [
-      "warn",
+      1,
     ],
     "@eslint-react/dom/no-dangerously-set-innerhtml-with-children": [
-      "error",
+      2,
     ],
     "@eslint-react/dom/no-find-dom-node": [
-      "error",
+      2,
     ],
     "@eslint-react/dom/no-missing-button-type": [
-      "warn",
+      1,
     ],
     "@eslint-react/dom/no-missing-iframe-sandbox": [
-      "warn",
+      1,
     ],
     "@eslint-react/dom/no-namespace": [
-      "error",
+      2,
     ],
     "@eslint-react/dom/no-render-return-value": [
-      "error",
+      2,
     ],
     "@eslint-react/dom/no-script-url": [
-      "warn",
+      1,
     ],
     "@eslint-react/dom/no-unsafe-iframe-sandbox": [
-      "warn",
+      1,
     ],
     "@eslint-react/dom/no-unsafe-target-blank": [
-      "warn",
+      1,
     ],
     "@eslint-react/ensure-forward-ref-using-ref": [
-      "warn",
+      1,
     ],
     "@eslint-react/naming-convention/component-name": [
-      "error",
+      2,
       "PascalCase",
     ],
     "@eslint-react/naming-convention/filename": [
-      "error",
+      2,
       {
         "rule": "kebab-case",
       },
     ],
     "@eslint-react/naming-convention/use-state": [
-      "error",
+      2,
     ],
     "@eslint-react/no-access-state-in-setstate": [
-      "error",
+      2,
     ],
     "@eslint-react/no-array-index-key": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-children-count": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-children-for-each": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-children-map": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-children-only": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-children-to-array": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-clone-element": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-comment-textnodes": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-component-will-mount": [
-      "error",
+      2,
     ],
     "@eslint-react/no-component-will-receive-props": [
-      "error",
+      2,
     ],
     "@eslint-react/no-component-will-update": [
-      "error",
+      2,
     ],
     "@eslint-react/no-create-ref": [
-      "error",
+      2,
     ],
     "@eslint-react/no-default-props": [
-      "error",
+      2,
     ],
     "@eslint-react/no-direct-mutation-state": [
-      "error",
+      2,
     ],
     "@eslint-react/no-duplicate-key": [
-      "error",
+      2,
     ],
     "@eslint-react/no-missing-key": [
-      "error",
+      2,
     ],
     "@eslint-react/no-nested-components": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-prop-types": [
-      "error",
+      2,
     ],
     "@eslint-react/no-redundant-should-component-update": [
-      "error",
+      2,
     ],
     "@eslint-react/no-set-state-in-component-did-mount": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-set-state-in-component-did-update": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-set-state-in-component-will-update": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-string-refs": [
-      "error",
+      2,
     ],
     "@eslint-react/no-unsafe-component-will-mount": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-unsafe-component-will-receive-props": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-unsafe-component-will-update": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-unstable-context-value": [
-      "error",
+      2,
     ],
     "@eslint-react/no-unstable-default-props": [
-      "error",
+      2,
     ],
     "@eslint-react/no-unused-class-component-members": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-unused-state": [
-      "warn",
+      1,
     ],
     "@eslint-react/no-useless-fragment": [
-      "error",
+      2,
     ],
     "@rightcapital/jsx-no-unused-expressions": [
-      "error",
+      2,
     ],
     "@rightcapital/no-explicit-type-on-function-component-identifier": [
-      "error",
+      2,
     ],
-    "@rightcapital/no-ignore-return-value-of-react-hooks": [
-      "error",
+    "@stylistic/jsx-self-closing-comp": [
+      2,
     ],
-    "@stylistic/js/lines-between-class-members": [
-      "error",
+    "@stylistic/lines-between-class-members": [
+      2,
       "always",
     ],
-    "@stylistic/js/padding-line-between-statements": [
-      "error",
+    "@stylistic/padding-line-between-statements": [
+      2,
       {
         "blankLine": "always",
         "next": "*",
@@ -2392,8 +3400,8 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         "prev": "directive",
       },
     ],
-    "@stylistic/js/spaced-comment": [
-      "error",
+    "@stylistic/spaced-comment": [
+      2,
       "always",
       {
         "block": {
@@ -2422,30 +3430,27 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         },
       },
     ],
-    "@stylistic/jsx/jsx-self-closing-comp": [
-      "error",
-    ],
     "@typescript-eslint/await-thenable": [
-      "error",
+      2,
     ],
     "@typescript-eslint/ban-ts-comment": [
-      "error",
+      2,
     ],
     "@typescript-eslint/consistent-type-exports": [
-      "error",
+      2,
       {
         "fixMixedExportsWithInlineTypeSpecifier": true,
       },
     ],
     "@typescript-eslint/consistent-type-imports": [
-      "error",
+      2,
       {
         "fixStyle": "inline-type-imports",
         "prefer": "type-imports",
       },
     ],
     "@typescript-eslint/naming-convention": [
-      "error",
+      2,
       {
         "custom": {
           "match": true,
@@ -2458,115 +3463,115 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "@typescript-eslint/no-array-constructor": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-array-delete": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-base-to-string": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-duplicate-enum-values": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-duplicate-type-constituents": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-empty-function": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-empty-object-type": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-explicit-any": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-extra-non-null-assertion": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-floating-promises": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-for-in-array": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-implied-eval": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-import-type-side-effects": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-misused-new": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-misused-promises": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-namespace": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-non-null-asserted-optional-chain": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-non-null-assertion": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-redundant-type-constituents": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-require-imports": [
-      "off",
+      0,
     ],
     "@typescript-eslint/no-shadow": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-this-alias": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unnecessary-type-assertion": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unnecessary-type-constraint": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-argument": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-assignment": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-call": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-declaration-merging": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-enum-comparison": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-function-type": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-member-access": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-return": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unsafe-unary-minus": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unused-expressions": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-unused-vars": [
-      "error",
+      2,
       {
         "argsIgnorePattern": "^_",
       },
     ],
     "@typescript-eslint/no-use-before-define": [
-      "error",
+      2,
       {
         "classes": false,
         "functions": false,
@@ -2575,31 +3580,31 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "@typescript-eslint/no-useless-constructor": [
-      "error",
+      2,
     ],
     "@typescript-eslint/no-wrapper-object-types": [
-      "error",
+      2,
     ],
     "@typescript-eslint/only-throw-error": [
-      "error",
+      2,
     ],
     "@typescript-eslint/prefer-as-const": [
-      "error",
+      2,
     ],
     "@typescript-eslint/prefer-namespace-keyword": [
-      "error",
+      2,
     ],
     "@typescript-eslint/prefer-promise-reject-errors": [
-      "error",
+      2,
     ],
     "@typescript-eslint/require-await": [
-      "error",
+      2,
     ],
     "@typescript-eslint/restrict-plus-operands": [
-      "error",
+      2,
     ],
     "@typescript-eslint/restrict-template-expressions": [
-      "error",
+      2,
       {
         "allowAny": true,
         "allowBoolean": true,
@@ -2610,13 +3615,13 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "@typescript-eslint/triple-slash-reference": [
-      "error",
+      2,
     ],
     "@typescript-eslint/unbound-method": [
-      "error",
+      2,
     ],
     "array-callback-return": [
-      "error",
+      2,
       {
         "allowImplicit": true,
         "allowVoid": false,
@@ -2624,10 +3629,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "block-scoped-var": [
-      "error",
+      2,
     ],
     "camelcase": [
-      "error",
+      2,
       {
         "ignoreDestructuring": false,
         "ignoreGlobals": false,
@@ -2636,61 +3641,61 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "consistent-return": [
-      "error",
+      2,
     ],
     "constructor-super": [
-      "off",
+      0,
     ],
     "curly": [
-      "error",
+      2,
       "all",
     ],
     "default-case": [
-      "error",
+      2,
       {
         "commentPattern": "^no default$",
       },
     ],
     "default-case-last": [
-      "error",
+      2,
     ],
     "dot-notation": [
-      "error",
+      2,
       {
         "allowKeywords": true,
         "allowPattern": "",
       },
     ],
     "eqeqeq": [
-      "error",
+      2,
       "always",
       {
         "null": "ignore",
       },
     ],
     "for-direction": [
-      "error",
+      2,
     ],
     "func-names": [
-      "warn",
+      1,
     ],
     "getter-return": [
-      "off",
+      0,
       {
         "allowImplicit": true,
       },
     ],
     "grouped-accessor-pairs": [
-      "error",
+      2,
     ],
     "guard-for-in": [
-      "error",
+      2,
     ],
     "import-x/export": [
-      "error",
+      2,
     ],
     "import-x/extensions": [
-      "warn",
+      1,
       "ignorePackages",
       {
         "js": "never",
@@ -2700,111 +3705,87 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "import-x/first": [
-      "error",
+      2,
     ],
     "import-x/max-dependencies": [
-      "off",
+      0,
       {
         "max": 10,
       },
     ],
     "import-x/named": [
-      "error",
+      0,
     ],
     "import-x/newline-after-import": [
-      "error",
+      2,
     ],
     "import-x/no-absolute-path": [
-      "error",
+      2,
     ],
     "import-x/no-cycle": [
-      "error",
+      2,
     ],
     "import-x/no-duplicates": [
-      "error",
+      2,
       {
         "prefer-inline": true,
       },
     ],
     "import-x/no-dynamic-require": [
-      "error",
+      2,
     ],
     "import-x/no-extraneous-dependencies": [
-      "error",
+      2,
       {
-        "devDependencies": [
-          "test/**",
-          "tests/**",
-          "spec/**",
-          "**/__tests__/**",
-          "**/__mocks__/**",
-          "test.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-          "test-*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-          "**/*{.,_}{test,spec}.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
-          "**/jest.config.js",
-          "**/jest.setup.js",
-          "**/vue.config.js",
-          "**/webpack.config.js",
-          "**/webpack.config.*.js",
-          "**/rollup.config.js",
-          "**/rollup.config.*.js",
-          "**/gulpfile.js",
-          "**/gulpfile.*.js",
-          "**/Gruntfile{,.js}",
-          "**/protractor.conf.js",
-          "**/protractor.conf.*.js",
-          "**/karma.conf.js",
-          "**/.eslintrc.{js,cjs}",
-          "**/eslint.config.{js,cjs,mjs}",
-        ],
+        "devDependencies": false,
         "optionalDependencies": false,
       },
     ],
     "import-x/no-import-module-exports": [
-      "error",
+      2,
       {
         "exceptions": [],
       },
     ],
     "import-x/no-mutable-exports": [
-      "error",
+      2,
     ],
     "import-x/no-named-as-default": [
-      "error",
+      2,
     ],
     "import-x/no-named-as-default-member": [
-      "error",
+      2,
     ],
     "import-x/no-named-default": [
-      "error",
+      2,
     ],
     "import-x/no-relative-packages": [
-      "error",
+      2,
     ],
     "import-x/no-self-import": [
-      "error",
+      2,
     ],
     "import-x/no-unresolved": [
-      "error",
+      2,
       {
         "caseSensitive": true,
         "commonjs": true,
       },
     ],
     "import-x/no-useless-path-segments": [
-      "error",
+      2,
       {
         "commonjs": true,
       },
     ],
     "import-x/no-webpack-loader-syntax": [
-      "error",
+      2,
     ],
     "import-x/order": [
-      "off",
+      0,
     ],
     "jsx-a11y/alt-text": [
-      "error",
+      2,
       {
         "area": [],
         "elements": [
@@ -2819,31 +3800,31 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/anchor-has-content": [
-      "error",
+      2,
       {
         "components": [],
       },
     ],
     "jsx-a11y/aria-activedescendant-has-tabindex": [
-      "error",
+      2,
     ],
     "jsx-a11y/aria-props": [
-      "error",
+      2,
     ],
     "jsx-a11y/aria-proptypes": [
-      "error",
+      2,
     ],
     "jsx-a11y/aria-role": [
-      "error",
+      2,
       {
         "ignoreNonDOM": false,
       },
     ],
     "jsx-a11y/aria-unsupported-elements": [
-      "error",
+      2,
     ],
     "jsx-a11y/control-has-associated-label": [
-      "error",
+      2,
       {
         "controlComponents": [],
         "depth": 5,
@@ -2874,7 +3855,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/heading-has-content": [
-      "error",
+      2,
       {
         "components": [
           "",
@@ -2882,19 +3863,19 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/html-has-lang": [
-      "error",
+      2,
     ],
     "jsx-a11y/iframe-has-title": [
-      "error",
+      2,
     ],
     "jsx-a11y/img-redundant-alt": [
-      "error",
+      2,
     ],
     "jsx-a11y/interactive-supports-focus": [
-      "error",
+      2,
     ],
     "jsx-a11y/label-has-associated-control": [
-      "error",
+      2,
       {
         "assert": "both",
         "controlComponents": [],
@@ -2904,10 +3885,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/lang": [
-      "error",
+      2,
     ],
     "jsx-a11y/media-has-caption": [
-      "error",
+      2,
       {
         "audio": [],
         "track": [],
@@ -2915,19 +3896,19 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/mouse-events-have-key-events": [
-      "error",
+      2,
     ],
     "jsx-a11y/no-access-key": [
-      "error",
+      2,
     ],
     "jsx-a11y/no-autofocus": [
-      "error",
+      2,
       {
         "ignoreNonDOM": true,
       },
     ],
     "jsx-a11y/no-distracting-elements": [
-      "error",
+      2,
       {
         "elements": [
           "marquee",
@@ -2936,7 +3917,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/no-interactive-element-to-noninteractive-role": [
-      "error",
+      2,
       {
         "tr": [
           "none",
@@ -2945,7 +3926,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/no-noninteractive-element-interactions": [
-      "error",
+      2,
       {
         "handlers": [
           "onClick",
@@ -2958,7 +3939,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/no-noninteractive-element-to-interactive-role": [
-      "error",
+      2,
       {
         "li": [
           "menuitem",
@@ -2994,7 +3975,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/no-noninteractive-tabindex": [
-      "error",
+      2,
       {
         "roles": [
           "tabpanel",
@@ -3003,10 +3984,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/no-redundant-roles": [
-      "error",
+      2,
     ],
     "jsx-a11y/no-static-element-interactions": [
-      "error",
+      2,
       {
         "handlers": [
           "onClick",
@@ -3019,36 +4000,27 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "jsx-a11y/role-has-required-aria-props": [
-      "error",
+      2,
     ],
     "jsx-a11y/role-supports-aria-props": [
-      "error",
+      2,
     ],
     "jsx-a11y/scope": [
-      "error",
+      2,
     ],
     "jsx-a11y/tabindex-no-positive": [
-      "error",
+      2,
     ],
     "lodash/prop-shorthand": [
-      "error",
+      2,
       "never",
     ],
     "max-classes-per-file": [
-      "error",
+      2,
       1,
     ],
-    "n/global-require": [
-      "error",
-    ],
-    "n/no-new-require": [
-      "error",
-    ],
-    "n/no-path-concat": [
-      "error",
-    ],
     "new-cap": [
-      "error",
+      2,
       {
         "capIsNew": false,
         "capIsNewExceptions": [
@@ -3062,92 +4034,89 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-alert": [
-      "warn",
+      1,
     ],
     "no-array-constructor": [
-      "off",
+      0,
     ],
     "no-async-promise-executor": [
-      "error",
+      2,
     ],
     "no-await-in-loop": [
-      "error",
+      2,
     ],
     "no-bitwise": [
-      "error",
-    ],
-    "no-buffer-constructor": [
-      "error",
+      2,
     ],
     "no-caller": [
-      "error",
+      2,
     ],
     "no-case-declarations": [
-      "error",
+      2,
     ],
     "no-class-assign": [
-      "error",
+      2,
     ],
     "no-compare-neg-zero": [
-      "error",
+      2,
     ],
     "no-cond-assign": [
-      "error",
+      2,
       "always",
     ],
     "no-console": [
-      "warn",
+      1,
     ],
     "no-const-assign": [
-      "off",
+      0,
     ],
     "no-constant-condition": [
-      "warn",
+      1,
     ],
     "no-constructor-return": [
-      "error",
+      2,
     ],
     "no-continue": [
-      "error",
+      2,
     ],
     "no-control-regex": [
-      "error",
+      2,
     ],
     "no-debugger": [
-      "error",
+      2,
     ],
     "no-delete-var": [
-      "error",
+      2,
     ],
     "no-dupe-args": [
-      "off",
+      0,
     ],
     "no-dupe-class-members": [
-      "off",
+      0,
     ],
     "no-dupe-else-if": [
-      "error",
+      2,
     ],
     "no-dupe-keys": [
-      "off",
+      0,
     ],
     "no-duplicate-case": [
-      "error",
+      2,
     ],
     "no-else-return": [
-      "error",
+      2,
       {
         "allowElseIf": false,
       },
     ],
     "no-empty": [
-      "error",
+      2,
     ],
     "no-empty-character-class": [
-      "error",
+      2,
     ],
     "no-empty-function": [
-      "off",
+      0,
       {
         "allow": [
           "arrowFunctions",
@@ -3157,122 +4126,122 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-empty-pattern": [
-      "error",
+      2,
     ],
     "no-eval": [
-      "error",
+      2,
     ],
     "no-ex-assign": [
-      "error",
+      2,
     ],
     "no-extend-native": [
-      "error",
+      2,
     ],
     "no-extra-bind": [
-      "error",
+      2,
     ],
     "no-extra-boolean-cast": [
-      "error",
+      2,
     ],
     "no-extra-label": [
-      "error",
+      2,
     ],
     "no-fallthrough": [
-      "error",
+      2,
     ],
     "no-func-assign": [
-      "off",
+      0,
     ],
     "no-global-assign": [
-      "error",
+      2,
       {
         "exceptions": [],
       },
     ],
     "no-implied-eval": [
-      "off",
+      0,
     ],
     "no-import-assign": [
-      "off",
+      0,
     ],
     "no-inner-declarations": [
-      "error",
+      2,
     ],
     "no-invalid-regexp": [
-      "error",
+      2,
     ],
     "no-irregular-whitespace": [
-      "error",
+      2,
     ],
     "no-iterator": [
-      "error",
+      2,
     ],
     "no-label-var": [
-      "error",
+      2,
     ],
     "no-labels": [
-      "error",
+      2,
       {
         "allowLoop": false,
         "allowSwitch": false,
       },
     ],
     "no-lone-blocks": [
-      "error",
+      2,
     ],
     "no-lonely-if": [
-      "error",
+      2,
     ],
     "no-loop-func": [
-      "error",
+      2,
     ],
     "no-loss-of-precision": [
-      "error",
+      2,
     ],
     "no-misleading-character-class": [
-      "error",
+      2,
     ],
     "no-multi-assign": [
-      "error",
+      2,
     ],
     "no-multi-str": [
-      "error",
+      2,
     ],
     "no-nested-ternary": [
-      "error",
+      2,
     ],
     "no-new": [
-      "error",
+      2,
     ],
     "no-new-func": [
-      "error",
+      2,
     ],
     "no-new-native-nonconstructor": [
-      "off",
+      0,
     ],
     "no-new-symbol": [
-      "off",
+      0,
     ],
     "no-new-wrappers": [
-      "error",
+      2,
     ],
     "no-nonoctal-decimal-escape": [
-      "error",
+      2,
     ],
     "no-obj-calls": [
-      "off",
+      0,
     ],
     "no-object-constructor": [
-      "error",
+      2,
     ],
     "no-octal": [
-      "error",
+      2,
     ],
     "no-octal-escape": [
-      "error",
+      2,
     ],
     "no-param-reassign": [
-      "error",
+      2,
       {
         "ignorePropertyModificationsFor": [
           "acc",
@@ -3291,25 +4260,25 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-plusplus": [
-      "error",
+      2,
     ],
     "no-promise-executor-return": [
-      "error",
+      2,
     ],
     "no-proto": [
-      "error",
+      2,
     ],
     "no-prototype-builtins": [
-      "error",
+      2,
     ],
     "no-redeclare": [
-      "off",
+      0,
     ],
     "no-regex-spaces": [
-      "error",
+      2,
     ],
     "no-restricted-exports": [
-      "error",
+      2,
       {
         "restrictedNamedExports": [
           "default",
@@ -3318,7 +4287,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-restricted-globals": [
-      "error",
+      2,
       {
         "message": "Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite",
         "name": "isFinite",
@@ -3387,7 +4356,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       "top",
     ],
     "no-restricted-properties": [
-      "error",
+      2,
       {
         "message": "arguments.callee is deprecated",
         "object": "arguments",
@@ -3438,7 +4407,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-restricted-syntax": [
-      "error",
+      2,
       {
         "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
         "selector": "ForInStatement",
@@ -3457,56 +4426,56 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-return-assign": [
-      "error",
+      2,
       "always",
     ],
     "no-return-await": [
-      "error",
+      2,
     ],
     "no-script-url": [
-      "error",
+      2,
     ],
     "no-self-assign": [
-      "error",
+      2,
       {
         "props": true,
       },
     ],
     "no-self-compare": [
-      "error",
+      2,
     ],
     "no-sequences": [
-      "error",
+      2,
     ],
     "no-setter-return": [
-      "off",
+      0,
     ],
     "no-shadow": [
-      "off",
+      0,
     ],
     "no-shadow-restricted-names": [
-      "error",
+      2,
     ],
     "no-sparse-arrays": [
-      "error",
+      2,
     ],
     "no-template-curly-in-string": [
-      "error",
+      2,
     ],
     "no-this-before-super": [
-      "off",
+      0,
     ],
     "no-throw-literal": [
-      "off",
+      0,
     ],
     "no-undef": [
-      "off",
+      0,
     ],
     "no-undef-init": [
-      "error",
+      2,
     ],
     "no-underscore-dangle": [
-      "error",
+      2,
       {
         "allow": [],
         "allowAfterSuper": false,
@@ -3520,52 +4489,51 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-unexpected-multiline": [
-      "error",
+      2,
     ],
     "no-unneeded-ternary": [
-      "error",
+      2,
       {
         "defaultAssignment": false,
       },
     ],
     "no-unreachable": [
-      "off",
+      0,
     ],
     "no-unreachable-loop": [
-      "error",
+      2,
       {
         "ignore": [],
       },
     ],
     "no-unsafe-finally": [
-      "error",
+      2,
     ],
     "no-unsafe-negation": [
-      "off",
+      0,
     ],
     "no-unsafe-optional-chaining": [
-      "error",
+      2,
       {
         "disallowArithmeticOperators": true,
       },
     ],
     "no-unused-expressions": [
-      "off",
+      0,
       {
         "allowShortCircuit": false,
         "allowTaggedTemplates": false,
         "allowTernary": false,
-        "enforceForJSX": false,
       },
     ],
     "no-unused-labels": [
-      "error",
+      2,
     ],
     "no-unused-private-class-members": [
-      "error",
+      2,
     ],
     "no-unused-vars": [
-      "off",
+      0,
       {
         "args": "after-used",
         "ignoreRestSiblings": true,
@@ -3573,7 +4541,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-use-before-define": [
-      "off",
+      0,
       {
         "classes": true,
         "functions": true,
@@ -3581,25 +4549,25 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-useless-backreference": [
-      "error",
+      2,
     ],
     "no-useless-catch": [
-      "error",
+      2,
     ],
     "no-useless-computed-key": [
-      "error",
+      2,
     ],
     "no-useless-concat": [
-      "error",
+      2,
     ],
     "no-useless-constructor": [
-      "off",
+      0,
     ],
     "no-useless-escape": [
-      "error",
+      2,
     ],
     "no-useless-rename": [
-      "error",
+      2,
       {
         "ignoreDestructuring": false,
         "ignoreExport": false,
@@ -3607,19 +4575,19 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-useless-return": [
-      "error",
+      2,
     ],
     "no-var": [
-      "error",
+      2,
     ],
     "no-void": [
-      "error",
+      2,
     ],
     "no-with": [
-      "error",
+      2,
     ],
     "object-shorthand": [
-      "error",
+      2,
       "always",
       {
         "avoidQuotes": true,
@@ -3627,22 +4595,22 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "one-var": [
-      "error",
+      2,
       "never",
     ],
     "operator-assignment": [
-      "error",
+      2,
       "always",
     ],
     "prefer-const": [
-      "error",
+      2,
       {
         "destructuring": "any",
         "ignoreReadBeforeAssign": true,
       },
     ],
     "prefer-destructuring": [
-      "error",
+      2,
       {
         "AssignmentExpression": {
           "array": true,
@@ -3658,94 +4626,99 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "prefer-exponentiation-operator": [
-      "error",
+      2,
     ],
     "prefer-numeric-literals": [
-      "error",
+      2,
     ],
     "prefer-object-spread": [
-      "error",
+      2,
     ],
     "prefer-promise-reject-errors": [
-      "off",
+      0,
       {
         "allowEmptyReject": true,
       },
     ],
     "prefer-regex-literals": [
-      "error",
+      2,
       {
         "disallowRedundantWrapping": true,
       },
     ],
     "prefer-rest-params": [
-      "error",
+      2,
     ],
     "prefer-spread": [
-      "error",
+      2,
     ],
     "prefer-template": [
-      "error",
+      2,
     ],
     "radix": [
-      "error",
+      2,
     ],
     "react-hooks/exhaustive-deps": [
-      "error",
+      2,
     ],
     "react-hooks/rules-of-hooks": [
-      "error",
+      2,
     ],
     "require-await": [
-      "off",
+      0,
     ],
     "require-yield": [
-      "error",
+      2,
     ],
     "simple-import-sort/exports": [
-      "error",
+      2,
     ],
     "simple-import-sort/imports": [
-      "error",
+      2,
     ],
     "symbol-description": [
-      "error",
+      2,
     ],
     "unicode-bom": [
-      "error",
+      2,
       "never",
     ],
     "unicorn/prefer-node-protocol": [
-      "error",
+      2,
     ],
     "unicorn/text-encoding-identifier-case": [
-      "error",
+      2,
     ],
     "use-isnan": [
-      "error",
+      2,
     ],
     "valid-typeof": [
-      "error",
+      2,
       {
         "requireStringLiterals": true,
       },
     ],
     "vars-on-top": [
-      "error",
+      2,
     ],
     "yoda": [
-      "error",
+      2,
     ],
   },
   "settings": {
     "import-x/extensions": [
       ".js",
-      ".mjs",
       ".jsx",
+      ".cjs",
+      ".mjs",
+      ".ts",
+      ".cts",
+      ".mts",
+      ".tsx",
     ],
-    "import-x/ignore": [
+    "import-x/external-module-folders": [
       "node_modules",
-      "\\.(coffee|scss|css|less|hbs|svg|json)$",
+      "node_modules/@types",
     ],
     "import-x/parsers": {
       "@typescript-eslint/parser": [
@@ -3756,13 +4729,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       ],
     },
     "import-x/resolver": {
-      "node": {
-        "extensions": [
-          ".mjs",
-          ".js",
-          ".json",
-        ],
-      },
       "typescript": {
         "alwaysTryTypes": true,
       },
