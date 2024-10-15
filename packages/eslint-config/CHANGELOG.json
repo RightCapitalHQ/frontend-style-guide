@@ -1,0 +1,20 @@
+{
+  "name": "@rightcapital/eslint-config",
+  "entries": [
+    {
+      "date": "Tue, 15 Oct 2024 07:46:18 GMT",
+      "version": "37.0.0",
+      "tag": "@rightcapital/eslint-config_v37.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config",
+            "commit": "c79a291edc76c7801ff3e6b9729d7ef633921b93",
+            "comment": "feat: add `@rightcapital/eslint-config` that supports ESLint v9"
+          }
+        ]
+      }
+    }
+  ]
+}

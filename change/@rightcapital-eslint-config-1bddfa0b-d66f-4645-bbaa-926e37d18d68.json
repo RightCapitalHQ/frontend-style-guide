@@ -1,7 +1,0 @@
-{
-  "type": "major",
-  "comment": "feat: add `@rightcapital/eslint-config` that supports ESLint v9",
-  "packageName": "@rightcapital/eslint-config",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}
