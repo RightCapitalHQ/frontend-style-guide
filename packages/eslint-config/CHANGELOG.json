@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Fri, 18 Oct 2024 03:10:30 GMT",
+      "version": "37.0.1",
+      "tag": "@rightcapital/eslint-config_v37.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config",
+            "commit": "ed2ea51af6396655e643181c62a7458adc0e9a31",
+            "comment": "feat: set engines.node for import attributes support"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 15 Oct 2024 07:46:18 GMT",
       "version": "37.0.0",
       "tag": "@rightcapital/eslint-config_v37.0.0",
