@@ -1,0 +1,7 @@
+{
+  "comment": "feat: set engines.node for import attributes support",
+  "type": "patch",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
