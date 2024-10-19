@@ -4,7 +4,7 @@
     "build": "ncc build renovate-auto-beachball-changefile.mjs -o dist"
   },
   "dependencies": {
-    "execa": "9.4.0"
+    "execa": "9.4.1"
   },
   "devDependencies": {
     "@vercel/ncc": "0.38.2"
