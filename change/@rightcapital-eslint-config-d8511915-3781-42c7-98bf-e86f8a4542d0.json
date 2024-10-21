@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "fix(deps): update dependencies (non-major)",
-  "packageName": "@rightcapital/eslint-config",
-  "email": "29139614+renovate[bot]@users.noreply.github.com",
-  "dependentChangeType": "patch"
-}

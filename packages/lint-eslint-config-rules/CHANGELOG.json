@@ -2,6 +2,21 @@
   "name": "@rightcapital/lint-eslint-config-rules",
   "entries": [
     {
+      "date": "Mon, 21 Oct 2024 03:54:29 GMT",
+      "version": "1.2.1",
+      "tag": "@rightcapital/lint-eslint-config-rules_v1.2.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/lint-eslint-config-rules",
+            "commit": "fb75aa4f31c9f7d674a9914aaaadc2578d96dc5c",
+            "comment": "fix(deps): update dependencies (non-major)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 30 Sep 2024 08:30:34 GMT",
       "version": "1.2.0",
       "tag": "@rightcapital/lint-eslint-config-rules_v1.2.0",
