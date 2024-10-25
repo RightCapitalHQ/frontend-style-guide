@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Fri, 25 Oct 2024 07:26:21 GMT",
+      "version": "38.0.0",
+      "tag": "@rightcapital/eslint-config_v38.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config",
+            "commit": "b5379814fd92eeb676a7a9357000648d2758344a",
+            "comment": "fix(deps): update dependency eslint-plugin-unicorn to v56"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 21 Oct 2024 03:54:29 GMT",
       "version": "37.0.2",
       "tag": "@rightcapital/eslint-config_v37.0.2",
