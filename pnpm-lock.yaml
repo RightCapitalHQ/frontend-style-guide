@@ -874,12 +874,14 @@ packages:
   '@rightcapital/eslint-config-base@36.3.0':
     resolution: {integrity: sha512-eCeAWn7lgrDwmwHlM/u+37cFLP09WAkHW67Co3a3Bk+tyRDNkhc1NJLiM2+UVGYhd64vkJRGhckWfaEsU3UjlQ==}
     engines: {node: '>=16.0.0'}
+    deprecated: This package is deprecated. Please upgrade to ESLint v9 and use the new @rightcapital/eslint-config package instead.
     peerDependencies:
       eslint: ^8.23.1 || ^9.0.0
 
   '@rightcapital/eslint-config-javascript@36.3.0':
     resolution: {integrity: sha512-WJ2EnDqRgGPxf2IipD4fDb6ROqj783C4JnfDCXR2+cnb0hbuncceNLwVeThkc+ANhdch07QBLjAK9Fw7rPbQnQ==}
     engines: {node: '>=16.0.0'}
+    deprecated: This package is deprecated. Please upgrade to ESLint v9 and use the new @rightcapital/eslint-config package instead.
     peerDependencies:
       eslint: ^8.23.1
 
