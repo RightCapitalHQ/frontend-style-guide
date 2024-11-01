@@ -176,8 +176,8 @@ importers:
         specifier: npm:@frantic1048/fs.walk@2.0.1-pr103-async-iterator-fix
         version: '@frantic1048/fs.walk@2.0.1-pr103-async-iterator-fix'
       core-js:
-        specifier: 3.38.1
-        version: 3.38.1
+        specifier: 3.39.0
+        version: 3.39.0
       eslint:
         specifier: ^8.0.0
         version: 8.57.1
@@ -874,12 +874,14 @@ packages:
   '@rightcapital/eslint-config-base@36.3.0':
     resolution: {integrity: sha512-eCeAWn7lgrDwmwHlM/u+37cFLP09WAkHW67Co3a3Bk+tyRDNkhc1NJLiM2+UVGYhd64vkJRGhckWfaEsU3UjlQ==}
     engines: {node: '>=16.0.0'}
+    deprecated: This package is deprecated. Please upgrade to ESLint v9 and use the new @rightcapital/eslint-config package instead.
     peerDependencies:
       eslint: ^8.23.1 || ^9.0.0
 
   '@rightcapital/eslint-config-javascript@36.3.0':
     resolution: {integrity: sha512-WJ2EnDqRgGPxf2IipD4fDb6ROqj783C4JnfDCXR2+cnb0hbuncceNLwVeThkc+ANhdch07QBLjAK9Fw7rPbQnQ==}
     engines: {node: '>=16.0.0'}
+    deprecated: This package is deprecated. Please upgrade to ESLint v9 and use the new @rightcapital/eslint-config package instead.
     peerDependencies:
       eslint: ^8.23.1
 
@@ -1515,8 +1517,8 @@ packages:
   core-js-compat@3.38.1:
     resolution: {integrity: sha512-JRH6gfXxGmrzF3tZ57lFx97YARxCXPaMzPo6jELZhv88pBH5VXpQ+y0znKGlFnzuaihqhLbefxSJxWJMPtfDzw==}
 
-  core-js@3.38.1:
-    resolution: {integrity: sha512-OP35aUorbU3Zvlx7pjsFdu1rGNnD4pgw/CWoYzRY3t2EzoVT7shKHY1dlAy3f41cGIO7ZDPQimhGFTlEYkG/Hw==}
+  core-js@3.39.0:
+    resolution: {integrity: sha512-raM0ew0/jJUqkJ0E6e8UDtl+y/7ktFivgWvqw8dNSQeNWoSDLvQ1H/RN3aPXB9tBd4/FhyR4RDPGhsNIMsAn7g==}
 
   cosmiconfig-typescript-loader@5.0.0:
     resolution: {integrity: sha512-+8cK7jRAReYkMwMiG+bxhcNKiHJDM6bR9FD/nGBXOWdMLuYawjF5cGrtLilJ+LGd3ZjCXnJjR5DkfWPoIVlqJA==}
@@ -4913,7 +4915,7 @@ snapshots:
     dependencies:
       browserslist: 4.23.3
 
-  core-js@3.38.1: {}
+  core-js@3.39.0: {}
 
   cosmiconfig-typescript-loader@5.0.0(@types/node@20.17.2)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3):
     dependencies:

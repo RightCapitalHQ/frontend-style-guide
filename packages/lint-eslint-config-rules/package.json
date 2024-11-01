@@ -31,7 +31,7 @@
   "dependencies": {
     "@eslint/eslintrc": "3.1.0",
     "@nodelib/fs.walk": "npm:@frantic1048/fs.walk@2.0.1-pr103-async-iterator-fix",
-    "core-js": "3.38.1"
+    "core-js": "3.39.0"
   },
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
@@ -43,7 +43,7 @@
   "peerDependencies": {
     "eslint": "^8.0.0"
   },
-  "packageManager": "pnpm@9.12.2",
+  "packageManager": "pnpm@9.12.3",
   "engines": {
     "node": ">=20.0.0"
   },
