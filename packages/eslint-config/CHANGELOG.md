@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Fri, 25 Oct 2024 07:26:21 GMT and should not be manually modified. -->
+<!-- This log was last generated on Fri, 01 Nov 2024 05:19:24 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [38.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v38.0.1) (2024-11-1)
+
+### Patches
+
+- fix(deps): update dependencies (non-major) ([b1d750e](https://github.com/RightCapitalHQ/frontend-style-guide/commit/b1d750e049489a1712711cea70eeb76c9e730953))
 
 ## [38.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v38.0.0) (2024-10-25)
 
