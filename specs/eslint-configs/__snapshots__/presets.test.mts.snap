@@ -1405,7 +1405,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       2,
     ],
     "no-class-assign": [
-      2,
+      0,
     ],
     "no-compare-neg-zero": [
       2,
@@ -3260,6 +3260,21 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/ensure-forward-ref-using-ref": [
       1,
     ],
+    "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": [
+      0,
+    ],
+    "@eslint-react/hooks-extra/no-redundant-custom-hook": [
+      1,
+    ],
+    "@eslint-react/hooks-extra/prefer-use-state-lazy-initialization": [
+      1,
+    ],
+    "@eslint-react/jsx-no-duplicate-props": [
+      1,
+    ],
+    "@eslint-react/jsx-uses-vars": [
+      1,
+    ],
     "@eslint-react/naming-convention/component-name": [
       2,
       "PascalCase",
@@ -3325,7 +3340,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
     ],
     "@eslint-react/no-nested-components": [
-      1,
+      2,
     ],
     "@eslint-react/no-prop-types": [
       2,
@@ -3355,10 +3370,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       1,
     ],
     "@eslint-react/no-unstable-context-value": [
-      2,
+      1,
     ],
     "@eslint-react/no-unstable-default-props": [
-      2,
+      1,
     ],
     "@eslint-react/no-unused-class-component-members": [
       1,
@@ -3368,6 +3383,18 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "@eslint-react/no-useless-fragment": [
       2,
+    ],
+    "@eslint-react/web-api/no-leaked-event-listener": [
+      1,
+    ],
+    "@eslint-react/web-api/no-leaked-interval": [
+      1,
+    ],
+    "@eslint-react/web-api/no-leaked-resize-observer": [
+      1,
+    ],
+    "@eslint-react/web-api/no-leaked-timeout": [
+      1,
     ],
     "@rightcapital/jsx-no-unused-expressions": [
       2,
@@ -4055,7 +4082,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
     ],
     "no-class-assign": [
-      2,
+      0,
     ],
     "no-compare-neg-zero": [
       2,
@@ -4734,14 +4761,18 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     },
     "react-x": {
-      "additionalHooks": {
-        "useLayoutEffect": [
-          "useIsomorphicLayoutEffect",
-        ],
-      },
-      "polymorphicPropName": "as",
-      "skipImportCheck": true,
-      "version": "detect",
+      "additionalComponents": [
+        {
+          "as": "a",
+          "attributes": [
+            {
+              "as": "href",
+              "name": "to",
+            },
+          ],
+          "name": "Link",
+        },
+      ],
     },
   },
 }
