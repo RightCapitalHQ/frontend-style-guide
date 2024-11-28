@@ -49,6 +49,9 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // https://github.com/facebook/react/blob/1204c789776cb01fbaf3e9f032e7e2ba85a44137/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js
       'react-hooks/exhaustive-deps': 'error',
 
+      // MEMO: There are too many false positives with this rule.
+      '@eslint-react/hooks-extra/no-direct-set-state-in-use-effect': 'off',
+
       // A11y
       // Enforce that all elements that require alternative text have meaningful information
       // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md
