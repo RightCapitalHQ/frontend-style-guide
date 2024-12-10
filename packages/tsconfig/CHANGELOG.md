@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/tsconfig
 
-<!-- This log was last generated on Fri, 01 Nov 2024 05:19:24 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 10 Dec 2024 01:57:16 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [1.2.9](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Ftsconfig_v1.2.9) (2024-12-10)
+
+### Patches
+
+- fix(deps): update dependencies (non-major) ([c181541](https://github.com/RightCapitalHQ/frontend-style-guide/commit/c1815412203f6b201bbcd236adab098ec3b44850))
 
 ## [1.2.8](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Ftsconfig_v1.2.8) (2024-11-1)
 
