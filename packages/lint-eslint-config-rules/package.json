@@ -29,7 +29,7 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "@eslint/eslintrc": "3.1.0",
+    "@eslint/eslintrc": "3.2.0",
     "@nodelib/fs.walk": "npm:@frantic1048/fs.walk@2.0.1-pr103-async-iterator-fix",
     "core-js": "3.39.0"
   },
@@ -43,7 +43,7 @@
   "peerDependencies": {
     "eslint": "^8.0.0"
   },
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@9.15.0",
   "engines": {
     "node": ">=20.0.0"
   },
