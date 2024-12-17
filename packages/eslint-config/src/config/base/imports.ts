@@ -78,7 +78,42 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // https://github.com/lydell/eslint-plugin-simple-import-sort?tab=readme-ov-file#usage
       // MEMO: simple-import-sort/imports should not be used with import-x/order
       'import-x/order': 'off',
-      'simple-import-sort/imports': 'error',
+      'simple-import-sort/imports': [
+        'error',
+        {
+          /**
+           * Almost the same as the default config of simple-import-sort.
+           *
+           * Except for the Highcharts side effect imports,
+           * which are grouped after package imports
+           *
+           * default: https://github.com/lydell/eslint-plugin-simple-import-sort#sorting:~:text=This%20is%20the%20default%20value%20for%20the%20groups%20option%3A
+           *
+           * highcharts v12 info: https://www.highcharts.com/blog/changelog/#:~:text=When%20importing%20Highcharts%20as%20a%20node%20module%2C%20additional%20modules%20no%20longer%20require%20initialization
+           */
+          groups: [
+            // Side effect imports.
+            ['^\\u0000'],
+            // Node.js builtins prefixed with `node:`.
+            ['^node:'],
+
+            // Packages.
+            // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+            ['^@?\\w'],
+
+            // Highcharts side effect imports
+            ['^\\u0000highcharts/'],
+
+            // Absolute imports and other imports such as Vue-style `@/foo`.
+            // Anything not matched in another group.
+            ['^'],
+
+            // Relative imports.
+            // Anything that starts with a dot.
+            ['^\\.'],
+          ],
+        },
+      ],
 
       // Ensure all exports are sorted
       // https://github.com/lydell/eslint-plugin-simple-import-sort?tab=readme-ov-file#usage
