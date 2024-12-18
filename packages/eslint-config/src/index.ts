@@ -8,25 +8,47 @@ import nodeConfig from './config/mixin/node.js';
 import reactConfig from './config/mixin/react.js';
 import scriptConfig from './config/mixin/script.js';
 import tsConfig from './config/typescript.js';
+import { allPlugins } from './plugins/index.js';
+
+interface IMakeConfigOptions {
+  react?: boolean;
+  a11y?: boolean;
+  /**
+   * MEMO: merge into target ?
+   * actually, it's about module resolution,
+   * wo could provide some common patterns for module resolution
+   *
+   * - webpack: accepts nearly anything, usually do not use extension
+   * - deno: accepts importing raw files
+   * - tsc: accepts importing compiled files
+   */
+  moduleResolution?: string;
+  target?: 'browser' | 'cli';
+}
+
+/**
+ *
+ */
+const makeConfig = (
+  options: IMakeConfigOptions,
+): TSESLint.FlatConfig.ConfigArray => {
+  return [];
+};
 
 const recommendedConfig = config(
   ...linterConfig,
-
   {
     files: ['**/*.{js,cjs,mjs,jsx}'],
     extends: [...jsConfig],
   },
-
   {
     files: ['**/*.{ts,cts,mts,tsx}'],
     extends: [...tsConfig],
   },
-
   {
     files: ['**/*.tsx'],
     extends: [...reactConfig],
   },
-
   {
     // test files
     files: [
@@ -46,7 +68,6 @@ const recommendedConfig = config(
       ],
     },
   },
-
   {
     // scripts
     files: [
@@ -60,7 +81,6 @@ const recommendedConfig = config(
     ],
     extends: [...scriptConfig],
   },
-
   {
     files: ['*.{js,cjs,mjs,ts,cts,mts}'], // files in the root directory, typically work in node environment
     extends: [...nodeConfig],
@@ -84,6 +104,15 @@ const utils = {
    */
   config,
   globals,
+  makeConfig,
+  /**
+   * all plugins used in @rightcapital/eslint-config
+   *
+   * useful for overriding rules
+   *
+   * MEMO: provide a utility function for overriding rules? (instead of using `plugins` directly)
+   */
+  plugins: allPlugins,
 } as const;
 
 export { configs, utils };
