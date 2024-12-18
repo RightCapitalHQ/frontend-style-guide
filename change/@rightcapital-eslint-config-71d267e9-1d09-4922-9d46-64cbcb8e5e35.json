@@ -1,7 +1,0 @@
-{
-  "comment": "feat(eslint-config): add `@typescript-eslint/consistent-type-definitions` rule",
-  "type": "major",
-  "packageName": "@rightcapital/eslint-config",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}

@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Tue, 10 Dec 2024 01:57:16 GMT and should not be manually modified. -->
+<!-- This log was last generated on Wed, 18 Dec 2024 07:05:59 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [40.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v40.0.0) (2024-12-18)
+
+### Major changes
+
+- feat(eslint-config): add `@typescript-eslint/consistent-type-definitions` rule ([95ff644](https://github.com/RightCapitalHQ/frontend-style-guide/commit/95ff6447f4e27dfea9f8d97757f1ff0e3c8111f7))
 
 ## [39.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v39.0.1) (2024-12-10)
 

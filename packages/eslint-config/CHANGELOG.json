@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Wed, 18 Dec 2024 07:05:59 GMT",
+      "version": "40.0.0",
+      "tag": "@rightcapital/eslint-config_v40.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config",
+            "commit": "95ff6447f4e27dfea9f8d97757f1ff0e3c8111f7",
+            "comment": "feat(eslint-config): add `@typescript-eslint/consistent-type-definitions` rule"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 10 Dec 2024 01:57:16 GMT",
       "version": "39.0.1",
       "tag": "@rightcapital/eslint-config_v39.0.1",
