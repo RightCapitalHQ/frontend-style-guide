@@ -1013,6 +1013,10 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "@typescript-eslint/ban-ts-comment": [
       2,
     ],
+    "@typescript-eslint/consistent-type-definitions": [
+      2,
+      "interface",
+    ],
     "@typescript-eslint/consistent-type-exports": [
       2,
       {
@@ -3466,6 +3470,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "@typescript-eslint/ban-ts-comment": [
       2,
+    ],
+    "@typescript-eslint/consistent-type-definitions": [
+      2,
+      "interface",
     ],
     "@typescript-eslint/consistent-type-exports": [
       2,

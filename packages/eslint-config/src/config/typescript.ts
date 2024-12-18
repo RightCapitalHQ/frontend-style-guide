@@ -84,6 +84,9 @@ const config: TSESLint.FlatConfig.ConfigArray = [
         },
       ],
 
+      // https://typescript-eslint.io/rules/consistent-type-definitions/
+      '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+
       // https://typescript-eslint.io/rules/no-shadow/
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': 'error',
