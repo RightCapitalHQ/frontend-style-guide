@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/lint-eslint-config-rules",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Check rule config issues in ESLint configuration",
   "keywords": [
     "eslint",

@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/lint-eslint-config-rules
 
-<!-- This log was last generated on Tue, 10 Dec 2024 01:57:16 GMT and should not be manually modified. -->
+<!-- This log was last generated on Mon, 23 Dec 2024 01:44:37 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [1.2.4](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Flint-eslint-config-rules_v1.2.4) (2024-12-23)
+
+### Patches
+
+- fix(deps): update dependencies (non-major) ([79bbd58](https://github.com/RightCapitalHQ/frontend-style-guide/commit/79bbd58c021884ff5d7f8b5c433f57d1fc4c4fe5))
 
 ## [1.2.3](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Flint-eslint-config-rules_v1.2.3) (2024-12-10)
 
