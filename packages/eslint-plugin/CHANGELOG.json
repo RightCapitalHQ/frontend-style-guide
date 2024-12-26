@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Thu, 26 Dec 2024 02:08:51 GMT",
+      "version": "41.0.0",
+      "tag": "@rightcapital/eslint-plugin_v41.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "93d81d7b4467c6539f1f08b114ee294032184496",
+            "comment": "fix(deps): update eslint rule and plugin updates"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 23 Dec 2024 01:44:37 GMT",
       "version": "40.0.1",
       "tag": "@rightcapital/eslint-plugin_v40.0.1",
