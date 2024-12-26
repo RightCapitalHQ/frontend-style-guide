@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Thu, 26 Dec 2024 02:11:17 GMT",
+      "version": "41.0.0",
+      "tag": "@rightcapital/eslint-plugin_v41.0.0",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "e76e1bb4a40b5f28f06e9575e1ca7e231836b7a4",
+            "comment": "chore(deps): update devdependencies"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 26 Dec 2024 02:08:51 GMT",
       "version": "41.0.0",
       "tag": "@rightcapital/eslint-plugin_v41.0.0",
