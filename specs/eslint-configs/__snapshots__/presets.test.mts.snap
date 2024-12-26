@@ -3232,9 +3232,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
   "parser": "<OMITTED>",
   "plugins": "<OMITTED>",
   "rules": {
-    "@eslint-react/dom/no-children-in-void-dom-elements": [
-      1,
-    ],
     "@eslint-react/dom/no-dangerously-set-innerhtml": [
       1,
     ],
@@ -3265,22 +3262,19 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/dom/no-unsafe-target-blank": [
       1,
     ],
+    "@eslint-react/dom/no-void-elements-with-children": [
+      1,
+    ],
     "@eslint-react/ensure-forward-ref-using-ref": [
       1,
     ],
     "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": [
       0,
     ],
-    "@eslint-react/hooks-extra/no-redundant-custom-hook": [
+    "@eslint-react/hooks-extra/no-useless-custom-hooks": [
       1,
     ],
     "@eslint-react/hooks-extra/prefer-use-state-lazy-initialization": [
-      1,
-    ],
-    "@eslint-react/jsx-no-duplicate-props": [
-      1,
-    ],
-    "@eslint-react/jsx-uses-vars": [
       1,
     ],
     "@eslint-react/naming-convention/component-name": [
@@ -3332,6 +3326,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/no-component-will-update": [
       2,
     ],
+    "@eslint-react/no-context-provider": [
+      0,
+    ],
     "@eslint-react/no-create-ref": [
       2,
     ],
@@ -3341,8 +3338,17 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/no-direct-mutation-state": [
       2,
     ],
+    "@eslint-react/no-duplicate-jsx-props": [
+      1,
+    ],
     "@eslint-react/no-duplicate-key": [
       2,
+    ],
+    "@eslint-react/no-forward-ref": [
+      0,
+    ],
+    "@eslint-react/no-implicit-key": [
+      1,
     ],
     "@eslint-react/no-missing-key": [
       2,
@@ -3391,6 +3397,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "@eslint-react/no-useless-fragment": [
       2,
+    ],
+    "@eslint-react/use-jsx-vars": [
+      1,
     ],
     "@eslint-react/web-api/no-leaked-event-listener": [
       1,
@@ -4773,18 +4782,14 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     },
     "react-x": {
-      "additionalComponents": [
-        {
-          "as": "a",
-          "attributes": [
-            {
-              "as": "href",
-              "name": "to",
-            },
-          ],
-          "name": "Link",
-        },
-      ],
+      "additionalHooks": {
+        "useLayoutEffect": [
+          "useIsomorphicLayoutEffect",
+        ],
+      },
+      "polymorphicPropName": "as",
+      "strictImportCheck": false,
+      "version": "detect",
     },
   },
 }
