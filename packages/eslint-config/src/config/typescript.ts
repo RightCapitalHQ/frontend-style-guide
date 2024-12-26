@@ -1,5 +1,6 @@
 import eslintPluginRightcapital from '@rightcapital/eslint-plugin';
 import type { TSESLint } from '@typescript-eslint/utils';
+import { createOxcImportResolver } from 'eslint-import-resolver-oxc';
 import * as typescriptEslint from 'typescript-eslint';
 
 import eslintPluginImportX from '../plugins/eslint-plugin-import-x.js';
@@ -41,9 +42,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'import-x/parsers': {
         '@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx'],
       },
-      'import-x/resolver': {
-        typescript: { alwaysTryTypes: true },
-      },
+      'import-x/resolver-next': [createOxcImportResolver()],
     },
     /**
      * Be careful when adding extension rules from `@typescript-eslint`,

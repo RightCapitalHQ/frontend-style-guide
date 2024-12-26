@@ -921,16 +921,13 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       "node_modules",
       "\\.(coffee|scss|css|less|hbs|svg|json)$",
     ],
-    "import-x/resolver": {
-      "node": {
-        "extensions": [
-          ".mjs",
-          ".js",
-          ".json",
-        ],
+    "import-x/resolver-next": [
+      {
+        "interfaceVersion": 3,
+        "name": "eslint-import-resolver-oxc",
+        "resolve": [Function],
       },
-      "typescript": {},
-    },
+    ],
   },
 }
 `;
@@ -2076,11 +2073,13 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
         ".tsx",
       ],
     },
-    "import-x/resolver": {
-      "typescript": {
-        "alwaysTryTypes": true,
+    "import-x/resolver-next": [
+      {
+        "interfaceVersion": 3,
+        "name": "eslint-import-resolver-oxc",
+        "resolve": [Function],
       },
-    },
+    ],
   },
 }
 `;
@@ -4776,11 +4775,13 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         ".tsx",
       ],
     },
-    "import-x/resolver": {
-      "typescript": {
-        "alwaysTryTypes": true,
+    "import-x/resolver-next": [
+      {
+        "interfaceVersion": 3,
+        "name": "eslint-import-resolver-oxc",
+        "resolve": [Function],
       },
-    },
+    ],
     "react-x": {
       "additionalHooks": {
         "useLayoutEffect": [
