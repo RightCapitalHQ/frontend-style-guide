@@ -40,6 +40,15 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       '@stylistic/jsx-self-closing-comp': 'error',
       '@rightcapital/jsx-no-unused-expressions': 'error',
 
+      // React 19 feature, not applicable to projects using React 18 or below
+      // https://react.dev/blog/2024/12/05/react-19#context-as-a-provider
+      // https://eslint-react.xyz/docs/rules/no-context-provider
+      '@eslint-react/no-context-provider': 'off',
+      // React 19 feature
+      // https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop
+      // https://eslint-react.xyz/docs/rules/no-forward-ref
+      '@eslint-react/no-forward-ref': 'off',
+
       // hooks
       // Enforce Rules of Hooks
       // https://github.com/facebook/react/blob/c11015ff4f610ac2924d1fc6d569a17657a404fd/packages/eslint-plugin-react-hooks/src/RulesOfHooks.js
