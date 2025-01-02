@@ -37,7 +37,7 @@
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "8.56.12",
     "@types/eslint__eslintrc": "2.1.2",
-    "@types/node": "22.10.2",
+    "@types/node": "22.10.4",
     "typescript": "5.7.2"
   },
   "peerDependencies": {
