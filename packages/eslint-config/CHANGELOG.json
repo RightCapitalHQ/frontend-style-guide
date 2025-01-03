@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Fri, 03 Jan 2025 02:19:12 GMT",
+      "version": "41.0.1",
+      "tag": "@rightcapital/eslint-config_v41.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config",
+            "commit": "07fd099e85c42db9181b58783dc1158c2e842d03",
+            "comment": "fix(deps): update dependencies (non-major)"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 26 Dec 2024 02:08:51 GMT",
       "version": "41.0.0",
       "tag": "@rightcapital/eslint-config_v41.0.0",
