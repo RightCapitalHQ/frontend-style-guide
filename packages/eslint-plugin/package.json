@@ -30,14 +30,14 @@
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "8.56.12",
-    "@types/node": "22.10.4",
+    "@types/node": "22.10.6",
     "@typescript-eslint/parser": "8.18.2",
     "@typescript-eslint/rule-tester": "8.18.2",
     "@vitest/coverage-v8": "2.1.8",
     "@vitest/ui": "2.1.8",
     "eslint": "8.57.1",
     "eslint-doc-generator": "2.0.2",
-    "typescript": "5.7.2",
+    "typescript": "5.7.3",
     "vitest": "2.1.8"
   },
   "peerDependencies": {
