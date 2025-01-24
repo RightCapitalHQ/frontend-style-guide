@@ -1,6 +1,4 @@
 import type { TSESLint } from '@typescript-eslint/utils';
-import globals from 'globals';
-import { config } from 'typescript-eslint';
 
 import jsConfig from './config/javascript.js';
 import linterConfig from './config/linter.js';
@@ -8,25 +6,22 @@ import nodeConfig from './config/mixin/node.js';
 import reactConfig from './config/mixin/react.js';
 import scriptConfig from './config/mixin/script.js';
 import tsConfig from './config/typescript.js';
+import utils from './utils.js';
 
-const recommendedConfig = config(
+const recommendedConfig = utils.defineConfig(
   ...linterConfig,
-
   {
     files: ['**/*.{js,cjs,mjs,jsx}'],
     extends: [...jsConfig],
   },
-
   {
     files: ['**/*.{ts,cts,mts,tsx}'],
     extends: [...tsConfig],
   },
-
   {
     files: ['**/*.tsx'],
     extends: [...reactConfig],
   },
-
   {
     // test files
     files: [
@@ -46,7 +41,6 @@ const recommendedConfig = config(
       ],
     },
   },
-
   {
     // scripts
     files: [
@@ -60,7 +54,6 @@ const recommendedConfig = config(
     ],
     extends: [...scriptConfig],
   },
-
   {
     files: ['*.{js,cjs,mjs,ts,cts,mts}'], // files in the root directory, typically work in node environment
     extends: [...nodeConfig],
@@ -75,16 +68,6 @@ const configs = {
   react: reactConfig,
   script: scriptConfig,
 } as const satisfies Record<string, TSESLint.FlatConfig.ConfigArray>;
-
-const utils = {
-  /**
-   * Utility function for composing configs from `typescript-eslint`.
-   *
-   * @see https://typescript-eslint.io/packages/typescript-eslint#config
-   */
-  config,
-  globals,
-} as const;
 
 export { configs, utils };
 export default { configs, utils };

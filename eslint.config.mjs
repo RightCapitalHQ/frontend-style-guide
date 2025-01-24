@@ -1,9 +1,9 @@
 import eslintConfigRightcapital from '@rightcapital/eslint-config';
 import eslintPluginEslintPlugin from 'eslint-plugin-eslint-plugin';
 
-const { config } = eslintConfigRightcapital.utils;
+const { defineConfig } = eslintConfigRightcapital.utils;
 
-export default config(
+export default defineConfig(
   {
     /**
      * NOTE:

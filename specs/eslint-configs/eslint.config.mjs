@@ -1,8 +1,8 @@
 import eslintConfigRightcapital from '@rightcapital/eslint-config';
 
-const { config } = eslintConfigRightcapital.utils;
+const { defineConfig } = eslintConfigRightcapital.utils;
 
-export default config(
+export default defineConfig(
   {
     files: ['src/javascript.js'],
     extends: [...eslintConfigRightcapital.configs.js],

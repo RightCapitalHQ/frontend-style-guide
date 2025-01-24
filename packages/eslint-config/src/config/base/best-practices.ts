@@ -1,15 +1,12 @@
 import type { TSESLint } from '@typescript-eslint/utils';
-import eslintPluginLodash from 'eslint-plugin-lodash';
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+
+import { pickPlugins } from '../../utils.js';
 
 // extracted from eslint-config-airbnb-base@15.0.0
 // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-base-v15.0.0/packages/eslint-config-airbnb-base/rules/best-practices.js
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
-    plugins: {
-      lodash: eslintPluginLodash,
-      unicorn: eslintPluginUnicorn,
-    },
+    plugins: pickPlugins(['lodash', 'unicorn']),
     rules: {
       // enforces return statements in callbacks of array's methods
       // https://eslint.org/docs/rules/array-callback-return

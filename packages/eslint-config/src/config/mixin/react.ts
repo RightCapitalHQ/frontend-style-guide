@@ -1,11 +1,8 @@
 import eslintPluginReact from '@eslint-react/eslint-plugin';
-import eslintPluginRightcapital from '@rightcapital/eslint-plugin';
-import eslintPluginStylistic from '@stylistic/eslint-plugin';
 import type { TSESLint } from '@typescript-eslint/utils';
-import eslintPluginA11y from 'eslint-plugin-jsx-a11y';
 import globals from 'globals';
 
-import eslintPluginReactHooks from '../../plugins/eslint-plugin-react-hooks.js';
+import { pickPlugins } from '../../utils.js';
 /**
  * Common rules for React, working with TypeScript.
  */
@@ -17,13 +14,15 @@ const config: TSESLint.FlatConfig.ConfigArray = [
         ...globals.browser,
       },
     },
-    plugins: {
-      ...eslintPluginReact.configs.all.plugins,
-      '@rightcapital': eslintPluginRightcapital,
-      '@stylistic': eslintPluginStylistic as TSESLint.FlatConfig.Plugin,
-      'react-hooks': eslintPluginReactHooks,
-      'jsx-a11y': eslintPluginA11y,
-    },
+    plugins: pickPlugins([
+      ...(Object.keys(
+        eslintPluginReact.configs.all.plugins,
+      ) as (keyof typeof eslintPluginReact.configs.all.plugins)[]),
+      '@rightcapital',
+      '@stylistic',
+      'react-hooks',
+      'jsx-a11y',
+    ]),
     rules: {
       // naming convention
       '@eslint-react/naming-convention/component-name': ['error', 'PascalCase'],

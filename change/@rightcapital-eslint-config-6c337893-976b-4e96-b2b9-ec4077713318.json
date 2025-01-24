@@ -1,0 +1,7 @@
+{
+  "comment": "feat!: expose used plugins and automatic inference used plugins",
+  "type": "major",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}

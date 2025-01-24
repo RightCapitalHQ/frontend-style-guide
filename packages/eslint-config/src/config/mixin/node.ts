@@ -1,6 +1,7 @@
 import type { TSESLint } from '@typescript-eslint/utils';
-import n from 'eslint-plugin-n';
 import globals from 'globals';
+
+import { pickPlugins } from '../../utils.js';
 /**
  * Common rules for JavaScript files.
  */
@@ -12,9 +13,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       },
     },
 
-    plugins: {
-      n,
-    },
+    plugins: pickPlugins(['n']),
 
     rules: {
       // require all requires be top-level

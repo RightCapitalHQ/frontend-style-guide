@@ -40,9 +40,9 @@ In your `eslint.config.mjs`([or equivalent](https://eslint.org/docs/latest/use/c
 ```js
 import eslintConfigRightcapital from '@rightcapital/eslint-config';
 
-const { config } = eslintConfigRightcapital.utils;
+const { defineConfig } = eslintConfigRightcapital.utils;
 
-export default config(
+export default defineConfig(
   ...eslintConfigRightcapital.configs.recommended,
 
   // add more configs for specific files or packages if needed
@@ -73,7 +73,25 @@ export default config(
 
 **`utils`**
 
-- `config`: reexported util from `typescript-eslint` for easier compositing ESLint config. (docs: https://typescript-eslint.io/packages/typescript-eslint#config)
+- `defineConfig`: reexported util from `typescript-eslint` for easier compositing ESLint config. (docs: https://typescript-eslint.io/packages/typescript-eslint#config), with automatic plugin inference (when the plugin is known to `@rightcapital/eslint-config`).
+
+  ```js
+  const { defineConfig } = eslintConfigRightcapital.utils;
+
+  export default defineConfig({
+    plugins: {
+      /**
+       * You can omit this since it's already known to `@rightcapital/eslint-config`.
+       * And `defineConfig` will automatically infer the plugin from `@rightcapital/eslint-config`.
+       */
+      // unicorn: eslintPluginUnicorn,
+    },
+    rules: {
+      'unicorn/no-hex-escape': 'error',
+    },
+  });
+  ```
+
 - `globals`: reexported util from [globals](https://github.com/sindresorhus/globals), useful for configuring [`languageOptions.globals`](https://eslint.org/docs/latest/use/configure/language-options#specifying-globals).
 
 ---
