@@ -108,12 +108,15 @@ const config: TSESLint.FlatConfig.ConfigArray = [
           controlComponents: [],
           ignoreElements: [
             'audio',
+            'video',
             'canvas',
             'embed',
             'input',
             'textarea',
             'tr',
-            'video',
+            // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/959
+            'th',
+            'td',
           ],
           ignoreRoles: [
             'grid',

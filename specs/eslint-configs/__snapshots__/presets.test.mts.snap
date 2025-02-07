@@ -3878,12 +3878,14 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         "depth": 5,
         "ignoreElements": [
           "audio",
+          "video",
           "canvas",
           "embed",
           "input",
           "textarea",
           "tr",
-          "video",
+          "th",
+          "td",
         ],
         "ignoreRoles": [
           "grid",
