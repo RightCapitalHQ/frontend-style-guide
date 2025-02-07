@@ -3272,7 +3272,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       0,
     ],
     "@eslint-react/hooks-extra/no-useless-custom-hooks": [
-      1,
+      0,
     ],
     "@eslint-react/hooks-extra/prefer-use-state-lazy-initialization": [
       1,

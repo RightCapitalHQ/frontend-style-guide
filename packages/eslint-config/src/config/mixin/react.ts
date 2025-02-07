@@ -60,6 +60,9 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // MEMO: There are too many false positives with this rule.
       '@eslint-react/hooks-extra/no-direct-set-state-in-use-effect': 'off',
 
+      // MEMO: Too opinionated thus we disable it
+      '@eslint-react/hooks-extra/no-useless-custom-hooks': 'off',
+
       // A11y
       // Enforce that all elements that require alternative text have meaningful information
       // https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md
