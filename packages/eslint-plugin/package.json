@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/eslint-plugin",
-  "version": "41.0.1",
+  "version": "41.0.2",
   "description": "ESLint plugin for RightCapital",
   "keywords": [
     "eslint",

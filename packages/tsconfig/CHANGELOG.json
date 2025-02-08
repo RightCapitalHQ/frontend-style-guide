@@ -2,6 +2,21 @@
   "name": "@rightcapital/tsconfig",
   "entries": [
     {
+      "date": "Sat, 08 Feb 2025 06:04:37 GMT",
+      "version": "1.2.12",
+      "tag": "@rightcapital/tsconfig_v1.2.12",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/tsconfig",
+            "commit": "6ef8edfde43887f752c0d70d55a16020db388f67",
+            "comment": "chore(deps): update pnpm to v10"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 03 Jan 2025 02:19:12 GMT",
       "version": "1.2.11",
       "tag": "@rightcapital/tsconfig_v1.2.11",

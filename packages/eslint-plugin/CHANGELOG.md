@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-plugin
 
-<!-- This log was last generated on Fri, 03 Jan 2025 02:19:12 GMT and should not be manually modified. -->
+<!-- This log was last generated on Sat, 08 Feb 2025 06:04:37 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [41.0.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v41.0.2) (2025-2-8)
+
+### Patches
+
+- chore(deps): update pnpm to v10 ([6ef8edf](https://github.com/RightCapitalHQ/frontend-style-guide/commit/6ef8edfde43887f752c0d70d55a16020db388f67))
 
 ## [41.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v41.0.1) (2025-1-3)
 

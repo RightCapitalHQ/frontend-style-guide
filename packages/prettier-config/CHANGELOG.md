@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/prettier-config
 
-<!-- This log was last generated on Sat, 08 Feb 2025 05:48:02 GMT and should not be manually modified. -->
+<!-- This log was last generated on Sat, 08 Feb 2025 06:04:37 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [7.2.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Fprettier-config_v7.2.1) (2025-2-8)
+
+### Patches
+
+- chore(deps): update pnpm to v10 ([6ef8edf](https://github.com/RightCapitalHQ/frontend-style-guide/commit/6ef8edfde43887f752c0d70d55a16020db388f67))
 
 ## [7.2.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Fprettier-config_v7.2.0) (2025-2-8)
 

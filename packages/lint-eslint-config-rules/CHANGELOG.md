@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/lint-eslint-config-rules
 
-<!-- This log was last generated on Fri, 03 Jan 2025 02:19:12 GMT and should not be manually modified. -->
+<!-- This log was last generated on Sat, 08 Feb 2025 06:04:37 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [1.2.6](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Flint-eslint-config-rules_v1.2.6) (2025-2-8)
+
+### Patches
+
+- chore(deps): update pnpm to v10 ([6ef8edf](https://github.com/RightCapitalHQ/frontend-style-guide/commit/6ef8edfde43887f752c0d70d55a16020db388f67))
 
 ## [1.2.5](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Flint-eslint-config-rules_v1.2.5) (2025-1-3)
 
