@@ -1,13 +1,13 @@
-import eslintPluginStylistic from '@stylistic/eslint-plugin';
 import type { TSESLint } from '@typescript-eslint/utils';
+
+import { pickPlugins } from '../../utils.js';
 
 // extracted from eslint-config-airbnb-base@15.0.0
 // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-base-v15.0.0/packages/eslint-config-airbnb-base/rules/style.js
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
-    plugins: {
-      '@stylistic': eslintPluginStylistic as TSESLint.FlatConfig.Plugin,
-    },
+    plugins: pickPlugins(['@stylistic']),
+
     rules: {
       // require camel case names
       camelcase: ['error', { properties: 'never', ignoreDestructuring: false }],

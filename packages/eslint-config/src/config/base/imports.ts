@@ -1,16 +1,12 @@
 import type { TSESLint } from '@typescript-eslint/utils';
-import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
 
-import eslintPluginImportX from '../../plugins/eslint-plugin-import-x.js';
+import { pickPlugins } from '../../utils.js';
 
 // extracted from eslint-config-airbnb-base@15.0.0
 // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-base-v15.0.0/packages/eslint-config-airbnb-base/rules/imports.js
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
-    plugins: {
-      'import-x': eslintPluginImportX,
-      'simple-import-sort': eslintPluginSimpleImportSort,
-    },
+    plugins: pickPlugins(['import-x', 'simple-import-sort']),
 
     rules: {
       // Static analysis:

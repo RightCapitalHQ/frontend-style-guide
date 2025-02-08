@@ -1,8 +1,7 @@
-import eslintPluginRightcapital from '@rightcapital/eslint-plugin';
 import type { TSESLint } from '@typescript-eslint/utils';
 import * as typescriptEslint from 'typescript-eslint';
 
-import eslintPluginImportX from '../plugins/eslint-plugin-import-x.js';
+import { pickPlugins } from '../utils.js';
 import baseConfig from './base/index.js';
 
 /**
@@ -12,11 +11,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
   ...baseConfig,
   ...typescriptEslint.configs.recommendedTypeChecked,
   {
-    plugins: {
-      '@typescript-eslint': typescriptEslint.plugin,
-      '@rightcapital': eslintPluginRightcapital,
-      'import-x': eslintPluginImportX,
-    },
+    plugins: pickPlugins(['@typescript-eslint', '@rightcapital', 'import-x']),
     languageOptions: {
       parser: typescriptEslint.parser,
       parserOptions: {
