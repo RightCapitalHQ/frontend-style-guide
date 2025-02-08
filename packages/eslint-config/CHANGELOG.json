@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Sat, 08 Feb 2025 08:47:24 GMT",
+      "version": "42.0.0",
+      "tag": "@rightcapital/eslint-config_v42.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config",
+            "commit": "30efd99a8ba38223d6f1c4b1487d04820c37eedb",
+            "comment": "feat!: expose used plugins and automatic inference used plugins"
+          }
+        ]
+      }
+    },
+    {
       "date": "Sat, 08 Feb 2025 06:04:37 GMT",
       "version": "41.0.2",
       "tag": "@rightcapital/eslint-config_v41.0.2",

@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Sat, 08 Feb 2025 06:04:37 GMT and should not be manually modified. -->
+<!-- This log was last generated on Sat, 08 Feb 2025 08:47:24 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [42.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v42.0.0) (2025-2-8)
+
+### Major changes
+
+- feat!: expose used plugins and automatic inference used plugins ([30efd99](https://github.com/RightCapitalHQ/frontend-style-guide/commit/30efd99a8ba38223d6f1c4b1487d04820c37eedb))
 
 ## [41.0.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v41.0.2) (2025-2-8)
 
