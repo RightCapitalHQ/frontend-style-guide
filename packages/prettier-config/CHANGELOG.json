@@ -2,6 +2,21 @@
   "name": "@rightcapital/prettier-config",
   "entries": [
     {
+      "date": "Sat, 08 Feb 2025 05:48:02 GMT",
+      "version": "7.2.0",
+      "tag": "@rightcapital/prettier-config_v7.2.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/prettier-config",
+            "commit": "35b05036c6954d9d05ed600b41bcf3ceae5a8f49",
+            "comment": "feat: add pnpm v10 support for `prettier-config`"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 15 Jan 2025 08:35:33 GMT",
       "version": "7.1.12",
       "tag": "@rightcapital/prettier-config_v7.1.12",
