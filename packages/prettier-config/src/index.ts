@@ -7,7 +7,7 @@ const config: Options = {
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',
-  plugins: ['prettier-plugin-packagejson'],
+  plugins: [require.resolve('prettier-plugin-packagejson')],
 };
 
 export = config;

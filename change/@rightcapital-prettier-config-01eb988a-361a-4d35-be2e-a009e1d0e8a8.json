@@ -1,0 +1,7 @@
+{
+  "comment": "feat: add pnpm v10 support for `prettier-config`",
+  "type": "minor",
+  "packageName": "@rightcapital/prettier-config",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
