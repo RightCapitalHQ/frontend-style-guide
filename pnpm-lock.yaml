@@ -271,6 +271,9 @@ importers:
 
   specs/lint-eslint-config-rules:
     devDependencies:
+      '@rightcapital/lint-eslint-config-rules':
+        specifier: workspace:*
+        version: link:../../packages/lint-eslint-config-rules
       typescript:
         specifier: 5.7.3
         version: 5.7.3
