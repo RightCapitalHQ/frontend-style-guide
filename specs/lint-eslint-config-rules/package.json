@@ -5,6 +5,7 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "@rightcapital/lint-eslint-config-rules": "workspace:*",
     "typescript": "5.7.3",
     "vitest": "2.1.8"
   }
