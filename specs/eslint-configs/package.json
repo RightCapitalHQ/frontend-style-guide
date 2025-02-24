@@ -8,9 +8,6 @@
     "lint:prettier-eslint": "prettier -c .",
     "test": "vitest"
   },
-  "dependencies": {
-    "typescript": "5.7.2"
-  },
   "devDependencies": {
     "@rightcapital/eslint-config": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
@@ -19,7 +16,9 @@
     "eslint": "9.12.0",
     "eslint-config-prettier": "10.0.1",
     "execa": "9.5.2",
+    "jest-diff": "29.7.0",
     "prettier": "3.5.1",
+    "typescript": "5.7.2",
     "vitest": "2.1.9"
   }
 }

@@ -7,6 +7,7 @@ import eslintPluginLodash from 'eslint-plugin-lodash';
 import n from 'eslint-plugin-n';
 import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import unusedImportsEslintPlugin from 'eslint-plugin-unused-imports';
 import * as typescriptEslint from 'typescript-eslint';
 
 import eslintPluginImportX from './eslint-plugin-import-x.js';
@@ -33,4 +34,5 @@ export const plugins = definePlugins({
   'jsx-a11y': eslintPluginA11y,
   lodash: eslintPluginLodash,
   unicorn: eslintPluginUnicorn,
+  'unused-imports': unusedImportsEslintPlugin,
 });

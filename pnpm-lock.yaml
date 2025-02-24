@@ -104,6 +104,9 @@ importers:
       eslint-plugin-unicorn:
         specifier: 56.0.1
         version: 56.0.1(eslint@9.12.0(jiti@2.4.2))
+      eslint-plugin-unused-imports:
+        specifier: 4.1.4
+        version: 4.1.4(@typescript-eslint/eslint-plugin@8.18.2(@typescript-eslint/parser@8.18.2(eslint@9.12.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.12.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.12.0(jiti@2.4.2))
       globals:
         specifier: 15.14.0
         version: 15.14.0
@@ -236,10 +239,6 @@ importers:
         version: 2.51.0(typescript@5.7.2)
 
   specs/eslint-configs:
-    dependencies:
-      typescript:
-        specifier: 5.7.2
-        version: 5.7.2
     devDependencies:
       '@rightcapital/eslint-config':
         specifier: workspace:*
@@ -262,9 +261,15 @@ importers:
       execa:
         specifier: 9.5.2
         version: 9.5.2
+      jest-diff:
+        specifier: 29.7.0
+        version: 29.7.0
       prettier:
         specifier: 3.5.1
         version: 3.5.1
+      typescript:
+        specifier: 5.7.2
+        version: 5.7.2
       vitest:
         specifier: 2.1.9
         version: 2.1.9(@types/node@22.13.4)(@vitest/ui@2.1.9)
@@ -1876,6 +1881,15 @@ packages:
     engines: {node: '>=18.18'}
     peerDependencies:
       eslint: '>=8.56.0'
+
+  eslint-plugin-unused-imports@4.1.4:
+    resolution: {integrity: sha512-YptD6IzQjDardkl0POxnnRBhU1OEePMV0nd6siHaRBbd+lyh6NAhFEobiznKU7kTsSsDeSD62Pe7kAM1b7dAZQ==}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^8.0.0-0 || ^7.0.0 || ^6.0.0 || ^5.0.0
+      eslint: ^9.0.0 || ^8.0.0
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
 
   eslint-scope@7.2.2:
     resolution: {integrity: sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==}
@@ -5564,6 +5578,12 @@ snapshots:
       regjsparser: 0.10.0
       semver: 7.6.3
       strip-indent: 3.0.0
+
+  eslint-plugin-unused-imports@4.1.4(@typescript-eslint/eslint-plugin@8.18.2(@typescript-eslint/parser@8.18.2(eslint@9.12.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.12.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.12.0(jiti@2.4.2)):
+    dependencies:
+      eslint: 9.12.0(jiti@2.4.2)
+    optionalDependencies:
+      '@typescript-eslint/eslint-plugin': 8.18.2(@typescript-eslint/parser@8.18.2(eslint@9.12.0(jiti@2.4.2))(typescript@5.7.3))(eslint@9.12.0(jiti@2.4.2))(typescript@5.7.3)
 
   eslint-scope@7.2.2:
     dependencies:
