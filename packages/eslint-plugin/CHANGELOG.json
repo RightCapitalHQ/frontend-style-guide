@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Mon, 24 Feb 2025 02:00:25 GMT",
+      "version": "42.0.0",
+      "tag": "@rightcapital/eslint-plugin_v42.0.0",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "02246c90f0d7a48b9d9c06692c22a7cd59720350",
+            "comment": "chore(deps): update devdependency vitest to v2.1.9 [security]"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 21 Feb 2025 06:42:59 GMT",
       "version": "42.0.0",
       "tag": "@rightcapital/eslint-plugin_v42.0.0",
