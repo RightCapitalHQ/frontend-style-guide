@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "feat: add eslint-plugin-unused-imports",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "45930107+PinkChampagne17@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

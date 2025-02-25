@@ -23,8 +23,8 @@
     "lint:eslint": "eslint --max-warnings=0 .",
     "lint:prettier": "prettier -c .",
     "prepare": "./scripts/prepare.sh",
-    "test": "pnpm run --recursive --aggregate-output --reporter-hide-prefix test",
-    "test:update-snapshots": "pnpm --aggregate-output --filter './specs/*' test -- -u"
+    "test": "pnpm run --recursive --aggregate-output --reporter-hide-prefix test --run",
+    "test:update-snapshots": "pnpm --aggregate-output --filter './specs/*' test --run -u"
   },
   "config": {
     "commitizen": {

@@ -1,11 +1,12 @@
 import { readdir } from 'node:fs/promises';
 import { basename, resolve } from 'node:path';
-
-import { describe, test } from 'vitest';
+import { describe, expect, test } from 'vitest';
+import { execa } from 'execa';
 
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 import { ESLint } from 'eslint';
+import { diff } from 'jest-diff';
 
 const srcDir = resolve(__dirname, 'src');
 const rootDir = __dirname;
@@ -14,14 +15,41 @@ const sampleFiles = (await readdir(srcDir)).map((filename) =>
   resolve(srcDir, filename),
 );
 
-const parsedConfigs = await Promise.all(
-  sampleFiles.map(async (file) => [
-    basename(file),
-    await new ESLint({
-      cwd: rootDir,
-    }).calculateConfigForFile(file),
-  ]),
-);
+const getParsedConfigByOptions = async (
+  file: string,
+  { isInEditor }: { isInEditor: boolean },
+) => {
+  /**
+   * We don't use `new ESLint().calculateConfigForFile()` here
+   * because part of the configuration in @rightcapital/eslint-config is adjusted based on environment variables.
+   * However, ESLint configuration files might be cached,
+   * so even when environment variables change in the same Node.js process,
+   * calling `new ESLint().calculateConfigForFile()` again would still return the same result as before.
+   */
+  const { stdout } = await execa({
+    // @ts-expect-error
+    extendEnv: true,
+    env: {
+      RC_ESLINT_CONFIG_TEST_FORCE_IS_IN_EDITOR: isInEditor ? 1 : 0,
+    },
+  })`eslint --print-config ${file}`;
+  return JSON.parse(stdout as string);
+};
+
+const getParsedConfig = async () => {
+  return await Promise.all(
+    sampleFiles.map(async (file) => {
+      const fileBaseName = basename(file);
+      const [config, editorModeConfig] = await Promise.all([
+        getParsedConfigByOptions(file, { isInEditor: false }),
+        getParsedConfigByOptions(file, { isInEditor: true }),
+      ]);
+      return [fileBaseName, config, editorModeConfig] as const;
+    }),
+  );
+};
+
+const parsedConfigs = await getParsedConfig();
 
 /**
  * Make snapshot for the result of parsed presets,
@@ -29,13 +57,13 @@ const parsedConfigs = await Promise.all(
  *
  * @see https://eslint.org/docs/latest/integrate/nodejs-api#-eslintcalculateconfigforfilefilepath
  */
-describe('Resolved config matches snapshot', async () => {
-  for (const [file, config] of parsedConfigs) {
-    test.concurrent(file, async ({ expect }) => {
+describe('Resolved config matches snapshot', () => {
+  for (const [file, config, editorModeConfig] of parsedConfigs) {
+    test(file, () => {
       expect({
         ...config,
 
-        // These fields contains unnecessary information for snapshot
+        // These fields contain unnecessary information for snapshot
         parser: '<OMITTED>',
         plugins: '<OMITTED>',
         language: '<OMITTED>',
@@ -44,6 +72,15 @@ describe('Resolved config matches snapshot', async () => {
           parser: '<OMITTED>',
         },
       }).toMatchSnapshot();
+
+      expect(
+        diff(config, editorModeConfig, {
+          aAnnotation: 'Editor mode: false',
+          bAnnotation: 'Editor mode: true',
+          expand: false,
+          includeChangeCounts: true,
+        }),
+      ).toMatchSnapshot();
     });
   }
 });

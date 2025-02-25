@@ -1,5 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 
+import { isInEditorEnv } from '../helpers/is-in-editor-env.js';
 import baseConfig from './base/index.js';
 
 /**
@@ -23,5 +24,14 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     },
   },
 ];
+
+if (!isInEditorEnv()) {
+  config.push({
+    rules: {
+      'no-unused-vars': 'off',
+      'unused-imports/no-unused-imports': 'error',
+    },
+  });
+}
 
 export default config;
