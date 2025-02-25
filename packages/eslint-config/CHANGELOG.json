@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Tue, 25 Feb 2025 09:33:19 GMT",
+      "version": "42.1.0",
+      "tag": "@rightcapital/eslint-config_v42.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config",
+            "commit": "0eb282ce2826ac3f243af64661dc4093576536fb",
+            "comment": "feat: add eslint-plugin-unused-imports"
+          }
+        ]
+      }
+    },
+    {
       "date": "Sat, 08 Feb 2025 08:47:24 GMT",
       "version": "42.0.0",
       "tag": "@rightcapital/eslint-config_v42.0.0",

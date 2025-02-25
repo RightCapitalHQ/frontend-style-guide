@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Sat, 08 Feb 2025 08:47:24 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 25 Feb 2025 09:33:19 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [42.1.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v42.1.0) (2025-2-25)
+
+### Minor changes
+
+- feat: add eslint-plugin-unused-imports ([0eb282c](https://github.com/RightCapitalHQ/frontend-style-guide/commit/0eb282ce2826ac3f243af64661dc4093576536fb))
 
 ## [42.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v42.0.0) (2025-2-8)
 
