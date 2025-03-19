@@ -61,7 +61,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       '@eslint-react/hooks-extra/no-direct-set-state-in-use-effect': 'off',
 
       // MEMO: Too opinionated thus we disable it
-      '@eslint-react/hooks-extra/no-useless-custom-hooks': 'off',
+      '@eslint-react/hooks-extra/no-unnecessary-use-prefix': 'off',
 
       // A11y
       // Enforce that all elements that require alternative text have meaningful information
