@@ -1,7 +1,0 @@
-{
-  "comment": "feat: update deprecated `no-useless-custom-hooks` rule name from `@eslint-react/eslint-plugin`",
-  "type": "patch",
-  "packageName": "@rightcapital/eslint-config",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}

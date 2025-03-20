@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Wed, 19 Mar 2025 08:41:59 GMT and should not be manually modified. -->
+<!-- This log was last generated on Thu, 20 Mar 2025 02:50:57 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [43.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v43.0.1) (2025-3-20)
+
+### Patches
+
+- feat: update deprecated `no-useless-custom-hooks` rule name from `@eslint-react/eslint-plugin` ([9e633e1](https://github.com/RightCapitalHQ/frontend-style-guide/commit/9e633e15fb2c34de687cd486fb82e93acaa49d6f))
 
 ## [43.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v43.0.0) (2025-3-19)
 

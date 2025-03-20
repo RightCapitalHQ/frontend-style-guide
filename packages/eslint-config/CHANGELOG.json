@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Thu, 20 Mar 2025 02:50:57 GMT",
+      "version": "43.0.1",
+      "tag": "@rightcapital/eslint-config_v43.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config",
+            "commit": "9e633e15fb2c34de687cd486fb82e93acaa49d6f",
+            "comment": "feat: update deprecated `no-useless-custom-hooks` rule name from `@eslint-react/eslint-plugin`"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 19 Mar 2025 08:41:59 GMT",
       "version": "43.0.0",
       "tag": "@rightcapital/eslint-config_v43.0.0",
