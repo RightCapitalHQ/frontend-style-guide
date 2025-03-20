@@ -2147,7 +2147,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
       "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
       "@stylistic",
       "@typescript-eslint:@typescript-eslint/eslint-plugin@8.26.1",
-      "@rightcapital:@rightcapital/eslint-plugin@42.1.0",
+      "@rightcapital:@rightcapital/eslint-plugin",
 -     "unused-imports:unused-imports",
     ],
     "rules": Object {
@@ -3379,9 +3379,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       0,
     ],
     "@eslint-react/hooks-extra/no-unnecessary-use-prefix": [
-      1,
-    ],
-    "@eslint-react/hooks-extra/no-useless-custom-hooks": [
       0,
     ],
     "@eslint-react/hooks-extra/prefer-use-state-lazy-initialization": [
@@ -4930,14 +4927,14 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
       "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
       "@stylistic",
       "@typescript-eslint:@typescript-eslint/eslint-plugin@8.26.1",
-      "@rightcapital:@rightcapital/eslint-plugin@42.1.0",
+      "@rightcapital:@rightcapital/eslint-plugin",
 -     "unused-imports:unused-imports",
       "@eslint-react:eslint-plugin-react-x@1.36.1",
       "@eslint-react/dom:eslint-plugin-react-dom@1.36.1",
       "@eslint-react/web-api:eslint-plugin-react-web-api@1.36.1",
       "@eslint-react/debug:eslint-plugin-react-debug@1.36.1",
       "@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra@1.36.1",
-@@ -1558,11 +1557,11 @@
+@@ -1555,11 +1554,11 @@
       ],
       "@typescript-eslint/no-unused-expressions": Array [
         2,
@@ -4950,7 +4947,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
         },
       ],
       "@typescript-eslint/no-use-before-define": Array [
-@@ -2682,13 +2681,10 @@
+@@ -2679,13 +2678,10 @@
       ],
       "unicorn/prefer-node-protocol": Array [
         2,

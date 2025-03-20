@@ -60,9 +60,8 @@ const parsedConfigs = await getParsedConfig();
 describe('Resolved config matches snapshot', () => {
   for (const [file, config, editorModeConfig] of parsedConfigs) {
     test(file, () => {
-      expect({
-        ...config,
-
+      const trimConfigForSnapshot = (rawConfig) => ({
+        ...rawConfig,
         // These fields contain unnecessary information for snapshot
         parser: '<OMITTED>',
         plugins: '<OMITTED>',
@@ -71,10 +70,32 @@ describe('Resolved config matches snapshot', () => {
           ...config.languageOptions,
           parser: '<OMITTED>',
         },
-      }).toMatchSnapshot();
+      });
+      expect(trimConfigForSnapshot(config)).toMatchSnapshot();
 
+      const trimConfigForDiff = (rawConfig) => ({
+        ...rawConfig,
+        // These fields contain unnecessary information for diff
+        plugins: rawConfig.plugins.map((pluginName) =>
+          pluginName.replace(
+            /**
+             * We have to strip the version part of our plugin name (the plugin is in this monorepo)
+             *
+             * from:  "@rightcapital:@rightcapital/eslint-plugin@42.1.0"
+             * to:    "@rightcapital:@rightcapital/eslint-plugin"
+             *
+             * Since every time we publish a new version:
+             * 1. snapshot references to existing old version of @rightcapital/eslint-plugin
+             * 2. new version of @rightcapital/eslint-plugin published
+             * 3. new snapshot test will reference to the new version, test fails
+             */
+            /(?<=@rightcapital\/eslint-plugin)@.*$/,
+            '',
+          ),
+        ),
+      });
       expect(
-        diff(config, editorModeConfig, {
+        diff(trimConfigForDiff(config), trimConfigForDiff(editorModeConfig), {
           aAnnotation: 'Editor mode: false',
           bAnnotation: 'Editor mode: true',
           expand: false,
