@@ -36,7 +36,7 @@
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "8.56.12",
-    "@types/eslint__eslintrc": "2.1.2",
+    "@types/eslint__eslintrc": "3.3.0",
     "@types/node": "22.13.10",
     "typescript": "5.8.2"
   },
