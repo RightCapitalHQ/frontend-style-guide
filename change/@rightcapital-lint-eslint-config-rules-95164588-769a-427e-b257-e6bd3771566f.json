@@ -1,7 +1,0 @@
-{
-  "type": "none",
-  "comment": "chore(deps): update devdependencies",
-  "packageName": "@rightcapital/lint-eslint-config-rules",
-  "email": "29139614+renovate[bot]@users.noreply.github.com",
-  "dependentChangeType": "none"
-}
