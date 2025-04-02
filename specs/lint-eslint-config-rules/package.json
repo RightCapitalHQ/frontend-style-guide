@@ -7,6 +7,6 @@
   "devDependencies": {
     "@rightcapital/lint-eslint-config-rules": "workspace:*",
     "typescript": "5.8.2",
-    "vitest": "2.1.9"
+    "vitest": "3.1.1"
   }
 }
