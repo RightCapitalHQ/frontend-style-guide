@@ -38,8 +38,8 @@
     "@rightcapital/eslint-config": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
     "@rightcapital/scripts": "workspace:*",
-    "@types/node": "22.13.17",
-    "beachball": "2.52.0",
+    "@types/node": "22.14.1",
+    "beachball": "2.54.0",
     "commitizen": "4.3.1",
     "concurrently": "9.1.2",
     "eslint": "9.12.0",
@@ -48,7 +48,7 @@
     "husky": "9.1.7",
     "prettier": "3.5.3",
     "tsx": "4.19.3",
-    "typescript": "5.8.2"
+    "typescript": "5.8.3"
   },
   "packageManager": "pnpm@10.2.1",
   "engines": {
