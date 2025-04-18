@@ -2,6 +2,21 @@
   "name": "@rightcapital/prettier-config",
   "entries": [
     {
+      "date": "Fri, 18 Apr 2025 05:06:09 GMT",
+      "version": "7.2.1",
+      "tag": "@rightcapital/prettier-config_v7.2.1",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/prettier-config",
+            "commit": "03f9fde55766ab4990b20763f58d585930fee500",
+            "comment": "chore(deps): update devdependencies"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 21 Mar 2025 09:00:52 GMT",
       "version": "7.2.1",
       "tag": "@rightcapital/prettier-config_v7.2.1",
