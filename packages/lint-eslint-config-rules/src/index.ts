@@ -4,7 +4,6 @@ import 'core-js/es/set/index.js'; // for Node.js <22.0.0
 import { cpus } from 'node:os';
 import { basename } from 'node:path';
 
-import { FlatCompat } from '@eslint/eslintrc';
 import type { Entry } from '@nodelib/fs.walk';
 import * as fsWalk from '@nodelib/fs.walk';
 import { ESLint, type Rule } from 'eslint';
@@ -23,7 +22,6 @@ export type ESLintRuleMap = Map<ESLintRuleId, IESLintRule>;
 export interface IESLintConfigRulesLintResult {
   // other context
   readonly eslint: ESLint;
-  readonly compat: FlatCompat;
 
   readonly pluginMap: Map<string, ESLint.Plugin>;
   /** all rules that can be used */
@@ -67,11 +65,8 @@ export const lintESLintConfigRules = async (
   cwd = defaultCwd,
 ): Promise<IESLintConfigRulesLintResult> => {
   const eslint = new ESLint({ cwd });
-  const compat = new FlatCompat({
-    baseDirectory: cwd,
-    resolvePluginsRelativeTo: cwd,
-  });
 
+  // get plugin config
   let usedRuleIds: Set<string> = new Set();
   let usedPluginSpecifiers: Set<string> = new Set();
   const ruleMap: ESLintRuleMap = new Map(
@@ -80,6 +75,9 @@ export const lintESLintConfigRules = async (
       { id: ruleId, meta: rule.meta } satisfies IESLintRule,
     ]),
   );
+
+  // resolve all plugins
+  const pluginMap: Map<string, ESLint.Plugin> = new Map();
 
   /**
    * Iterate over all files in the project to
@@ -102,14 +100,20 @@ export const lintESLintConfigRules = async (
           | undefined
           | {
               rules: Record<string, unknown>;
-              plugins: string[];
+              plugins: Record<string, ESLint.Plugin>;
             };
 
         if (config !== undefined) {
           usedRuleIds = usedRuleIds.union(new Set(Object.keys(config.rules)));
           usedPluginSpecifiers = usedPluginSpecifiers.union(
-            new Set(config.plugins),
+            new Set(Object.keys(config.plugins)),
           );
+
+          for (const [pluginName, plugin] of Object.entries(config.plugins)) {
+            if (!pluginMap.has(pluginName)) {
+              pluginMap.set(pluginName, plugin);
+            }
+          }
         }
 
         /**
@@ -121,11 +125,6 @@ export const lintESLintConfigRules = async (
         concurrency: cpus().length * 2,
       },
     );
-
-  // resolve all plugins
-  const pluginMap: Map<string, ESLint.Plugin> = new Map(
-    Object.entries(compat.plugins(...usedPluginSpecifiers)[0].plugins ?? {}),
-  );
 
   for (const [pluginName, plugin] of pluginMap.entries()) {
     /**
@@ -151,7 +150,6 @@ export const lintESLintConfigRules = async (
 
   return {
     eslint,
-    compat,
 
     usedRuleIds,
     usedPluginSpecifiers,

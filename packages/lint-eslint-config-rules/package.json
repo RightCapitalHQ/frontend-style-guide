@@ -29,19 +29,17 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "@eslint/eslintrc": "3.2.0",
-    "@nodelib/fs.walk": "npm:@frantic1048/fs.walk@2.0.1-pr103-async-iterator-fix",
+    "@nodelib/fs.walk": "3.0.1",
     "core-js": "3.39.0"
   },
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
-    "@types/eslint": "8.56.12",
-    "@types/eslint__eslintrc": "2.1.2",
+    "@types/eslint": "9.6.1",
     "@types/node": "22.15.10",
     "typescript": "5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^9.0.0"
   },
   "packageManager": "pnpm@10.2.1",
   "engines": {
