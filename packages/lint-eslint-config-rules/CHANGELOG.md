@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/lint-eslint-config-rules
 
-<!-- This log was last generated on Sat, 08 Feb 2025 06:04:37 GMT and should not be manually modified. -->
+<!-- This log was last generated on Mon, 12 May 2025 10:24:56 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [2.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Flint-eslint-config-rules_v2.0.0) (2025-5-12)
+
+### Major changes
+
+- feat(@rightcapital/lint-eslint-config-rules): add support for ESLint v9 ([8cd0abe](https://github.com/RightCapitalHQ/frontend-style-guide/commit/8cd0abe10af319e21adbcac2d459ff928e7ee786))
 
 ## [1.2.6](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Flint-eslint-config-rules_v1.2.6) (2025-2-8)
 

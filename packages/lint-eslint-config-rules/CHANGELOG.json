@@ -2,6 +2,21 @@
   "name": "@rightcapital/lint-eslint-config-rules",
   "entries": [
     {
+      "date": "Mon, 12 May 2025 10:24:56 GMT",
+      "version": "2.0.0",
+      "tag": "@rightcapital/lint-eslint-config-rules_v2.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/lint-eslint-config-rules",
+            "commit": "8cd0abe10af319e21adbcac2d459ff928e7ee786",
+            "comment": "feat(@rightcapital/lint-eslint-config-rules): add support for ESLint v9"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 06 May 2025 05:09:18 GMT",
       "version": "1.2.6",
       "tag": "@rightcapital/lint-eslint-config-rules_v1.2.6",
