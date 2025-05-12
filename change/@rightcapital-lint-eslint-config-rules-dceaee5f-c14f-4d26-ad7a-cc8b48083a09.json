@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "feat(@rightcapital/lint-eslint-config-rules): add support for ESLint v9",
+  "packageName": "@rightcapital/lint-eslint-config-rules",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}

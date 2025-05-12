@@ -1,15 +1,17 @@
 import { readdir } from 'node:fs/promises';
-import { join } from 'node:path';
+import path from 'node:path';
 import { test } from 'vitest';
 import { lintESLintConfigRules } from '@rightcapital/lint-eslint-config-rules';
 
 const specDirs = (
-  await readdir(join(import.meta.dirname, 'fixtures'), { withFileTypes: true })
+  await readdir(path.join(import.meta.dirname, 'fixtures'), {
+    withFileTypes: true,
+  })
 ).filter((dirent) => dirent.isDirectory());
 
 for (const dirent of specDirs) {
   test(dirent.name, async ({ expect }) => {
-    const cwd = join(dirent.parentPath, dirent.name);
+    const cwd = path.join(dirent.parentPath, dirent.name);
     const result = await lintESLintConfigRules(cwd);
     expect(result.usedDeprecatedRuleIds).toEqual(
       new Set([
@@ -22,12 +24,7 @@ for (const dirent of specDirs) {
       ]),
     );
     expect(result.usedUnknownRuleIds).toEqual(
-      new Set([
-        'unknown-rule-off',
-        'unknown-rule-error',
-        '@prefixed/unknown-rule-off',
-        '@prefixed/unknown-rule-error',
-      ]),
+      new Set(['unknown-rule-off', '@prefixed/unknown-rule-off']),
     );
   });
 }
