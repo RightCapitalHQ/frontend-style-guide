@@ -5156,6 +5156,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "react-hooks/exhaustive-deps": [
       2,
     ],
+    "react-hooks/react-compiler": [
+      2,
+    ],
     "react-hooks/rules-of-hooks": [
       2,
     ],
@@ -5289,7 +5292,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
         },
       ],
       "@typescript-eslint/no-use-before-define": Array [
-@@ -2818,13 +2817,10 @@
+@@ -2821,13 +2820,10 @@
       ],
       "unicorn/prefer-node-protocol": Array [
         2,

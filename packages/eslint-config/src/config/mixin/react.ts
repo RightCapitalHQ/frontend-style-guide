@@ -57,6 +57,10 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // https://github.com/facebook/react/blob/1204c789776cb01fbaf3e9f032e7e2ba85a44137/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js
       'react-hooks/exhaustive-deps': 'error',
 
+      // React compiler related rules
+      // https://github.com/facebook/react/blob/2bcf06b69254cad6f7e702bf7d65c4f30478668c/packages/eslint-plugin-react-hooks/src/rules/ReactCompiler.ts
+      'react-hooks/react-compiler': 'error',
+
       // MEMO: There are too many false positives with this rule.
       '@eslint-react/hooks-extra/no-direct-set-state-in-use-effect': 'off',
 
