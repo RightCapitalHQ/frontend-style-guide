@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Tue, 13 May 2025 05:39:54 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 13 May 2025 05:51:46 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [43.0.3](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v43.0.3) (2025-5-13)
+
+### Patches
+
+- fix(deps): update dependency globals to v16 ([69fbdb8](https://github.com/RightCapitalHQ/frontend-style-guide/commit/69fbdb8e5c83e76c9e62414ca1f5ab4d13605a54))
 
 ## [43.0.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v43.0.2) (2025-5-13)
 

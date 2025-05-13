@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Tue, 13 May 2025 05:51:46 GMT",
+      "version": "43.0.3",
+      "tag": "@rightcapital/eslint-config_v43.0.3",
+      "comments": {
+        "patch": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config",
+            "commit": "69fbdb8e5c83e76c9e62414ca1f5ab4d13605a54",
+            "comment": "fix(deps): update dependency globals to v16"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 13 May 2025 05:39:54 GMT",
       "version": "43.0.2",
       "tag": "@rightcapital/eslint-config_v43.0.2",
