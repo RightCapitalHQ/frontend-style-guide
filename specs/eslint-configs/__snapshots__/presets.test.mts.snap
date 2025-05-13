@@ -1039,7 +1039,7 @@ exports[`Resolved config matches snapshot > javascript.js 2`] = `
 @@ -16,11 +16,10 @@
       "lodash:eslint-plugin-lodash",
       "unicorn:eslint-plugin-unicorn@56.0.1",
-      "import-x:eslint-plugin-import-x@4.9.0",
+      "import-x:eslint-plugin-import-x@4.11.1",
       "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
       "@stylistic",
 -     "unused-imports:unused-imports",
@@ -2171,7 +2171,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       },
     ],
     "no-with": [
-      2,
+      0,
     ],
     "object-shorthand": [
       2,
@@ -2336,10 +2336,10 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 + Editor mode: true   + 1
 
 @@ -18,11 +18,10 @@
-      "import-x:eslint-plugin-import-x@4.9.0",
+      "import-x:eslint-plugin-import-x@4.11.1",
       "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
       "@stylistic",
-      "@typescript-eslint:@typescript-eslint/eslint-plugin@8.26.1",
+      "@typescript-eslint:@typescript-eslint/eslint-plugin@8.32.1",
       "@rightcapital:@rightcapital/eslint-plugin",
 -     "unused-imports:unused-imports",
     ],
@@ -3555,6 +3555,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/dom/no-flush-sync": [
       2,
     ],
+    "@eslint-react/dom/no-hydrate": [
+      2,
+    ],
     "@eslint-react/dom/no-missing-button-type": [
       1,
     ],
@@ -3571,9 +3574,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
     ],
     "@eslint-react/dom/no-script-url": [
-      1,
-    ],
-    "@eslint-react/dom/no-unknown-property": [
       1,
     ],
     "@eslint-react/dom/no-unsafe-iframe-sandbox": [
@@ -3597,9 +3597,24 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/hooks-extra/prefer-use-state-lazy-initialization": [
       1,
     ],
+    "@eslint-react/jsx-key-before-spread": [
+      1,
+    ],
+    "@eslint-react/jsx-no-duplicate-props": [
+      1,
+    ],
+    "@eslint-react/jsx-uses-react": [
+      1,
+    ],
+    "@eslint-react/jsx-uses-vars": [
+      1,
+    ],
     "@eslint-react/naming-convention/component-name": [
       2,
       "PascalCase",
+    ],
+    "@eslint-react/naming-convention/context-name": [
+      1,
     ],
     "@eslint-react/naming-convention/filename": [
       2,
@@ -3667,9 +3682,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/no-direct-mutation-state": [
       2,
     ],
-    "@eslint-react/no-duplicate-jsx-props": [
-      1,
-    ],
     "@eslint-react/no-duplicate-key": [
       1,
     ],
@@ -3682,8 +3694,14 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/no-missing-key": [
       2,
     ],
+    "@eslint-react/no-misused-capture-owner-stack": [
+      2,
+    ],
     "@eslint-react/no-nested-component-definitions": [
       2,
+    ],
+    "@eslint-react/no-nested-lazy-component-declarations": [
+      1,
     ],
     "@eslint-react/no-prop-types": [
       2,
@@ -3735,9 +3753,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       {
         "allowExpressions": true,
       },
-    ],
-    "@eslint-react/use-jsx-vars": [
-      1,
     ],
     "@eslint-react/web-api/no-leaked-event-listener": [
       1,
@@ -5063,7 +5078,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     ],
     "no-with": [
-      2,
+      0,
     ],
     "object-shorthand": [
       2,
@@ -5226,6 +5241,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       },
     },
     "react-x": {
+      "additionalComponents": [],
       "additionalHooks": {
         "useEffect": [
           "useIsomorphicLayoutEffect",
@@ -5237,7 +5253,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       "importSource": "react",
       "polymorphicPropName": "as",
       "skipImportCheck": true,
-      "strict": false,
+      "strict": true,
       "version": "detect",
     },
   },
@@ -5249,18 +5265,18 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 + Editor mode: true   + 1
 
 @@ -1168,11 +1168,10 @@
-      "import-x:eslint-plugin-import-x@4.9.0",
+      "import-x:eslint-plugin-import-x@4.11.1",
       "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
       "@stylistic",
-      "@typescript-eslint:@typescript-eslint/eslint-plugin@8.26.1",
+      "@typescript-eslint:@typescript-eslint/eslint-plugin@8.32.1",
       "@rightcapital:@rightcapital/eslint-plugin",
 -     "unused-imports:unused-imports",
-      "@eslint-react:eslint-plugin-react-x@1.36.1",
-      "@eslint-react/dom:eslint-plugin-react-dom@1.36.1",
-      "@eslint-react/web-api:eslint-plugin-react-web-api@1.36.1",
-      "@eslint-react/debug:eslint-plugin-react-debug@1.36.1",
-      "@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra@1.36.1",
-@@ -1595,11 +1594,11 @@
+      "@eslint-react:eslint-plugin-react-x@1.49.0",
+      "@eslint-react/dom:eslint-plugin-react-dom@1.49.0",
+      "@eslint-react/web-api:eslint-plugin-react-web-api@1.49.0",
+      "@eslint-react/debug:eslint-plugin-react-debug@1.49.0",
+      "@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra@1.49.0",
+@@ -1610,11 +1609,11 @@
           "allowTaggedTemplates": false,
           "allowTernary": false,
         },
@@ -5273,7 +5289,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
         },
       ],
       "@typescript-eslint/no-use-before-define": Array [
-@@ -2803,13 +2802,10 @@
+@@ -2818,13 +2817,10 @@
       ],
       "unicorn/prefer-node-protocol": Array [
         2,

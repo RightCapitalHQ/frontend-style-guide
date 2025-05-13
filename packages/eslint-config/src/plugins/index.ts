@@ -2,16 +2,15 @@ import eslintPluginReact from '@eslint-react/eslint-plugin';
 import eslintPluginRightcapital from '@rightcapital/eslint-plugin';
 import eslintPluginStylistic from '@stylistic/eslint-plugin';
 import type { TSESLint } from '@typescript-eslint/utils';
+import eslintPluginImportX from 'eslint-plugin-import-x';
 import eslintPluginA11y from 'eslint-plugin-jsx-a11y';
 import eslintPluginLodash from 'eslint-plugin-lodash';
 import n from 'eslint-plugin-n';
+import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import unusedImportsEslintPlugin from 'eslint-plugin-unused-imports';
 import * as typescriptEslint from 'typescript-eslint';
-
-import eslintPluginImportX from './eslint-plugin-import-x.js';
-import eslintPluginReactHooks from './eslint-plugin-react-hooks.js';
 
 const definePlugins = <TPluginName extends string>(
   plugins: Record<TPluginName, Pick<TSESLint.FlatConfig.Plugin, 'rules'>>,
