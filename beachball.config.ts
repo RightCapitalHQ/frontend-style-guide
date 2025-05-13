@@ -20,6 +20,19 @@ const config: BeachballConfig = {
     '.vscode/**',
     'pnpm-lock.yaml',
   ],
+  hooks: {
+    precommit: async () => {
+      const { $ } = await import('execa');
+      /**
+       * After version bumps, we need to update lockfile
+       * to make sure all "workspace:*" dependencies are updated
+       *
+       * avoid issues like: https://github.com/RightCapitalHQ/frontend-style-guide/actions/runs/14992432680/job/42118726519
+       */
+      await $`pnpm -w install`;
+      await $`pnpm -w exec git add pnpm-lock.yaml`;
+    },
+  },
   changelog: {
     customRenderers: {
       // eslint-disable-next-line @typescript-eslint/require-await
