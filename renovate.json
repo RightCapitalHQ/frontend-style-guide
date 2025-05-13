@@ -69,18 +69,6 @@
       "matchPackageNames": ["eslint"],
       "matchUpdateTypes": ["major"],
       "enabled": false
-    },
-    {
-      "description": "lint-eslint-config-rules currently not support eslint@9 yet",
-      "matchFileNames": ["packages/lint-eslint-config-rules/package.json"],
-      "matchPackageNames": [
-        "eslint",
-        "@eslint/eslintrc",
-        "@types/eslint",
-        "@types/eslint__eslintrc"
-      ],
-      "matchUpdateTypes": ["major"],
-      "enabled": false
     }
   ]
 }
