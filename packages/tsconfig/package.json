@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/tsconfig",
-  "version": "1.2.12",
+  "version": "1.2.13",
   "description": "TypeScript Config for RightCapital",
   "repository": {
     "type": "git",
