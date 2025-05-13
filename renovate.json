@@ -62,6 +62,13 @@
       "description": "Skip problematic eslint-plugin-jsx-a11y 6.8.0 and 6.9.0 versions",
       "matchPackageNames": ["eslint-plugin-jsx-a11y"],
       "allowedVersions": "!/^6\\.(8|9)\\./"
+    },
+    {
+      "description": "E2E tests require fixed eslint major versions",
+      "matchFileNames": ["specs/**/package.json"],
+      "matchPackageNames": ["eslint"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
     }
   ]
 }
