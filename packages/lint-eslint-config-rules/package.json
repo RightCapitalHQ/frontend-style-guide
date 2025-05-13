@@ -35,7 +35,7 @@
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "9.6.1",
-    "@types/node": "22.15.10",
+    "@types/node": "22.15.17",
     "typescript": "5.8.3"
   },
   "peerDependencies": {
