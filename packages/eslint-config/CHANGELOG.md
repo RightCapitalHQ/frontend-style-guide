@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Tue, 13 May 2025 05:51:46 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 13 May 2025 08:55:10 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [44.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v44.0.0) (2025-5-13)
+
+### Major changes
+
+- fix(deps): update eslint rule and plugin updates ([a37693c](https://github.com/RightCapitalHQ/frontend-style-guide/commit/a37693c48bf4322d132a929a5c70053557d458ee))
 
 ## [43.0.3](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v43.0.3) (2025-5-13)
 
