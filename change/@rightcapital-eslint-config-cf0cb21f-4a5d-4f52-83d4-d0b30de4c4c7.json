@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "feat: enable react-hooks/react-compiler ESLint rule",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "lxy.lixiaoyan@gmail.com",
+  "dependentChangeType": "patch"
+}
