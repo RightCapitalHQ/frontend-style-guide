@@ -15,7 +15,15 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     "reportUnusedDisableDirectives": 1,
   },
   "parser": "<OMITTED>",
-  "plugins": "<OMITTED>",
+  "plugins": [
+    "@",
+    "lodash:eslint-plugin-lodash",
+    "unicorn:eslint-plugin-unicorn",
+    "import-x:eslint-plugin-import-x",
+    "simple-import-sort:eslint-plugin-simple-import-sort",
+    "@stylistic",
+    "unused-imports:unused-imports",
+  ],
   "rules": {
     "@stylistic/lines-between-class-members": [
       2,
@@ -1073,7 +1081,17 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "reportUnusedDisableDirectives": 1,
   },
   "parser": "<OMITTED>",
-  "plugins": "<OMITTED>",
+  "plugins": [
+    "@",
+    "lodash:eslint-plugin-lodash",
+    "unicorn:eslint-plugin-unicorn",
+    "import-x:eslint-plugin-import-x",
+    "simple-import-sort:eslint-plugin-simple-import-sort",
+    "@stylistic",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin",
+    "@rightcapital:@rightcapital/eslint-plugin",
+    "unused-imports:unused-imports",
+  ],
   "rules": {
     "@rightcapital/no-explicit-type-on-function-component-identifier": [
       2,
@@ -3500,7 +3518,25 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "reportUnusedDisableDirectives": 1,
   },
   "parser": "<OMITTED>",
-  "plugins": "<OMITTED>",
+  "plugins": [
+    "@",
+    "lodash:eslint-plugin-lodash",
+    "unicorn:eslint-plugin-unicorn",
+    "import-x:eslint-plugin-import-x",
+    "simple-import-sort:eslint-plugin-simple-import-sort",
+    "@stylistic",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin",
+    "@rightcapital:@rightcapital/eslint-plugin",
+    "unused-imports:unused-imports",
+    "@eslint-react:eslint-plugin-react-x",
+    "@eslint-react/dom:eslint-plugin-react-dom",
+    "@eslint-react/web-api:eslint-plugin-react-web-api",
+    "@eslint-react/debug:eslint-plugin-react-debug",
+    "@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra",
+    "@eslint-react/naming-convention:eslint-plugin-react-naming-convention",
+    "react-hooks:eslint-plugin-react-hooks",
+    "jsx-a11y:eslint-plugin-jsx-a11y",
+  ],
   "rules": {
     "@eslint-react/dom/no-dangerously-set-innerhtml": [
       1,
