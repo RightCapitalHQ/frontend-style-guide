@@ -52,6 +52,48 @@ const getParsedConfig = async () => {
 const parsedConfigs = await getParsedConfig();
 
 /**
+ * We have to strip the version part of our plugin name (the plugin is in this monorepo)
+ *
+ * from:  `import-x:eslint-plugin-import-x@4.11.1`
+ * to:    `import-x:eslint-plugin-import-x`
+ *
+ * from:  `@rightcapital:@rightcapital/eslint-plugin@42.1.0`
+ * to:    `@rightcapital:@rightcapital/eslint-plugin`
+ *
+ * Since every time we publish a new version:
+ * 1. snapshot references to existing old version of @rightcapital/eslint-plugin
+ * 2. new version of @rightcapital/eslint-plugin published
+ * 3. new snapshot test will reference to the new version, test fails
+ */
+const trimConfigPluginVersion = (pluginInfo: string) =>
+  pluginInfo.replace(/(?<=[\w\-]+:[\w\-]+|[@\w\-]+:@[\w\-]+\/[\w\-]+)@.+$/, '');
+
+describe.concurrent('trimConfigPluginVersion()', () => {
+  test.for([
+    [
+      'import-x:eslint-plugin-import-x@4.11.1',
+      'import-x:eslint-plugin-import-x',
+    ],
+    [
+      '@rightcapital:@rightcapital/eslint-plugin@42.1.0',
+      '@rightcapital:@rightcapital/eslint-plugin',
+    ],
+    [
+      '@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra@1.49.0',
+      '@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra',
+    ],
+    [
+      'rightcapital:@rightcapital/eslint-plugin@42.1.0',
+      'rightcapital:@rightcapital/eslint-plugin',
+    ],
+    ['@stylistic', '@stylistic'],
+    ['lodash:eslint-plugin-lodash', 'lodash:eslint-plugin-lodash'],
+  ])('trim %s -> %s', ([input, expected], { expect }) => {
+    expect(trimConfigPluginVersion(input)).toBe(expected);
+  });
+});
+
+/**
  * Make snapshot for the result of parsed presets,
  * Thus we can easily inspect the upgrade of upstream configs.
  *
@@ -64,7 +106,7 @@ describe('Resolved config matches snapshot', () => {
         ...rawConfig,
         // These fields contain unnecessary information for snapshot
         parser: '<OMITTED>',
-        plugins: '<OMITTED>',
+        plugins: rawConfig.plugins.map(trimConfigPluginVersion),
         language: '<OMITTED>',
         languageOptions: {
           ...config.languageOptions,
@@ -76,23 +118,7 @@ describe('Resolved config matches snapshot', () => {
       const trimConfigForDiff = (rawConfig) => ({
         ...rawConfig,
         // These fields contain unnecessary information for diff
-        plugins: rawConfig.plugins.map((pluginName) =>
-          pluginName.replace(
-            /**
-             * We have to strip the version part of our plugin name (the plugin is in this monorepo)
-             *
-             * from:  "@rightcapital:@rightcapital/eslint-plugin@42.1.0"
-             * to:    "@rightcapital:@rightcapital/eslint-plugin"
-             *
-             * Since every time we publish a new version:
-             * 1. snapshot references to existing old version of @rightcapital/eslint-plugin
-             * 2. new version of @rightcapital/eslint-plugin published
-             * 3. new snapshot test will reference to the new version, test fails
-             */
-            /(?<=@rightcapital\/eslint-plugin)@.*$/,
-            '',
-          ),
-        ),
+        plugins: rawConfig.plugins.map(trimConfigPluginVersion),
       });
       expect(
         diff(trimConfigForDiff(config), trimConfigForDiff(editorModeConfig), {

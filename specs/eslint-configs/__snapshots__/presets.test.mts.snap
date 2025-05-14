@@ -15,7 +15,15 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     "reportUnusedDisableDirectives": 1,
   },
   "parser": "<OMITTED>",
-  "plugins": "<OMITTED>",
+  "plugins": [
+    "@",
+    "lodash:eslint-plugin-lodash",
+    "unicorn:eslint-plugin-unicorn",
+    "import-x:eslint-plugin-import-x",
+    "simple-import-sort:eslint-plugin-simple-import-sort",
+    "@stylistic",
+    "unused-imports:unused-imports",
+  ],
   "rules": {
     "@stylistic/lines-between-class-members": [
       2,
@@ -1038,9 +1046,9 @@ exports[`Resolved config matches snapshot > javascript.js 2`] = `
 
 @@ -16,11 +16,10 @@
       "lodash:eslint-plugin-lodash",
-      "unicorn:eslint-plugin-unicorn@56.0.1",
-      "import-x:eslint-plugin-import-x@4.11.1",
-      "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
+      "unicorn:eslint-plugin-unicorn",
+      "import-x:eslint-plugin-import-x",
+      "simple-import-sort:eslint-plugin-simple-import-sort",
       "@stylistic",
 -     "unused-imports:unused-imports",
     ],
@@ -1092,7 +1100,17 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "reportUnusedDisableDirectives": 1,
   },
   "parser": "<OMITTED>",
-  "plugins": "<OMITTED>",
+  "plugins": [
+    "@",
+    "lodash:eslint-plugin-lodash",
+    "unicorn:eslint-plugin-unicorn",
+    "import-x:eslint-plugin-import-x",
+    "simple-import-sort:eslint-plugin-simple-import-sort",
+    "@stylistic",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin",
+    "@rightcapital:@rightcapital/eslint-plugin",
+    "unused-imports:unused-imports",
+  ],
   "rules": {
     "@rightcapital/no-explicit-type-on-function-component-identifier": [
       2,
@@ -2336,10 +2354,10 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 + Editor mode: true   + 1
 
 @@ -18,11 +18,10 @@
-      "import-x:eslint-plugin-import-x@4.11.1",
-      "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
+      "import-x:eslint-plugin-import-x",
+      "simple-import-sort:eslint-plugin-simple-import-sort",
       "@stylistic",
-      "@typescript-eslint:@typescript-eslint/eslint-plugin@8.32.1",
+      "@typescript-eslint:@typescript-eslint/eslint-plugin",
       "@rightcapital:@rightcapital/eslint-plugin",
 -     "unused-imports:unused-imports",
     ],
@@ -3541,7 +3559,25 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "reportUnusedDisableDirectives": 1,
   },
   "parser": "<OMITTED>",
-  "plugins": "<OMITTED>",
+  "plugins": [
+    "@",
+    "lodash:eslint-plugin-lodash",
+    "unicorn:eslint-plugin-unicorn",
+    "import-x:eslint-plugin-import-x",
+    "simple-import-sort:eslint-plugin-simple-import-sort",
+    "@stylistic",
+    "@typescript-eslint:@typescript-eslint/eslint-plugin",
+    "@rightcapital:@rightcapital/eslint-plugin",
+    "unused-imports:unused-imports",
+    "@eslint-react:eslint-plugin-react-x",
+    "@eslint-react/dom:eslint-plugin-react-dom",
+    "@eslint-react/web-api:eslint-plugin-react-web-api",
+    "@eslint-react/debug:eslint-plugin-react-debug",
+    "@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra",
+    "@eslint-react/naming-convention:eslint-plugin-react-naming-convention",
+    "react-hooks:eslint-plugin-react-hooks",
+    "jsx-a11y:eslint-plugin-jsx-a11y",
+  ],
   "rules": {
     "@eslint-react/dom/no-dangerously-set-innerhtml": [
       1,
@@ -5265,17 +5301,17 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 + Editor mode: true   + 1
 
 @@ -1168,11 +1168,10 @@
-      "import-x:eslint-plugin-import-x@4.11.1",
-      "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
+      "import-x:eslint-plugin-import-x",
+      "simple-import-sort:eslint-plugin-simple-import-sort",
       "@stylistic",
-      "@typescript-eslint:@typescript-eslint/eslint-plugin@8.32.1",
+      "@typescript-eslint:@typescript-eslint/eslint-plugin",
       "@rightcapital:@rightcapital/eslint-plugin",
 -     "unused-imports:unused-imports",
-      "@eslint-react:eslint-plugin-react-x@1.49.0",
-      "@eslint-react/dom:eslint-plugin-react-dom@1.49.0",
-      "@eslint-react/web-api:eslint-plugin-react-web-api@1.49.0",
-      "@eslint-react/debug:eslint-plugin-react-debug@1.49.0",
-      "@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra@1.49.0",
+      "@eslint-react:eslint-plugin-react-x",
+      "@eslint-react/dom:eslint-plugin-react-dom",
+      "@eslint-react/web-api:eslint-plugin-react-web-api",
+      "@eslint-react/debug:eslint-plugin-react-debug",
+      "@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra",
 @@ -1610,11 +1609,11 @@
           "allowTaggedTemplates": false,
           "allowTernary": false,
