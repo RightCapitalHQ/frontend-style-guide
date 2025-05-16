@@ -13,7 +13,7 @@
     "@rightcapital/prettier-config": "workspace:*",
     "@types/react": "19.1.4",
     "concurrently": "9.1.2",
-    "eslint": "9.26.0",
+    "eslint": "9.27.0",
     "eslint-config-prettier": "10.1.5",
     "execa": "9.5.3",
     "jest-diff": "29.7.0",
