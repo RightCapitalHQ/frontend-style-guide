@@ -1,6 +1,7 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 
 import { isInEditorEnv } from '../helpers/is-in-editor-env.js';
+import { pickPlugins } from '../utils.js';
 import baseConfig from './base/index.js';
 
 /**
@@ -22,15 +23,19 @@ const config: TSESLint.FlatConfig.ConfigArray = [
         '\\.(coffee|scss|css|less|hbs|svg|json)$',
       ],
     },
+    plugins: pickPlugins(['unused-imports']),
+    rules: {
+      // https://typescript-eslint.io/rules/no-unused-vars/
+      // https://github.com/sweepline/eslint-plugin-unused-imports#usage
+      'no-unused-vars': 'off',
+      'unused-imports/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    },
   },
 ];
 
 if (!isInEditorEnv()) {
   config.push({
-    rules: {
-      'no-unused-vars': 'off',
-      'unused-imports/no-unused-imports': 'error',
-    },
+    rules: { 'unused-imports/no-unused-imports': 'error' },
   });
 }
 
