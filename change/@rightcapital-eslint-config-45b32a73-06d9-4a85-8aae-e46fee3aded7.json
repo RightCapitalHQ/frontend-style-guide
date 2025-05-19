@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "fix: `no-unused-vars` is unexpectly disabled in non-editor environment",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "45930107+PinkChampagne17@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}

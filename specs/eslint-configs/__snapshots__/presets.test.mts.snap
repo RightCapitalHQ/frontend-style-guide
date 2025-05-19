@@ -983,6 +983,12 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     "unused-imports/no-unused-imports": [
       2,
     ],
+    "unused-imports/no-unused-vars": [
+      2,
+      {
+        "argsIgnorePattern": "^_",
+      },
+    ],
     "use-isnan": [
       2,
       {
@@ -1033,48 +1039,23 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
 `;
 
 exports[`Resolved config matches snapshot > javascript.js 2`] = `
-"- Editor mode: false  - 5
-+ Editor mode: true   + 1
+"- Editor mode: false  - 3
++ Editor mode: true   + 0
 
-@@ -16,11 +16,10 @@
-      "lodash:eslint-plugin-lodash",
-      "unicorn:eslint-plugin-unicorn@56.0.1",
-      "import-x:eslint-plugin-import-x@4.11.1",
-      "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
-      "@stylistic",
--     "unused-imports:unused-imports",
-    ],
-    "rules": Object {
-      "@stylistic/lines-between-class-members": Array [
-        2,
-        "always",
-@@ -827,11 +826,11 @@
-      ],
-      "no-unused-private-class-members": Array [
-        2,
-      ],
-      "no-unused-vars": Array [
--       0,
-+       2,
-        Object {
-          "args": "after-used",
-          "ignoreRestSiblings": true,
-          "vars": "all",
-        },
-@@ -980,13 +979,10 @@
-      ],
-      "unicorn/prefer-node-protocol": Array [
+@@ -982,13 +982,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
--       2,
--     ],
--     "unused-imports/no-unused-imports": Array [
         2,
       ],
-      "use-isnan": Array [
+-     "unused-imports/no-unused-imports": Array [
+-       2,
+-     ],
+      "unused-imports/no-unused-vars": Array [
         2,
-        Object {"
+        Object {
+          "argsIgnorePattern": "^_",
+        },"
 `;
 
 exports[`Resolved config matches snapshot > typescript.ts 1`] = `
@@ -1297,9 +1278,6 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     ],
     "@typescript-eslint/no-unused-vars": [
       0,
-      {
-        "argsIgnorePattern": "^_",
-      },
     ],
     "@typescript-eslint/no-use-before-define": [
       2,
@@ -2274,6 +2252,12 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "unused-imports/no-unused-imports": [
       2,
     ],
+    "unused-imports/no-unused-vars": [
+      2,
+      {
+        "argsIgnorePattern": "^_",
+      },
+    ],
     "use-isnan": [
       2,
       {
@@ -2332,48 +2316,23 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
 `;
 
 exports[`Resolved config matches snapshot > typescript.ts 2`] = `
-"- Editor mode: false  - 5
-+ Editor mode: true   + 1
+"- Editor mode: false  - 3
++ Editor mode: true   + 0
 
-@@ -18,11 +18,10 @@
-      "import-x:eslint-plugin-import-x@4.11.1",
-      "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
-      "@stylistic",
-      "@typescript-eslint:@typescript-eslint/eslint-plugin@8.32.1",
-      "@rightcapital:@rightcapital/eslint-plugin",
--     "unused-imports:unused-imports",
-    ],
-    "rules": Object {
-      "@rightcapital/no-explicit-type-on-function-component-identifier": Array [
-        2,
-      ],
-@@ -223,11 +222,11 @@
-          "allowTaggedTemplates": false,
-          "allowTernary": false,
-        },
-      ],
-      "@typescript-eslint/no-unused-vars": Array [
--       0,
-+       2,
-        Object {
-          "argsIgnorePattern": "^_",
-        },
-      ],
-      "@typescript-eslint/no-use-before-define": Array [
-@@ -1196,13 +1195,10 @@
-      ],
-      "unicorn/prefer-node-protocol": Array [
+@@ -1195,13 +1195,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
--       2,
--     ],
--     "unused-imports/no-unused-imports": Array [
         2,
       ],
-      "use-isnan": Array [
+-     "unused-imports/no-unused-imports": Array [
+-       2,
+-     ],
+      "unused-imports/no-unused-vars": Array [
         2,
-        Object {"
+        Object {
+          "argsIgnorePattern": "^_",
+        },"
 `;
 
 exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
@@ -3975,9 +3934,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "@typescript-eslint/no-unused-vars": [
       0,
-      {
-        "argsIgnorePattern": "^_",
-      },
     ],
     "@typescript-eslint/no-use-before-define": [
       2,
@@ -5187,6 +5143,12 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "unused-imports/no-unused-imports": [
       2,
     ],
+    "unused-imports/no-unused-vars": [
+      2,
+      {
+        "argsIgnorePattern": "^_",
+      },
+    ],
     "use-isnan": [
       2,
       {
@@ -5261,46 +5223,21 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
 `;
 
 exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
-"- Editor mode: false  - 5
-+ Editor mode: true   + 1
+"- Editor mode: false  - 3
++ Editor mode: true   + 0
 
-@@ -1168,11 +1168,10 @@
-      "import-x:eslint-plugin-import-x@4.11.1",
-      "simple-import-sort:eslint-plugin-simple-import-sort@12.1.1",
-      "@stylistic",
-      "@typescript-eslint:@typescript-eslint/eslint-plugin@8.32.1",
-      "@rightcapital:@rightcapital/eslint-plugin",
--     "unused-imports:unused-imports",
-      "@eslint-react:eslint-plugin-react-x@1.49.0",
-      "@eslint-react/dom:eslint-plugin-react-dom@1.49.0",
-      "@eslint-react/web-api:eslint-plugin-react-web-api@1.49.0",
-      "@eslint-react/debug:eslint-plugin-react-debug@1.49.0",
-      "@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra@1.49.0",
-@@ -1610,11 +1609,11 @@
-          "allowTaggedTemplates": false,
-          "allowTernary": false,
-        },
-      ],
-      "@typescript-eslint/no-unused-vars": Array [
--       0,
-+       2,
-        Object {
-          "argsIgnorePattern": "^_",
-        },
-      ],
-      "@typescript-eslint/no-use-before-define": Array [
-@@ -2818,13 +2817,10 @@
-      ],
-      "unicorn/prefer-node-protocol": Array [
+@@ -2817,13 +2817,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
--       2,
--     ],
--     "unused-imports/no-unused-imports": Array [
         2,
       ],
-      "use-isnan": Array [
+-     "unused-imports/no-unused-imports": Array [
+-       2,
+-     ],
+      "unused-imports/no-unused-vars": Array [
         2,
-        Object {"
+        Object {
+          "argsIgnorePattern": "^_",
+        },"
 `;

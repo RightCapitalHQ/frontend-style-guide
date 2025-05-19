@@ -12,7 +12,12 @@ const config: TSESLint.FlatConfig.ConfigArray = [
   ...baseConfig,
   ...typescriptEslint.configs.recommendedTypeChecked,
   {
-    plugins: pickPlugins(['@typescript-eslint', '@rightcapital', 'import-x']),
+    plugins: pickPlugins([
+      '@typescript-eslint',
+      '@rightcapital',
+      'import-x',
+      'unused-imports',
+    ]),
     languageOptions: {
       parser: typescriptEslint.parser,
       parserOptions: {
@@ -92,11 +97,10 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       '@typescript-eslint/no-empty-function': 'error',
 
       // https://typescript-eslint.io/rules/no-unused-vars/
+      // https://github.com/sweepline/eslint-plugin-unused-imports#usage
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        { argsIgnorePattern: '^_' },
-      ],
+      '@typescript-eslint/no-unused-vars': 'off',
+      'unused-imports/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 
       // https://typescript-eslint.io/rules/no-useless-constructor/
       'no-useless-constructor': 'off',
@@ -156,10 +160,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
 if (!isInEditorEnv()) {
   config.push({
-    rules: {
-      '@typescript-eslint/no-unused-vars': 'off',
-      'unused-imports/no-unused-imports': 'error',
-    },
+    rules: { 'unused-imports/no-unused-imports': 'error' },
   });
 }
 
