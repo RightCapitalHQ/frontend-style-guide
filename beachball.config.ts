@@ -23,15 +23,14 @@ const config: BeachballConfig = {
   hooks: {
     precommit: async () => {
       const { $ } = await import('execa');
-      const pnpmInstallEnv = { ...process.env };
-      delete pnpmInstallEnv.CI;
+
       /**
        * After version bumps, we need to update lockfile
        * to make sure all "workspace:*" dependencies are updated
        *
        * avoid issues like: https://github.com/RightCapitalHQ/frontend-style-guide/actions/runs/14992432680/job/42118726519
        */
-      await $({ env: pnpmInstallEnv })`pnpm -w install`;
+      await $`pnpm -w install --no-frozen-lockfile`;
       await $`pnpm -w exec git add pnpm-lock.yaml`;
     },
   },
