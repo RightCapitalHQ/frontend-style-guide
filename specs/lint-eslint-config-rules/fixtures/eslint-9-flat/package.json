@@ -2,7 +2,7 @@
   "name": "@rightcapital/lint-eslint-config-rules-spec-eslint-8-eslintrc",
   "private": true,
   "devDependencies": {
-    "@rightcapital/eslint-config": "44.0.0",
+    "@rightcapital/eslint-config": "44.0.1",
     "@rightcapital/lint-eslint-config-rules": "workspace:*",
     "eslint": "9.26.0"
   }

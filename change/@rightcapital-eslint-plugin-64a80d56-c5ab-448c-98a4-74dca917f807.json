@@ -1,0 +1,7 @@
+{
+  "comment": "chore: sync outdated package versions caused by incomplete publish",
+  "type": "none",
+  "packageName": "@rightcapital/eslint-plugin",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "none"
+}
