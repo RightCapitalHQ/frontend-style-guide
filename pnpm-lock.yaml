@@ -283,8 +283,8 @@ importers:
   specs/lint-eslint-config-rules/fixtures/eslint-9-flat:
     devDependencies:
       '@rightcapital/eslint-config':
-        specifier: 44.0.1
-        version: 44.0.1(@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
+        specifier: 44.0.2
+        version: 44.0.2(@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       '@rightcapital/lint-eslint-config-rules':
         specifier: workspace:*
         version: link:../../../../packages/lint-eslint-config-rules
@@ -765,8 +765,8 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@rightcapital/eslint-config@44.0.1':
-    resolution: {integrity: sha512-7evsDKE3XNSc7dJwCZsbHR8HY8ClRlGpLbE9TMWPQvLnd0iGJ/E29Ril6HY4LKTjQzDZJ5vkAUzWnfs6h+NXLA==}
+  '@rightcapital/eslint-config@44.0.2':
+    resolution: {integrity: sha512-/kV5YcTOEN7fPNsgF+bBLoZVvgGAy78+5RUyAHHcFSuf/RmVlfIYs9GddAVRlx3IKQfzTRUALZ3pnEUMpPFdGw==}
     engines: {node: ^18.20.0 || ^20.10.0 || ^21.1.0 || >=22}
     peerDependencies:
       eslint: '>=9'
@@ -775,8 +775,8 @@ packages:
       typescript:
         optional: true
 
-  '@rightcapital/eslint-plugin@44.0.1':
-    resolution: {integrity: sha512-n7Pa+fOsiTMHfIo2rUNkoRDHXdzQaAsr/Q4XxF7M4B5zNBaSxa5TFPsYIg9Us9ysHRzUrvFwhoSFdZT7UGS4EA==}
+  '@rightcapital/eslint-plugin@44.0.3':
+    resolution: {integrity: sha512-ZHyl+ONnjYyhzPL7HjdupEDKoAdKe5CP/8IWxZIQ1g4E+X7QsBj6HQA4BGd9bNvrF0tCvcLMozvY5IvPYSajMA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: '>=8.0.0'
@@ -4181,10 +4181,10 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@rightcapital/eslint-config@44.0.1(@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@rightcapital/eslint-config@44.0.2(@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@eslint-react/eslint-plugin': 1.49.0(eslint@9.26.0(jiti@2.4.2))(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3)
-      '@rightcapital/eslint-plugin': 44.0.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
+      '@rightcapital/eslint-plugin': 44.0.3(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       '@stylistic/eslint-plugin': 2.13.0(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       '@typescript-eslint/utils': 8.32.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       confusing-browser-globals: 1.0.11
@@ -4208,7 +4208,7 @@ snapshots:
       - supports-color
       - ts-api-utils
 
-  '@rightcapital/eslint-plugin@44.0.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@rightcapital/eslint-plugin@44.0.3(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@typescript-eslint/utils': 8.32.1(eslint@9.26.0(jiti@2.4.2))(typescript@5.8.3)
       eslint: 9.26.0(jiti@2.4.2)

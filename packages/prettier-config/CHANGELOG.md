@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/prettier-config
 
-<!-- This log was last generated on Tue, 13 May 2025 05:39:54 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 20 May 2025 07:23:51 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [7.2.3](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Fprettier-config_v7.2.3) (2025-5-20)
+
+### Patches
+
+- fix(deps): update dependencies (non-major) ([d92658b](https://github.com/RightCapitalHQ/frontend-style-guide/commit/d92658bb077949bda68ae43fa3cbef448803b837))
 
 ## [7.2.2](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Fprettier-config_v7.2.2) (2025-5-13)
 
