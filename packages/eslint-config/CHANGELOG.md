@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Tue, 13 May 2025 08:55:10 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 20 May 2025 05:39:27 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [44.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v44.0.1) (2025-5-20)
+
+### Patches
+
+- fix: `no-unused-vars` is unexpectly disabled in non-editor environment ([a113e57](https://github.com/RightCapitalHQ/frontend-style-guide/commit/a113e57bfff85733845381f117b7f0403b730d4e))
 
 ## [44.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v44.0.0) (2025-5-13)
 

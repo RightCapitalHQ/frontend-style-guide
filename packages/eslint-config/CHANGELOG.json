@@ -2,6 +2,29 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Tue, 20 May 2025 05:39:27 GMT",
+      "version": "44.0.1",
+      "tag": "@rightcapital/eslint-config_v44.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "45930107+PinkChampagne17@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config",
+            "commit": "a113e57bfff85733845381f117b7f0403b730d4e",
+            "comment": "fix: `no-unused-vars` is unexpectly disabled in non-editor environment"
+          }
+        ],
+        "none": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config",
+            "commit": "a113e57bfff85733845381f117b7f0403b730d4e",
+            "comment": "chore: sync outdated package versions caused by incomplete publish"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 13 May 2025 08:55:10 GMT",
       "version": "44.0.0",
       "tag": "@rightcapital/eslint-config_v44.0.0",
