@@ -169,7 +169,7 @@ describe('Presets does not contain style rules', () => {
 });
 
 // FIXME: migrate these deprecated rules with alternatives or remove them?
-const ignoredDeprecatedRules = ['no-buffer-constructor', 'no-return-await'];
+const ignoredDeprecatedRules = ['no-buffer-constructor'];
 const lintResults = await Promise.all(
   sampleFiles.map(async (file) => [
     basename(file),

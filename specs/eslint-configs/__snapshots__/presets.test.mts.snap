@@ -709,9 +709,6 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       2,
       "always",
     ],
-    "no-return-await": [
-      2,
-    ],
     "no-script-url": [
       2,
     ],
@@ -1050,7 +1047,7 @@ exports[`Resolved config matches snapshot > javascript.js 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -982,13 +982,10 @@
+@@ -979,13 +979,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -1985,9 +1982,6 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       2,
       "always",
     ],
-    "no-return-await": [
-      2,
-    ],
     "no-script-url": [
       2,
     ],
@@ -2337,7 +2331,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1195,13 +1195,10 @@
+@@ -1192,13 +1192,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -4888,9 +4882,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
       "always",
     ],
-    "no-return-await": [
-      2,
-    ],
     "no-script-url": [
       2,
     ],
@@ -5262,7 +5253,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2817,13 +2817,10 @@
+@@ -2814,13 +2814,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
