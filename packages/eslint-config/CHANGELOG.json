@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Sat, 07 Jun 2025 12:40:57 GMT",
+      "version": "48.0.0",
+      "tag": "@rightcapital/eslint-config_v48.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "38807139+liby@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config",
+            "commit": "c5ae30e5840797aa918ed5c23e0bb84f55b5959b",
+            "comment": "refactor: remove deprecated no-return-await ESLint rule"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 04 Jun 2025 08:36:46 GMT",
       "version": "47.0.0",
       "tag": "@rightcapital/eslint-config_v47.0.0",

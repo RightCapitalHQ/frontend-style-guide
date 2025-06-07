@@ -1,6 +1,6 @@
 {
   "name": "@rightcapital/eslint-config",
-  "version": "47.0.0",
+  "version": "48.0.0",
   "description": "ESLint Config for RightCapital",
   "repository": {
     "type": "git",

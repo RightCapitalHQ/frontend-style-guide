@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Wed, 04 Jun 2025 08:36:46 GMT and should not be manually modified. -->
+<!-- This log was last generated on Sat, 07 Jun 2025 12:40:57 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [48.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v48.0.0) (2025-6-7)
+
+### Major changes
+
+- refactor: remove deprecated no-return-await ESLint rule ([c5ae30e](https://github.com/RightCapitalHQ/frontend-style-guide/commit/c5ae30e5840797aa918ed5c23e0bb84f55b5959b))
 
 ## [47.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v47.0.0) (2025-6-4)
 
