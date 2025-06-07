@@ -20,7 +20,6 @@ for (const dirent of specDirs) {
 
         // from extended configs
         'no-buffer-constructor',
-        'no-return-await',
       ]),
     );
     expect(result.usedUnknownRuleIds).toEqual(
