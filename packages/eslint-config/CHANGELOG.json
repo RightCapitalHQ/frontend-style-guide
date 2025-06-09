@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Mon, 09 Jun 2025 07:45:50 GMT",
+      "version": "49.0.0",
+      "tag": "@rightcapital/eslint-config_v49.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config",
+            "commit": "32f40134da71eae113e293e9f150efbf43763f13",
+            "comment": "feat: replace deprecated ESLint core rule with `@typescript-eslint/return-await`"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 09 Jun 2025 01:52:11 GMT",
       "version": "48.0.1",
       "tag": "@rightcapital/eslint-config_v48.0.1",

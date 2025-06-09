@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Mon, 09 Jun 2025 01:52:11 GMT and should not be manually modified. -->
+<!-- This log was last generated on Mon, 09 Jun 2025 07:45:50 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [49.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v49.0.0) (2025-6-9)
+
+### Major changes
+
+- feat: replace deprecated ESLint core rule with `@typescript-eslint/return-await` ([32f4013](https://github.com/RightCapitalHQ/frontend-style-guide/commit/32f40134da71eae113e293e9f150efbf43763f13))
 
 ## [48.0.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v48.0.1) (2025-6-9)
 
