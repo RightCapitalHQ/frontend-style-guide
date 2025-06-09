@@ -129,6 +129,10 @@ const config: TSESLint.FlatConfig.ConfigArray = [
         },
       ],
 
+      // replacement for deprecated `no-return-await` core rule
+      // https://typescript-eslint.io/rules/return-await/
+      '@typescript-eslint/return-await': ['error', 'always'],
+
       // https://github.com/RightCapitalHQ/frontend-style-guide/issues/55
       '@typescript-eslint/consistent-type-imports': [
         'error',
