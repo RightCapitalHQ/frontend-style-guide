@@ -1338,6 +1338,10 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
         "allowRegExp": true,
       },
     ],
+    "@typescript-eslint/return-await": [
+      2,
+      "always",
+    ],
     "@typescript-eslint/triple-slash-reference": [
       2,
     ],
@@ -2331,7 +2335,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1192,13 +1192,10 @@
+@@ -1196,13 +1196,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -4009,6 +4013,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         "allowRegExp": true,
       },
     ],
+    "@typescript-eslint/return-await": [
+      2,
+      "always",
+    ],
     "@typescript-eslint/triple-slash-reference": [
       2,
     ],
@@ -5253,7 +5261,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2814,13 +2814,10 @@
+@@ -2818,13 +2818,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [

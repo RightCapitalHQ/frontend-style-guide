@@ -1,0 +1,7 @@
+{
+  "comment": "feat: replace deprecated ESLint core rule with `@typescript-eslint/return-await`",
+  "type": "major",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
