@@ -2,6 +2,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 import { plugins } from './plugins/index.js';
+import { isInGitHooksOrLintStaged } from './helpers/is-in-editor-env.js';
 
 /**
  * Generate a plugins object from a list of ESLint plugin names
@@ -52,6 +53,7 @@ const utils = {
   globals,
   plugins,
   pickPlugins,
+  isInGitHooksOrLintStaged,
 } as const;
 
 export default utils;
