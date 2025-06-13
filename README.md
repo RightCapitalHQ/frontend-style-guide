@@ -70,6 +70,7 @@ export default defineConfig(
 - `react`: React specific config.
 - `node`: Node.js specific config.
 - `script`: Script oriented config, with less strict rules.
+- `disableExpensiveRules`: Disable type-aware rules and `import-x/no-cycle` to speed up linting. Useful in git hooks or `lint-staged`.
 
 **`utils`**
 
@@ -93,6 +94,7 @@ export default defineConfig(
   ```
 
 - `globals`: reexported util from [globals](https://github.com/sindresorhus/globals), useful for configuring [`languageOptions.globals`](https://eslint.org/docs/latest/use/configure/language-options#specifying-globals).
+- `isInGitHooksOrLintStaged`: return a boolean to indicate whether current environment is in git hooks or `lint-staged`.
 
 ---
 

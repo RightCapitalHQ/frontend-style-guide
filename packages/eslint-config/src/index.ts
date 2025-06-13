@@ -2,6 +2,7 @@ import type { TSESLint } from '@typescript-eslint/utils';
 
 import jsConfig from './config/javascript.js';
 import linterConfig from './config/linter.js';
+import disableExpensiveRulesConfig from './config/mixin/disable-expensive-rules.js';
 import nodeConfig from './config/mixin/node.js';
 import reactConfig from './config/mixin/react.js';
 import scriptConfig from './config/mixin/script.js';
@@ -67,6 +68,7 @@ const configs = {
   node: nodeConfig,
   react: reactConfig,
   script: scriptConfig,
+  disableExpensiveRules: disableExpensiveRulesConfig,
 } as const satisfies Record<string, TSESLint.FlatConfig.ConfigArray>;
 
 export { configs, utils };
