@@ -4,6 +4,6 @@
   "devDependencies": {
     "@rightcapital/eslint-config": "workspace:*",
     "@rightcapital/lint-eslint-config-rules": "workspace:*",
-    "eslint": "9.26.0"
+    "eslint": "9.29.0"
   }
 }
