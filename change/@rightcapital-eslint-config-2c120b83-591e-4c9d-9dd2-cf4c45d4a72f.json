@@ -1,7 +1,0 @@
-{
-  "type": "minor",
-  "comment": "feat: add disableExpensiveRules util config and export isInGitHooksOrLintStaged",
-  "packageName": "@rightcapital/eslint-config",
-  "email": "jindong.zhannng@gmail.com",
-  "dependentChangeType": "patch"
-}

@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Tue, 17 Jun 2025 10:05:58 GMT",
+      "version": "50.1.0",
+      "tag": "@rightcapital/eslint-config_v50.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "jindong.zhannng@gmail.com",
+            "package": "@rightcapital/eslint-config",
+            "commit": "7ae50965aff57d4cb2feb5dfef74fde4b27323a8",
+            "comment": "feat: add disableExpensiveRules util config and export isInGitHooksOrLintStaged"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 10 Jun 2025 01:45:17 GMT",
       "version": "50.0.0",
       "tag": "@rightcapital/eslint-config_v50.0.0",

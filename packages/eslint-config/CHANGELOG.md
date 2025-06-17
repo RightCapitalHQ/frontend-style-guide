@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Tue, 10 Jun 2025 01:45:17 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 17 Jun 2025 10:05:58 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [50.1.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v50.1.0) (2025-6-17)
+
+### Minor changes
+
+- feat: add disableExpensiveRules util config and export isInGitHooksOrLintStaged ([7ae5096](https://github.com/RightCapitalHQ/frontend-style-guide/commit/7ae50965aff57d4cb2feb5dfef74fde4b27323a8))
 
 ## [50.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v50.0.0) (2025-6-10)
 
