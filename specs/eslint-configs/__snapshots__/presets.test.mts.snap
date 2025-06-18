@@ -4,7 +4,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
 {
   "language": "<OMITTED>",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "parser": "<OMITTED>",
     "parserOptions": {
       "sourceType": "module",
@@ -736,7 +736,9 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
         "allow": [],
         "builtinGlobals": false,
         "hoist": "functions",
+        "ignoreFunctionTypeParameterNameValueShadow": true,
         "ignoreOnInitialization": false,
+        "ignoreTypeValueShadow": true,
       },
     ],
     "no-shadow-restricted-names": [
@@ -842,7 +844,10 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       {
         "allowNamedExports": false,
         "classes": true,
+        "enums": true,
         "functions": true,
+        "ignoreTypeReferences": true,
+        "typedefs": true,
         "variables": true,
       },
     ],
@@ -866,6 +871,9 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-useless-rename": [
       2,
@@ -1047,7 +1055,7 @@ exports[`Resolved config matches snapshot > javascript.js 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -979,13 +979,10 @@
+@@ -987,13 +987,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -1067,7 +1075,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
 {
   "language": "<OMITTED>",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "parser": "<OMITTED>",
     "parserOptions": {
       "projectService": true,
@@ -2013,7 +2021,9 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
         "allow": [],
         "builtinGlobals": false,
         "hoist": "functions",
+        "ignoreFunctionTypeParameterNameValueShadow": true,
         "ignoreOnInitialization": false,
+        "ignoreTypeValueShadow": true,
       },
     ],
     "no-shadow-restricted-names": [
@@ -2119,7 +2129,10 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       {
         "allowNamedExports": false,
         "classes": true,
+        "enums": true,
         "functions": true,
+        "ignoreTypeReferences": true,
+        "typedefs": true,
         "variables": true,
       },
     ],
@@ -2143,6 +2156,9 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-useless-rename": [
       2,
@@ -2335,7 +2351,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1196,13 +1196,10 @@
+@@ -1204,13 +1204,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -2355,7 +2371,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
 {
   "language": "<OMITTED>",
   "languageOptions": {
-    "ecmaVersion": 2025,
+    "ecmaVersion": 2026,
     "globals": {
       "AI": false,
       "AICreateMonitor": false,
@@ -4917,7 +4933,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         "allow": [],
         "builtinGlobals": false,
         "hoist": "functions",
+        "ignoreFunctionTypeParameterNameValueShadow": true,
         "ignoreOnInitialization": false,
+        "ignoreTypeValueShadow": true,
       },
     ],
     "no-shadow-restricted-names": [
@@ -5023,7 +5041,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       {
         "allowNamedExports": false,
         "classes": true,
+        "enums": true,
         "functions": true,
+        "ignoreTypeReferences": true,
+        "typedefs": true,
         "variables": true,
       },
     ],
@@ -5047,6 +5068,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "no-useless-escape": [
       2,
+      {
+        "allowRegexCharacters": [],
+      },
     ],
     "no-useless-rename": [
       2,
@@ -5261,7 +5285,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2818,13 +2818,10 @@
+@@ -2826,13 +2826,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
