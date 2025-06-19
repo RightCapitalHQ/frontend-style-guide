@@ -161,8 +161,8 @@ importers:
         specifier: 9.29.0
         version: 9.29.0(jiti@2.4.2)
       eslint-doc-generator:
-        specifier: 2.1.2
-        version: 2.1.2(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
+        specifier: 2.2.0
+        version: 2.2.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       typescript:
         specifier: 5.8.3
         version: 5.8.3
@@ -1351,6 +1351,10 @@ packages:
     resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
 
+  commander@14.0.0:
+    resolution: {integrity: sha512-2uM9rYjPvyq39NwLRqaiLtWHyDC1FvryJDa2ATTVims5YAS4PupsEQsDvP14FqhFr0P49CYDugi59xaxJlTXRA==}
+    engines: {node: '>=20'}
+
   comment-parser@1.4.1:
     resolution: {integrity: sha512-buhp5kePrmda3vhc5B9t7pUQXAb2Tnd0qgpkIhPhkHXxJpiPJ11H0ZEU0oBpJ2QztSbzG/ZxMj/CHsYJqRHmyg==}
     engines: {node: '>= 12.0.0'}
@@ -1621,8 +1625,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-doc-generator@2.1.2:
-    resolution: {integrity: sha512-4CzDcFiVaNDxaUYF01bnebGkxKvowp6dyX/USED+4GbKCNTcoopbXZ0Jtb0m4/xYS2ImOajDmgb8HA3njgVMPg==}
+  eslint-doc-generator@2.2.0:
+    resolution: {integrity: sha512-vKI1fuPeIIMo3AQpo+rx7ZQNIlGyw+6XRHu9baObBcwilhDvBA1r6sY9uUcuua2UU7NpkD3cEDut5ZBZvcHAkw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -4514,6 +4518,8 @@ snapshots:
 
   commander@13.1.0: {}
 
+  commander@14.0.0: {}
+
   comment-parser@1.4.1: {}
 
   commitizen@4.3.1(@types/node@22.15.32)(typescript@5.8.3):
@@ -4860,12 +4866,12 @@ snapshots:
     dependencies:
       eslint: 9.29.0(jiti@2.4.2)
 
-  eslint-doc-generator@2.1.2(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3):
+  eslint-doc-generator@2.2.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3):
     dependencies:
       '@typescript-eslint/utils': 8.34.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       ajv: 8.17.1
       change-case: 5.4.4
-      commander: 13.1.0
+      commander: 14.0.0
       cosmiconfig: 9.0.0(typescript@5.8.3)
       deepmerge: 4.3.1
       dot-prop: 9.0.0
