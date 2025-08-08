@@ -2,15 +2,15 @@ import { RuleTester } from '@typescript-eslint/rule-tester';
 import { afterAll, describe, test } from 'vitest';
 
 export class VitestRuleTester extends RuleTester {
-  static describe: typeof describe = describe;
+  public static describe: typeof describe = describe;
 
-  static describeSkip: typeof describe.skip = describe.skip;
+  public static describeSkip: typeof describe.skip = describe.skip;
 
-  static it: typeof test = test;
+  public static it: typeof test = test;
 
-  static itOnly: typeof test.only = test.only;
+  public static itOnly: typeof test.only = test.only;
 
-  static itSkip: typeof test.skip = test.skip;
+  public static itSkip: typeof test.skip = test.skip;
 
-  static afterAll: typeof afterAll = afterAll;
+  public static afterAll: typeof afterAll = afterAll;
 }

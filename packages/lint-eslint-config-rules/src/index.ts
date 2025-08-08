@@ -70,6 +70,8 @@ export const lintESLintConfigRules = async (
   let usedRuleIds: Set<string> = new Set();
   let usedPluginSpecifiers: Set<string> = new Set();
   const ruleMap: ESLintRuleMap = new Map(
+    // intended internal API usage
+    // eslint-disable-next-line @typescript-eslint/no-deprecated
     Array.from(builtinRules.entries(), ([ruleId, rule]) => [
       ruleId,
       { id: ruleId, meta: rule.meta } satisfies IESLintRule,
