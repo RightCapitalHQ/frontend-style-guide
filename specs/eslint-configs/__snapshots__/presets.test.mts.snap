@@ -2338,11 +2338,12 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
         ".tsx",
       ],
     },
-    "import-x/resolver": {
-      "typescript": {
-        "alwaysTryTypes": true,
+    "import-x/resolver-next": [
+      {
+        "interfaceVersion": 3,
+        "name": "eslint-import-resolver-typescript",
       },
-    },
+    ],
   },
 }
 `;
@@ -5256,11 +5257,12 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         ".tsx",
       ],
     },
-    "import-x/resolver": {
-      "typescript": {
-        "alwaysTryTypes": true,
+    "import-x/resolver-next": [
+      {
+        "interfaceVersion": 3,
+        "name": "eslint-import-resolver-typescript",
       },
-    },
+    ],
     "react-x": {
       "additionalComponents": [],
       "additionalHooks": {

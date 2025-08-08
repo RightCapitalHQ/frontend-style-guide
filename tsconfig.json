@@ -4,9 +4,6 @@
     { "path": "./tsconfig.scripts.json" },
     { "path": "./packages/eslint-plugin" },
     { "path": "./packages/prettier-config" },
-    { "path": "./packages/eslint-config" },
-    { "path": "./packages/eslint-config-base" },
-    { "path": "./packages/eslint-config-javascript" },
-    { "path": "./packages/eslint-config-typescript" }
+    { "path": "./packages/eslint-config" }
   ]
 }
