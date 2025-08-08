@@ -1,4 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import * as typescriptEslint from 'typescript-eslint';
 
 import { isInEditorEnv } from '../helpers/is-in-editor-env.js';
@@ -42,9 +43,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'import-x/parsers': {
         '@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx'],
       },
-      'import-x/resolver': {
-        typescript: { alwaysTryTypes: true },
-      },
+      'import-x/resolver-next': [createTypeScriptImportResolver()],
     },
     /**
      * Be careful when adding extension rules from `@typescript-eslint`,
