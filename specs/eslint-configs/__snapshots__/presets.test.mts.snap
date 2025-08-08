@@ -987,6 +987,18 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       2,
       "never",
     ],
+    "unicorn/custom-error-definition": [
+      2,
+    ],
+    "unicorn/prefer-array-some": [
+      2,
+    ],
+    "unicorn/prefer-class-fields": [
+      2,
+    ],
+    "unicorn/prefer-includes": [
+      2,
+    ],
     "unicorn/prefer-node-protocol": [
       2,
     ],
@@ -1055,7 +1067,7 @@ exports[`Resolved config matches snapshot > javascript.js 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -987,13 +987,10 @@
+@@ -999,13 +999,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -1174,6 +1186,12 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       {
         "fixStyle": "inline-type-imports",
         "prefer": "type-imports",
+      },
+    ],
+    "@typescript-eslint/explicit-member-accessibility": [
+      2,
+      {
+        "accessibility": "explicit",
       },
     ],
     "@typescript-eslint/naming-convention": [
@@ -2275,6 +2293,18 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       2,
       "never",
     ],
+    "unicorn/custom-error-definition": [
+      2,
+    ],
+    "unicorn/prefer-array-some": [
+      2,
+    ],
+    "unicorn/prefer-class-fields": [
+      2,
+    ],
+    "unicorn/prefer-includes": [
+      2,
+    ],
     "unicorn/prefer-node-protocol": [
       2,
     ],
@@ -2352,7 +2382,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1204,13 +1204,10 @@
+@@ -1222,13 +1222,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -3860,6 +3890,12 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         "prefer": "type-imports",
       },
     ],
+    "@typescript-eslint/explicit-member-accessibility": [
+      2,
+      {
+        "accessibility": "explicit",
+      },
+    ],
     "@typescript-eslint/naming-convention": [
       2,
       {
@@ -5194,6 +5230,18 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
       "never",
     ],
+    "unicorn/custom-error-definition": [
+      2,
+    ],
+    "unicorn/prefer-array-some": [
+      2,
+    ],
+    "unicorn/prefer-class-fields": [
+      2,
+    ],
+    "unicorn/prefer-includes": [
+      2,
+    ],
     "unicorn/prefer-node-protocol": [
       2,
     ],
@@ -5287,7 +5335,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2826,13 +2826,10 @@
+@@ -2844,13 +2844,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [

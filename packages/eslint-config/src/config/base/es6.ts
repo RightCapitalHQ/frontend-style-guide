@@ -1,9 +1,13 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 
+import { pickPlugins } from '../../utils.js';
+
 // extracted from eslint-config-airbnb-base@15.0.0
 // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-base-v15.0.0/packages/eslint-config-airbnb-base/rules/es6.js
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
+    plugins: pickPlugins(['unicorn']),
+
     rules: {
       // verify super() callings in constructors
       'constructor-super': 'error',
@@ -46,6 +50,14 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // disallow unnecessary constructor
       // https://eslint.org/docs/rules/no-useless-constructor
       'no-useless-constructor': 'error',
+
+      // enforce setting property defaults with the class fields
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-class-fields.md
+      'unicorn/prefer-class-fields': 'error',
+
+      // enforce correct Error subclassing
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/custom-error-definition.md
+      'unicorn/custom-error-definition': 'error',
 
       // disallow renaming import, export, and destructured assignments to the same name
       // https://eslint.org/docs/rules/no-useless-rename
@@ -123,6 +135,14 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // require a Symbol description
       // https://eslint.org/docs/rules/symbol-description
       'symbol-description': 'error',
+
+      // prefer `Array.prototype.includes()` over `Array.prototype.indexOf()` for checking (non-)existence
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-includes.md
+      'unicorn/prefer-includes': 'error',
+
+      // prefer .some(…) over .filter(…).length check and .{find,findLast,findIndex,findLastIndex}(…)
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-array-some.md
+      'unicorn/prefer-array-some': 'error',
     },
   },
 ];

@@ -13,7 +13,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       },
     },
 
-    plugins: pickPlugins(['n']),
+    plugins: pickPlugins(['n', 'unicorn']),
 
     rules: {
       // require all requires be top-level
@@ -31,6 +31,19 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // disallow string concatenation with __dirname and __filename
       // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-path-concat.md
       'n/no-path-concat': 'error',
+
+      // disallow process.exit()
+      // https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-process-exit.md
+      'n/no-process-exit': 'error',
+
+      // prefer assert.ok() over assert() for better readability and consistency
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/consistent-assert.md
+      'unicorn/consistent-assert': 'error',
+
+      // prefer `import.meta.filename` over legacy pattern `url.fileURLToPath(import.meta.url)`,
+      // and the same for `import.meta.dirname`
+      // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-import-meta-properties.md
+      'unicorn/prefer-import-meta-properties': 'error',
     },
   },
 ];
