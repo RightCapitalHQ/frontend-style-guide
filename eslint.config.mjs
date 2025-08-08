@@ -41,7 +41,7 @@ export default defineConfig(
   // @rightcapital/eslint-plugin
   {
     files: ['packages/eslint-plugin/**/*.ts'],
-    extends: [eslintPluginEslintPlugin.configs['flat/recommended']],
+    extends: [eslintPluginEslintPlugin.configs.recommended],
   },
   {
     files: ['packages/eslint-plugin/src/helpers/test/*.ts'],
