@@ -1,7 +1,0 @@
-{
-  "comment": "feat: add several useful rules",
-  "type": "minor",
-  "packageName": "@rightcapital/lint-eslint-config-rules",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}

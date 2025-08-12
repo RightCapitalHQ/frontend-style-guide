@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Fri, 08 Aug 2025 06:33:38 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 12 Aug 2025 10:40:45 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [51.1.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v51.1.0) (2025-8-12)
+
+### Minor changes
+
+- feat: add several useful rules ([476ab96](https://github.com/RightCapitalHQ/frontend-style-guide/commit/476ab9659b3668665597d482c9106cd45ba3c86d))
 
 ## [51.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v51.0.0) (2025-8-8)
 

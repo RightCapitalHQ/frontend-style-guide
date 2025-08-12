@@ -2,6 +2,21 @@
   "name": "@rightcapital/lint-eslint-config-rules",
   "entries": [
     {
+      "date": "Tue, 12 Aug 2025 10:40:45 GMT",
+      "version": "2.1.0",
+      "tag": "@rightcapital/lint-eslint-config-rules_v2.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/lint-eslint-config-rules",
+            "commit": "476ab9659b3668665597d482c9106cd45ba3c86d",
+            "comment": "feat: add several useful rules"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 18 Jun 2025 06:52:14 GMT",
       "version": "2.0.4",
       "tag": "@rightcapital/lint-eslint-config-rules_v2.0.4",
