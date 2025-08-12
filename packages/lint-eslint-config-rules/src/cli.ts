@@ -111,10 +111,15 @@ Note:
       console.log(
         `Found used deprecated rules:\n\t${sortedRuleIds(usedDeprecatedRuleIds)
           .map((ruleId) => {
-            const replacedByMeta = rulesMap.get(ruleId)?.meta?.replacedBy;
+            const deprecated = rulesMap.get(ruleId)?.meta?.deprecated;
+            const replacedBy =
+              typeof deprecated === 'object' && deprecated.replacedBy;
             const replacedByInfo =
-              Array.isArray(replacedByMeta) && replacedByMeta.length > 0
-                ? ` (replaced by ${replacedByMeta.join(', ')})`
+              Array.isArray(replacedBy) && replacedBy.length > 0
+                ? ` (replaced by ${replacedBy
+                    .map((info) => info?.rule?.name)
+                    .filter(Boolean)
+                    .join(', ')})`
                 : '';
             return `${ruleId}${replacedByInfo}`;
           })

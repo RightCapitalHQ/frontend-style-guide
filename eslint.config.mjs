@@ -1,7 +1,7 @@
 import eslintConfigRightcapital from '@rightcapital/eslint-config';
 import eslintPluginEslintPlugin from 'eslint-plugin-eslint-plugin';
 
-const { defineConfig } = eslintConfigRightcapital.utils;
+const { defineConfig, pickPlugins } = eslintConfigRightcapital.utils;
 
 export default defineConfig(
   {
@@ -20,6 +20,16 @@ export default defineConfig(
     ],
   },
   ...eslintConfigRightcapital.configs.recommended,
+
+  {
+    files: ['**/*.{ts,cts,mts,tsx}'],
+    plugins: pickPlugins(['@typescript-eslint']),
+    rules: {
+      // disallow referring to code marked with @deprecated
+      // https://typescript-eslint.io/rules/no-deprecated
+      '@typescript-eslint/no-deprecated': 'error',
+    },
+  },
 
   // scripts
   {

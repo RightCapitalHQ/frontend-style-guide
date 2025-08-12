@@ -157,6 +157,13 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // This rule is not suitable for TypeScript
       // https://github.com/antfu/eslint-plugin-import-x/blob/master/docs/rules/named.md
       'import-x/named': 'off',
+
+      // consistent accessibility modifiers for class members
+      // https://typescript-eslint.io/rules/explicit-member-accessibility/
+      '@typescript-eslint/explicit-member-accessibility': [
+        'error',
+        { accessibility: 'explicit' },
+      ],
     },
   },
 ];

@@ -1,0 +1,7 @@
+{
+  "comment": "feat: add several useful rules",
+  "type": "minor",
+  "packageName": "@rightcapital/eslint-plugin",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
