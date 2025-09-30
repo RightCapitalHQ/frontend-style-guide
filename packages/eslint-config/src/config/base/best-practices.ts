@@ -42,7 +42,11 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
       // Require grouped accessor pairs in object literals and classes
       // https://eslint.org/docs/rules/grouped-accessor-pairs
-      'grouped-accessor-pairs': 'error',
+      'grouped-accessor-pairs': [
+        'error',
+        'anyOrder',
+        { enforceForTSTypes: true },
+      ],
 
       // make sure for-in loops have an if statement
       // https://eslint.org/docs/rules/guard-for-in

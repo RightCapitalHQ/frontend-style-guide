@@ -19,7 +19,6 @@ In this case:
 1.  Review the changes of the configs through the diff of the snapshot.
 
 2.  Check if the changes are expected:
-
     1. If yes, update the snapshot by running(the `-u` flag is Vitests's [snapshot updating](https://vitest.dev/guide/snapshot.html#updating-snapshots) flag):
 
        ```sh
