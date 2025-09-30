@@ -151,6 +151,9 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     "grouped-accessor-pairs": [
       2,
       "anyOrder",
+      {
+        "enforceForTSTypes": true,
+      },
     ],
     "guard-for-in": [
       2,
@@ -471,6 +474,9 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       2,
@@ -1067,7 +1073,7 @@ exports[`Resolved config matches snapshot > javascript.js 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -999,13 +999,10 @@
+@@ -1005,13 +1005,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -1448,6 +1454,9 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "grouped-accessor-pairs": [
       2,
       "anyOrder",
+      {
+        "enforceForTSTypes": true,
+      },
     ],
     "guard-for-in": [
       2,
@@ -1771,6 +1780,9 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       2,
@@ -2382,7 +2394,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1222,13 +1222,10 @@
+@@ -1228,13 +1228,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -4150,6 +4162,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "grouped-accessor-pairs": [
       2,
       "anyOrder",
+      {
+        "enforceForTSTypes": true,
+      },
     ],
     "guard-for-in": [
       2,
@@ -4702,6 +4717,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "no-misleading-character-class": [
       2,
+      {
+        "allowEscape": false,
+      },
     ],
     "no-multi-assign": [
       2,
@@ -5335,7 +5353,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2844,13 +2844,10 @@
+@@ -2850,13 +2850,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
