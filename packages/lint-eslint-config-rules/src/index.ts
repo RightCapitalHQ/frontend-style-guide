@@ -15,7 +15,7 @@ const defaultCwd = process.cwd();
 export type ESLintRuleId = string;
 export interface IESLintRule {
   id: ESLintRuleId;
-  meta: Rule.RuleMetaData | undefined;
+  meta?: Rule.RuleModule['meta'];
 }
 export type ESLintRuleMap = Map<ESLintRuleId, IESLintRule>;
 
