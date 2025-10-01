@@ -50,7 +50,7 @@
     "tsx": "4.20.5",
     "typescript": "5.9.2"
   },
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.17.1",
   "engines": {
     "node": ">=16.0.0"
   }
