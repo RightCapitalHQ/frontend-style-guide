@@ -1,0 +1,7 @@
+{
+  "type": "none",
+  "comment": "chore(deps): update devdependency @types/eslint-plugin-jsx-a11y to v6.10.1",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "29139614+renovate[bot]@users.noreply.github.com",
+  "dependentChangeType": "none"
+}
