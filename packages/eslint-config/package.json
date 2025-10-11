@@ -22,7 +22,7 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "@eslint-react/eslint-plugin": "1.51.3",
+    "@eslint-react/eslint-plugin": "2.0.6",
     "@rightcapital/eslint-plugin": "workspace:*",
     "@stylistic/eslint-plugin": "5.2.2",
     "@typescript-eslint/utils": "8.34.0",
@@ -32,9 +32,9 @@
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-lodash": "8.0.0",
     "eslint-plugin-n": "17.19.0",
-    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-hooks": "6.1.1",
     "eslint-plugin-simple-import-sort": "12.1.1",
-    "eslint-plugin-unicorn": "60.0.0",
+    "eslint-plugin-unicorn": "61.0.2",
     "eslint-plugin-unused-imports": "4.1.4",
     "globals": "16.2.0",
     "typescript-eslint": "8.34.0"
