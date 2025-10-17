@@ -1288,6 +1288,9 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "@typescript-eslint/no-unnecessary-type-constraint": [
       2,
     ],
+    "@typescript-eslint/no-unnecessary-type-conversion": [
+      2,
+    ],
     "@typescript-eslint/no-unsafe-argument": [
       2,
     ],
@@ -2394,7 +2397,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1228,13 +1228,10 @@
+@@ -1231,13 +1231,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [
@@ -3996,6 +3999,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@typescript-eslint/no-unnecessary-type-constraint": [
       2,
     ],
+    "@typescript-eslint/no-unnecessary-type-conversion": [
+      2,
+    ],
     "@typescript-eslint/no-unsafe-argument": [
       2,
     ],
@@ -5353,7 +5359,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2850,13 +2850,10 @@
+@@ -2853,13 +2853,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [

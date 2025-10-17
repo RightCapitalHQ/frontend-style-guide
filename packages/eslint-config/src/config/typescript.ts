@@ -71,6 +71,9 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // https://typescript-eslint.io/rules/no-non-null-assertion
       '@typescript-eslint/no-non-null-assertion': 'error',
 
+      // https://typescript-eslint.io/rules/no-unnecessary-type-conversion/
+      '@typescript-eslint/no-unnecessary-type-conversion': 'error',
+
       '@typescript-eslint/naming-convention': [
         'error',
         {
