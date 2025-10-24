@@ -42,7 +42,7 @@
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
     "@types/confusing-browser-globals": "1.0.3",
-    "@types/eslint-plugin-jsx-a11y": "6.10.0",
+    "@types/eslint-plugin-jsx-a11y": "6.10.1",
     "@types/semver": "7.7.1"
   },
   "peerDependencies": {
