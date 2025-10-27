@@ -11,9 +11,9 @@
   "devDependencies": {
     "@rightcapital/eslint-config": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
-    "@types/react": "19.2.0",
+    "@types/react": "19.2.2",
     "concurrently": "9.2.1",
-    "eslint": "9.37.0",
+    "eslint": "9.38.0",
     "eslint-config-prettier": "10.1.5",
     "execa": "9.6.0",
     "jest-diff": "30.2.0",
