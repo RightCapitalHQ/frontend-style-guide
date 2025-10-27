@@ -14,7 +14,7 @@
     "@types/react": "19.2.2",
     "concurrently": "9.2.1",
     "eslint": "9.38.0",
-    "eslint-config-prettier": "10.1.5",
+    "eslint-config-prettier": "10.1.8",
     "execa": "9.6.0",
     "jest-diff": "30.2.0",
     "prettier": "3.6.2",
