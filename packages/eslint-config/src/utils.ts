@@ -1,5 +1,5 @@
+import { defineConfig as coreDefineConfig } from 'eslint/config';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
 
 import { isInGitHooksOrLintStaged } from './helpers/is-in-editor-env.js';
 import { plugins } from './plugins/index.js';
@@ -20,17 +20,19 @@ export function pickPlugins(pluginNames?: Array<keyof typeof plugins>) {
   );
 }
 
-const defineConfig: typeof tseslint.config = (...configs) =>
-  tseslint.config(...configs).map((config) => {
+const defineConfig: typeof coreDefineConfig = (...configs) =>
+  coreDefineConfig(...configs).map((config) => {
     const knownPluginNames = Object.keys(plugins).filter((pluginName) =>
       Object.keys(config.rules ?? {}).some((rule) =>
         rule.startsWith(`${pluginName}/`),
       ),
     ) as Array<keyof typeof plugins>;
+
     const resolvedPlugins = {
       ...pickPlugins(knownPluginNames),
       ...config.plugins,
     };
+
     return {
       ...(Object.keys(resolvedPlugins).length > 0
         ? { plugins: resolvedPlugins }
@@ -43,11 +45,11 @@ const utils = {
   /**
    * Utility function for easily composing configs.
    *
-   * This is a wrapper around `typescript-eslint`'s `config` function.
+   * This is a wrapper around ESLint `defineConfig` function.
    *
    * With automatic plugin inference(if the plugin is known to `@rightcapital/eslint-config`).
    *
-   * @see https://typescript-eslint.io/packages/typescript-eslint#config
+   * @see https://eslint.org/docs/latest/use/configure/combine-configs
    */
   defineConfig,
   globals,

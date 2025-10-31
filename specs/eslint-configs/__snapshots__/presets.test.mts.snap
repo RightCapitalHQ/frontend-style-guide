@@ -3672,13 +3672,11 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
       {
         "excepts": [
-          "^index$",
-        ],
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx",
+          "index",
+          "/^_/",
+          "/^\\$/",
+          "/^[0-9]+$/",
+          "/^\\[[^\\]]+\\]$/",
         ],
         "rule": "kebab-case",
       },
@@ -5353,7 +5351,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2850,13 +2850,10 @@
+@@ -2848,13 +2848,10 @@
         2,
       ],
       "unicorn/text-encoding-identifier-case": Array [

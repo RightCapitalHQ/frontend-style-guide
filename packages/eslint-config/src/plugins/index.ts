@@ -1,3 +1,4 @@
+import type { Plugin } from '@eslint/core';
 import eslintPluginReact from '@eslint-react/eslint-plugin';
 import eslintPluginRightcapital from '@rightcapital/eslint-plugin';
 import eslintPluginStylistic from '@stylistic/eslint-plugin';
@@ -14,21 +15,24 @@ import * as typescriptEslint from 'typescript-eslint';
 
 const definePlugins = <TPluginName extends string>(
   plugins: Record<TPluginName, Pick<TSESLint.FlatConfig.Plugin, 'rules'>>,
-): Record<TPluginName, TSESLint.FlatConfig.Plugin> => {
-  return plugins;
+) => {
+  /**
+   * We may enhance this when ESLint core types become better
+   */
+  return plugins as unknown as Record<TPluginName, Plugin>;
 };
 
 /**
  * All plugins used in `@rightcapital/eslint-config`.
  */
 export const plugins = definePlugins({
-  '@typescript-eslint': typescriptEslint.plugin,
+  '@typescript-eslint': typescriptEslint.plugin as TSESLint.FlatConfig.Plugin,
   '@rightcapital': eslintPluginRightcapital,
   'import-x': eslintPluginImportX,
   'simple-import-sort': eslintPluginSimpleImportSort,
   n,
   ...eslintPluginReact.configs.all.plugins,
-  '@stylistic': eslintPluginStylistic as TSESLint.FlatConfig.Plugin,
+  '@stylistic': eslintPluginStylistic,
   'react-hooks': eslintPluginReactHooks,
   'jsx-a11y': eslintPluginA11y,
   lodash: eslintPluginLodash,

@@ -1,9 +1,9 @@
-import type { TSESLint } from '@typescript-eslint/utils';
+import type { ConfigObject } from '@eslint/core';
 
 /**
  * Less strict config for scripts and config files.
  */
-const config: TSESLint.FlatConfig.ConfigArray = [
+const config: readonly ConfigObject[] = [
   {
     rules: {
       'no-console': 'off',

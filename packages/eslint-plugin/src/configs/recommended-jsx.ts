@@ -1,12 +1,8 @@
-import type { ClassicConfig } from '@typescript-eslint/utils/ts-eslint';
+import type { ConfigObject } from '@eslint/core';
 
-export const recommendedJsxConfig: ClassicConfig.Config = {
-  overrides: [
-    {
-      files: '**/*.{jsx,tsx}',
-      rules: {
-        '@rightcapital/jsx-no-unused-expressions': 'error',
-      },
-    },
-  ],
+export const recommendedJsxConfig: ConfigObject = {
+  files: ['**/*.{jsx,tsx}'],
+  rules: {
+    '@rightcapital/jsx-no-unused-expressions': 'error',
+  },
 };

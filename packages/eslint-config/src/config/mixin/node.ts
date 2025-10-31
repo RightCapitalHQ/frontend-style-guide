@@ -1,11 +1,11 @@
-import type { TSESLint } from '@typescript-eslint/utils';
+import type { ConfigObject } from '@eslint/core';
 import globals from 'globals';
 
 import { pickPlugins } from '../../utils.js';
 /**
  * Common rules for JavaScript files.
  */
-const config: TSESLint.FlatConfig.ConfigArray = [
+const config: readonly ConfigObject[] = [
   {
     languageOptions: {
       globals: {

@@ -1,4 +1,4 @@
-import type { TSESLint } from '@typescript-eslint/utils';
+import type { ConfigObject } from '@eslint/core';
 
 import jsConfig from './config/javascript.js';
 import linterConfig from './config/linter.js';
@@ -69,7 +69,7 @@ const configs = {
   react: reactConfig,
   script: scriptConfig,
   disableExpensiveRules: disableExpensiveRulesConfig,
-} as const satisfies Record<string, TSESLint.FlatConfig.ConfigArray>;
+} as const satisfies Record<string, readonly ConfigObject[]>;
 
 export { configs, utils };
 export default { configs, utils };

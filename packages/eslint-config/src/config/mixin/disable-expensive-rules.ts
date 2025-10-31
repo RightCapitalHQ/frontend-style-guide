@@ -1,7 +1,7 @@
-import type { TSESLint } from '@typescript-eslint/utils';
+import type { ConfigObject } from '@eslint/core';
 import * as typescriptEslint from 'typescript-eslint';
 
-const config: TSESLint.FlatConfig.ConfigArray = [
+const config: readonly ConfigObject[] = [
   typescriptEslint.configs.disableTypeChecked,
   {
     rules: {

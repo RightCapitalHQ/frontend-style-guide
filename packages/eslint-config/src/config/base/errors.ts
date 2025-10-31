@@ -1,8 +1,9 @@
-import type { TSESLint } from '@typescript-eslint/utils';
-
 // extracted from eslint-config-airbnb-base@15.0.0
+
+import type { ConfigObject } from '@eslint/core';
+
 // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-base-v15.0.0/packages/eslint-config-airbnb-base/rules/errors.js
-const config: TSESLint.FlatConfig.ConfigArray = [
+const config: readonly ConfigObject[] = [
   {
     rules: {
       // Enforce “for” loop update clause moving the counter in the right direction

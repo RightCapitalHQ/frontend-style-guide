@@ -1,10 +1,10 @@
-import type { TSESLint } from '@typescript-eslint/utils';
+import type { ConfigObject } from '@eslint/core';
 
 import { pickPlugins } from '../../utils.js';
 
 // extracted from eslint-config-airbnb-base@15.0.0
 // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-base-v15.0.0/packages/eslint-config-airbnb-base/rules/style.js
-const config: TSESLint.FlatConfig.ConfigArray = [
+const config: readonly ConfigObject[] = [
   {
     plugins: pickPlugins(['@stylistic']),
 

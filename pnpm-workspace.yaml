@@ -2,3 +2,5 @@ packages:
   - 'packages/*'
   - 'specs/**'
   - 'scripts'
+catalog:
+  '@eslint/core': 0.16.0
