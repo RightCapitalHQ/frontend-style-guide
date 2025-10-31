@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Fri, 31 Oct 2025 09:26:41 GMT",
+      "version": "52.0.0",
+      "tag": "@rightcapital/eslint-plugin_v52.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "0430c55721ed7ab2748d379bab58953622147d00",
+            "comment": "feat!: migrate to ESLint core `defineConfig()`"
+          }
+        ]
+      }
+    },
+    {
       "date": "Mon, 27 Oct 2025 06:44:34 GMT",
       "version": "51.1.0",
       "tag": "@rightcapital/eslint-plugin_v51.1.0",

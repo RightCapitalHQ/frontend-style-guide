@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-plugin
 
-<!-- This log was last generated on Tue, 12 Aug 2025 10:40:45 GMT and should not be manually modified. -->
+<!-- This log was last generated on Fri, 31 Oct 2025 09:26:41 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [52.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v52.0.0) (2025-10-31)
+
+### Major changes
+
+- feat!: migrate to ESLint core `defineConfig()` ([0430c55](https://github.com/RightCapitalHQ/frontend-style-guide/commit/0430c55721ed7ab2748d379bab58953622147d00))
 
 ## [51.1.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v51.1.0) (2025-8-12)
 
