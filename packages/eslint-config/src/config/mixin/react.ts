@@ -1,12 +1,12 @@
+import type { ConfigObject } from '@eslint/core';
 import eslintPluginReact from '@eslint-react/eslint-plugin';
-import type { TSESLint } from '@typescript-eslint/utils';
 import globals from 'globals';
 
 import { pickPlugins } from '../../utils.js';
 /**
  * Common rules for React, working with TypeScript.
  */
-const config: TSESLint.FlatConfig.ConfigArray = [
+const config: readonly ConfigObject[] = [
   eslintPluginReact.configs.recommended,
   {
     languageOptions: {

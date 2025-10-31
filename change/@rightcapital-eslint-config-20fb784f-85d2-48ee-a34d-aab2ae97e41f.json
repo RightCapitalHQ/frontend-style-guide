@@ -1,0 +1,7 @@
+{
+  "comment": "feat!: migrate to ESLint core `defineConfig()`",
+  "type": "major",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}

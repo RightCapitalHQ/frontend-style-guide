@@ -1,8 +1,10 @@
-import type { ClassicConfig } from '@typescript-eslint/utils/ts-eslint';
+import { defineConfig } from 'eslint/config';
 
-export const recommendedReactConfig: ClassicConfig.Config = {
-  extends: ['plugin:@rightcapital/recommended-jsx'],
+import { recommendedJsxConfig } from './recommended-jsx';
+
+export const recommendedReactConfig = defineConfig({
+  extends: [recommendedJsxConfig],
   rules: {
     '@rightcapital/no-ignore-return-value-of-react-hooks': 'error',
   },
-};
+});

@@ -28,6 +28,7 @@
     "@typescript-eslint/utils": "8.46.2"
   },
   "devDependencies": {
+    "@eslint/core": "catalog:",
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "9.6.1",
     "@types/node": "22.18.11",

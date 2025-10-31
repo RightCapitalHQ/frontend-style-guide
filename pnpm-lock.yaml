@@ -4,6 +4,12 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@eslint/core':
+      specifier: 0.16.0
+      version: 0.16.0
+
 importers:
 
   .:
@@ -117,6 +123,9 @@ importers:
         specifier: 8.46.2
         version: 8.46.2(eslint@9.38.0(jiti@2.4.2))(typescript@5.9.3)
     devDependencies:
+      '@eslint/core':
+        specifier: 'catalog:'
+        version: 0.16.0
       '@rightcapital/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -136,6 +145,9 @@ importers:
         specifier: 8.46.2
         version: 8.46.2(eslint@9.38.0(jiti@2.4.2))(typescript@5.9.3)
     devDependencies:
+      '@eslint/core':
+        specifier: 'catalog:'
+        version: 0.16.0
       '@rightcapital/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig

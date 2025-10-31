@@ -1,4 +1,4 @@
-import type { TSESLint } from '@typescript-eslint/utils';
+import type { ConfigObject } from '@eslint/core';
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import * as typescriptEslint from 'typescript-eslint';
 
@@ -9,7 +9,7 @@ import baseConfig from './base/index.js';
 /**
  * Common rules for TypeScript files.
  */
-const config: TSESLint.FlatConfig.ConfigArray = [
+const editorConfig: readonly ConfigObject[] = [
   ...baseConfig,
   ...typescriptEslint.configs.recommendedTypeChecked,
   {
@@ -168,10 +168,13 @@ const config: TSESLint.FlatConfig.ConfigArray = [
   },
 ];
 
-if (!isInEditorEnv()) {
-  config.push({
+const nonEditorConfig: readonly ConfigObject[] = [
+  ...editorConfig,
+  {
     rules: { 'unused-imports/no-unused-imports': 'error' },
-  });
-}
+  },
+];
+
+const config = isInEditorEnv() ? editorConfig : nonEditorConfig;
 
 export default config;

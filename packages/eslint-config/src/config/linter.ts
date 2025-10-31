@@ -1,6 +1,6 @@
-import type { TSESLint } from '@typescript-eslint/utils';
+import type { ConfigObject } from '@eslint/core';
 
-const config: TSESLint.FlatConfig.ConfigArray = [
+const config: readonly ConfigObject[] = [
   {
     linterOptions: {
       reportUnusedDisableDirectives: true,
