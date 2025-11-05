@@ -19,6 +19,6 @@
     "jest-diff": "30.2.0",
     "prettier": "3.6.2",
     "typescript": "5.9.3",
-    "vitest": "3.2.4"
+    "vitest": "4.0.5"
   }
 }
