@@ -4,3 +4,4 @@ packages:
   - 'scripts'
 catalog:
   '@eslint/core': 0.16.0
+  eslint: 9.38.0
