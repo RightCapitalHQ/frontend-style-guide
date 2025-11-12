@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/lint-eslint-config-rules
 
-<!-- This log was last generated on Tue, 12 Aug 2025 10:40:45 GMT and should not be manually modified. -->
+<!-- This log was last generated on Wed, 12 Nov 2025 10:51:07 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [2.1.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Flint-eslint-config-rules_v2.1.1) (2025-11-12)
+
+### Patches
+
+- chore: set proper ESLint and @eslint/core version and upgrade them together ([614fcbb](https://github.com/RightCapitalHQ/frontend-style-guide/commit/614fcbb48c30f5dabe029ab9f1f1cd52008d4135))
 
 ## [2.1.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Flint-eslint-config-rules_v2.1.0) (2025-8-12)
 

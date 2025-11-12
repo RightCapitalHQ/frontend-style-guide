@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Wed, 12 Nov 2025 10:51:07 GMT",
+      "version": "52.0.1",
+      "tag": "@rightcapital/eslint-config_v52.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/eslint-config",
+            "commit": "614fcbb48c30f5dabe029ab9f1f1cd52008d4135",
+            "comment": "chore: set proper ESLint and @eslint/core version and upgrade them together"
+          }
+        ]
+      }
+    },
+    {
       "date": "Fri, 31 Oct 2025 09:26:41 GMT",
       "version": "52.0.0",
       "tag": "@rightcapital/eslint-config_v52.0.0",

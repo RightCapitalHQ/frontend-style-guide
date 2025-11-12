@@ -2,6 +2,21 @@
   "name": "@rightcapital/lint-eslint-config-rules",
   "entries": [
     {
+      "date": "Wed, 12 Nov 2025 10:51:07 GMT",
+      "version": "2.1.1",
+      "tag": "@rightcapital/lint-eslint-config-rules_v2.1.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/lint-eslint-config-rules",
+            "commit": "614fcbb48c30f5dabe029ab9f1f1cd52008d4135",
+            "comment": "chore: set proper ESLint and @eslint/core version and upgrade them together"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 06 Nov 2025 02:42:11 GMT",
       "version": "2.1.0",
       "tag": "@rightcapital/lint-eslint-config-rules_v2.1.0",
