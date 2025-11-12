@@ -7,8 +7,8 @@ settings:
 catalogs:
   default:
     '@eslint/core':
-      specifier: 0.16.0
-      version: 0.16.0
+      specifier: 0.17.0
+      version: 0.17.0
     eslint:
       specifier: 9.38.0
       version: 9.38.0
@@ -125,7 +125,7 @@ importers:
     devDependencies:
       '@eslint/core':
         specifier: 'catalog:'
-        version: 0.16.0
+        version: 0.17.0
       '@rightcapital/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -150,7 +150,7 @@ importers:
     devDependencies:
       '@eslint/core':
         specifier: 'catalog:'
-        version: 0.16.0
+        version: 0.17.0
       '@rightcapital/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -642,6 +642,10 @@ packages:
 
   '@eslint/core@0.16.0':
     resolution: {integrity: sha512-nmC8/totwobIiFcGkDza3GIKfAw1+hLiYVrh3I1nIomQ8PEr5cxg34jnkmGawul/ep52wGRAcyeDCNtWKSOj4Q==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@eslint/core@0.17.0':
+    resolution: {integrity: sha512-yL/sLrpmtDaFEiUj1osRP4TI2MDz1AddJL+jZ7KSqvBuliN4xqYY54IfdN8qD8Toa6g1iloph1fxQNkjOxrrpQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/eslintrc@3.3.1':
@@ -3671,6 +3675,10 @@ snapshots:
       '@types/json-schema': 7.0.15
 
   '@eslint/core@0.16.0':
+    dependencies:
+      '@types/json-schema': 7.0.15
+
+  '@eslint/core@0.17.0':
     dependencies:
       '@types/json-schema': 7.0.15
 
