@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "chore: set proper ESLint and @eslint/core version and upgrade them together",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}

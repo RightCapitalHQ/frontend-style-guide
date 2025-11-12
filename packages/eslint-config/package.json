@@ -44,11 +44,12 @@
     "@rightcapital/tsconfig": "workspace:*",
     "@types/confusing-browser-globals": "1.0.3",
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
-    "@types/semver": "7.7.1"
+    "@types/semver": "7.7.1",
+    "eslint": "catalog:"
   },
   "peerDependencies": {
-    "eslint": ">=9",
-    "typescript": "^5.0.0"
+    "eslint": "9.x",
+    "typescript": "5.x"
   },
   "peerDependenciesMeta": {
     "typescript": {
