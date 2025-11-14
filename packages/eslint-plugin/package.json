@@ -25,15 +25,15 @@
     "update:eslint-docs": "pnpm run build && eslint-doc-generator && prettier --write src/rules/**/*.md"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "8.46.2"
+    "@typescript-eslint/utils": "8.46.3"
   },
   "devDependencies": {
     "@eslint/core": "catalog:",
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "9.6.1",
     "@types/node": "24.10.0",
-    "@typescript-eslint/parser": "8.46.2",
-    "@typescript-eslint/rule-tester": "8.46.2",
+    "@typescript-eslint/parser": "8.46.3",
+    "@typescript-eslint/rule-tester": "8.46.3",
     "@vitest/coverage-v8": "4.0.7",
     "@vitest/ui": "4.0.7",
     "eslint": "catalog:",
