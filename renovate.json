@@ -51,6 +51,12 @@
       "commitBody": "Beachball-bump-type: major"
     },
     {
+      "groupName": "ESLint core updates",
+      "matchPackageNames": ["eslint", "@eslint/core"],
+      "commitBody": "Beachball-bump-type: none",
+      "automerge": true
+    },
+    {
       "description": "Group all RightCapital packages (non-major) together",
       "groupName": "RightCapital packages (non-major)",
       "groupSlug": "auto-merge-rightcapital-packages-non-major-updates",
