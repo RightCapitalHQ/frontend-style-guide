@@ -34,12 +34,12 @@
     "@types/node": "24.10.0",
     "@typescript-eslint/parser": "8.46.3",
     "@typescript-eslint/rule-tester": "8.46.3",
-    "@vitest/coverage-v8": "4.0.7",
-    "@vitest/ui": "4.0.7",
+    "@vitest/coverage-v8": "4.0.8",
+    "@vitest/ui": "4.0.8",
     "eslint": "catalog:",
     "eslint-doc-generator": "2.3.0",
     "typescript": "5.9.3",
-    "vitest": "4.0.7"
+    "vitest": "4.0.8"
   },
   "peerDependencies": {
     "eslint": "9.x"
