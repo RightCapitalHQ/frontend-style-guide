@@ -3,5 +3,5 @@ packages:
   - 'specs/**'
   - 'scripts'
 catalog:
-  '@eslint/core': 0.17.0
+  '@eslint/core': 1.0.0
   eslint: 9.39.1
