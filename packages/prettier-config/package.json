@@ -21,7 +21,7 @@
     "prepack": "pnpm run build"
   },
   "dependencies": {
-    "prettier-plugin-packagejson": "2.5.15"
+    "prettier-plugin-packagejson": "2.5.19"
   },
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
@@ -30,7 +30,7 @@
   "peerDependencies": {
     "prettier": "^3.0.0"
   },
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.23.0",
   "engines": {
     "node": ">=16.0.0"
   },
