@@ -11,33 +11,29 @@
   },
   "packageRules": [
     {
-      "description": "Group all Dependencies (non-major) together",
-      "groupName": "Dependencies (non-major)",
-      "groupSlug": "auto-merge-non-major-updates",
+      "description": "Group all non-major dependency updates together",
+      "groupName": "Dependencies (Non-Major)",
       "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
       "automerge": false
     },
     {
-      "description": "Group all DevDependencies together",
-      "groupName": "DevDependencies",
-      "groupSlug": "auto-merge-dev-dependencies-updates",
+      "description": "Group all dev dependency updates together",
+      "groupName": "Dev Dependencies",
       "matchDepTypes": ["devDependencies"],
       "commitBody": "Beachball-bump-type: none",
       "automerge": false
     },
     {
-      "description": "Mark peerDependencies's major updates as breaking changes",
-      "groupName": "PeerDependencies(major)",
-      "groupSlug": "peer-dependencies-major-updates",
+      "description": "Mark peer dependency major updates as breaking changes",
+      "groupName": "Peer Dependencies (Major)",
       "matchDepTypes": ["peerDependencies"],
       "matchUpdateTypes": ["major"],
       "commitBody": "Beachball-bump-type: major"
     },
     {
-      "description": "Mark rule and plugin updates as breaking changes",
-      "groupName": "ESLint rule and plugin updates",
-      "groupSlug": "eslint-rule-and-plugin-updates",
+      "description": "Mark ESLint rule and plugin updates as breaking changes",
+      "groupName": "ESLint Rules and Plugins",
       "matchPackagePatterns": [
         "^eslint-config-",
         "^eslint-plugin-",
@@ -51,15 +47,15 @@
       "commitBody": "Beachball-bump-type: major"
     },
     {
-      "groupName": "ESLint core updates",
+      "description": "Group ESLint core package updates together",
+      "groupName": "ESLint Core",
       "matchPackageNames": ["eslint", "@eslint/core"],
       "commitBody": "Beachball-bump-type: none",
       "automerge": true
     },
     {
-      "description": "Group all RightCapital packages (non-major) together",
-      "groupName": "RightCapital packages (non-major)",
-      "groupSlug": "auto-merge-rightcapital-packages-non-major-updates",
+      "description": "Group all non-major RightCapital package updates together",
+      "groupName": "RightCapital Packages (Non-Major)",
       "matchUpdateTypes": ["minor", "patch"],
       "matchPackagePrefixes": ["@rightcapital"],
       "automerge": false
@@ -70,7 +66,7 @@
       "allowedVersions": "!/^6\\.(8|9)\\./"
     },
     {
-      "description": "E2E tests require fixed eslint major versions",
+      "description": "Disable ESLint major updates for E2E test specs",
       "matchFileNames": ["specs/**/package.json"],
       "matchPackageNames": ["eslint"],
       "matchUpdateTypes": ["major"],
