@@ -46,7 +46,7 @@
     "eslint-plugin-eslint-plugin": "7.2.0",
     "execa": "9.6.0",
     "husky": "9.1.7",
-    "prettier": "3.6.2",
+    "prettier": "3.7.2",
     "tsx": "4.20.6",
     "typescript": "5.9.3"
   },
