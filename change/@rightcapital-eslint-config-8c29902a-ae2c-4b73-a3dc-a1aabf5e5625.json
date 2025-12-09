@@ -1,0 +1,7 @@
+{
+  "type": "major",
+  "comment": "fix(deps): update eslint rules and plugins to v8.48.1",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "29139614+renovate[bot]@users.noreply.github.com",
+  "dependentChangeType": "patch"
+}
