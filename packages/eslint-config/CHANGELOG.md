@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Wed, 10 Dec 2025 11:02:04 GMT and should not be manually modified. -->
+<!-- This log was last generated on Wed, 10 Dec 2025 12:51:29 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [58.2.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v58.2.0) (2025-12-10)
+
+### Minor changes
+
+- fix: rare resolution errors with import-x/parser ([c2578d2](https://github.com/RightCapitalHQ/frontend-style-guide/commit/c2578d2b2c4275b420dd596b23e12ff374668317))
 
 ## [58.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v58.0.0) (2025-12-10)
 
