@@ -1,0 +1,7 @@
+{
+  "comment": "fix: rare resolution errors with import-x/parser",
+  "type": "minor",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
