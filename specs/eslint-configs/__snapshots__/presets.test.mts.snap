@@ -1055,6 +1055,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       "node_modules",
       "\\.(coffee|scss|css|less|hbs|svg|json)$",
     ],
+    "import-x/parsers": {},
     "import-x/resolver": {
       "node": {
         "extensions": [
@@ -2373,7 +2374,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       "node_modules/@types",
     ],
     "import-x/parsers": {
-      "@typescript-eslint/parser": [
+      "<OMITTED_ABSOLUTE_PATH>/@typescript-eslint/parser/dist/index.js": [
         ".ts",
         ".cts",
         ".mts",
@@ -5314,7 +5315,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       "node_modules/@types",
     ],
     "import-x/parsers": {
-      "@typescript-eslint/parser": [
+      "<OMITTED_ABSOLUTE_PATH>/@typescript-eslint/parser/dist/index.js": [
         ".ts",
         ".cts",
         ".mts",

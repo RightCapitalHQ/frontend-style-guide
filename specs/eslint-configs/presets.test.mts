@@ -112,6 +112,18 @@ describe('Resolved config matches snapshot', () => {
           ...config.languageOptions,
           parser: '<OMITTED>',
         },
+        settings: {
+          ...config.settings,
+          'import-x/parsers': Object.fromEntries(
+            Object.entries(config.settings?.['import-x/parsers'] ?? {}).map(
+              ([key, value]) => [
+                // trim host-specific absolute path parts
+                key.replace(/.*\/node_modules\//, '<OMITTED_ABSOLUTE_PATH>/'),
+                value,
+              ],
+            ),
+          ),
+        },
       });
       expect(trimConfigForSnapshot(config)).toMatchSnapshot();
 

@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'node:url';
+
 import type { ConfigObject } from '@eslint/core';
 import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 import * as typescriptEslint from 'typescript-eslint';
@@ -41,7 +43,13 @@ const editorConfig: readonly ConfigObject[] = [
         'node_modules/@types',
       ],
       'import-x/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx'],
+        // ensure import-x can always resolve the parser path correctly
+        [fileURLToPath(import.meta.resolve('@typescript-eslint/parser'))]: [
+          '.ts',
+          '.cts',
+          '.mts',
+          '.tsx',
+        ],
       },
       'import-x/resolver-next': [createTypeScriptImportResolver()],
     },
