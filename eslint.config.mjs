@@ -35,6 +35,7 @@ export default defineConfig(
   {
     files: [
       'packages/*/*.{js,cjs,mjs,ts,cts,mts}', // each package's top-level directory files
+      'packages/*/scripts/*.{js,cjs,mjs,ts,cts,mts}', // each package's scripts
       'scripts/**/*.{js,cjs,mjs}',
       '.github/actions/**/*.{js,cjs,mjs}',
     ],

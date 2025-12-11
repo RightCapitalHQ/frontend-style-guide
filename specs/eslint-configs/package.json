@@ -17,7 +17,7 @@
     "eslint-config-prettier": "10.1.8",
     "execa": "9.6.1",
     "jest-diff": "30.2.0",
-    "prettier": "3.7.4",
+    "prettier": "catalog:",
     "typescript": "5.9.3",
     "vitest": "4.0.15"
   }
