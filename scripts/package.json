@@ -4,8 +4,8 @@
   "bin": {},
   "dependencies": {
     "@actions/glob": "0.5.0",
-    "@types/node": "24.9.1",
-    "typescript": "5.8.3"
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3"
   },
   "devDependencies": {
     "beachball": "2.58.0"
