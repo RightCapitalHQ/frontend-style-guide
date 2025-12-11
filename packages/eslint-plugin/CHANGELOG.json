@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-plugin",
   "entries": [
     {
+      "date": "Thu, 11 Dec 2025 03:24:29 GMT",
+      "version": "58.2.0",
+      "tag": "@rightcapital/eslint-plugin_v58.2.0",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-plugin",
+            "commit": "b2d766b21b0730af9c869b654e678d3757a4c00f",
+            "comment": "chore(deps): update dev dependencies"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 10 Dec 2025 11:02:04 GMT",
       "version": "58.0.0",
       "tag": "@rightcapital/eslint-plugin_v58.0.0",
