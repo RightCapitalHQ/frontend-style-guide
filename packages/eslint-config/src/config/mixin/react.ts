@@ -2,6 +2,7 @@ import type { ConfigObject } from '@eslint/core';
 import eslintPluginReact from '@eslint-react/eslint-plugin';
 import globals from 'globals';
 
+import { eslintReactPluginNames } from '../../plugins/index.js';
 import { pickPlugins } from '../../utils.js';
 /**
  * Common rules for React, working with TypeScript.
@@ -15,9 +16,7 @@ const config: readonly ConfigObject[] = [
       },
     },
     plugins: pickPlugins([
-      ...(Object.keys(
-        eslintPluginReact.configs.all.plugins,
-      ) as (keyof typeof eslintPluginReact.configs.all.plugins)[]),
+      ...eslintReactPluginNames,
       '@rightcapital',
       '@stylistic',
       'react-hooks',

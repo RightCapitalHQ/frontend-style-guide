@@ -8,8 +8,8 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import { ESLint } from 'eslint';
 import { diff } from 'jest-diff';
 
-const srcDir = resolve(__dirname, 'src');
-const rootDir = __dirname;
+const rootDir = resolve(__dirname, '..');
+const srcDir = resolve(rootDir, 'src');
 
 const sampleFiles = (await readdir(srcDir)).map((filename) =>
   resolve(srcDir, filename),

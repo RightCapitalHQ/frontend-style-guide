@@ -19,6 +19,7 @@
     "prebuild": "pnpm run clean",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
+    "generate:types": "tsx scripts/generate-eslint-react-types.mts",
     "prepack": "pnpm run build"
   },
   "dependencies": {
@@ -46,7 +47,8 @@
     "@types/confusing-browser-globals": "1.0.3",
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
     "@types/semver": "7.7.1",
-    "eslint": "catalog:"
+    "eslint": "catalog:",
+    "prettier": "catalog:"
   },
   "peerDependencies": {
     "eslint": "9.x",
