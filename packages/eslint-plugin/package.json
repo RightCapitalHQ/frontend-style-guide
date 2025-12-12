@@ -37,7 +37,7 @@
     "@vitest/coverage-v8": "4.0.15",
     "@vitest/ui": "4.0.15",
     "eslint": "catalog:",
-    "eslint-doc-generator": "2.3.0",
+    "eslint-doc-generator": "2.4.0",
     "typescript": "5.9.3",
     "vitest": "4.0.15"
   },
