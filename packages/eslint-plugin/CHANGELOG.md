@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-plugin
 
-<!-- This log was last generated on Wed, 10 Dec 2025 11:02:04 GMT and should not be manually modified. -->
+<!-- This log was last generated on Thu, 25 Dec 2025 10:58:43 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [61.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v61.0.0) (2025-12-25)
+
+### Major changes
+
+- fix(deps): update eslint rules and plugins ([ba3e113](https://github.com/RightCapitalHQ/frontend-style-guide/commit/ba3e11356a33a7278f53c29a5596ead558c4c1cb))
 
 ## [58.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v58.0.0) (2025-12-10)
 
