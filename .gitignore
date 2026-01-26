@@ -117,3 +117,4 @@ public/
 # nx
 /.nx/cache
 /.nx/workspace-data
+!/.nx/version-plans/
