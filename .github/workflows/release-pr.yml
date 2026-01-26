@@ -1,0 +1,91 @@
+name: Release PR
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.nx/version-plans/**'
+
+jobs:
+  create-release-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Configure Git
+        run: |
+          git config user.email "npm-publisher@rightcapital.com"
+          git config user.name "GitHub Actions[bot]"
+
+      - name: Check for existing release PR
+        id: check-pr
+        run: |
+          pr_number=$(gh pr list --head release --json number --jq '.[0].number // empty')
+          echo "pr_number=$pr_number" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create or update release branch
+        run: |
+          git checkout -B release
+
+          # Run version bump (updates package.json versions, changelogs)
+          pnpm exec nx release version
+
+          # Update lock file after version bumps
+          pnpm install --no-frozen-lockfile
+
+          git add .
+          git commit -m "chore(release): prepare release" || echo "No changes to commit"
+          git push origin release --force
+
+      - name: Generate PR body
+        run: |
+          {
+            echo "## Release Summary"
+            echo ""
+            echo "This PR will release the following packages when merged:"
+            echo ""
+            # Show pending version changes
+            pnpm exec nx release version --dry-run 2>&1 | grep -E "(UPDATE|Skipping)" || true
+            echo ""
+            echo "---"
+            echo ""
+            echo "### Version Plans Included"
+            echo ""
+            find .nx/version-plans -name '*.md' -type f 2>/dev/null | while read -r f; do
+              echo "#### $(basename "$f")"
+              cat "$f"
+              echo ""
+            done
+          } > pr-body.md
+
+      - name: Create or update PR
+        run: |
+          if [ -z "${{ steps.check-pr.outputs.pr_number }}" ]; then
+            gh pr create \
+              --base main \
+              --head release \
+              --title "chore(release): release packages" \
+              --body-file pr-body.md \
+              --label "release"
+          else
+            gh pr edit ${{ steps.check-pr.outputs.pr_number }} \
+              --body-file pr-body.md
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.REPO_AUTOMATION_TOKEN }}
