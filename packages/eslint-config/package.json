@@ -20,7 +20,7 @@
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "generate:types": "tsx scripts/generate-eslint-react-types.mts",
-    "prepack": "pnpm run build"
+    "prepack": "nx build"
   },
   "dependencies": {
     "@eslint-react/eslint-plugin": "2.13.0",

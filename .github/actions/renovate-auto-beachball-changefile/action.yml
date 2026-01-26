@@ -1,5 +1,0 @@
-name: 'renovate-auto-beachball-changefile'
-description: 'This action is used to automatically generate beachball changefiles for Renovate'
-runs:
-  using: 'node20'
-  main: 'dist/index.mjs'
