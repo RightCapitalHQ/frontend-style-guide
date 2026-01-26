@@ -54,6 +54,9 @@ const config: BeachballConfig = {
           return `- ${entry.comment}`;
         }
         // Imitate GitHub's commit format https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls#commit-shas
+        if (!entry.commit) {
+          return `- ${entry.comment}`;
+        }
         return `- ${entry.comment} ([${entry.commit.substring(
           0,
           7,
