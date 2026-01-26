@@ -38,5 +38,33 @@
       "!{projectRoot}/vitest.config.*"
     ],
     "sharedGlobals": ["{workspaceRoot}/tsconfig.base.json"]
+  },
+  "release": {
+    "groups": {
+      "eslint": {
+        "projects": ["eslint-config", "eslint-plugin"],
+        "projectsRelationship": "fixed"
+      },
+      "other": {
+        "projects": ["prettier-config", "tsconfig", "lint-eslint-config-rules"],
+        "projectsRelationship": "independent"
+      }
+    },
+    "versionPlans": true,
+    "version": {
+      "preVersionCommand": "pnpm run build"
+    },
+    "changelog": {
+      "projectChangelogs": true,
+      "workspaceChangelog": false
+    },
+    "releaseTag": {
+      "pattern": "{projectName}_v{version}"
+    },
+    "git": {
+      "commit": true,
+      "tag": true,
+      "commitMessage": "chore(release): applying package updates"
+    }
   }
 }

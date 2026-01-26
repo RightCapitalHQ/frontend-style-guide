@@ -1,0 +1,15 @@
+{
+  "name": "renovate-auto-version-plan",
+  "private": true,
+  "type": "module",
+  "main": "renovate-auto-version-plan.mjs",
+  "scripts": {
+    "build": "ncc build renovate-auto-version-plan.mjs -o dist"
+  },
+  "dependencies": {
+    "execa": "9.6.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.38.4"
+  }
+}
