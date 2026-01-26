@@ -1,15 +1,65 @@
 name: Release
+
 on:
-  push:
-    tags:
-      - '@rightcapital/**'
+  pull_request:
+    types: [closed]
+    branches: [main]
+
 jobs:
   release:
+    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'release'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
       - uses: actions/checkout@v6
-      - uses: rightcapitalhq/action-beachball-release@main
         with:
-          tag: ${{ github.ref_name }}
-          repo-url: ${{ github.server_url }}/${{ github.repository }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          ref: main
+          token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Configure Git
+        run: |
+          git config user.email "npm-publisher@rightcapital.com"
+          git config user.name "GitHub Actions[bot]"
+
+      - name: Build packages
+        run: pnpm run build
+
+      - name: Create tags and publish
+        run: |
+          # Create git tags for the release
+          pnpm exec nx release --skip-publish
+
+          # Push commits and tags
+          git push origin main --follow-tags
+
+          # Publish to npm
+          pnpm exec nx release publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+
+      - name: Create GitHub Releases
+        run: |
+          # Nx release can create GitHub releases automatically
+          pnpm exec nx release changelog --create-release=github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Clean up version plans
+        run: |
+          rm -f .nx/version-plans/*.md
+          git add .nx/version-plans/
+          git commit -m "chore: clean up version plans after release" || echo "No version plans to clean"
+          git push origin main

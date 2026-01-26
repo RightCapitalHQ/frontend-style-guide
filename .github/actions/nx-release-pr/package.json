@@ -1,0 +1,20 @@
+{
+  "name": "nx-release-pr",
+  "private": true,
+  "scripts": {
+    "build": "rslib build"
+  },
+  "dependencies": {
+    "@actions/core": "1.11.1",
+    "execa": "9.6.0"
+  },
+  "peerDependencies": {
+    "nx": ">=22.0.0"
+  },
+  "devDependencies": {
+    "@rslib/core": "0.19.6",
+    "@types/node": "22.15.17",
+    "nx": "22.0.2",
+    "typescript": "5.8.3"
+  }
+}
