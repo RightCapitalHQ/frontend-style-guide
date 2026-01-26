@@ -1,7 +1,5 @@
 {
-  "extends": "@rightcapital/tsconfig",
-  "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./lib"
-  }
+  "compilerOptions": { "composite": true },
+  "files": [],
+  "references": [{ "path": "./tsconfig.lib.json" }]
 }
