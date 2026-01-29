@@ -2,14 +2,14 @@
 import { createRequire as __WEBPACK_EXTERNAL_createRequire } from "module";
 /******/ var __webpack_modules__ = ({
 
-/***/ 915:
+/***/ 186:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
 
 const cp = __nccwpck_require__(317);
-const parse = __nccwpck_require__(356);
-const enoent = __nccwpck_require__(706);
+const parse = __nccwpck_require__(605);
+const enoent = __nccwpck_require__(341);
 
 function spawn(command, args, options) {
     // Parse the arguments
@@ -48,7 +48,7 @@ module.exports._enoent = enoent;
 
 /***/ }),
 
-/***/ 706:
+/***/ 341:
 /***/ ((module) => {
 
 
@@ -77,7 +77,7 @@ function hookChildProcess(cp, parsed) {
         // the command exists and emit an "error" instead
         // See https://github.com/IndigoUnited/node-cross-spawn/issues/16
         if (name === 'exit') {
-            const err = verifyENOENT(arg1, parsed, 'spawn');
+            const err = verifyENOENT(arg1, parsed);
 
             if (err) {
                 return originalEmit.call(cp, 'error', err);
@@ -114,15 +114,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 356:
+/***/ 605:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
 
 const path = __nccwpck_require__(928);
-const resolveCommand = __nccwpck_require__(219);
-const escape = __nccwpck_require__(805);
-const readShebang = __nccwpck_require__(600);
+const resolveCommand = __nccwpck_require__(530);
+const escape = __nccwpck_require__(780);
+const readShebang = __nccwpck_require__(735);
 
 const isWin = process.platform === 'win32';
 const isExecutableRegExp = /\.(?:com|exe)$/i;
@@ -212,7 +212,7 @@ module.exports = parse;
 
 /***/ }),
 
-/***/ 805:
+/***/ 780:
 /***/ ((module) => {
 
 
@@ -232,15 +232,17 @@ function escapeArgument(arg, doubleEscapeMetaChars) {
     arg = `${arg}`;
 
     // Algorithm below is based on https://qntm.org/cmd
+    // It's slightly altered to disable JS backtracking to avoid hanging on specially crafted input
+    // Please see https://github.com/moxystudio/node-cross-spawn/pull/160 for more information
 
     // Sequence of backslashes followed by a double quote:
     // double up all the backslashes and escape the double quote
-    arg = arg.replace(/(\\*)"/g, '$1$1\\"');
+    arg = arg.replace(/(?=(\\+?)?)\1"/g, '$1$1\\"');
 
     // Sequence of backslashes followed by the end of the string
     // (which will become a double quote later):
     // double up all the backslashes
-    arg = arg.replace(/(\\*)$/, '$1$1');
+    arg = arg.replace(/(?=(\\+?)?)\1$/, '$1$1');
 
     // All other backslashes occur literally
 
@@ -264,13 +266,13 @@ module.exports.argument = escapeArgument;
 
 /***/ }),
 
-/***/ 600:
+/***/ 735:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
 
 const fs = __nccwpck_require__(896);
-const shebangCommand = __nccwpck_require__(857);
+const shebangCommand = __nccwpck_require__(205);
 
 function readShebang(command) {
     // Read the first 150 bytes from the file
@@ -294,14 +296,14 @@ module.exports = readShebang;
 
 /***/ }),
 
-/***/ 219:
+/***/ 530:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
 
 const path = __nccwpck_require__(928);
-const which = __nccwpck_require__(936);
-const getPathKey = __nccwpck_require__(430);
+const which = __nccwpck_require__(828);
+const getPathKey = __nccwpck_require__(386);
 
 function resolveCommandAttempt(parsed, withoutPathExt) {
     const env = parsed.options.env || process.env;
@@ -353,15 +355,15 @@ module.exports = resolveCommand;
 
 /***/ }),
 
-/***/ 97:
+/***/ 845:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var fs = __nccwpck_require__(896)
 var core
 if (process.platform === 'win32' || global.TESTING_WINDOWS) {
-  core = __nccwpck_require__(276)
+  core = __nccwpck_require__(547)
 } else {
-  core = __nccwpck_require__(578)
+  core = __nccwpck_require__(518)
 }
 
 module.exports = isexe
@@ -417,7 +419,7 @@ function sync (path, options) {
 
 /***/ }),
 
-/***/ 578:
+/***/ 518:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 module.exports = isexe
@@ -465,7 +467,7 @@ function checkMode (stat, options) {
 
 /***/ }),
 
-/***/ 276:
+/***/ 547:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 module.exports = isexe
@@ -514,7 +516,7 @@ function sync (path, options) {
 
 /***/ }),
 
-/***/ 430:
+/***/ 386:
 /***/ ((module) => {
 
 
@@ -537,11 +539,11 @@ module.exports["default"] = pathKey;
 
 /***/ }),
 
-/***/ 857:
+/***/ 205:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 
-const shebangRegex = __nccwpck_require__(508);
+const shebangRegex = __nccwpck_require__(600);
 
 module.exports = (string = '') => {
 	const match = string.match(shebangRegex);
@@ -563,7 +565,7 @@ module.exports = (string = '') => {
 
 /***/ }),
 
-/***/ 508:
+/***/ 600:
 /***/ ((module) => {
 
 
@@ -572,7 +574,7 @@ module.exports = /^#!(.*)/;
 
 /***/ }),
 
-/***/ 936:
+/***/ 828:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const isWindows = process.platform === 'win32' ||
@@ -581,7 +583,7 @@ const isWindows = process.platform === 'win32' ||
 
 const path = __nccwpck_require__(928)
 const COLON = isWindows ? ';' : ':'
-const isexe = __nccwpck_require__(97)
+const isexe = __nccwpck_require__(845)
 
 const getNotFoundError = (cmd) =>
   Object.assign(new Error(`not found: ${cmd}`), { code: 'ENOENT' })
@@ -765,7 +767,11 @@ module.exports = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("path");
 /************************************************************************/
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/is-plain-obj@4.1.0/node_modules/is-plain-obj/index.js
+;// CONCATENATED MODULE: external "node:fs/promises"
+const promises_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:fs/promises");
+;// CONCATENATED MODULE: external "node:path"
+const external_node_path_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:path");
+;// CONCATENATED MODULE: ./node_modules/.pnpm/is-plain-obj@4.1.0/node_modules/is-plain-obj/index.js
 function isPlainObject(value) {
 	if (typeof value !== 'object' || value === null) {
 		return false;
@@ -777,12 +783,12 @@ function isPlainObject(value) {
 
 ;// CONCATENATED MODULE: external "node:url"
 const external_node_url_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:url");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/arguments/file-url.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/arguments/file-url.js
 
 
 // Allow some arguments/options to be either a file path string or a file URL
 const safeNormalizeFileUrl = (file, name) => {
-	const fileString = normalizeFileUrl(file);
+	const fileString = normalizeFileUrl(normalizeDenoExecPath(file));
 
 	if (typeof fileString !== 'string') {
 		throw new TypeError(`${name} must be a string or a file URL: ${fileString}.`);
@@ -791,10 +797,20 @@ const safeNormalizeFileUrl = (file, name) => {
 	return fileString;
 };
 
+// In Deno node:process execPath is a special object, not just a string:
+// https://github.com/denoland/deno/blob/f460188e583f00144000aa0d8ade08218d47c3c1/ext/node/polyfills/process.ts#L344
+const normalizeDenoExecPath = file => isDenoExecPath(file)
+	? file.toString()
+	: file;
+
+const isDenoExecPath = file => typeof file !== 'string'
+	&& file
+	&& Object.getPrototypeOf(file) === String.prototype;
+
 // Same but also allows other values, e.g. `boolean` for the `shell` option
 const normalizeFileUrl = file => file instanceof URL ? (0,external_node_url_namespaceObject.fileURLToPath)(file) : file;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/parameters.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/parameters.js
 
 
 
@@ -831,7 +847,7 @@ const normalizeParameters = (rawFile, rawArguments = [], rawOptions = {}) => {
 const external_node_child_process_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:child_process");
 ;// CONCATENATED MODULE: external "node:string_decoder"
 const external_node_string_decoder_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:string_decoder");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/utils/uint-array.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/utils/uint-array.js
 
 
 const {toString: objectToString} = Object.prototype;
@@ -902,7 +918,7 @@ const getJoinLength = uint8Arrays => {
 	return joinLength;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/template.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/template.js
 
 
 
@@ -980,7 +996,11 @@ const splitByWhitespaces = (template, rawTemplate) => {
 			templateStart = templateIndex + 1;
 		} else if (rawCharacter === '\\') {
 			const nextRawCharacter = rawTemplate[rawIndex + 1];
-			if (nextRawCharacter === 'u' && rawTemplate[rawIndex + 2] === '{') {
+			if (nextRawCharacter === '\n') {
+				// Handles escaped newlines in templates
+				templateIndex -= 1;
+				rawIndex += 1;
+			} else if (nextRawCharacter === 'u' && rawTemplate[rawIndex + 2] === '{') {
 				rawIndex = rawTemplate.indexOf('}', rawIndex + 3);
 			} else {
 				rawIndex += ESCAPE_LENGTH[nextRawCharacter] ?? 1;
@@ -1057,7 +1077,7 @@ const getSubprocessResult = ({stdout}) => {
 const external_node_util_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:util");
 ;// CONCATENATED MODULE: external "node:process"
 const external_node_process_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:process");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/utils/standard-stream.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/utils/standard-stream.js
 
 
 const isStandardStream = stream => STANDARD_STREAMS.includes(stream);
@@ -1065,7 +1085,7 @@ const STANDARD_STREAMS = [external_node_process_namespaceObject.stdin, external_
 const STANDARD_STREAMS_ALIASES = ['stdin', 'stdout', 'stderr'];
 const getStreamName = fdNumber => STANDARD_STREAMS_ALIASES[fdNumber] ?? `stdio[${fdNumber}]`;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/arguments/specific.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/arguments/specific.js
 
 
 
@@ -1178,7 +1198,7 @@ const getFdSpecificValue = (optionArray, fdNumber) => fdNumber === 'ipc'
 	? optionArray.at(-1)
 	: optionArray[fdNumber];
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/values.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/values.js
 
 
 // The `verbose` option can have different values for `stdout`/`stderr`
@@ -1213,9 +1233,7 @@ const isVerboseFunction = fdVerbose => typeof fdVerbose === 'function';
 
 const VERBOSE_VALUES = ['none', 'short', 'full'];
 
-;// CONCATENATED MODULE: external "node:fs"
-const external_node_fs_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:fs");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/arguments/escape.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/arguments/escape.js
 
 
 
@@ -1305,25 +1323,30 @@ const quoteString = escapedArgument => {
 
 const NO_ESCAPE_REGEXP = /^[\w./-]+$/;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/is-unicode-supported@2.0.0/node_modules/is-unicode-supported/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/is-unicode-supported@2.1.0/node_modules/is-unicode-supported/index.js
 
 
 function isUnicodeSupported() {
+	const {env} = external_node_process_namespaceObject;
+	const {TERM, TERM_PROGRAM} = env;
+
 	if (external_node_process_namespaceObject.platform !== 'win32') {
-		return external_node_process_namespaceObject.env.TERM !== 'linux'; // Linux console (kernel)
+		return TERM !== 'linux'; // Linux console (kernel)
 	}
 
-	return Boolean(external_node_process_namespaceObject.env.WT_SESSION) // Windows Terminal
-		|| Boolean(external_node_process_namespaceObject.env.TERMINUS_SUBLIME) // Terminus (<0.2.27)
-		|| external_node_process_namespaceObject.env.ConEmuTask === '{cmd::Cmder}' // ConEmu and cmder
-		|| external_node_process_namespaceObject.env.TERM_PROGRAM === 'Terminus-Sublime'
-		|| external_node_process_namespaceObject.env.TERM_PROGRAM === 'vscode'
-		|| external_node_process_namespaceObject.env.TERM === 'xterm-256color'
-		|| external_node_process_namespaceObject.env.TERM === 'alacritty'
-		|| external_node_process_namespaceObject.env.TERMINAL_EMULATOR === 'JetBrains-JediTerm';
+	return Boolean(env.WT_SESSION) // Windows Terminal
+		|| Boolean(env.TERMINUS_SUBLIME) // Terminus (<0.2.27)
+		|| env.ConEmuTask === '{cmd::Cmder}' // ConEmu and cmder
+		|| TERM_PROGRAM === 'Terminus-Sublime'
+		|| TERM_PROGRAM === 'vscode'
+		|| TERM === 'xterm-256color'
+		|| TERM === 'alacritty'
+		|| TERM === 'rxvt-unicode'
+		|| TERM === 'rxvt-unicode-256color'
+		|| env.TERMINAL_EMULATOR === 'JetBrains-JediTerm';
 }
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/figures@6.1.0/node_modules/figures/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/figures@6.1.0/node_modules/figures/index.js
 
 
 const common = {
@@ -1619,7 +1642,7 @@ const replaceSymbols = (string, {useFallback = !shouldUseMain} = {}) => {
 
 ;// CONCATENATED MODULE: external "node:tty"
 const external_node_tty_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:tty");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/yoctocolors@2.1.1/node_modules/yoctocolors/base.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/yoctocolors@2.1.2/node_modules/yoctocolors/base.js
 
 
 // eslint-disable-next-line no-warning-comments
@@ -1647,13 +1670,18 @@ const format = (open, close) => {
 		// Handle nested colors.
 
 		// We could have done this, but it's too slow (as of Node.js 22).
-		// return openCode + string.replaceAll(closeCode, openCode) + closeCode;
+		// return openCode + string.replaceAll(closeCode, (close === 22 ? closeCode : '') + openCode) + closeCode;
 
 		let result = openCode;
 		let lastIndex = 0;
 
+		// SGR 22 resets both bold (1) and dim (2). When we encounter a nested
+		// close for styles that use 22, we need to re-open the outer style.
+		const reopenOnNestedClose = close === 22;
+		const replaceCode = (reopenOnNestedClose ? closeCode : '') + openCode;
+
 		while (index !== -1) {
-			result += string.slice(lastIndex, index) + openCode;
+			result += string.slice(lastIndex, index) + replaceCode;
 			lastIndex = index + closeCode.length;
 			index = string.indexOf(closeCode, lastIndex);
 		}
@@ -1710,7 +1738,7 @@ const bgMagentaBright = format(105, 49);
 const bgCyanBright = format(106, 49);
 const bgWhiteBright = format(107, 49);
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/default.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/default.js
 
 
 
@@ -1761,7 +1789,7 @@ const COLORS = {
 	duration: () => gray,
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/custom.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/custom.js
 
 
 // Apply the `verbose` function on each line
@@ -1789,19 +1817,27 @@ const appendNewline = printedLine => printedLine.endsWith('\n')
 	? printedLine
 	: `${printedLine}\n`;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/log.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/log.js
 
 
 
 
 
-
-// Write synchronously to ensure lines are properly ordered and not interleaved with `stdout`
+// This prints on stderr.
+// If the subprocess prints on stdout and is using `stdout: 'inherit'`,
+// there is a chance both writes will compete (introducing a race condition).
+// This means their respective order is not deterministic.
+// In particular, this means the verbose command lines might be after the start of the subprocess output.
+// Using synchronous I/O does not solve this problem.
+// However, this only seems to happen when the stdout/stderr target
+// (e.g. a terminal) is being written to by many subprocesses at once, which is unlikely in real scenarios.
 const verboseLog = ({type, verboseMessage, fdNumber, verboseInfo, result}) => {
 	const verboseObject = getVerboseObject({type, result, verboseInfo});
 	const printedLines = getPrintedLines(verboseMessage, verboseObject);
 	const finalLines = applyVerboseOnLines(printedLines, verboseInfo, fdNumber);
-	(0,external_node_fs_namespaceObject.writeFileSync)(STDERR_FD, finalLines);
+	if (finalLines !== '') {
+		console.warn(finalLines.slice(0, -1));
+	}
 };
 
 const getVerboseObject = ({
@@ -1827,9 +1863,6 @@ const getPrintedLine = verboseObject => {
 	return {verboseLine, verboseObject};
 };
 
-// Unless a `verbose` function is used, print all logs on `stderr`
-const STDERR_FD = 2;
-
 // Serialize any type to a line string, for logging
 const serializeVerboseMessage = message => {
 	const messageString = typeof message === 'string' ? message : (0,external_node_util_namespaceObject.inspect)(message);
@@ -1840,7 +1873,7 @@ const serializeVerboseMessage = message => {
 // Same as `util.inspect()`
 const TAB_SIZE = 2;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/start.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/start.js
 
 
 
@@ -1857,7 +1890,7 @@ const logCommand = (escapedCommand, verboseInfo) => {
 	});
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/info.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/info.js
 
 
 // Information computed before spawning, used by the `verbose` option
@@ -1898,7 +1931,7 @@ const validateVerbose = verbose => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/return/duration.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/return/duration.js
 
 
 // Start counting time before spawning the subprocess
@@ -1908,7 +1941,7 @@ const getStartTime = () => external_node_process_namespaceObject.hrtime.bigint()
 // Printed by the `verbose` option.
 const getDurationMs = startTime => Number(external_node_process_namespaceObject.hrtime.bigint() - startTime) / 1e6;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/arguments/command.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/arguments/command.js
 
 
 
@@ -1930,11 +1963,9 @@ const handleCommand = (filePath, rawArguments, rawOptions) => {
 	};
 };
 
-;// CONCATENATED MODULE: external "node:path"
-const external_node_path_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:path");
-// EXTERNAL MODULE: ../../../node_modules/.pnpm/cross-spawn@7.0.3/node_modules/cross-spawn/index.js
-var cross_spawn = __nccwpck_require__(915);
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/path-key@4.0.0/node_modules/path-key/index.js
+// EXTERNAL MODULE: ./node_modules/.pnpm/cross-spawn@7.0.6/node_modules/cross-spawn/index.js
+var cross_spawn = __nccwpck_require__(186);
+;// CONCATENATED MODULE: ./node_modules/.pnpm/path-key@4.0.0/node_modules/path-key/index.js
 function pathKey(options = {}) {
 	const {
 		env = process.env,
@@ -1948,7 +1979,7 @@ function pathKey(options = {}) {
 	return Object.keys(env).reverse().find(key => key.toUpperCase() === 'PATH') || 'Path';
 }
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/unicorn-magic@0.3.0/node_modules/unicorn-magic/node.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/unicorn-magic@0.3.0/node_modules/unicorn-magic/node.js
 
 
 
@@ -1999,7 +2030,7 @@ function execFileSync(file, arguments_ = [], options = {}) {
 
 
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/npm-run-path@6.0.0/node_modules/npm-run-path/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/npm-run-path@6.0.0/node_modules/npm-run-path/index.js
 
 
 
@@ -2057,8 +2088,8 @@ const npmRunPathEnv = ({env = external_node_process_namespaceObject.env, ...opti
 };
 
 ;// CONCATENATED MODULE: external "node:timers/promises"
-const promises_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:timers/promises");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/return/final-error.js
+const external_node_timers_promises_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:timers/promises");
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/return/final-error.js
 // When the subprocess fails, this is the error instance being returned.
 // If another error instance is being thrown, it is kept as `error.cause`.
 const getFinalError = (originalError, message, isSync) => {
@@ -2102,7 +2133,7 @@ setErrorName(ExecaSyncError, ExecaSyncError.name);
 
 ;// CONCATENATED MODULE: external "node:os"
 const external_node_os_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:os");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/human-signals@8.0.0/node_modules/human-signals/build/src/realtime.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/human-signals@8.0.1/node_modules/human-signals/build/src/realtime.js
 
 const getRealtimeSignals=()=>{
 const length=SIGRTMAX-SIGRTMIN+1;
@@ -2119,7 +2150,7 @@ standard:"posix"
 
 const SIGRTMIN=34;
 const SIGRTMAX=64;
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/human-signals@8.0.0/node_modules/human-signals/build/src/core.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/human-signals@8.0.1/node_modules/human-signals/build/src/core.js
 
 
 const SIGNALS=[
@@ -2393,7 +2424,7 @@ action:"terminate",
 description:"Invalid system call",
 standard:"other"
 }];
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/human-signals@8.0.0/node_modules/human-signals/build/src/signals.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/human-signals@8.0.1/node_modules/human-signals/build/src/signals.js
 
 
 
@@ -2428,7 +2459,7 @@ const supported=constantSignal!==undefined;
 const number=supported?constantSignal:defaultNumber;
 return{name,number,description,supported,action,forced,standard}
 };
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/human-signals@8.0.0/node_modules/human-signals/build/src/main.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/human-signals@8.0.1/node_modules/human-signals/build/src/main.js
 
 
 
@@ -2499,7 +2530,7 @@ return signals.find((signalA)=>signalA.number===number)
 };
 
 const signalsByNumber=getSignalsByNumber();
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/terminate/signal.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/terminate/signal.js
 
 
 
@@ -2571,7 +2602,7 @@ const getAvailableSignalIntegers = () => [...new Set(Object.values(external_node
 // Human-friendly description of a signal
 const getSignalDescription = signal => signalsByName[signal].description;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/terminate/kill.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/terminate/kill.js
 
 
 
@@ -2659,7 +2690,7 @@ const killOnTimeout = async ({kill, forceKillAfterDelay, context, controllerSign
 	}
 
 	try {
-		await (0,promises_namespaceObject.setTimeout)(forceKillAfterDelay, undefined, {signal: controllerSignal});
+		await (0,external_node_timers_promises_namespaceObject.setTimeout)(forceKillAfterDelay, undefined, {signal: controllerSignal});
 		if (kill('SIGKILL')) {
 			context.isForcefullyTerminated ??= true;
 		}
@@ -2668,7 +2699,7 @@ const killOnTimeout = async ({kill, forceKillAfterDelay, context, controllerSign
 
 ;// CONCATENATED MODULE: external "node:events"
 const external_node_events_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:events");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/utils/abort-signal.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/utils/abort-signal.js
 
 
 // Combines `util.aborted()` and `events.addAbortListener()`: promise-based and cleaned up with a stop signal
@@ -2678,7 +2709,7 @@ const onAbortedSignal = async (mainSignal, stopSignal) => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/terminate/cancel.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/terminate/cancel.js
 
 
 // Validate the `cancelSignal` option
@@ -2700,7 +2731,7 @@ const terminateOnCancel = async (subprocess, cancelSignal, context, {signal}) =>
 	throw cancelSignal.reason;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/validation.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/validation.js
 // Validate the IPC channel is connected before receiving/sending messages
 const validateIpcMethod = ({methodName, isSubprocess, ipc, isConnected}) => {
 	validateIpcOption(methodName, isSubprocess, ipc);
@@ -2813,7 +2844,7 @@ const disconnect = anyProcess => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/utils/deferred.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/utils/deferred.js
 const createDeferred = () => {
 	const methods = {};
 	const promise = new Promise((resolve, reject) => {
@@ -2822,7 +2853,7 @@ const createDeferred = () => {
 	return Object.assign(promise, methods);
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/arguments/fd-options.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/arguments/fd-options.js
 
 
 // Retrieve stream targeted by the `to` option
@@ -2932,7 +2963,7 @@ const serializeOptionValue = value => {
 	return typeof value === 'number' ? `${value}` : 'Stream';
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/utils/max-listeners.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/utils/max-listeners.js
 
 
 // Temporarily increase the maximum number of listeners on an eventEmitter
@@ -2948,7 +2979,7 @@ const incrementMaxListeners = (eventEmitter, maxListenersIncrement, signal) => {
 	});
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/reference.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/reference.js
 // By default, Node.js keeps the subprocess alive while it has a `message` or `disconnect` listener.
 // We replicate the same logic for the events that we proxy.
 // This ensures the subprocess is kept alive while `getOneMessage()` and `getEachMessage()` are ongoing.
@@ -2994,7 +3025,7 @@ const redoAddedReferences = (channel, isSubprocess) => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/incoming.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/incoming.js
 
 
 
@@ -3040,7 +3071,7 @@ const onMessage = async ({anyProcess, channel, isSubprocess, ipcEmitter}, wrappe
 		// eslint-disable-next-line no-await-in-loop
 		await waitForOutgoingMessages(anyProcess, ipcEmitter, wrappedMessage);
 		// eslint-disable-next-line no-await-in-loop
-		await promises_namespaceObject.scheduler.yield();
+		await external_node_timers_promises_namespaceObject.scheduler.yield();
 
 		// eslint-disable-next-line no-await-in-loop
 		const message = await handleStrictRequest({
@@ -3075,7 +3106,7 @@ const onDisconnect = async ({anyProcess, channel, isSubprocess, ipcEmitter, boun
 
 const INCOMING_MESSAGES = new WeakMap();
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/forward.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/forward.js
 
 
 
@@ -3133,7 +3164,7 @@ const isConnected = anyProcess => {
 		: ipcEmitter.connected;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/strict.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/strict.js
 
 
 
@@ -3248,7 +3279,7 @@ const throwOnDisconnect = async (anyProcess, isSubprocess, {signal}) => {
 const REQUEST_TYPE = 'execa:ipc:request';
 const RESPONSE_TYPE = 'execa:ipc:response';
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/outgoing.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/outgoing.js
 
 
 
@@ -3297,7 +3328,7 @@ const getMinListenerCount = anyProcess => SUBPROCESS_OPTIONS.has(anyProcess)
 	? 1
 	: 0;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/send.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/send.js
 
 
 
@@ -3385,7 +3416,7 @@ const getSendMethod = anyProcess => {
 
 const PROCESS_SEND_METHODS = new WeakMap();
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/graceful.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/graceful.js
 
 
 
@@ -3434,7 +3465,7 @@ const startIpc = async ({anyProcess, channel, isSubprocess, ipc}) => {
 	}
 
 	getIpcEmitter(anyProcess, channel, isSubprocess);
-	await promises_namespaceObject.scheduler.yield();
+	await external_node_timers_promises_namespaceObject.scheduler.yield();
 };
 
 let cancelListening = false;
@@ -3459,7 +3490,7 @@ const abortOnDisconnect = () => {
 
 const cancelController = new AbortController();
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/terminate/graceful.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/terminate/graceful.js
 
 
 
@@ -3532,7 +3563,7 @@ const getReason = ({reason}) => {
 	return error;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/terminate/timeout.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/terminate/timeout.js
 
 
 
@@ -3549,13 +3580,13 @@ const throwOnTimeout = (subprocess, timeout, context, controller) => timeout ===
 	: [killAfterTimeout(subprocess, timeout, context, controller)];
 
 const killAfterTimeout = async (subprocess, timeout, context, {signal}) => {
-	await (0,promises_namespaceObject.setTimeout)(timeout, undefined, {signal});
+	await (0,external_node_timers_promises_namespaceObject.setTimeout)(timeout, undefined, {signal});
 	context.terminationReason ??= 'timeout';
 	subprocess.kill();
 	throw new DiscardedError();
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/node.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/node.js
 
 
 
@@ -3610,7 +3641,7 @@ const handleNodeOption = (file, commandArguments, {
 
 ;// CONCATENATED MODULE: external "node:v8"
 const external_node_v8_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:v8");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/ipc-input.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/ipc-input.js
 
 
 // Validate the `ipcInput` option
@@ -3656,7 +3687,7 @@ const sendIpcInput = async (subprocess, ipcInput) => {
 	await subprocess.sendMessage(ipcInput);
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/arguments/encoding-option.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/arguments/encoding-option.js
 // Validate `encoding` option
 const validateEncoding = ({encoding}) => {
 	if (ENCODINGS.has(encoding)) {
@@ -3708,7 +3739,9 @@ const ENCODING_ALIASES = {
 
 const serializeEncoding = encoding => typeof encoding === 'string' ? `"${encoding}"` : String(encoding);
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/arguments/cwd.js
+;// CONCATENATED MODULE: external "node:fs"
+const external_node_fs_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:fs");
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/arguments/cwd.js
 
 
 
@@ -3749,7 +3782,7 @@ const fixCwdError = (originalMessage, cwd) => {
 	return originalMessage;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/arguments/options.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/arguments/options.js
 
 
 
@@ -3847,7 +3880,20 @@ const getEnv = ({env: envOption, extendEnv, preferLocal, node, localDirectory, n
 	return env;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/strip-final-newline@4.0.0/node_modules/strip-final-newline/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/arguments/shell.js
+// When the `shell` option is set, any command argument is concatenated as a single string by Node.js:
+// https://github.com/nodejs/node/blob/e38ce27f3ca0a65f68a31cedd984cddb927d4002/lib/child_process.js#L614-L624
+// However, since Node 24, it also prints a deprecation warning.
+// To avoid this warning, we perform that same operation before calling `node:child_process`.
+// Shells only understand strings, which is why Node.js performs that concatenation.
+// However, we rely on users splitting command arguments as an array.
+// For example, this allows us to easily detect which arguments are passed.
+// So we do want users to pass array of arguments even with `shell: true`, but we also want to avoid any warning.
+const concatenateShell = (file, commandArguments, options) => options.shell && commandArguments.length > 0
+	? [[file, ...commandArguments].join(' '), [], options]
+	: [file, commandArguments, options];
+
+;// CONCATENATED MODULE: ./node_modules/.pnpm/strip-final-newline@4.0.0/node_modules/strip-final-newline/index.js
 function strip_final_newline_stripFinalNewline(input) {
 	if (typeof input === 'string') {
 		return stripFinalNewlineString(input);
@@ -3875,7 +3921,7 @@ const LF_BINARY = LF.codePointAt(0);
 const CR = '\r';
 const CR_BINARY = CR.codePointAt(0);
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/is-stream@4.0.1/node_modules/is-stream/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/is-stream@4.0.1/node_modules/is-stream/index.js
 function isStream(stream, {checkOpen = true} = {}) {
 	return stream !== null
 		&& typeof stream === 'object'
@@ -3914,7 +3960,7 @@ function isTransformStream(stream, options) {
 		&& typeof stream._transform === 'function';
 }
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/@sec-ant+readable-stream@0.4.1/node_modules/@sec-ant/readable-stream/dist/ponyfill/asyncIterator.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/@sec-ant+readable-stream@0.4.1/node_modules/@sec-ant/readable-stream/dist/ponyfill/asyncIterator.js
 const a = Object.getPrototypeOf(
   Object.getPrototypeOf(
     /* istanbul ignore next */
@@ -4003,12 +4049,12 @@ function h({ preventCancel: r = !1 } = {}) {
 }
 
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/@sec-ant+readable-stream@0.4.1/node_modules/@sec-ant/readable-stream/dist/ponyfill/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/@sec-ant+readable-stream@0.4.1/node_modules/@sec-ant/readable-stream/dist/ponyfill/index.js
 
 
 
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/stream.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/stream.js
 
 
 
@@ -4075,7 +4121,7 @@ const handleStreamEnd = async (stream, controller, state) => {
 // This prevents using dynamic imports.
 const nodeImports = {};
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/contents.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/contents.js
 
 
 const getStreamContents = async (stream, {init, convertChunk, getSize, truncateChunk, addChunk, getFinalChunk, finalize}, {maxBuffer = Number.POSITIVE_INFINITY} = {}) => {
@@ -4198,7 +4244,7 @@ class MaxBufferError extends Error {
 	}
 }
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/io/max-buffer.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/io/max-buffer.js
 
 
 
@@ -4289,7 +4335,7 @@ const truncateMaxBufferSync = (result, isMaxBuffer, maxBuffer) => {
 // `spawnSync()` does not allow differentiating `maxBuffer` per file descriptor, so we always use `stdout`
 const getMaxBufferSync = ([, stdoutMaxBuffer]) => stdoutMaxBuffer;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/return/message.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/return/message.js
 
 
 
@@ -4448,7 +4494,7 @@ const serializeMessageItem = messageItem => {
 	return '';
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/return/result.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/return/result.js
 
 
 
@@ -4636,7 +4682,7 @@ const normalizeExitPayload = (rawExitCode, rawSignal) => {
 	return {exitCode, signal, signalDescription};
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/parse-ms@4.0.0/node_modules/parse-ms/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/parse-ms@4.0.0/node_modules/parse-ms/index.js
 const toZeroIfInfinity = value => Number.isFinite(value) ? value : 0;
 
 function parseNumber(milliseconds) {
@@ -4683,7 +4729,7 @@ function parseMilliseconds(milliseconds) {
 	throw new TypeError('Expected a finite number or bigint');
 }
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/pretty-ms@9.1.0/node_modules/pretty-ms/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/pretty-ms@9.3.0/node_modules/pretty-ms/index.js
 
 
 const isZero = value => value === 0 || value === 0n;
@@ -4747,67 +4793,79 @@ function prettyMilliseconds(milliseconds, options) {
 	const parsed = parseMilliseconds(milliseconds);
 	const days = BigInt(parsed.days);
 
-	add(days / 365n, 'year', 'y');
-	add(days % 365n, 'day', 'd');
-	add(Number(parsed.hours), 'hour', 'h');
+	if (options.hideYearAndDays) {
+		add((BigInt(days) * 24n) + BigInt(parsed.hours), 'hour', 'h');
+	} else {
+		if (options.hideYear) {
+			add(days, 'day', 'd');
+		} else {
+			add(days / 365n, 'year', 'y');
+			add(days % 365n, 'day', 'd');
+		}
+
+		add(Number(parsed.hours), 'hour', 'h');
+	}
+
 	add(Number(parsed.minutes), 'minute', 'm');
 
-	if (
-		options.separateMilliseconds
-		|| options.formatSubMilliseconds
-		|| (!options.colonNotation && milliseconds < 1000)
-	) {
-		const seconds = Number(parsed.seconds);
-		const milliseconds = Number(parsed.milliseconds);
-		const microseconds = Number(parsed.microseconds);
-		const nanoseconds = Number(parsed.nanoseconds);
+	if (!options.hideSeconds) {
+		if (
+			options.separateMilliseconds
+			|| options.formatSubMilliseconds
+			|| (!options.colonNotation && milliseconds < 1000 && !options.subSecondsAsDecimals)
+		) {
+			const seconds = Number(parsed.seconds);
+			const milliseconds = Number(parsed.milliseconds);
+			const microseconds = Number(parsed.microseconds);
+			const nanoseconds = Number(parsed.nanoseconds);
 
-		add(seconds, 'second', 's');
+			add(seconds, 'second', 's');
 
-		if (options.formatSubMilliseconds) {
-			add(milliseconds, 'millisecond', 'ms');
-			add(microseconds, 'microsecond', 'µs');
-			add(nanoseconds, 'nanosecond', 'ns');
+			if (options.formatSubMilliseconds) {
+				add(milliseconds, 'millisecond', 'ms');
+				add(microseconds, 'microsecond', 'µs');
+				add(nanoseconds, 'nanosecond', 'ns');
+			} else {
+				const millisecondsAndBelow
+					= milliseconds
+					+ (microseconds / 1000)
+					+ (nanoseconds / 1e6);
+
+				const millisecondsDecimalDigits
+					= typeof options.millisecondsDecimalDigits === 'number'
+						? options.millisecondsDecimalDigits
+						: 0;
+
+				const roundedMilliseconds = millisecondsAndBelow >= 1
+					? Math.round(millisecondsAndBelow)
+					: Math.ceil(millisecondsAndBelow);
+
+				const millisecondsString = millisecondsDecimalDigits
+					? millisecondsAndBelow.toFixed(millisecondsDecimalDigits)
+					: roundedMilliseconds;
+
+				add(
+					Number.parseFloat(millisecondsString),
+					'millisecond',
+					'ms',
+					millisecondsString,
+				);
+			}
 		} else {
-			const millisecondsAndBelow
-				= milliseconds
-				+ (microseconds / 1000)
-				+ (nanoseconds / 1e6);
-
-			const millisecondsDecimalDigits
-				= typeof options.millisecondsDecimalDigits === 'number'
-					? options.millisecondsDecimalDigits
-					: 0;
-
-			const roundedMilliseconds = millisecondsAndBelow >= 1
-				? Math.round(millisecondsAndBelow)
-				: Math.ceil(millisecondsAndBelow);
-
-			const millisecondsString = millisecondsDecimalDigits
-				? millisecondsAndBelow.toFixed(millisecondsDecimalDigits)
-				: roundedMilliseconds;
-
-			add(
-				Number.parseFloat(millisecondsString),
-				'millisecond',
-				'ms',
-				millisecondsString,
-			);
+			const seconds = (
+				(isBigInt ? Number(milliseconds % ONE_DAY_IN_MILLISECONDS) : milliseconds)
+				/ 1000
+			) % 60;
+			const secondsDecimalDigits
+				= typeof options.secondsDecimalDigits === 'number'
+					? options.secondsDecimalDigits
+					: 1;
+			const secondsFixed = floorDecimals(seconds, secondsDecimalDigits);
+			const secondsString = options.keepDecimalsOnWholeSeconds
+				? secondsFixed
+				: secondsFixed.replace(/\.0+$/, '');
+			add(Number.parseFloat(secondsString), 'second', 's', secondsString);
 		}
-	} else {
-		const seconds = (
-			(isBigInt ? Number(milliseconds % ONE_DAY_IN_MILLISECONDS) : milliseconds)
-			/ 1000
-		) % 60;
-		const secondsDecimalDigits
-			= typeof options.secondsDecimalDigits === 'number'
-				? options.secondsDecimalDigits
-				: 1;
-		const secondsFixed = floorDecimals(seconds, secondsDecimalDigits);
-		const secondsString = options.keepDecimalsOnWholeSeconds
-			? secondsFixed
-			: secondsFixed.replace(/\.0+$/, '');
-		add(Number.parseFloat(secondsString), 'second', 's', secondsString);
 	}
 
 	if (result.length === 0) {
@@ -4822,7 +4880,7 @@ function prettyMilliseconds(milliseconds, options) {
 	return sign + result.join(separator);
 }
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/error.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/error.js
 
 
 // When `verbose` is `short|full|custom`, print each command's error when it fails
@@ -4837,7 +4895,7 @@ const logError = (result, verboseInfo) => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/complete.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/complete.js
 
 
 
@@ -4863,7 +4921,7 @@ const logDuration = (result, verboseInfo) => {
 	});
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/return/reject.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/return/reject.js
 
 
 // Applies the `reject` option.
@@ -4878,7 +4936,7 @@ const handleResult = (result, verboseInfo, {reject}) => {
 	return result;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/stdio/type.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/stdio/type.js
 
 
 
@@ -5005,8 +5063,10 @@ const isUrl = value => Object.prototype.toString.call(value) === '[object URL]';
 const isRegularUrl = value => isUrl(value) && value.protocol !== 'file:';
 
 const isFilePathObject = value => isPlainObject(value)
-	&& Object.keys(value).length === 1
+	&& Object.keys(value).length > 0
+	&& Object.keys(value).every(key => FILE_PATH_KEYS.has(key))
 	&& isFilePathString(value.file);
+const FILE_PATH_KEYS = new Set(['file', 'append']);
 const isFilePathString = file => typeof file === 'string';
 
 const isUnknownStdioString = (type, value) => type === 'native'
@@ -5051,7 +5111,7 @@ const TYPE_TO_MESSAGE = {
 	uint8Array: 'a Uint8Array',
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/transform/object-mode.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/transform/object-mode.js
 
 
 /*
@@ -5094,7 +5154,7 @@ const getFdObjectMode = (stdioItems, direction) => {
 		: lastTransform.value.readableObjectMode;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/transform/normalize.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/transform/normalize.js
 
 
 
@@ -5207,7 +5267,7 @@ const normalizeGenerator = ({stdioItem, stdioItem: {value}, index, newTransforms
 
 const sortTransforms = (newTransforms, direction) => direction === 'input' ? newTransforms.reverse() : newTransforms;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/stdio/direction.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/stdio/direction.js
 
 
 
@@ -5281,13 +5341,13 @@ const getStandardStreamDirection = value => {
 // When the ambiguity remains, we default to `output` since it is the most common use case for additional file descriptors.
 const DEFAULT_DIRECTION = 'output';
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/array.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/array.js
 // The `ipc` option adds an `ipc` item to the `stdio` option
 const normalizeIpcStdioArray = (stdioArray, ipc) => ipc && !stdioArray.includes('ipc')
 	? [...stdioArray, 'ipc']
 	: stdioArray;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/stdio/stdio-option.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/stdio/stdio-option.js
 
 
 
@@ -5349,7 +5409,7 @@ const normalizeStdioSync = (stdioArray, buffer, verboseInfo) => stdioArray.map((
 const isOutputPipeOnly = stdioOption => stdioOption === 'pipe'
 	|| (Array.isArray(stdioOption) && stdioOption.every(item => item === 'pipe'));
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/stdio/native.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/stdio/native.js
 
 
 
@@ -5457,7 +5517,7 @@ const getStandardStream = (fdNumber, value, optionName) => {
 	return standardStream;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/stdio/input-option.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/stdio/input-option.js
 
 
 
@@ -5509,7 +5569,7 @@ const getInputFileType = inputFile => {
 	throw new Error('The `inputFile` option must be a file path string or a file URL.');
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/stdio/duplicate.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/stdio/duplicate.js
 
 
 // Duplicates in the same file descriptor is most likely an error.
@@ -5622,7 +5682,7 @@ const throwOnDuplicateStream = (stdioItem, optionName, type) => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/stdio/handle.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/stdio/handle.js
 
 
 
@@ -5833,7 +5893,7 @@ const forwardStdio = stdioItems => {
 	return type === 'native' ? value : 'pipe';
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/stdio/handle-sync.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/stdio/handle-sync.js
 
 
 
@@ -5884,7 +5944,7 @@ const addPropertiesSync = {
 	output: {
 		...addProperties,
 		fileUrl: ({value}) => ({path: value}),
-		filePath: ({value: {file}}) => ({path: file}),
+		filePath: ({value: {file, append}}) => ({path: file, append}),
 		fileNumber: ({value}) => ({path: value}),
 		iterable: forbiddenIfSync,
 		string: forbiddenIfSync,
@@ -5892,7 +5952,7 @@ const addPropertiesSync = {
 	},
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/io/strip-newline.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/io/strip-newline.js
 
 
 // Apply `stripFinalNewline` option, which applies to `result.stdout|stderr|all|stdio[*]`.
@@ -5908,7 +5968,7 @@ const getStripFinalNewline = (stripFinalNewline, fdNumber) => fdNumber === 'all'
 
 ;// CONCATENATED MODULE: external "node:stream"
 const external_node_stream_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:stream");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/transform/split.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/transform/split.js
 // Split chunks line-wise for generators passed to the `std*` options
 const getSplitLinesGenerator = (binary, preserveNewlines, skipped, state) => binary || skipped
 	? undefined
@@ -6022,7 +6082,7 @@ const linesUint8ArrayInfo = {
 
 ;// CONCATENATED MODULE: external "node:buffer"
 const external_node_buffer_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:buffer");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/transform/validate.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/transform/validate.js
 
 
 
@@ -6067,7 +6127,7 @@ Instead, \`yield\` should either be called with a value, or not be called at all
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/transform/encoding-transform.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/transform/encoding-transform.js
 
 
 
@@ -6120,7 +6180,7 @@ const encodingStringFinal = function * (stringDecoder) {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/transform/run-async.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/transform/run-async.js
 
 
 // Applies a series of generator functions asynchronously
@@ -6182,7 +6242,7 @@ const identityGenerator = function * (chunk) {
 	yield chunk;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/transform/run-sync.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/transform/run-sync.js
 // Duplicate the code from `run-async.js` but as synchronous functions
 const pushChunksSync = (getChunksSync, getChunksArguments, transformStream, done) => {
 	try {
@@ -6234,7 +6294,7 @@ const run_sync_identityGenerator = function * (chunk) {
 	yield chunk;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/transform/generator.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/transform/generator.js
 
 
 
@@ -6333,7 +6393,7 @@ const addInternalGenerators = (
 	].filter(Boolean);
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/io/input-sync.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/io/input-sync.js
 
 
 
@@ -6379,7 +6439,7 @@ const validateSerializable = newContents => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/output.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/output.js
 
 
 
@@ -6441,7 +6501,7 @@ const logLine = (line, fdNumber, verboseInfo) => {
 	});
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/io/output-sync.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/io/output-sync.js
 
 
 
@@ -6567,9 +6627,9 @@ const logOutputSync = ({serializedResult, fdNumber, state, verboseInfo, encoding
 
 // When the `std*` target is a file path/URL or a file descriptor
 const writeToFiles = (serializedResult, stdioItems, outputFiles) => {
-	for (const {path} of stdioItems.filter(({type}) => FILE_TYPES.has(type))) {
+	for (const {path, append} of stdioItems.filter(({type}) => FILE_TYPES.has(type))) {
 		const pathString = typeof path === 'string' ? path : path.toString();
-		if (outputFiles.has(pathString)) {
+		if (append || outputFiles.has(pathString)) {
 			(0,external_node_fs_namespaceObject.appendFileSync)(path, serializedResult);
 		} else {
 			outputFiles.add(pathString);
@@ -6578,7 +6638,7 @@ const writeToFiles = (serializedResult, stdioItems, outputFiles) => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/resolve/all-sync.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/resolve/all-sync.js
 
 
 
@@ -6613,7 +6673,7 @@ const getAllSync = ([, stdout, stderr], options) => {
 	return `${stdout}${stderr}`;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/resolve/exit-async.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/resolve/exit-async.js
 
 
 
@@ -6669,7 +6729,7 @@ const isSubprocessErrorExit = (exitCode, signal) => exitCode === undefined && si
 // When the subprocess fails due to a non-0 exit code or to a signal termination
 const isFailedExit = (exitCode, signal) => exitCode !== 0 || signal !== null;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/resolve/exit-sync.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/resolve/exit-sync.js
 
 
 
@@ -6696,7 +6756,8 @@ const getResultError = (error, exitCode, signal) => {
 	return isFailedExit(exitCode, signal) ? new DiscardedError() : undefined;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/main-sync.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/main-sync.js
+
 
 
 
@@ -6814,7 +6875,7 @@ const runSubprocessSync = ({file, commandArguments, options, command, escapedCom
 	try {
 		addInputOptionsSync(fileDescriptors, options);
 		const normalizedOptions = normalizeSpawnSyncOptions(options);
-		return (0,external_node_child_process_namespaceObject.spawnSync)(file, commandArguments, normalizedOptions);
+		return (0,external_node_child_process_namespaceObject.spawnSync)(...concatenateShell(file, commandArguments, normalizedOptions));
 	} catch (error) {
 		return makeEarlyError({
 			error,
@@ -6860,7 +6921,7 @@ const getSyncResult = ({error, exitCode, signal, timedOut, isMaxBuffer, stdio, a
 		isSync: true,
 	});
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/get-one.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/get-one.js
 
 
 
@@ -6926,7 +6987,7 @@ const throwOnStrictError = async (ipcEmitter, isSubprocess, {signal}) => {
 	throw getStrictResponseError(error, isSubprocess);
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/get-each.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/get-each.js
 
 
 
@@ -7017,7 +7078,7 @@ const throwIfStrictError = ({error}) => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/methods.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/methods.js
 
 
 
@@ -7068,7 +7129,7 @@ const getIpcMethods = (anyProcess, isSubprocess, ipc) => ({
 	}),
 });
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/return/early-error.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/return/early-error.js
 
 
 
@@ -7125,7 +7186,7 @@ const duplex = () => new external_node_stream_namespaceObject.Duplex({read() {},
 
 const handleDummyPromise = async (error, verboseInfo, options) => handleResult(error, verboseInfo, options);
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/stdio/handle-async.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/stdio/handle-async.js
 
 
 
@@ -7170,7 +7231,7 @@ const addPropertiesAsync = {
 	output: {
 		...handle_async_addProperties,
 		fileUrl: ({value}) => ({stream: (0,external_node_fs_namespaceObject.createWriteStream)(value)}),
-		filePath: ({value: {file}}) => ({stream: (0,external_node_fs_namespaceObject.createWriteStream)(file)}),
+		filePath: ({value: {file, append}}) => ({stream: (0,external_node_fs_namespaceObject.createWriteStream)(file, append ? {flags: 'a'} : {})}),
 		webStream: ({value}) => ({stream: external_node_stream_namespaceObject.Writable.fromWeb(value)}),
 		iterable: forbiddenIfAsync,
 		asyncIterable: forbiddenIfAsync,
@@ -7181,7 +7242,7 @@ const addPropertiesAsync = {
 
 ;// CONCATENATED MODULE: external "node:stream/promises"
 const external_node_stream_promises_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:stream/promises");
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/@sindresorhus+merge-streams@4.0.0/node_modules/@sindresorhus/merge-streams/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/@sindresorhus+merge-streams@4.0.0/node_modules/@sindresorhus/merge-streams/index.js
 
 
 
@@ -7448,7 +7509,7 @@ const PASSTHROUGH_LISTENERS_COUNT = 2;
 //  - once due to `stream.pipe(passThroughStream)`
 const PASSTHROUGH_LISTENERS_PER_STREAM = 1;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/io/pipeline.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/io/pipeline.js
 
 
 
@@ -7498,7 +7559,7 @@ const abortSourceStream = source => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/io/output-async.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/io/output-async.js
 
 
 
@@ -7580,7 +7641,7 @@ const setStandardStreamMaxListeners = (stream, {signal}) => {
 // That library also listens for `source` end, which adds 1 more listener.
 const MAX_LISTENERS_INCREMENT = 2;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/signal-exit@4.1.0/node_modules/signal-exit/dist/mjs/signals.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/signal-exit@4.1.0/node_modules/signal-exit/dist/mjs/signals.js
 /**
  * This is not the set of all possible signals.
  *
@@ -7620,7 +7681,7 @@ if (process.platform === 'linux') {
     signals.push('SIGIO', 'SIGPOLL', 'SIGPWR', 'SIGSTKFLT');
 }
 //# sourceMappingURL=signals.js.map
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/signal-exit@4.1.0/node_modules/signal-exit/dist/mjs/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/signal-exit@4.1.0/node_modules/signal-exit/dist/mjs/index.js
 // Note: since nyc uses this module to output coverage, any lines
 // that are in the direct sync flow of nyc's outputCoverage are
 // ignored, since we can never get coverage for them.
@@ -7637,7 +7698,7 @@ const processOk = (process) => !!process &&
     typeof process.pid === 'number' &&
     typeof process.on === 'function';
 const kExitEmitter = Symbol.for('signal-exit emitter');
-const renovate_auto_beachball_changefile_global = globalThis;
+const renovate_auto_version_plan_global = globalThis;
 const ObjectDefineProperty = Object.defineProperty.bind(Object);
 // teeny special purpose ee
 class Emitter {
@@ -7652,10 +7713,10 @@ class Emitter {
     count = 0;
     id = Math.random();
     constructor() {
-        if (renovate_auto_beachball_changefile_global[kExitEmitter]) {
-            return renovate_auto_beachball_changefile_global[kExitEmitter];
+        if (renovate_auto_version_plan_global[kExitEmitter]) {
+            return renovate_auto_version_plan_global[kExitEmitter];
         }
-        ObjectDefineProperty(renovate_auto_beachball_changefile_global, kExitEmitter, {
+        ObjectDefineProperty(renovate_auto_version_plan_global, kExitEmitter, {
             value: this,
             writable: false,
             enumerable: false,
@@ -7896,7 +7957,7 @@ load,
  */
 unload, } = signalExitWrap(processOk(mjs_process) ? new SignalExit(mjs_process) : new SignalExitFallback());
 //# sourceMappingURL=index.js.map
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/terminate/cleanup.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/terminate/cleanup.js
 
 
 
@@ -7914,7 +7975,8 @@ const cleanupOnExit = (subprocess, {cleanup, detached}, {signal}) => {
 	});
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/pipe/pipe-arguments.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/pipe/pipe-arguments.js
+
 
 
 
@@ -7973,7 +8035,7 @@ const getDestination = (boundOptions, createNested, firstArgument, ...pipeArgume
 		return {destination, pipeOptions: boundOptions};
 	}
 
-	if (typeof firstArgument === 'string' || firstArgument instanceof URL) {
+	if (typeof firstArgument === 'string' || firstArgument instanceof URL || isDenoExecPath(firstArgument)) {
 		if (Object.keys(boundOptions).length > 0) {
 			throw new TypeError('Please use .pipe("file", ..., options) or .pipe(execa("file", ..., options)) instead of .pipe(options)("file", ...).');
 		}
@@ -8006,7 +8068,7 @@ const getSourceStream = (source, from) => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/pipe/throw.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/pipe/throw.js
 
 
 
@@ -8066,7 +8128,7 @@ const createNonCommandError = ({error, fileDescriptors, sourceOptions, startTime
 
 const PIPE_COMMAND_MESSAGE = 'source.pipe(destination)';
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/pipe/sequence.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/pipe/sequence.js
 // Like Bash, we await both subprocesses. This is unlike some other shells which only await the destination subprocess.
 // Like Bash with the `pipefail` option, if either subprocess fails, the whole pipe fails.
 // Like Bash, if both subprocesses fail, we return the failure of the destination.
@@ -8092,7 +8154,7 @@ const waitForBothSubprocesses = async subprocessPromises => {
 	return destinationResult;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/pipe/streaming.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/pipe/streaming.js
 
 
 
@@ -8145,7 +8207,7 @@ const SOURCE_LISTENERS_PER_PIPE = 2;
 // Those are added by `finished()` in `cleanupMergedStreamsMap()`
 const DESTINATION_LISTENERS_PER_PIPE = 1;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/pipe/abort.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/pipe/abort.js
 
 
 
@@ -8167,7 +8229,7 @@ const unpipeOnSignalAbort = async (unpipeSignal, {sourceStream, mergedStream, fi
 	});
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/pipe/setup.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/pipe/setup.js
 
 
 
@@ -8241,7 +8303,7 @@ const handlePipePromise = async ({
 // We need to ensure this does not create unhandled rejections.
 const getSubprocessPromises = (sourcePromise, destination) => Promise.allSettled([sourcePromise, destination]);
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/utils.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/utils.js
 const utils_identity = value => value;
 
 const utils_noop = () => undefined;
@@ -8254,7 +8316,7 @@ const throwObjectStream = chunk => {
 
 const getLengthProperty = convertedChunk => convertedChunk.length;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/array.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/array.js
 
 
 
@@ -8288,7 +8350,7 @@ const arrayMethods = {
 	finalize: getContentsProperty,
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/array-buffer.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/array-buffer.js
 
 
 
@@ -8374,7 +8436,7 @@ const arrayBufferMethods = {
 	finalize: finalizeArrayBuffer,
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/string.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/get-stream@9.0.1/node_modules/get-stream/source/string.js
 
 
 
@@ -8412,7 +8474,7 @@ const stringMethods = {
 	finalize: getContentsProperty,
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/io/iterate.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/io/iterate.js
 
 
 
@@ -8524,7 +8586,7 @@ const getGenerators = ({binary, shouldEncode, encoding, shouldSplit, preserveNew
 	getSplitLinesGenerator(binary, preserveNewlines, !shouldSplit, {}),
 ].filter(Boolean);
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/io/contents.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/io/contents.js
 
 
 
@@ -8597,7 +8659,7 @@ const logOutputAsync = async ({stream, onStreamEnd, fdNumber, encoding, allMixed
 // When using `buffer: false`, users need to read `subprocess.stdout|stderr|all` right away
 // See https://github.com/sindresorhus/execa/issues/730 and https://github.com/sindresorhus/execa/pull/729#discussion_r1465496310
 const resumeStream = async stream => {
-	await (0,promises_namespaceObject.setImmediate)();
+	await (0,external_node_timers_promises_namespaceObject.setImmediate)();
 	if (stream.readableFlowing === null) {
 		stream.resume();
 	}
@@ -8642,7 +8704,7 @@ const handleBufferedData = ({bufferedData}) => isArrayBuffer(bufferedData)
 	? new Uint8Array(bufferedData)
 	: bufferedData;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/resolve/wait-stream.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/resolve/wait-stream.js
 
 
 // Wraps `finished(stream)` to handle the following case:
@@ -8740,7 +8802,7 @@ const isStreamAbort = error => error?.code === 'ERR_STREAM_PREMATURE_CLOSE';
 // Therefore, we ignore this error on writable streams.
 const isStreamEpipe = error => error?.code === 'EPIPE';
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/resolve/stdio.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/resolve/stdio.js
 
 
 
@@ -8789,7 +8851,7 @@ const waitForSubprocessStream = async ({stream, fdNumber, encoding, buffer, maxB
 	return output;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/resolve/all-async.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/resolve/all-async.js
 
 
 
@@ -8837,7 +8899,7 @@ const getAllMixed = ({all, stdout, stderr}) => all
 	&& stderr
 	&& stdout.readableObjectMode !== stderr.readableObjectMode;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/verbose/ipc.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/verbose/ipc.js
 
 
 
@@ -8854,7 +8916,7 @@ const logIpcOutput = (message, verboseInfo) => {
 	});
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/ipc/buffer-messages.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/ipc/buffer-messages.js
 
 
 
@@ -8903,7 +8965,7 @@ const getBufferedIpcOutput = async (ipcOutputPromise, ipcOutput) => {
 	return ipcOutput;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/resolve/wait-subprocess.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/resolve/wait-subprocess.js
 
 
 
@@ -9051,7 +9113,7 @@ const throwOnSubprocessError = async (subprocess, {signal}) => {
 	throw error;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/convert/concurrent.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/convert/concurrent.js
 
 
 // When using multiple `.readable()`/`.writable()`/`.duplex()`, `final` and `destroy` should wait for other streams
@@ -9086,7 +9148,7 @@ const waitForConcurrentStreams = async ({resolve, promises}, subprocess) => {
 	return !isSubprocessExit;
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/convert/shared.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/convert/shared.js
 
 
 
@@ -9134,7 +9196,7 @@ const destroyOtherStream = (stream, isOpen, error) => {
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/convert/readable.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/convert/readable.js
 
 
 
@@ -9244,7 +9306,7 @@ const destroyOtherReadable = (stream, error) => {
 	destroyOtherStream(stream, stream.readable, error);
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/convert/writable.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/convert/writable.js
 
 
 
@@ -9331,7 +9393,7 @@ const destroyOtherWritable = (stream, error) => {
 	destroyOtherStream(stream, stream.writable, error);
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/convert/duplex.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/convert/duplex.js
 
 
 
@@ -9391,7 +9453,7 @@ const onDuplexDestroy = async ({subprocessStdout, subprocessStdin, subprocess, w
 	]);
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/convert/iterable.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/convert/iterable.js
 
 
 
@@ -9427,7 +9489,7 @@ const iterateOnStdoutData = async function * (onStdoutData, subprocessStdout, su
 	}
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/convert/add.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/convert/add.js
 
 
 
@@ -9444,7 +9506,7 @@ const addConvertedStreams = (subprocess, {encoding}) => {
 	subprocess[Symbol.asyncIterator] = createIterable.bind(undefined, subprocess, encoding, {});
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/promise.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/promise.js
 // The return value is a mixin of `subprocess` and `Promise`
 const mergePromise = (subprocess, promise) => {
 	for (const [property, descriptor] of descriptors) {
@@ -9461,7 +9523,8 @@ const descriptors = ['then', 'catch', 'finally'].map(property => [
 	Reflect.getOwnPropertyDescriptor(nativePromisePrototype, property),
 ]);
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/main-async.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/main-async.js
+
 
 
 
@@ -9539,7 +9602,7 @@ const handleAsyncOptions = ({timeout, signal, ...options}) => {
 const spawnSubprocessAsync = ({file, commandArguments, options, startTime, verboseInfo, command, escapedCommand, fileDescriptors}) => {
 	let subprocess;
 	try {
-		subprocess = (0,external_node_child_process_namespaceObject.spawn)(file, commandArguments, options);
+		subprocess = (0,external_node_child_process_namespaceObject.spawn)(...concatenateShell(file, commandArguments, options));
 	} catch (error) {
 		return handleEarlyError({
 			error,
@@ -9656,7 +9719,7 @@ const getAsyncResult = ({errorInfo, exitCode, signal, stdio, all, ipcOutput, con
 		startTime,
 	});
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/bind.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/bind.js
 
 
 
@@ -9681,7 +9744,7 @@ const mergeOption = (optionName, boundOptionValue, optionValue) => {
 
 const DEEP_OPTIONS = new Set(['env', ...FD_SPECIFIC_OPTIONS]);
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/create.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/create.js
 
 
 
@@ -9748,7 +9811,7 @@ const parseArguments = ({mapArguments, firstArgument, nextArguments, deepOptions
 	};
 };
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/command.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/command.js
 // Main logic for `execaCommand()`
 const mapCommandAsync = ({file, commandArguments}) => parseCommand(file, commandArguments);
 
@@ -9793,7 +9856,7 @@ const parseCommandString = command => {
 
 const SPACES_REGEXP = / +/g;
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/lib/methods/script.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/lib/methods/script.js
 // Sets `$.sync` and `$.s`
 const setScriptSync = (boundExeca, createNested, boundOptions) => {
 	boundExeca.sync = createNested(mapScriptSync, boundOptions);
@@ -9817,7 +9880,7 @@ const getScriptStdinOption = ({input, inputFile, stdio}) => input === undefined 
 // However, some options (like `stdin: 'inherit'`) would create issues with piping, i.e. cannot be deep.
 const deepScriptOptions = {preferLocal: true};
 
-;// CONCATENATED MODULE: ../../../node_modules/.pnpm/execa@9.4.0/node_modules/execa/index.js
+;// CONCATENATED MODULE: ./node_modules/.pnpm/execa@9.6.0/node_modules/execa/index.js
 
 
 
@@ -9842,10 +9905,13 @@ const {
 } = getIpcExport();
 
 
-;// CONCATENATED MODULE: ./renovate-auto-beachball-changefile.mjs
+;// CONCATENATED MODULE: ./renovate-auto-version-plan.mjs
 
 
-const bumpTypeHeader = 'Beachball-bump-type: ';
+
+
+
+const bumpTypeHeader = 'Nx-version-bump: ';
 
 /**
  * @param {string[]} args git-rev-list args
@@ -9882,12 +9948,75 @@ async function parseBumpTypeAndMessage() {
   return { bumpType, message };
 }
 
+async function getAffectedPackages() {
+  // Get list of changed files in this commit
+  const { stdout } = await $`git diff-tree --no-commit-id --name-only -r HEAD`;
+  const files = stdout.split('\n').filter(Boolean);
+
+  // Map files to package names (Nx project names are the directory names)
+  const packages = new Set();
+  for (const file of files) {
+    if (file.startsWith('packages/')) {
+      const parts = file.split('/');
+      if (parts.length >= 2) {
+        // Nx project name is the directory name
+        const pkgDir = parts[1];
+        packages.add(pkgDir);
+      }
+    }
+  }
+
+  // If no specific packages detected, affect all publishable packages
+  if (packages.size === 0) {
+    return [
+      'eslint-config',
+      'eslint-plugin',
+      'prettier-config',
+      'tsconfig',
+      'lint-eslint-config-rules',
+    ];
+  }
+
+  return Array.from(packages);
+}
+
 /**
  * @param {{bumpType:string, message: string}} options
  * @returns {Promise<void>}
  */
-async function generateChangefile({ bumpType, message }) {
-  await $`npx beachball change --no-commit --type ${bumpType} --message ${message}`;
+async function generateVersionPlan({ bumpType, message }) {
+  const affectedPackages = await getAffectedPackages();
+
+  // Skip if bump type is 'none'
+  if (bumpType === 'none') {
+    console.log('Bump type is "none", skipping version plan generation');
+    return;
+  }
+
+  const planContent = `---
+${affectedPackages.map((pkg) => `"${pkg}": ${bumpType}`).join('\n')}
+---
+
+${message}
+`;
+
+  const versionPlansDir = '.nx/version-plans';
+  await promises_namespaceObject.mkdir(versionPlansDir, { recursive: true });
+
+  const fileName = `version-plan-${Date.now()}.md`;
+  const filePath = external_node_path_namespaceObject.join(versionPlansDir, fileName);
+
+  await promises_namespaceObject.writeFile(filePath, planContent);
+  console.log(`Created version plan: ${filePath}`);
+}
+
+async function checkVersionPlan() {
+  try {
+    const result = await $({ reject: false })`pnpm exec nx release plan:check`;
+    return result.exitCode === 0;
+  } catch {
+    return false;
+  }
 }
 
 /**
@@ -9901,18 +10030,17 @@ async function updateRenovateCommit({ message }) {
 }
 
 async function main() {
-  const isMissingChangefile =
-    (await $({ reject: false })`pnpm exec beachball check`).exitCode !== 0;
+  const hasVersionPlan = await checkVersionPlan();
 
   await configureGitUser();
   const bumpTypeAndMessage = await parseBumpTypeAndMessage();
 
   // do nothing if we cannot find the bump type from the Renovate commit
-  // otherwise, we will later try to generate a changefile
+  // otherwise, we will later try to generate a version plan
   // and trim `bumpTypeHeader` from the commit message
   if (!bumpTypeAndMessage) {
-    if (isMissingChangefile) {
-      console.log(`Changefile is missing, and auto generating changefile failed.
+    if (!hasVersionPlan) {
+      console.log(`Version plan is missing, and auto generating failed.
 \tCannot find ${bumpTypeHeader} in the commit message`);
       process.exitCode = 1;
       return;
@@ -9923,12 +10051,12 @@ async function main() {
   }
 
   const { bumpType, message } = bumpTypeAndMessage;
-  if (isMissingChangefile) {
-    await generateChangefile({ bumpType, message });
+  if (!hasVersionPlan) {
+    await generateVersionPlan({ bumpType, message });
   }
   await updateRenovateCommit({ message });
 
-  if (isMissingChangefile) {
+  if (!hasVersionPlan) {
     process.exitCode = 1;
   }
 }

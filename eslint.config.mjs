@@ -11,6 +11,9 @@ export default defineConfig(
      * see: https://eslint.org/docs/latest/use/configure/configuration-files#globally-ignoring-files-with-ignores
      */
     ignores: [
+      // nx cache
+      '.nx',
+
       // build output
       'packages/*/lib',
       '.github/actions/*/dist',
