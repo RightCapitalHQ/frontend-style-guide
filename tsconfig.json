@@ -1,9 +1,27 @@
 {
-  "files": [],
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "lib": ["es2023"],
+    "module": "node16",
+    "target": "es2022",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16",
+    "outDir": "./node_modules/.cache/rightcapital/frontend-style-guide-scripts"
+  },
+  "include": ["commitlint.config.ts"],
   "references": [
-    { "path": "./tsconfig.scripts.json" },
-    { "path": "./packages/eslint-plugin" },
-    { "path": "./packages/prettier-config" },
-    { "path": "./packages/eslint-config" }
+    {
+      "path": "./packages/eslint-plugin"
+    },
+    {
+      "path": "./packages/prettier-config"
+    },
+    {
+      "path": "./packages/lint-eslint-config-rules"
+    }
   ]
 }
