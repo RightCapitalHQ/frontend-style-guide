@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: docker://rhysd/actionlint:1.6.26
+      - uses: docker://rhysd/actionlint:1.6.26@sha256:2362769b1d75056da70e7af1b12d9e52746f3a123b8f22a4322869e8f2cd45f2
         with:
           args: -color
 
