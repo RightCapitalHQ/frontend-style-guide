@@ -68,16 +68,43 @@ jobs:
                 echo "| \`$name\` | \`$old_version\` | \`$new_version\` |"
               fi
             done
-            echo ""
-            echo "## Changes"
-            echo ""
-            find .nx/version-plans -name '*.md' -type f 2>/dev/null | sort | while read -r f; do
-              # Extract the description (content after the closing --- of front matter)
+            # Classify version plans by highest bump type
+            breaking="" features="" fixes=""
+            for f in $(find .nx/version-plans -name '*.md' -type f 2>/dev/null | sort); do
               description=$(awk 'BEGIN{n=0} /^---$/{n++; next} n>=2{print}' "$f" | sed '/^[[:space:]]*$/d')
-              if [ -n "$description" ]; then
-                echo "- $description"
+              [ -z "$description" ] && continue
+              # Determine the highest bump type in the front matter
+              bumps=$(awk 'BEGIN{n=0} /^---$/{n++; next} n==1{print $2}' "$f")
+              if echo "$bumps" | grep -q "major"; then
+                breaking="${breaking}- ${description}"$'\n'
+              elif echo "$bumps" | grep -q "minor"; then
+                features="${features}- ${description}"$'\n'
+              else
+                fixes="${fixes}- ${description}"$'\n'
               fi
             done
+            if [ -n "$breaking" ] || [ -n "$features" ] || [ -n "$fixes" ]; then
+              echo "## Changes"
+              echo ""
+              if [ -n "$breaking" ]; then
+                echo "### Breaking Changes"
+                echo ""
+                printf "%s" "$breaking"
+                echo ""
+              fi
+              if [ -n "$features" ]; then
+                echo "### New Features"
+                echo ""
+                printf "%s" "$features"
+                echo ""
+              fi
+              if [ -n "$fixes" ]; then
+                echo "### Fixes & Improvements"
+                echo ""
+                printf "%s" "$fixes"
+                echo ""
+              fi
+            fi
           } > pr-body.md
 
       - name: Create or update PR
