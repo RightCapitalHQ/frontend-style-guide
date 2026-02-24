@@ -1,6 +1,8 @@
-# Disallow ignoring return value of React hooks (`@rightcapital/no-ignore-return-value-of-react-hooks`)
+# @rightcapital/no-ignore-return-value-of-react-hooks
 
-💼 This rule is enabled in the `recommended-react` config.
+📝 Disallow ignoring return value of React hooks.
+
+💼 This rule is enabled in the ✅ `recommended-react` config.
 
 <!-- end auto-generated rule header -->
 
