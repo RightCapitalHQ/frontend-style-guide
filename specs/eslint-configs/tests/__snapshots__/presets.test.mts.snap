@@ -21,13 +21,17 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     "unicorn:eslint-plugin-unicorn",
     "import-x:eslint-plugin-import-x",
     "simple-import-sort:eslint-plugin-simple-import-sort",
-    "@stylistic",
+    "@stylistic:@stylistic/eslint-plugin",
     "unused-imports:unused-imports",
   ],
   "rules": {
     "@stylistic/lines-between-class-members": [
       2,
       "always",
+      {
+        "exceptAfterOverload": true,
+        "exceptAfterSingleLine": false,
+      },
     ],
     "@stylistic/padding-line-between-statements": [
       2,
@@ -1077,7 +1081,7 @@ exports[`Resolved config matches snapshot > javascript.js 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1008,13 +1008,10 @@
+@@ -1012,13 +1012,10 @@
         2,
         Object {
           "withDash": false,
@@ -1114,7 +1118,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "unicorn:eslint-plugin-unicorn",
     "import-x:eslint-plugin-import-x",
     "simple-import-sort:eslint-plugin-simple-import-sort",
-    "@stylistic",
+    "@stylistic:@stylistic/eslint-plugin",
     "@typescript-eslint:@typescript-eslint/eslint-plugin",
     "@rightcapital:@rightcapital/eslint-plugin",
     "unused-imports:unused-imports",
@@ -1126,6 +1130,10 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "@stylistic/lines-between-class-members": [
       2,
       "always",
+      {
+        "exceptAfterOverload": true,
+        "exceptAfterSingleLine": false,
+      },
     ],
     "@stylistic/padding-line-between-statements": [
       2,
@@ -2401,7 +2409,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1231,13 +1231,10 @@
+@@ -1235,13 +1235,10 @@
         2,
         Object {
           "withDash": false,
@@ -3588,11 +3596,12 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "unicorn:eslint-plugin-unicorn",
     "import-x:eslint-plugin-import-x",
     "simple-import-sort:eslint-plugin-simple-import-sort",
-    "@stylistic",
+    "@stylistic:@stylistic/eslint-plugin",
     "@typescript-eslint:@typescript-eslint/eslint-plugin",
     "@rightcapital:@rightcapital/eslint-plugin",
     "unused-imports:unused-imports",
     "@eslint-react:eslint-plugin-react-x",
+    "@eslint-react/rsc:eslint-plugin-react-rsc",
     "@eslint-react/dom:eslint-plugin-react-dom",
     "@eslint-react/web-api:eslint-plugin-react-web-api",
     "@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra",
@@ -3678,6 +3687,12 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
         "rule": "kebab-case",
       },
     ],
+    "@eslint-react/naming-convention/id-name": [
+      1,
+    ],
+    "@eslint-react/naming-convention/ref-name": [
+      1,
+    ],
     "@eslint-react/naming-convention/use-state": [
       2,
     ],
@@ -3726,14 +3741,8 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/no-direct-mutation-state": [
       2,
     ],
-    "@eslint-react/no-duplicate-key": [
-      2,
-    ],
     "@eslint-react/no-forward-ref": [
       0,
-    ],
-    "@eslint-react/no-implicit-key": [
-      1,
     ],
     "@eslint-react/no-missing-key": [
       2,
@@ -3793,6 +3802,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/prefer-use-state-lazy-initialization": [
       1,
     ],
+    "@eslint-react/rsc/function-definition": [
+      2,
+    ],
     "@eslint-react/web-api/no-leaked-event-listener": [
       1,
     ],
@@ -3813,10 +3825,18 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "@stylistic/jsx-self-closing-comp": [
       2,
+      {
+        "component": true,
+        "html": true,
+      },
     ],
     "@stylistic/lines-between-class-members": [
       2,
       "always",
+      {
+        "exceptAfterOverload": true,
+        "exceptAfterSingleLine": false,
+      },
     ],
     "@stylistic/padding-line-between-statements": [
       2,
@@ -5332,7 +5352,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2833,13 +2833,10 @@
+@@ -2845,13 +2845,10 @@
         2,
         Object {
           "withDash": false,
