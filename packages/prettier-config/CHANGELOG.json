@@ -2,6 +2,21 @@
   "name": "@rightcapital/prettier-config",
   "entries": [
     {
+      "date": "Tue, 24 Feb 2026 07:41:20 GMT",
+      "version": "8.0.0",
+      "tag": "@rightcapital/prettier-config_v8.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "im@pyonpyon.today",
+            "package": "@rightcapital/prettier-config",
+            "commit": "3e35e11bdd3d1815f53ef7c0ac61c29519e8bb97",
+            "comment": "fix(deps): update dependency prettier-plugin-packagejson to v3"
+          }
+        ]
+      }
+    },
+    {
       "date": "Sat, 11 Oct 2025 01:39:37 GMT",
       "version": "7.2.5",
       "tag": "@rightcapital/prettier-config_v7.2.5",

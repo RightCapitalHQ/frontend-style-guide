@@ -1,7 +1,0 @@
-{
-  "comment": "fix(deps): update dependency prettier-plugin-packagejson to v3",
-  "type": "major",
-  "packageName": "@rightcapital/prettier-config",
-  "email": "im@pyonpyon.today",
-  "dependentChangeType": "patch"
-}
