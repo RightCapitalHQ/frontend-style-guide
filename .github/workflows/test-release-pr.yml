@@ -118,12 +118,9 @@ jobs:
           echo "### PR body preview"
           cat pr-body.md
 
-      - name: Dry-run full release
+      - name: Dry-run version
         if: inputs.dry_run_release
-        run: |
-          pnpm exec nx release version --dry-run
-          pnpm exec nx release changelog --dry-run
-          pnpm exec nx release publish --dry-run
+        run: pnpm exec nx release version --dry-run
 
   cleanup:
     needs: test-release-pr
