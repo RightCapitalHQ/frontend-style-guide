@@ -754,7 +754,7 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     "no-shadow-restricted-names": [
       2,
       {
-        "reportGlobalThis": false,
+        "reportGlobalThis": true,
       },
     ],
     "no-sparse-arrays": [
@@ -979,7 +979,6 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
     ],
     "radix": [
       2,
-      "always",
     ],
     "require-yield": [
       2,
@@ -1081,7 +1080,7 @@ exports[`Resolved config matches snapshot > javascript.js 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1012,13 +1012,10 @@
+@@ -1011,13 +1011,10 @@
         2,
         Object {
           "withDash": false,
@@ -2071,7 +2070,7 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     "no-shadow-restricted-names": [
       2,
       {
-        "reportGlobalThis": false,
+        "reportGlobalThis": true,
       },
     ],
     "no-sparse-arrays": [
@@ -2296,7 +2295,6 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
     ],
     "radix": [
       2,
-      "always",
     ],
     "require-await": [
       0,
@@ -2409,7 +2407,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1235,13 +1235,10 @@
+@@ -1234,13 +1234,10 @@
         2,
         Object {
           "withDash": false,
@@ -5003,7 +5001,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "no-shadow-restricted-names": [
       2,
       {
-        "reportGlobalThis": false,
+        "reportGlobalThis": true,
       },
     ],
     "no-sparse-arrays": [
@@ -5228,7 +5226,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     ],
     "radix": [
       2,
-      "always",
     ],
     "react-hooks/exhaustive-deps": [
       2,
@@ -5352,7 +5349,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2845,13 +2845,10 @@
+@@ -2844,13 +2844,10 @@
         2,
         Object {
           "withDash": false,
