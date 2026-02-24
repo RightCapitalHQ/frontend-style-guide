@@ -2,6 +2,21 @@
   "name": "@rightcapital/eslint-config",
   "entries": [
     {
+      "date": "Tue, 24 Feb 2026 07:44:40 GMT",
+      "version": "63.0.0",
+      "tag": "@rightcapital/eslint-config_v63.0.0",
+      "comments": {
+        "major": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/eslint-config",
+            "commit": "4671754d8df1a121dadf98264030f29977441ac6",
+            "comment": "fix(deps): update dependency eslint-plugin-unicorn to v63"
+          }
+        ]
+      }
+    },
+    {
       "date": "Tue, 24 Feb 2026 05:21:41 GMT",
       "version": "62.0.0",
       "tag": "@rightcapital/eslint-config_v62.0.0",

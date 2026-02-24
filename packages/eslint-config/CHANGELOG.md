@@ -1,8 +1,14 @@
 # Change Log - @rightcapital/eslint-config
 
-<!-- This log was last generated on Tue, 24 Feb 2026 03:38:54 GMT and should not be manually modified. -->
+<!-- This log was last generated on Tue, 24 Feb 2026 07:44:40 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## [63.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v63.0.0) (2026-2-24)
+
+### Major changes
+
+- fix(deps): update dependency eslint-plugin-unicorn to v63 ([4671754](https://github.com/RightCapitalHQ/frontend-style-guide/commit/4671754d8df1a121dadf98264030f29977441ac6))
 
 ## [62.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-config_v62.0.0) (2026-2-24)
 
