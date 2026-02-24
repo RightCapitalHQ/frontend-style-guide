@@ -1,6 +1,8 @@
-# Disallow unused JSX expressions (`@rightcapital/jsx-no-unused-expressions`)
+# @rightcapital/jsx-no-unused-expressions
 
-💼 This rule is enabled in the `recommended-jsx` config.
+📝 Disallow unused JSX expressions.
+
+💼 This rule is enabled in the following configs: ☑️ `recommended-jsx`, ✅ `recommended-react`.
 
 <!-- end auto-generated rule header -->
 
