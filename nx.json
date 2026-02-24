@@ -52,19 +52,23 @@
     },
     "versionPlans": true,
     "version": {
-      "preVersionCommand": "pnpm run build"
+      "preVersionCommand": "pnpm run build",
+      "git": {
+        "commit": false,
+        "tag": false
+      }
     },
     "changelog": {
       "projectChangelogs": true,
-      "workspaceChangelog": false
+      "workspaceChangelog": false,
+      "git": {
+        "commit": true,
+        "tag": true,
+        "commitMessage": "chore(release): applying package updates"
+      }
     },
     "releaseTag": {
       "pattern": "{projectName}_v{version}"
-    },
-    "git": {
-      "commit": true,
-      "tag": true,
-      "commitMessage": "chore(release): applying package updates"
     }
   }
 }
