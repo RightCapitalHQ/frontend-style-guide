@@ -39,7 +39,7 @@
     "typescript": "5.9.3"
   },
   "peerDependencies": {
-    "eslint": "9.x"
+    "eslint": "9.x || 10.x"
   },
   "packageManager": "pnpm@10.12.1",
   "engines": {

@@ -51,7 +51,7 @@
     "prettier": "catalog:"
   },
   "peerDependencies": {
-    "eslint": "9.x",
+    "eslint": "9.x || 10.x",
     "typescript": "5.x"
   },
   "peerDependenciesMeta": {

@@ -5,5 +5,5 @@ packages:
 
 catalog:
   '@eslint/core': 1.1.0
-  eslint: 9.39.2
+  eslint: 10.0.0
   prettier: 3.7.4
