@@ -13,9 +13,8 @@ const config: BeachballConfig = {
   ignorePatterns: [
     '.*ignore',
     '.yamllint',
-    '.prettierrc',
-    'eslintrc.js',
-    'jest.*.js',
+    'prettier.config.cjs',
+    'eslint.config.mjs',
     '.pnpm-store/**',
     '.vscode/**',
     'pnpm-lock.yaml',
