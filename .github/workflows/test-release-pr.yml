@@ -68,19 +68,25 @@ jobs:
             echo ""
             echo "## Release Summary"
             echo ""
-            echo "This PR will release the following packages when merged:"
+            echo "| Package | Current | New |"
+            echo "|---------|---------|-----|"
+            for pkg_json in packages/*/package.json; do
+              new_version=$(jq -r '.version' "$pkg_json")
+              old_version=$(git show HEAD~1:"$pkg_json" 2>/dev/null | jq -r '.version' 2>/dev/null || echo "")
+              if [ -n "$old_version" ] && [ "$old_version" != "$new_version" ]; then
+                name=$(jq -r '.name' "$pkg_json")
+                echo "| \`$name\` | \`$old_version\` | \`$new_version\` |"
+              fi
+            done
             echo ""
-            # Show pending version changes
-            pnpm exec nx release version --dry-run 2>&1 | grep -E "(UPDATE|Skipping)" || true
+            echo "## Changes"
             echo ""
-            echo "---"
-            echo ""
-            echo "### Version Plans Included"
-            echo ""
-            find .nx/version-plans -name '*.md' -type f 2>/dev/null | while read -r f; do
-              echo "#### $(basename "$f")"
-              cat "$f"
-              echo ""
+            find .nx/version-plans -name '*.md' -type f 2>/dev/null | sort | while read -r f; do
+              # Extract the description (content after the closing --- of front matter)
+              description=$(awk 'BEGIN{n=0} /^---$/{n++; next} n>=2{print}' "$f" | sed '/^[[:space:]]*$/d')
+              if [ -n "$description" ]; then
+                echo "- $description"
+              fi
             done
           } > pr-body.md
 
