@@ -2,6 +2,21 @@
   "name": "@rightcapital/lint-eslint-config-rules",
   "entries": [
     {
+      "date": "Tue, 24 Feb 2026 05:21:41 GMT",
+      "version": "2.1.1",
+      "tag": "@rightcapital/lint-eslint-config-rules_v2.1.1",
+      "comments": {
+        "none": [
+          {
+            "author": "29139614+renovate[bot]@users.noreply.github.com",
+            "package": "@rightcapital/lint-eslint-config-rules",
+            "commit": "05e86d06e615ea89ac92395b8e61c10b5470935b",
+            "comment": "chore(deps): update pnpm.catalog.default eslint to v10"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 25 Dec 2025 10:53:42 GMT",
       "version": "2.1.1",
       "tag": "@rightcapital/lint-eslint-config-rules_v2.1.1",

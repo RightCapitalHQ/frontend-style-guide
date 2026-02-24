@@ -1,7 +1,0 @@
-{
-  "type": "none",
-  "comment": "chore(deps): update pnpm.catalog.default eslint to v10",
-  "packageName": "@rightcapital/lint-eslint-config-rules",
-  "email": "29139614+renovate[bot]@users.noreply.github.com",
-  "dependentChangeType": "none"
-}
