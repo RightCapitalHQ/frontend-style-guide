@@ -80,9 +80,14 @@ jobs:
     if: startsWith(github.event.pull_request.head.ref, 'renovate/') && github.base_ref == github.event.repository.default_branch
     runs-on: ubuntu-latest
     steps:
+      # fetch-depth: 2 is required because the action uses
+      # `git diff-tree HEAD` (needs the parent tree) and
+      # `git commit --amend` (loses the parent ref in a depth-1 shallow clone,
+      # producing an orphan commit).
       - uses: actions/checkout@v6
         with:
           ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 2
           token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
