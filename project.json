@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
+  "name": "@rightcapital/frontend-style-guide",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:noop"
+    },
+    "typecheck": {
+      "command": "tsc --build --emitDeclarationOnly tsconfig.json"
+    }
+  }
+}

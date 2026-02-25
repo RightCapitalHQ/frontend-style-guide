@@ -1,0 +1,9 @@
+# nx release managed files
+CHANGELOG.md
+
+# pnpm managed files
+pnpm-lock.yaml
+
+# build output
+/packages/*/lib
+/.github/actions/*/dist

@@ -1,0 +1,24 @@
+{
+  "name": "@rightcapital/style-guide-spec-eslint-configs",
+  "private": true,
+  "scripts": {
+    "fix": "eslint --fix . && prettier --write .",
+    "lint": "concurrently pnpm:lint:*",
+    "lint:eslint": "eslint --report-unused-disable-directives --max-warnings=0 .",
+    "lint:prettier-eslint": "prettier -c .",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@rightcapital/eslint-config": "workspace:*",
+    "@rightcapital/prettier-config": "workspace:*",
+    "@types/react": "19.2.7",
+    "concurrently": "9.2.1",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "10.1.8",
+    "execa": "9.6.1",
+    "jest-diff": "30.2.0",
+    "prettier": "catalog:",
+    "typescript": "5.9.3",
+    "vitest": "4.0.16"
+  }
+}

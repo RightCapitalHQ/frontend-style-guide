@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext"
+  },
+  "references": [
+    {
+      "path": "../../packages/lint-eslint-config-rules"
+    }
+  ]
+}
