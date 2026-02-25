@@ -1,0 +1,98 @@
+name: Release
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+jobs:
+  release:
+    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'release'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: main
+          token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Configure Git
+        run: |
+          git config user.email "npm-publisher@rightcapital.com"
+          git config user.name "GitHub Actions[bot]"
+
+      - name: Create tags and GitHub releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PACKAGES=(
+            packages/eslint-config
+            packages/eslint-plugin
+            packages/prettier-config
+            packages/tsconfig
+            packages/lint-eslint-config-rules
+          )
+
+          tags_to_release=()
+
+          for pkg_dir in "${PACKAGES[@]}"; do
+            name=$(jq -r '.name' "$pkg_dir/package.json")
+            version=$(jq -r '.version' "$pkg_dir/package.json")
+            tag="${name}_v${version}"
+
+            # Skip if tag already exists (idempotent for re-runs)
+            if git rev-parse "$tag" >/dev/null 2>&1; then
+              echo "Tag $tag already exists, skipping"
+              continue
+            fi
+
+            git tag "$tag"
+            tags_to_release+=("$pkg_dir:$tag")
+            echo "Created tag $tag"
+          done
+
+          if [ ${#tags_to_release[@]} -eq 0 ]; then
+            echo "No new tags to create"
+            exit 0
+          fi
+
+          git push origin --tags
+
+          for entry in "${tags_to_release[@]}"; do
+            pkg_dir="${entry%%:*}"
+            tag="${entry##*:}"
+            changelog_file="$pkg_dir/CHANGELOG.md"
+
+            notes=""
+            if [ -f "$changelog_file" ]; then
+              # Extract content between the first ## heading and the next one.
+              # Handles both Nx format (## X.Y.Z) and legacy format (## [X.Y.Z](url)).
+              notes=$(awk '/^## /{if(found) exit; found=1; next} found{print}' "$changelog_file")
+              # Trim leading/trailing blank lines
+              notes=$(echo "$notes" | sed -e '/./,$!d' -e :a -e '/^\n*$/{$d;N;ba;}')
+            fi
+
+            if [ -n "$notes" ]; then
+              echo "$notes" | gh release create "$tag" --title "$tag" --notes-file -
+            else
+              gh release create "$tag" --title "$tag" --notes ""
+            fi
+            echo "Created GitHub release for $tag"
+          done
+
+      - name: Publish to npm
+        run: pnpm exec nx release publish
+        env:
+          NPM_CONFIG_PROVENANCE: true
