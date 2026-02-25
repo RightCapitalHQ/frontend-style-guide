@@ -1,0 +1,28 @@
+{
+  "name": "@rightcapital/tsconfig",
+  "version": "1.2.16",
+  "description": "TypeScript Config for RightCapital",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
+    "directory": "packages/prettier-config"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "exports": {
+    ".": "./src/tsconfig.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {},
+  "packageManager": "pnpm@10.30.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "tsconfig": "./src/tsconfig.json"
+}

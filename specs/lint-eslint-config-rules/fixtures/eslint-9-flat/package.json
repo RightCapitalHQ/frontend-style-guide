@@ -1,0 +1,9 @@
+{
+  "name": "@rightcapital/lint-eslint-config-rules-spec-eslint-8-eslintrc",
+  "private": true,
+  "devDependencies": {
+    "@rightcapital/eslint-config": "workspace:*",
+    "@rightcapital/lint-eslint-config-rules": "workspace:*",
+    "eslint": "catalog:"
+  }
+}

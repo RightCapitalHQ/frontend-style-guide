@@ -1,0 +1,59 @@
+{
+  "name": "@rightcapital/frontend-style-guide",
+  "version": "5.0.0",
+  "private": true,
+  "description": "RightCapital's frontend style guide.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "nx run-many -t build",
+    "change": "nx release plan",
+    "check": "nx release plan:check",
+    "commit": "cz",
+    "dev": "nx watch --all -- nx run \\$NX_PROJECT_NAME:build",
+    "fix": "concurrently 'pnpm:fix:*' \"pnpm --filter './specs/*' fix\"",
+    "fix:eslint": "eslint --fix .",
+    "fix:prettier": "prettier --write --list-different .",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "concurrently 'pnpm:lint:*' \"pnpm --filter './specs/*' lint\"",
+    "lint:eslint": "eslint --max-warnings=0 .",
+    "lint:prettier": "prettier -c .",
+    "prepare": "./scripts/prepare.sh",
+    "test": "pnpm run --recursive --aggregate-output --reporter-hide-prefix test --run",
+    "test:update-snapshots": "pnpm --aggregate-output --filter './specs/*' test --run -u",
+    "typecheck": "nx run-many -t typecheck"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "20.2.0",
+    "@commitlint/config-conventional": "20.2.0",
+    "@commitlint/cz-commitlint": "20.2.0",
+    "@commitlint/types": "20.3.1",
+    "@nx/js": "22.0.2",
+    "@rightcapital/eslint-config": "workspace:*",
+    "@rightcapital/prettier-config": "workspace:*",
+    "@types/node": "24.10.4",
+    "commitizen": "4.3.1",
+    "concurrently": "9.2.1",
+    "eslint": "catalog:",
+    "eslint-plugin-eslint-plugin": "7.3.1",
+    "execa": "9.6.1",
+    "husky": "9.1.7",
+    "nx": "22.0.2",
+    "prettier": "catalog:",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "pnpm@10.30.0",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
