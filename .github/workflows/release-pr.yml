@@ -1,0 +1,38 @@
+name: Release PR
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.nx/version-plans/**'
+
+concurrency:
+  group: release-pr
+  cancel-in-progress: true
+
+jobs:
+  create-release-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
+
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+
+      - run: pnpm install
+
+      - uses: ./.github/actions/nx-release-pr
+        with:
+          branch: release
+          base: main
+          pr-title: 'chore(release): release packages'
+          token: ${{ secrets.REPO_AUTOMATION_TOKEN }}

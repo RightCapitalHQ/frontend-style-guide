@@ -1,0 +1,7 @@
+{
+  "extends": "@rightcapital/tsconfig",
+  "include": ["scripts"],
+  "compilerOptions": {
+    "outDir": "./node_modules/.cache/rightcapital/frontend-style-guide-eslint-config-scripts"
+  }
+}

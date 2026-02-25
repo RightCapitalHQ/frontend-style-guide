@@ -1,0 +1,5 @@
+name: 'renovate-auto-version-plan'
+description: 'Automatically generate Nx version plans for Renovate PRs'
+runs:
+  using: 'node24'
+  main: 'dist/index.js'

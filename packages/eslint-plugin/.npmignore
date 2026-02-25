@@ -1,0 +1,7 @@
+*
+!/lib/**
+/lib/**/*.test.js
+/lib/**/*.test.d.ts
+/lib/**/*.test.js.map
+/lib/**/*.test.d.ts.map
+/lib/helpers/test/
