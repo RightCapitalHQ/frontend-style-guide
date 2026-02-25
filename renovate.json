@@ -3,11 +3,11 @@
   "extends": ["github>RightCapitalHQ/renovate-config:library"],
   "assignees": ["frantic1048"],
   "reviewers": ["frantic1048"],
-  "commitBody": "Beachball-bump-type: patch",
+  "commitBody": "Nx-version-bump: patch",
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": false,
-    "commitBody": "Beachball-bump-type: none"
+    "commitBody": "Nx-version-bump: none"
   },
   "packageRules": [
     {
@@ -21,7 +21,7 @@
       "description": "Group all dev dependency updates together",
       "groupName": "Dev Dependencies",
       "matchDepTypes": ["devDependencies"],
-      "commitBody": "Beachball-bump-type: none",
+      "commitBody": "Nx-version-bump: none",
       "automerge": false
     },
     {
@@ -29,7 +29,7 @@
       "groupName": "Peer Dependencies (Major)",
       "matchDepTypes": ["peerDependencies"],
       "matchUpdateTypes": ["major"],
-      "commitBody": "Beachball-bump-type: major"
+      "commitBody": "Nx-version-bump: major"
     },
     {
       "description": "Mark ESLint rule and plugin updates as breaking changes",
@@ -44,13 +44,13 @@
         "^@stylistic/eslint-",
         "^eslint-import-resolver-typescript$"
       ],
-      "commitBody": "Beachball-bump-type: major"
+      "commitBody": "Nx-version-bump: major"
     },
     {
       "description": "Group ESLint core package updates together",
       "groupName": "ESLint Core",
       "matchPackageNames": ["eslint", "@eslint/core"],
-      "commitBody": "Beachball-bump-type: none",
+      "commitBody": "Nx-version-bump: none",
       "automerge": true
     },
     {

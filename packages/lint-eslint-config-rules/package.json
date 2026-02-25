@@ -26,7 +26,7 @@
     "prebuild": "pnpm run clean",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "prepack": "pnpm run build"
+    "prepack": "nx build"
   },
   "dependencies": {
     "@nodelib/fs.walk": "3.0.1",

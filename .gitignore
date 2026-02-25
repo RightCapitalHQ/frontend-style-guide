@@ -113,3 +113,8 @@ public/
 
 # build output
 /packages/*/lib
+
+# nx
+/.nx/cache
+/.nx/workspace-data
+!/.nx/version-plans/

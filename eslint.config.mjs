@@ -11,6 +11,9 @@ export default defineConfig(
      * see: https://eslint.org/docs/latest/use/configure/configuration-files#globally-ignoring-files-with-ignores
      */
     ignores: [
+      // nx cache
+      '.nx',
+
       // build output
       'packages/*/lib',
       '.github/actions/*/dist',
@@ -37,7 +40,7 @@ export default defineConfig(
       'packages/*/*.{js,cjs,mjs,ts,cts,mts}', // each package's top-level directory files
       'packages/*/scripts/*.{js,cjs,mjs,ts,cts,mts}', // each package's scripts
       'scripts/**/*.{js,cjs,mjs}',
-      '.github/actions/**/*.{js,cjs,mjs}',
+      '.github/actions/**/*.{js,cjs,mjs,ts,cts,mts}',
     ],
     extends: [
       ...eslintConfigRightcapital.configs.script,

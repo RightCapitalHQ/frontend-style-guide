@@ -19,7 +19,7 @@
     "prebuild": "pnpm run clean",
     "build": "tsc --build tsconfig.lib.json",
     "clean": "tsc --build tsconfig.lib.json --clean",
-    "prepack": "pnpm run build",
+    "prepack": "nx build",
     "test": "vitest --coverage",
     "test:ui": "vitest --ui",
     "update:eslint-docs": "pnpm run build && eslint-doc-generator && prettier --write src/rules/**/*.md"

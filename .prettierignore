@@ -1,7 +1,5 @@
-# beachball managed files
-CHANGELOG.json
+# nx release managed files
 CHANGELOG.md
-/change/
 
 # pnpm managed files
 pnpm-lock.yaml
