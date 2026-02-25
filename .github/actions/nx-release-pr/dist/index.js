@@ -22894,9 +22894,26 @@ Instead, \`yield\` should either be called with a value, or not be called at all
         await $`git config user.name ${'GitHub Actions[bot]'}`;
         await $`git checkout -B ${branch}`;
         const plans = await readVersionPlans();
-        const { projectsVersionData } = await (0, index_js_namespaceObject.releaseVersion)({
+        const { projectsVersionData, workspaceVersion, releaseGraph } = await (0, index_js_namespaceObject.releaseVersion)({
             dryRun: false,
-            verbose: false
+            verbose: false,
+            gitCommit: false,
+            gitTag: false,
+            stageChanges: false,
+            deleteVersionPlans: false
+        });
+        await (0, index_js_namespaceObject.releaseChangelog)({
+            dryRun: false,
+            verbose: false,
+            versionData: projectsVersionData,
+            version: workspaceVersion,
+            releaseGraph,
+            gitCommit: false,
+            gitTag: false,
+            stageChanges: false,
+            gitPush: false,
+            createRelease: false,
+            deleteVersionPlans: true
         });
         await $`pnpm install --no-frozen-lockfile`;
         await $`git add .`;

@@ -2,7 +2,7 @@ import { writeFile } from 'node:fs/promises';
 
 import * as core from '@actions/core';
 import { $ } from 'execa';
-import { releaseVersion } from 'nx/release/index.js';
+import { releaseChangelog, releaseVersion } from 'nx/release/index.js';
 
 import { composePrBody } from './pr-body.js';
 import { readVersionPlans } from './version-plan.js';
@@ -30,9 +30,35 @@ async function run(): Promise<void> {
   const plans = await readVersionPlans();
 
   // Run version bump via Nx programmatic API
-  const { projectsVersionData } = await releaseVersion({
+  // Explicitly disable git operations here because this action handles
+  // git staging/committing/pushing itself. These flags also bypass the
+  // Nx 22 check that rejects top-level `release.git` in nx.json when
+  // using the programmatic API (the top-level config is still needed
+  // for the `nx release` CLI used in the release workflow).
+  const { projectsVersionData, workspaceVersion, releaseGraph } =
+    await releaseVersion({
+      dryRun: false,
+      verbose: false,
+      gitCommit: false,
+      gitTag: false,
+      stageChanges: false,
+      deleteVersionPlans: false,
+    });
+
+  // Generate per-project CHANGELOG.md files from version plan descriptions.
+  // Version plans are consumed (deleted) here after changelogs are written.
+  await releaseChangelog({
     dryRun: false,
     verbose: false,
+    versionData: projectsVersionData,
+    version: workspaceVersion,
+    releaseGraph,
+    gitCommit: false,
+    gitTag: false,
+    stageChanges: false,
+    gitPush: false,
+    createRelease: false,
+    deleteVersionPlans: true,
   });
 
   // Update lock file after version bumps
