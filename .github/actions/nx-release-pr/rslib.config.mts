@@ -5,7 +5,7 @@ export default defineConfig({
     {
       autoExternal: false,
       bundle: true,
-      format: 'esm',
+      format: 'cjs',
       output: {
         distPath: { root: 'dist' },
         externals: [/^nx(\/|$)/],

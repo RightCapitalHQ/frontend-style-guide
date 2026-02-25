@@ -1,7 +1,6 @@
 {
   "name": "nx-release-pr",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "rslib build --no-dts"
   },
