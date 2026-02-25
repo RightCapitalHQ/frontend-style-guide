@@ -1,0 +1,35 @@
+name: 'nx-release-pr'
+description: 'Create or update a release PR for an Nx-managed monorepo'
+inputs:
+  branch:
+    description: 'Branch name for the release (e.g. "release" or "test-release")'
+    required: true
+  base:
+    description: 'Base branch for the PR (e.g. "main")'
+    required: true
+  pr-title:
+    description: 'Pull request title'
+    required: true
+  banner:
+    description: 'Optional markdown banner prepended to the PR body'
+    required: false
+    default: ''
+  commit-message:
+    description: 'Git commit message for the version bump commit'
+    required: false
+    default: 'chore(release): prepare release'
+  label:
+    description: 'Label to apply to the PR'
+    required: false
+    default: 'release'
+  token:
+    description: 'GitHub token for git push and PR operations'
+    required: true
+outputs:
+  pr-url:
+    description: 'URL of the created or updated PR'
+  pr-number:
+    description: 'Number of the created or updated PR'
+runs:
+  using: 'node24'
+  main: 'dist/index.js'

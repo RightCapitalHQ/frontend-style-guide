@@ -1,0 +1,76 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>RightCapitalHQ/renovate-config:library"],
+  "assignees": ["frantic1048"],
+  "reviewers": ["frantic1048"],
+  "commitBody": "Nx-version-bump: patch",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": false,
+    "commitBody": "Nx-version-bump: none"
+  },
+  "packageRules": [
+    {
+      "description": "Group all non-major dependency updates together",
+      "groupName": "Dependencies (Non-Major)",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": false
+    },
+    {
+      "description": "Group all dev dependency updates together",
+      "groupName": "Dev Dependencies",
+      "matchDepTypes": ["devDependencies"],
+      "commitBody": "Nx-version-bump: none",
+      "automerge": false
+    },
+    {
+      "description": "Mark peer dependency major updates as breaking changes",
+      "groupName": "Peer Dependencies (Major)",
+      "matchDepTypes": ["peerDependencies"],
+      "matchUpdateTypes": ["major"],
+      "commitBody": "Nx-version-bump: major"
+    },
+    {
+      "description": "Mark ESLint rule and plugin updates as breaking changes",
+      "groupName": "ESLint Rules and Plugins",
+      "matchPackagePatterns": [
+        "^eslint-config-",
+        "^eslint-plugin-",
+        "typescript-eslint",
+        "^@typescript-eslint/",
+        "^@eslint-react/",
+        "^@rushstack/eslint-patch$",
+        "^@stylistic/eslint-",
+        "^eslint-import-resolver-typescript$"
+      ],
+      "commitBody": "Nx-version-bump: major"
+    },
+    {
+      "description": "Group ESLint core package updates together",
+      "groupName": "ESLint Core",
+      "matchPackageNames": ["eslint", "@eslint/core"],
+      "commitBody": "Nx-version-bump: none",
+      "automerge": true
+    },
+    {
+      "description": "Group all non-major RightCapital package updates together",
+      "groupName": "RightCapital Packages (Non-Major)",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchPackagePrefixes": ["@rightcapital"],
+      "automerge": false
+    },
+    {
+      "description": "Skip problematic eslint-plugin-jsx-a11y 6.8.0 and 6.9.0 versions",
+      "matchPackageNames": ["eslint-plugin-jsx-a11y"],
+      "allowedVersions": "!/^6\\.(8|9)\\./"
+    },
+    {
+      "description": "Disable ESLint major updates for E2E test specs",
+      "matchFileNames": ["specs/**/package.json"],
+      "matchPackageNames": ["eslint"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    }
+  ]
+}

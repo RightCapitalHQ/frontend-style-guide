@@ -1,0 +1,9 @@
+packages:
+  - packages/*
+  - specs/**
+  - .github/actions/*
+
+catalog:
+  '@eslint/core': 1.1.0
+  eslint: 10.0.0
+  prettier: 3.7.4
