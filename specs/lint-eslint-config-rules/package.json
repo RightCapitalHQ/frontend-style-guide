@@ -1,0 +1,12 @@
+{
+  "name": "@rightcapital/lint-eslint-config-rules-specs",
+  "private": true,
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@rightcapital/lint-eslint-config-rules": "workspace:*",
+    "typescript": "5.9.3",
+    "vitest": "4.0.18"
+  }
+}

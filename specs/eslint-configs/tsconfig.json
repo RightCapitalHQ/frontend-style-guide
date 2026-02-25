@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "module": "NodeNext"
+  },
+  "include": ["src/**/*", "*.mts", "*.ts"],
+  "references": [
+    {
+      "path": "../../packages/prettier-config"
+    }
+  ]
+}
