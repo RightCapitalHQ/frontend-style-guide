@@ -1,5 +1,6 @@
 import type { ConfigObject } from '@eslint/core';
 import eslintPluginReact from '@eslint-react/eslint-plugin';
+import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
 import { eslintReactPluginNames } from '../../plugins/index.js';
@@ -9,6 +10,7 @@ import { pickPlugins } from '../../utils.js';
  */
 const config: readonly ConfigObject[] = [
   eslintPluginReact.configs.recommended,
+  eslintPluginReactHooks.configs.flat.recommended,
   {
     languageOptions: {
       globals: {
@@ -46,15 +48,6 @@ const config: readonly ConfigObject[] = [
       // https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop
       // https://eslint-react.xyz/docs/rules/no-forward-ref
       '@eslint-react/no-forward-ref': 'off',
-
-      // hooks
-      // Enforce Rules of Hooks
-      // https://github.com/facebook/react/blob/c11015ff4f610ac2924d1fc6d569a17657a404fd/packages/eslint-plugin-react-hooks/src/RulesOfHooks.js
-      'react-hooks/rules-of-hooks': 'error',
-
-      // Verify the list of the dependencies for Hooks like useEffect and similar
-      // https://github.com/facebook/react/blob/1204c789776cb01fbaf3e9f032e7e2ba85a44137/packages/eslint-plugin-react-hooks/src/ExhaustiveDeps.js
-      'react-hooks/exhaustive-deps': 'error',
 
       // MEMO: There are too many false positives with this rule.
       '@eslint-react/hooks-extra/no-direct-set-state-in-use-effect': 'off',
