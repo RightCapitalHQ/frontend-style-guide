@@ -427,8 +427,6 @@ function __webpack_require__(moduleId) {
 var __webpack_exports__ = {};
 (()=>{
     "use strict";
-    const promises_namespaceObject = require("node:fs/promises");
-    const external_node_path_namespaceObject = require("node:path");
     function isPlainObject(value) {
         if ('object' != typeof value || null === value) return false;
         const prototype = Object.getPrototypeOf(value);
@@ -1214,6 +1212,7 @@ Please set the "stdio" option to ensure that file descriptor exists.`);
             verboseInfo
         };
     };
+    const external_node_path_namespaceObject = require("node:path");
     var cross_spawn = __webpack_require__("../../../node_modules/.pnpm/cross-spawn@7.0.6/node_modules/cross-spawn/index.js");
     function pathKey(options = {}) {
         const { env = process.env, platform = process.platform } = options;
@@ -1269,7 +1268,7 @@ Please set the "stdio" option to ensure that file descriptor exists.`);
         env[pathName] = npmRunPath(options);
         return env;
     };
-    const external_node_timers_promises_namespaceObject = require("node:timers/promises");
+    const promises_namespaceObject = require("node:timers/promises");
     const getFinalError = (originalError, message, isSync)=>{
         const ErrorClass = isSync ? ExecaSyncError : ExecaError;
         const options = originalError instanceof DiscardedError ? {} : {
@@ -1741,7 +1740,7 @@ Available signal numbers: ${getAvailableSignalIntegers()}.`;
     const killOnTimeout = async ({ kill, forceKillAfterDelay, context, controllerSignal })=>{
         if (false === forceKillAfterDelay) return;
         try {
-            await (0, external_node_timers_promises_namespaceObject.setTimeout)(forceKillAfterDelay, void 0, {
+            await (0, promises_namespaceObject.setTimeout)(forceKillAfterDelay, void 0, {
                 signal: controllerSignal
             });
             if (kill('SIGKILL')) context.isForcefullyTerminated ??= true;
@@ -1950,7 +1949,7 @@ Please set this option with "pipe" instead.`;
         if (incomingMessages.length > 1) return;
         while(incomingMessages.length > 0){
             await waitForOutgoingMessages(anyProcess, ipcEmitter, wrappedMessage);
-            await external_node_timers_promises_namespaceObject.scheduler["yield"]();
+            await promises_namespaceObject.scheduler["yield"]();
             const message = await handleStrictRequest({
                 wrappedMessage: incomingMessages[0],
                 anyProcess,
@@ -2213,7 +2212,7 @@ Please set this option with "pipe" instead.`;
         if (!ipc) return void throwOnMissingParent();
         if (null === channel) return void abortOnDisconnect();
         getIpcEmitter(anyProcess, channel, isSubprocess);
-        await external_node_timers_promises_namespaceObject.scheduler["yield"]();
+        await promises_namespaceObject.scheduler["yield"]();
     };
     let cancelListening = false;
     const handleAbort = (wrappedMessage)=>{
@@ -2272,7 +2271,7 @@ Please set this option with "pipe" instead.`;
             killAfterTimeout(subprocess, timeout, context, controller)
         ];
     const killAfterTimeout = async (subprocess, timeout, context, { signal })=>{
-        await (0, external_node_timers_promises_namespaceObject.setTimeout)(timeout, void 0, {
+        await (0, promises_namespaceObject.setTimeout)(timeout, void 0, {
             signal
         });
         context.terminationReason ??= 'timeout';
@@ -5544,7 +5543,7 @@ Instead, \`yield\` should either be called with a value, or not be called at all
         await logLines(linesIterable, stream, fdNumber, verboseInfo);
     };
     const resumeStream = async (stream)=>{
-        await (0, external_node_timers_promises_namespaceObject.setImmediate)();
+        await (0, promises_namespaceObject.setImmediate)();
         if (null === stream.readableFlowing) stream.resume();
     };
     const contents_getStreamContents = async ({ stream, stream: { readableObjectMode }, iterable, fdNumber, encoding, maxBuffer, lines })=>{
@@ -6453,38 +6452,13 @@ Instead, \`yield\` should either be called with a value, or not be called at all
             message
         };
     }
-    async function getAffectedPackages() {
-        const { stdout } = await $`git diff-tree --no-commit-id --name-only -r HEAD`;
-        const files = stdout.split('\n').filter(Boolean);
-        const packages = new Set();
-        for (const file of files)if (file.startsWith('packages/')) {
-            const parts = file.split('/');
-            if (parts.length >= 2) {
-                const pkgDir = parts[1];
-                packages.add(pkgDir);
-            }
-        }
-        if (0 === packages.size) return [];
-        return Array.from(packages);
-    }
     async function generateVersionPlan({ bumpType, message }) {
-        const affectedPackages = await getAffectedPackages();
-        if ('none' === bumpType) return void console.log('Bump type is "none", skipping version plan generation');
-        if (0 === affectedPackages.length) return void console.log('No package changes detected, skipping version plan generation');
-        const planContent = `---
-${affectedPackages.map((pkg)=>`"${pkg}": ${bumpType}`).join('\n')}
----
-
-${message}
-`;
-        const versionPlansDir = '.nx/version-plans';
-        await promises_namespaceObject.mkdir(versionPlansDir, {
-            recursive: true
-        });
-        const fileName = `version-plan-${Date.now()}.md`;
-        const filePath = external_node_path_namespaceObject.join(versionPlansDir, fileName);
-        await promises_namespaceObject.writeFile(filePath, planContent);
-        console.log(`Created version plan: ${filePath}`);
+        const result = await $({
+            reject: false
+        })`pnpm exec nx release plan ${bumpType} --message ${message} --base HEAD~1`;
+        console.log(result.stdout);
+        if (result.stderr) console.error(result.stderr);
+        if (0 !== result.exitCode) throw new Error(`nx release plan failed with exit code ${String(result.exitCode)}`);
     }
     async function checkVersionPlan() {
         try {

@@ -81,7 +81,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # fetch-depth: 2 is required because the action uses
-      # `git diff-tree HEAD` (needs the parent tree) and
+      # `--base HEAD~1` for nx release plan (needs the parent commit) and
       # `git commit --amend` (loses the parent ref in a depth-1 shallow clone,
       # producing an orphan commit).
       - uses: actions/checkout@v6

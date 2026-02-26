@@ -6,8 +6,7 @@
   "commitBody": "Nx-version-bump: patch",
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": false,
-    "commitBody": "Nx-version-bump: none"
+    "automerge": false
   },
   "packageRules": [
     {
@@ -21,7 +20,6 @@
       "description": "Group all dev dependency updates together",
       "groupName": "Dev Dependencies",
       "matchDepTypes": ["devDependencies"],
-      "commitBody": "Nx-version-bump: none",
       "automerge": false
     },
     {
@@ -50,7 +48,6 @@
       "description": "Group ESLint core package updates together",
       "groupName": "ESLint Core",
       "matchPackageNames": ["eslint", "@eslint/core"],
-      "commitBody": "Nx-version-bump: none",
       "automerge": true
     },
     {

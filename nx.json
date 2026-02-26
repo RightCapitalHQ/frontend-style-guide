@@ -50,7 +50,17 @@
         "projectsRelationship": "independent"
       }
     },
-    "versionPlans": true,
+    "versionPlans": {
+      "ignorePatternsForPlanCheck": [
+        ".*ignore",
+        ".yamllint",
+        "prettier.config.*",
+        "eslint.config.*",
+        ".pnpm-store/**",
+        ".vscode/**",
+        "pnpm-lock.yaml"
+      ]
+    },
     "version": {
       "preVersionCommand": "pnpm run build"
     },

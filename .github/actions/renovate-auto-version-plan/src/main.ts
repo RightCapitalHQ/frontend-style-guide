@@ -1,6 +1,3 @@
-import * as fs from 'node:fs/promises';
-import * as path from 'node:path';
-
 import { $ } from 'execa';
 
 const bumpTypeHeader = 'Nx-version-bump: ';
@@ -36,31 +33,6 @@ async function parseBumpTypeAndMessage(): Promise<{
   return { bumpType, message };
 }
 
-async function getAffectedPackages(): Promise<string[]> {
-  // Get list of changed files in this commit
-  const { stdout } = await $`git diff-tree --no-commit-id --name-only -r HEAD`;
-  const files = stdout.split('\n').filter(Boolean);
-
-  // Map files to package names (Nx project names are the directory names)
-  const packages = new Set<string>();
-  for (const file of files) {
-    if (file.startsWith('packages/')) {
-      const parts = file.split('/');
-      if (parts.length >= 2) {
-        // Nx project name is the directory name
-        const pkgDir = parts[1];
-        packages.add(pkgDir);
-      }
-    }
-  }
-
-  if (packages.size === 0) {
-    return [];
-  }
-
-  return Array.from(packages);
-}
-
 async function generateVersionPlan({
   bumpType,
   message,
@@ -68,36 +40,24 @@ async function generateVersionPlan({
   bumpType: string;
   message: string;
 }) {
-  const affectedPackages = await getAffectedPackages();
+  // nx release plan handles:
+  // - detecting affected projects (--onlyTouched defaults to true)
+  // - mapping to release groups (e.g., eslint-config → "eslint" fixed group)
+  // - writing the version plan file in .nx/version-plans/
+  const result = await $({
+    reject: false,
+  })`pnpm exec nx release plan ${bumpType} --message ${message} --base HEAD~1`;
 
-  // Skip if bump type is 'none'
-  if (bumpType === 'none') {
-    console.log('Bump type is "none", skipping version plan generation');
-    return;
+  console.log(result.stdout);
+  if (result.stderr) {
+    console.error(result.stderr);
   }
 
-  if (affectedPackages.length === 0) {
-    console.log(
-      'No package changes detected, skipping version plan generation',
+  if (result.exitCode !== 0) {
+    throw new Error(
+      `nx release plan failed with exit code ${String(result.exitCode)}`,
     );
-    return;
   }
-
-  const planContent = `---
-${affectedPackages.map((pkg) => `"${pkg}": ${bumpType}`).join('\n')}
----
-
-${message}
-`;
-
-  const versionPlansDir = '.nx/version-plans';
-  await fs.mkdir(versionPlansDir, { recursive: true });
-
-  const fileName = `version-plan-${Date.now()}.md`;
-  const filePath = path.join(versionPlansDir, fileName);
-
-  await fs.writeFile(filePath, planContent);
-  console.log(`Created version plan: ${filePath}`);
 }
 
 async function checkVersionPlan() {
