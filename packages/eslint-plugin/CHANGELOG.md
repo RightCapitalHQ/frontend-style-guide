@@ -1,4 +1,4 @@
-# 64.0.0 (2026-02-28)
+## 64.0.0 (2026-02-28)
 
 ### 🩹 Fixes
 
@@ -18,12 +18,6 @@
 - Claude Opus 4.6
 - Jiahao Guo @frantic1048
 - Xiaoyan Li @lixiaoyan
-
-# Change Log - @rightcapital/eslint-plugin
-
-<!-- This log was last generated on Tue, 24 Feb 2026 03:38:54 GMT and should not be manually modified. -->
-
-<!-- Start content -->
 
 ## [62.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Feslint-plugin_v62.0.0) (2026-2-24)
 

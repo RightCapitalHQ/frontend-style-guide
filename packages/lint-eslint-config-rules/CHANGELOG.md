@@ -12,12 +12,6 @@
 
 - Jiahao Guo @frantic1048
 
-# Change Log - @rightcapital/lint-eslint-config-rules
-
-<!-- This log was last generated on Wed, 12 Nov 2025 10:51:07 GMT and should not be manually modified. -->
-
-<!-- Start content -->
-
 ## [2.1.1](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Flint-eslint-config-rules_v2.1.1) (2025-11-12)
 
 ### Patches

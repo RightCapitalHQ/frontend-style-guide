@@ -77,8 +77,8 @@ jobs:
 
             notes=""
             if [ -f "$changelog_file" ]; then
-              # Extract content between the first ## heading and the next one.
-              # Handles both Nx format (## X.Y.Z) and legacy format (## [X.Y.Z](url)).
+              # Extract content between the first ## heading and the next one
+              # (all versions use ## via custom changelog renderer).
               notes=$(awk '/^## /{if(found) exit; found=1; next} found{print}' "$changelog_file")
               # Trim leading/trailing blank lines
               notes=$(echo "$notes" | sed -e '/./,$!d' -e :a -e '/^\n*$/{$d;N;ba;}')

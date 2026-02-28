@@ -12,12 +12,6 @@
 
 - Jiahao Guo @frantic1048
 
-# Change Log - @rightcapital/prettier-config
-
-<!-- This log was last generated on Tue, 24 Feb 2026 07:41:20 GMT and should not be manually modified. -->
-
-<!-- Start content -->
-
 ## [8.0.0](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Fprettier-config_v8.0.0) (2026-2-24)
 
 ### Major changes

@@ -70,7 +70,10 @@
       "commitMessage": "chore(release): applying package updates"
     },
     "changelog": {
-      "projectChangelogs": { "createRelease": "github" },
+      "projectChangelogs": {
+        "renderer": "scripts/changelog-renderer.cjs",
+        "createRelease": "github"
+      },
       "workspaceChangelog": false
     },
     "releaseTag": {

@@ -8,12 +8,6 @@
 
 - Jiahao Guo @frantic1048
 
-# Change Log - @rightcapital/tsconfig
-
-<!-- This log was last generated on Mon, 09 Jun 2025 01:52:11 GMT and should not be manually modified. -->
-
-<!-- Start content -->
-
 ## [1.2.16](https://github.com/RightCapitalHQ/frontend-style-guide/tree/%40rightcapital%2Ftsconfig_v1.2.16) (2025-6-9)
 
 ### Patches
