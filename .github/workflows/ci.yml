@@ -97,6 +97,9 @@ jobs:
           cache: pnpm
       - run: pnpm install
 
+      - name: Rebuild GitHub Actions dist
+        run: pnpm exec nx run-many --targets=build --projects='tag:scope:github-action'
+
       - name: Check and generate version plan for Renovate
         uses: ./.github/actions/renovate-auto-version-plan
 

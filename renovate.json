@@ -71,6 +71,11 @@
       "matchPackageNames": ["eslint"],
       "matchUpdateTypes": ["major"],
       "enabled": false
+    },
+    {
+      "description": "Group GitHub Actions dependency updates (dist rebuild is automated in CI)",
+      "groupName": "GitHub Actions Dependencies",
+      "matchFileNames": [".github/actions/**/package.json"]
     }
   ]
 }
