@@ -3,9 +3,7 @@ name: Release PR
 on:
   push:
     branches: [main]
-    paths:
-      - '.nx/version-plans/**'
-      - '.github/actions/nx-release-pr/dist/**'
+  workflow_dispatch:
 
 concurrency:
   group: release-pr

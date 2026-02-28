@@ -69,7 +69,8 @@ async function run(): Promise<void> {
   try {
     await $`git commit -m ${commitMessage}`;
   } catch {
-    core.info('No changes to commit');
+    core.info('No version changes detected, skipping release PR.');
+    return;
   }
   await $`git push origin ${branch} --force`;
 
