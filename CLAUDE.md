@@ -28,7 +28,7 @@ pnpm run typecheck
 pnpm run dev
 
 # Create a version plan before PR (required for PRs with publishable changes)
-pnpm run change
+pnpm -w change
 
 # Check that a version plan exists (used in CI)
 pnpm run check
@@ -79,6 +79,18 @@ Compiled TypeScript outputs to `packages/*/lib/`. Source is in `packages/*/src/`
 - **Test framework**: Vitest
 - **Versioning**: Nx Release with version plans
 
+## Development Workflow
+
+1. Create a `feature/*` branch, make changes, and run `pnpm -w change` to generate a version plan
+2. Open a PR to `main` and merge after review
+3. Merge the automatically created Release PR (`release` → `main`) to publish packages to npm
+
+Additional conventions:
+
+- ESLint uses modern flat config format (`eslint.config.mjs`)
+- Conventional commits are enforced via commitlint
+- Use `pnpm exec` or `pnpm dlx` instead of `npx` for running binaries
+
 ## Nx Release
 
 Versioning uses Nx Release with version plans (markdown files in `.nx/version-plans/`).
@@ -87,12 +99,6 @@ Two release groups:
 
 - **eslint** (fixed) - `eslint-config` and `eslint-plugin` always release together at the same version
 - **other** (independent) - `prettier-config`, `tsconfig`, `lint-eslint-config-rules` release independently
-
-Release flow:
-
-1. Contributors run `pnpm run change` to create a version plan
-2. When version plans or `nx-release-pr` action dist files are pushed to `main`, the `release-pr.yml` workflow creates/updates a release PR on the `release` branch
-3. Merging the release PR (`release` → `main`) triggers `release.yml`, which creates git tags, GitHub releases from changelogs, and publishes to npm with provenance
 
 CI enforcement:
 
@@ -104,11 +110,3 @@ CI enforcement:
 - `feature/*` - Development branches for all changes (features, fixes, refactors, etc.)
 - `renovate/*` - Automated dependency update branches created by Renovate
 - `release` - Holds the Release PR content; created/updated by `release-pr.yml`, merged back into `main` to trigger a release
-
-## Workflow Requirements
-
-- Run `pnpm run change` before creating PRs to generate a version plan (stored in `.nx/version-plans/`)
-- ESLint uses modern flat config format (`eslint.config.mjs`)
-- Conventional commits are enforced via commitlint
-- Releases happen via Release PR workflow (not automatic on main)
-- Use `pnpm exec` or `pnpm dlx` instead of `npx` for running binaries

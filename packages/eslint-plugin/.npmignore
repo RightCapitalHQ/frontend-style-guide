@@ -1,5 +1,7 @@
 *
 !/lib/**
+!/LICENSE
+!/README.md
 /lib/**/*.test.js
 /lib/**/*.test.d.ts
 /lib/**/*.test.js.map
