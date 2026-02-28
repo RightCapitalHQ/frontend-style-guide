@@ -6,7 +6,8 @@
   "commitBody": "Nx-version-bump: patch",
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": false
+    "automerge": false,
+    "commitBody": "Nx-version-bump: none"
   },
   "packageRules": [
     {
@@ -20,7 +21,8 @@
       "description": "Group all dev dependency updates together",
       "groupName": "Dev Dependencies",
       "matchDepTypes": ["devDependencies"],
-      "automerge": false
+      "automerge": false,
+      "commitBody": "Nx-version-bump: none"
     },
     {
       "description": "Mark peer dependency major updates as breaking changes",
@@ -48,7 +50,8 @@
       "description": "Group ESLint core package updates together",
       "groupName": "ESLint Core",
       "matchPackageNames": ["eslint", "@eslint/core"],
-      "automerge": true
+      "automerge": true,
+      "commitBody": "Nx-version-bump: none"
     },
     {
       "description": "Group all non-major RightCapital package updates together",

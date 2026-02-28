@@ -63,17 +63,6 @@ async function generateVersionPlan({
   }
 }
 
-async function checkVersionPlan() {
-  try {
-    const result = await $({
-      reject: false,
-    })`pnpm exec nx release plan:check --base ${baseRef}`;
-    return result.exitCode === 0;
-  } catch {
-    return false;
-  }
-}
-
 async function updateRenovateCommit({ message }: { message: string }) {
   await $`git add .`;
   await $`git commit --amend -m ${message}`;
@@ -81,35 +70,33 @@ async function updateRenovateCommit({ message }: { message: string }) {
 }
 
 async function main() {
-  const hasVersionPlan = await checkVersionPlan();
-
   await configureGitUser();
   const bumpTypeAndMessage = await parseBumpTypeAndMessage();
 
-  // do nothing if we cannot find the bump type from the Renovate commit
-  // otherwise, we will later try to generate a version plan
-  // and trim `bumpTypeHeader` from the commit message
+  // No header = commit already processed by a previous run. Nothing to do.
   if (!bumpTypeAndMessage) {
-    if (!hasVersionPlan) {
-      console.log(`Version plan is missing, and auto generating failed.
-\tCannot find ${bumpTypeHeader} in the commit message`);
-      process.exitCode = 1;
-      return;
-    }
-    console.log(`Everything is ok, nothing to do.`);
+    console.log('Bump type header already processed.');
     process.exitCode = 0;
     return;
   }
 
   const { bumpType, message } = bumpTypeAndMessage;
-  if (!hasVersionPlan) {
-    await generateVersionPlan({ bumpType, message });
-  }
-  await updateRenovateCommit({ message });
 
-  if (!hasVersionPlan) {
+  if (bumpType === 'none') {
+    // Dev deps, lock file maintenance, ESLint core — no version plan needed.
+    // Strip header to mark as processed, then exit.
+    console.log('Bump type is "none", skipping version plan generation.');
+    await updateRenovateCommit({ message });
     process.exitCode = 1;
+    return;
   }
+
+  // Always generate a version plan for this specific change,
+  // regardless of whether other version plans already exist for the group.
+  await generateVersionPlan({ bumpType, message });
+  await updateRenovateCommit({ message });
+  // Exit 1 to signal CI re-run (commit was amended)
+  process.exitCode = 1;
 }
 
 main().catch((error: unknown) => {

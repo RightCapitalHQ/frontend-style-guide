@@ -6461,45 +6461,36 @@ Instead, \`yield\` should either be called with a value, or not be called at all
         if (result.stderr) console.error(result.stderr);
         if (0 !== result.exitCode) throw new Error(`nx release plan failed with exit code ${String(result.exitCode)}`);
     }
-    async function checkVersionPlan() {
-        try {
-            const result = await $({
-                reject: false
-            })`pnpm exec nx release plan:check --base ${baseRef}`;
-            return 0 === result.exitCode;
-        } catch  {
-            return false;
-        }
-    }
     async function updateRenovateCommit({ message }) {
         await $`git add .`;
         await $`git commit --amend -m ${message}`;
         await $`git push --force-with-lease`;
     }
     async function main() {
-        const hasVersionPlan = await checkVersionPlan();
         await configureGitUser();
         const bumpTypeAndMessage = await parseBumpTypeAndMessage();
         if (!bumpTypeAndMessage) {
-            if (!hasVersionPlan) {
-                console.log(`Version plan is missing, and auto generating failed.
-\tCannot find ${bumpTypeHeader} in the commit message`);
-                process.exitCode = 1;
-                return;
-            }
-            console.log("Everything is ok, nothing to do.");
+            console.log('Bump type header already processed.');
             process.exitCode = 0;
             return;
         }
         const { bumpType, message } = bumpTypeAndMessage;
-        if (!hasVersionPlan) await generateVersionPlan({
+        if ('none' === bumpType) {
+            console.log('Bump type is "none", skipping version plan generation.');
+            await updateRenovateCommit({
+                message
+            });
+            process.exitCode = 1;
+            return;
+        }
+        await generateVersionPlan({
             bumpType,
             message
         });
         await updateRenovateCommit({
             message
         });
-        if (!hasVersionPlan) process.exitCode = 1;
+        process.exitCode = 1;
     }
     main().catch((error)=>{
         console.error(error instanceof Error ? error.message : String(error));

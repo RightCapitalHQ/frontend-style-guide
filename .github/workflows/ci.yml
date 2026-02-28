@@ -49,7 +49,7 @@ jobs:
 
   check-version-plan:
     needs: install
-    if: github.base_ref == github.event.repository.default_branch && github.head_ref != 'release'
+    if: github.base_ref == github.event.repository.default_branch && github.head_ref != 'release' && !startsWith(github.head_ref, 'renovate/')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
