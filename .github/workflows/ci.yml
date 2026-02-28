@@ -81,7 +81,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # fetch-depth: 2 is required because the action uses
-      # `--base HEAD~1` for nx release plan (needs the parent commit) and
       # `git commit --amend` (loses the parent ref in a depth-1 shallow clone,
       # producing an orphan commit).
       - uses: actions/checkout@v6
@@ -89,6 +88,8 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 2
           token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
+      - name: Fetch base branch
+        run: git fetch origin ${{ github.base_ref }}
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:

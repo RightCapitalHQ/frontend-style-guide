@@ -1,6 +1,9 @@
 import { $ } from 'execa';
 
 const bumpTypeHeader = 'Nx-version-bump: ';
+const baseRef = process.env.GITHUB_BASE_REF
+  ? `origin/${process.env.GITHUB_BASE_REF}`
+  : 'HEAD~1';
 
 function gitHeadInfo(...args: string[]) {
   return $`git rev-list --max-count=1 --no-commit-header ${args} HEAD`;
@@ -46,7 +49,7 @@ async function generateVersionPlan({
   // - writing the version plan file in .nx/version-plans/
   const result = await $({
     reject: false,
-  })`pnpm exec nx release plan ${bumpType} --message ${message} --base HEAD~1`;
+  })`pnpm exec nx release plan ${bumpType} --message ${message} --base ${baseRef}`;
 
   console.log(result.stdout);
   if (result.stderr) {
@@ -62,7 +65,9 @@ async function generateVersionPlan({
 
 async function checkVersionPlan() {
   try {
-    const result = await $({ reject: false })`pnpm exec nx release plan:check`;
+    const result = await $({
+      reject: false,
+    })`pnpm exec nx release plan:check --base ${baseRef}`;
     return result.exitCode === 0;
   } catch {
     return false;

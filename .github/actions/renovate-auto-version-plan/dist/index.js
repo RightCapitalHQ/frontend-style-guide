@@ -6432,6 +6432,7 @@ Instead, \`yield\` should either be called with a value, or not be called at all
     const $ = createExeca(mapScriptAsync, {}, deepScriptOptions, setScriptSync);
     const { sendMessage: execa_sendMessage, getOneMessage: execa_getOneMessage, getEachMessage: execa_getEachMessage, getCancelSignal: execa_getCancelSignal } = getIpcExport();
     const bumpTypeHeader = 'Nx-version-bump: ';
+    const baseRef = process.env.GITHUB_BASE_REF ? `origin/${process.env.GITHUB_BASE_REF}` : 'HEAD~1';
     function gitHeadInfo(...args) {
         return $`git rev-list --max-count=1 --no-commit-header ${args} HEAD`;
     }
@@ -6455,7 +6456,7 @@ Instead, \`yield\` should either be called with a value, or not be called at all
     async function generateVersionPlan({ bumpType, message }) {
         const result = await $({
             reject: false
-        })`pnpm exec nx release plan ${bumpType} --message ${message} --base HEAD~1`;
+        })`pnpm exec nx release plan ${bumpType} --message ${message} --base ${baseRef}`;
         console.log(result.stdout);
         if (result.stderr) console.error(result.stderr);
         if (0 !== result.exitCode) throw new Error(`nx release plan failed with exit code ${String(result.exitCode)}`);
@@ -6464,7 +6465,7 @@ Instead, \`yield\` should either be called with a value, or not be called at all
         try {
             const result = await $({
                 reject: false
-            })`pnpm exec nx release plan:check`;
+            })`pnpm exec nx release plan:check --base ${baseRef}`;
             return 0 === result.exitCode;
         } catch  {
             return false;
