@@ -49,7 +49,7 @@ jobs:
 
   check-version-plan:
     needs: install
-    if: github.base_ref == github.event.repository.default_branch
+    if: github.base_ref == github.event.repository.default_branch && github.head_ref != 'release'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

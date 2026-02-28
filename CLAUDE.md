@@ -45,8 +45,8 @@ pnpm --filter renovate-auto-version-plan run build
 
 ### Package Structure
 
-- `packages/eslint-config` - ESLint flat config (v9+) with presets: `recommended`, `js`, `ts`, `react`, `node`, `script`
-- `packages/eslint-plugin` - Custom ESLint rules (e.g., `jsx-no-unused-expressions`, `no-explicit-type-on-function-component-identifier`)
+- `packages/eslint-config` - ESLint flat config (v9+) with presets: `recommended`, `js`, `ts`, `react`, `node`, `script`, `disableExpensiveRules`
+- `packages/eslint-plugin` - Custom ESLint rules (e.g., `jsx-no-unused-expressions`, `no-explicit-type-on-function-component-identifier`, `no-ignore-return-value-of-react-hooks`)
 - `packages/prettier-config` - Prettier configuration
 - `packages/tsconfig` - Shared TypeScript configuration
 - `packages/lint-eslint-config-rules` - CLI tool for validating ESLint config rules
@@ -91,8 +91,19 @@ Two release groups:
 Release flow:
 
 1. Contributors run `pnpm run change` to create a version plan
-2. When version plans are pushed to `main`, the `release-pr.yml` workflow creates/updates a release PR on the `release` branch
-3. Merging the release PR triggers `release.yml` which publishes to npm and creates GitHub releases
+2. When version plans or `nx-release-pr` action dist files are pushed to `main`, the `release-pr.yml` workflow creates/updates a release PR on the `release` branch
+3. Merging the release PR (`release` → `main`) triggers `release.yml`, which creates git tags, GitHub releases from changelogs, and publishes to npm with provenance
+
+CI enforcement:
+
+- The `check-version-plan` job in `ci.yml` requires a version plan on PRs to `main`, **except** for the Release PR (from the `release` branch)
+
+## Branching
+
+- `main` - Default branch; all PRs target `main`
+- `feature/*` - Development branches for all changes (features, fixes, refactors, etc.)
+- `renovate/*` - Automated dependency update branches created by Renovate
+- `release` - Holds the Release PR content; created/updated by `release-pr.yml`, merged back into `main` to trigger a release
 
 ## Workflow Requirements
 

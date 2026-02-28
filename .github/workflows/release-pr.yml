@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - '.nx/version-plans/**'
+      - '.github/actions/nx-release-pr/dist/**'
 
 concurrency:
   group: release-pr
