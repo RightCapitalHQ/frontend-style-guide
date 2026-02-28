@@ -1,3 +1,13 @@
+## 1.2.17 (2026-02-28)
+
+### 🩹 Fixes
+
+- migrate to building and releasing to nx ([310308c](https://github.com/RightCapitalHQ/frontend-style-guide/commit/310308c))
+
+### ❤️ Thank You
+
+- Jiahao Guo @frantic1048
+
 # Change Log - @rightcapital/tsconfig
 
 <!-- This log was last generated on Mon, 09 Jun 2025 01:52:11 GMT and should not be manually modified. -->
