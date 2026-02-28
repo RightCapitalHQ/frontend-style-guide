@@ -5,7 +5,7 @@
     "build": "rslib build"
   },
   "dependencies": {
-    "@actions/core": "1.11.1",
+    "@actions/core": "3.0.0",
     "execa": "9.6.0"
   },
   "devDependencies": {
