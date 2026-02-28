@@ -1,3 +1,17 @@
+## 2.1.2 (2026-02-28)
+
+### 🩹 Fixes
+
+- migrate to building and releasing to nx ([310308c](https://github.com/RightCapitalHQ/frontend-style-guide/commit/310308c))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.17
+
+### ❤️ Thank You
+
+- Jiahao Guo @frantic1048
+
 # Change Log - @rightcapital/lint-eslint-config-rules
 
 <!-- This log was last generated on Wed, 12 Nov 2025 10:51:07 GMT and should not be manually modified. -->

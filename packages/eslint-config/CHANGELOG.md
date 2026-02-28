@@ -1,3 +1,24 @@
+# 64.0.0 (2026-02-28)
+
+### 🩹 Fixes
+
+- migrate to building and releasing to nx ([310308c](https://github.com/RightCapitalHQ/frontend-style-guide/commit/310308c))
+
+### ⚠️  Breaking Changes
+
+- enable React Compiler ESLint rules via react-hooks recommended preset ([0c4d9ba](https://github.com/RightCapitalHQ/frontend-style-guide/commit/0c4d9ba))
+- fix(deps): update dependency @stylistic/eslint-plugin to v5.9.0 ([93a8197](https://github.com/RightCapitalHQ/frontend-style-guide/commit/93a8197))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.17
+
+### ❤️ Thank You
+
+- Claude Opus 4.6
+- Jiahao Guo @frantic1048
+- Xiaoyan Li @lixiaoyan
+
 # Change Log - @rightcapital/eslint-config
 
 <!-- This log was last generated on Tue, 24 Feb 2026 07:44:40 GMT and should not be manually modified. -->

@@ -1,3 +1,17 @@
+## 8.0.1 (2026-02-28)
+
+### 🩹 Fixes
+
+- migrate to building and releasing to nx ([310308c](https://github.com/RightCapitalHQ/frontend-style-guide/commit/310308c))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.17
+
+### ❤️ Thank You
+
+- Jiahao Guo @frantic1048
+
 # Change Log - @rightcapital/prettier-config
 
 <!-- This log was last generated on Tue, 24 Feb 2026 07:41:20 GMT and should not be manually modified. -->
