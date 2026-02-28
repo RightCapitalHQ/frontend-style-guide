@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@nodelib/fs.walk": "3.0.1",
-    "core-js": "3.42.0"
+    "core-js": "3.48.0"
   },
   "devDependencies": {
     "@rightcapital/tsconfig": "workspace:*",
@@ -41,7 +41,7 @@
   "peerDependencies": {
     "eslint": "9.x || 10.x"
   },
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.30.1",
   "engines": {
     "node": ">=20.0.0"
   },
