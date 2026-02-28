@@ -5,12 +5,12 @@
     "build": "rslib build"
   },
   "dependencies": {
-    "@actions/core": "1.11.1",
+    "@actions/core": "3.0.0",
     "execa": "9.6.0"
   },
   "devDependencies": {
     "@rslib/core": "0.19.6",
-    "@types/node": "22.15.17",
+    "@types/node": "24.10.13",
     "nx": "22.0.2",
     "typescript": "5.8.3"
   },
