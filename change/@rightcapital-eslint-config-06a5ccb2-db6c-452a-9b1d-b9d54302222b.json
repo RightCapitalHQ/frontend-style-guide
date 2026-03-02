@@ -1,0 +1,7 @@
+{
+  "comment": "fix: (highcharts v12) keep highcharts side effect imports grouped after package imports",
+  "type": "minor",
+  "packageName": "@rightcapital/eslint-config",
+  "email": "im@pyonpyon.today",
+  "dependentChangeType": "patch"
+}
