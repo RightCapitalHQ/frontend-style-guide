@@ -5,9 +5,27 @@ on:
     types: [closed]
     branches: [main]
 
+  workflow_call:
+    inputs:
+      prerelease:
+        required: true
+        type: boolean
+      branch_name:
+        required: true
+        type: string
+      run_number:
+        required: true
+        type: string
+      run_attempt:
+        required: true
+        type: string
+
 jobs:
   release:
-    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'release'
+    if: >-
+      github.event_name == 'pull_request'
+      && github.event.pull_request.merged == true
+      && github.event.pull_request.head.ref == 'release'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -96,3 +114,33 @@ jobs:
         run: pnpm exec nx release publish
         env:
           NPM_CONFIG_PROVENANCE: true
+
+  prerelease:
+    if: >-
+      github.event_name == 'workflow_call'
+      && inputs.prerelease
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          registry-url: https://registry.npmjs.org/
+          cache: pnpm
+      - run: pnpm install
+
+      - name: Publish prerelease (development)
+        env:
+          BRANCH_NAME: ${{ inputs.branch_name }}
+          RUN_NUMBER: ${{ inputs.run_number }}
+          RUN_ATTEMPT: ${{ inputs.run_attempt }}
+        run: |
+          preid="${BRANCH_NAME//\//-}".${RUN_NUMBER}.${RUN_ATTEMPT}
+          pnpm --filter './packages/*' exec npm --no-git-tag-version version prerelease --preid="${preid}"
+          pnpm --filter './packages/*' publish --no-git-checks --access public --tag development
