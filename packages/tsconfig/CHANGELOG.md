@@ -1,3 +1,9 @@
+## 1.2.18 (2026-03-02)
+
+### 🩹 Fixes
+
+- fix(deps): update dependencies (non-major) ([48b5a46](https://github.com/RightCapitalHQ/frontend-style-guide/commit/48b5a46))
+
 ## 1.2.17 (2026-02-28)
 
 ### 🩹 Fixes

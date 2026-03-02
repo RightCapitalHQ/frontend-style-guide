@@ -1,3 +1,13 @@
+## 8.0.2 (2026-03-02)
+
+### 🩹 Fixes
+
+- fix(deps): update dependencies (non-major) ([48b5a46](https://github.com/RightCapitalHQ/frontend-style-guide/commit/48b5a46))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.18
+
 ## 8.0.1 (2026-02-28)
 
 ### 🩹 Fixes
