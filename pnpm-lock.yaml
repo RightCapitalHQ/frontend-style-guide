@@ -197,6 +197,9 @@ importers:
       '@typescript-eslint/utils':
         specifier: 8.56.0
         version: 8.56.0(eslint@10.0.1(jiti@2.6.1))(typescript@5.9.3)
+      zod:
+        specifier: 4.3.6
+        version: 4.3.6
     devDependencies:
       '@eslint/core':
         specifier: 'catalog:'
@@ -4593,6 +4596,9 @@ packages:
   zod@4.1.13:
     resolution: {integrity: sha512-AvvthqfqrAhNH9dnfmrfKzX5upOdjUVJYFqNSlkmGf64gRaTzlPwz99IHYnVs28qYAybvAlBV+H7pn0saFY4Ig==}
 
+  zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+
 snapshots:
 
   '@actions/core@3.0.0':
@@ -5722,7 +5728,7 @@ snapshots:
       eslint: 10.0.1(jiti@2.6.1)
       ts-pattern: 5.9.0
       typescript: 5.9.3
-      zod: 4.1.13
+      zod: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -9394,3 +9400,5 @@ snapshots:
       zod: 4.1.13
 
   zod@4.1.13: {}
+
+  zod@4.3.6: {}

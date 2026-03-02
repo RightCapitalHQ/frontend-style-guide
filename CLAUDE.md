@@ -111,3 +111,4 @@ CI enforcement:
 - ESLint uses modern flat config format (`eslint.config.mjs`)
 - Conventional commits are enforced via commitlint
 - Releases happen via Release PR workflow (not automatic on main)
+- Use `pnpm exec` or `pnpm dlx` instead of `npx` for running binaries
