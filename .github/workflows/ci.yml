@@ -117,13 +117,18 @@ jobs:
         check-renovate-version-plan,
         check-workflow-files,
       ]
-    permissions:
-      id-token: write
-      contents: read
-    uses: ./.github/workflows/release.yml
-    with:
-      prerelease: true
-      branch_name: ${{ github.head_ref }}
-      run_number: ${{ github.run_number }}
-      run_attempt: ${{ github.run_attempt }}
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger prerelease workflow
+        env:
+          GH_TOKEN: ${{ secrets.REPO_AUTOMATION_TOKEN }}
+          BRANCH_NAME: ${{ github.head_ref }}
+          RUN_NUMBER: ${{ github.run_number }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+        run: |
+          gh workflow run release.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            -f prerelease=true \
+            -f "branch_name=${BRANCH_NAME}" \
+            -f "run_number=${RUN_NUMBER}" \
+            -f "run_attempt=${RUN_ATTEMPT}"
