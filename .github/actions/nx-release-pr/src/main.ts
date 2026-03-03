@@ -3,8 +3,9 @@ import { writeFile } from 'node:fs/promises';
 import * as core from '@actions/core';
 import { $ } from 'execa';
 import { releaseChangelog, releaseVersion } from 'nx/release/index.js';
+import { readCachedProjectGraph } from 'nx/src/project-graph/project-graph.js';
 
-import { composePrBody } from './pr-body.js';
+import { composePrBody, type IReleaseGroup } from './pr-body.js';
 import { readVersionPlans } from './version-plan.js';
 
 async function run(): Promise<void> {
@@ -74,8 +75,29 @@ async function run(): Promise<void> {
   }
   await $`git push origin ${branch} --force`;
 
+  // Build mapping from Nx project names to npm package names.
+  // The project graph is already cached from releaseVersion(), so this is cheap.
+  const projectGraph = readCachedProjectGraph();
+  const projectNameToNpmName: Record<string, string> = {};
+  for (const projectName of Object.keys(projectsVersionData)) {
+    projectNameToNpmName[projectName] =
+      projectGraph.nodes[projectName]?.data.metadata?.js?.packageName ??
+      projectName;
+  }
+
+  // Extract release group info (name + projects) for PR body generation
+  const releaseGroups: IReleaseGroup[] = releaseGraph.releaseGroups.map(
+    (g) => ({ name: g.name, projects: g.projects as string[] }),
+  );
+
   // Generate PR body
-  const body = composePrBody(banner, projectsVersionData, plans);
+  const body = composePrBody(
+    banner,
+    projectsVersionData,
+    plans,
+    releaseGroups,
+    projectNameToNpmName,
+  );
   await writeFile('pr-body.md', body);
 
   // Check for existing PR

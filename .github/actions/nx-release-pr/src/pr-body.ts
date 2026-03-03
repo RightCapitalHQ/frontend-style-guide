@@ -2,14 +2,55 @@ import type { VersionData } from 'nx/src/command-line/release/utils/shared.js';
 
 import type { IVersionPlan } from './version-plan.js';
 
-export function renderVersionTable(projectsVersionData: VersionData): string {
+export interface IReleaseGroup {
+  name: string;
+  projects: string[];
+}
+
+function buildGroupProjectsMap(
+  releaseGroups: IReleaseGroup[],
+): Record<string, string[]> {
+  const map: Record<string, string[]> = {};
+  for (const group of releaseGroups) {
+    map[group.name] = group.projects;
+  }
+  return map;
+}
+
+function resolveAffectedProjects(
+  bumps: Record<string, string>,
+  groupProjectsMap: Record<string, string[]>,
+): string[] {
+  const projects: string[] = [];
+  for (const key of Object.keys(bumps)) {
+    const groupProjects = groupProjectsMap[key];
+    if (groupProjects) {
+      projects.push(...groupProjects);
+    } else {
+      projects.push(key);
+    }
+  }
+  return projects;
+}
+
+function formatPackageTags(
+  projects: string[],
+  npmNameMap: Record<string, string>,
+): string {
+  return projects.map((p) => `\`${npmNameMap[p] ?? p}\``).join(', ');
+}
+
+export function renderVersionTable(
+  projectsVersionData: VersionData,
+  npmNameMap: Record<string, string>,
+): string {
   const rows = Object.entries(projectsVersionData)
     .filter(
       ([, data]) => data.newVersion && data.newVersion !== data.currentVersion,
     )
     .map(
       ([name, data]) =>
-        `| \`${name}\` | \`${data.currentVersion}\` | \`${data.newVersion}\` |`,
+        `| \`${npmNameMap[name] ?? name}\` | \`${data.currentVersion}\` | \`${data.newVersion}\` |`,
     );
 
   if (rows.length === 0) {
@@ -25,18 +66,30 @@ export function renderVersionTable(projectsVersionData: VersionData): string {
   return lines.join('\n');
 }
 
-export function renderChangesSection(plans: IVersionPlan[]): string {
+export function renderChangesSection(
+  plans: IVersionPlan[],
+  releaseGroups: IReleaseGroup[],
+  npmNameMap: Record<string, string>,
+): string {
+  const groupProjectsMap = buildGroupProjectsMap(releaseGroups);
+
   const breaking: string[] = [];
   const features: string[] = [];
   const fixes: string[] = [];
 
   for (const plan of plans) {
+    const tags = formatPackageTags(
+      resolveAffectedProjects(plan.bumps, groupProjectsMap),
+      npmNameMap,
+    );
+    const entry = `- ${plan.description} (${tags})`;
+
     if (plan.highestBump === 'major') {
-      breaking.push(`- ${plan.description}`);
+      breaking.push(entry);
     } else if (plan.highestBump === 'minor') {
-      features.push(`- ${plan.description}`);
+      features.push(entry);
     } else {
-      fixes.push(`- ${plan.description}`);
+      fixes.push(entry);
     }
   }
 
@@ -63,9 +116,11 @@ export function composePrBody(
   banner: string,
   projectsVersionData: VersionData,
   plans: IVersionPlan[],
+  releaseGroups: IReleaseGroup[],
+  npmNameMap: Record<string, string>,
 ): string {
-  const versionTable = renderVersionTable(projectsVersionData);
-  const changesSection = renderChangesSection(plans);
+  const versionTable = renderVersionTable(projectsVersionData, npmNameMap);
+  const changesSection = renderChangesSection(plans, releaseGroups, npmNameMap);
 
   const parts: string[] = [];
 

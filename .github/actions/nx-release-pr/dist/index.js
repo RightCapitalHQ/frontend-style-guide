@@ -21261,8 +21261,26 @@ Instead, \`yield\` should either be called with a value, or not be called at all
     const $ = createExeca(mapScriptAsync, {}, deepScriptOptions, setScriptSync);
     const { sendMessage: execa_sendMessage, getOneMessage: execa_getOneMessage, getEachMessage: execa_getEachMessage, getCancelSignal: execa_getCancelSignal } = getIpcExport();
     const index_js_namespaceObject = require("nx/release/index.js");
-    function renderVersionTable(projectsVersionData) {
-        const rows = Object.entries(projectsVersionData).filter(([, data])=>data.newVersion && data.newVersion !== data.currentVersion).map(([name, data])=>`| \`${name}\` | \`${data.currentVersion}\` | \`${data.newVersion}\` |`);
+    const project_graph_js_namespaceObject = require("nx/src/project-graph/project-graph.js");
+    function buildGroupProjectsMap(releaseGroups) {
+        const map = {};
+        for (const group of releaseGroups)map[group.name] = group.projects;
+        return map;
+    }
+    function resolveAffectedProjects(bumps, groupProjectsMap) {
+        const projects = [];
+        for (const key of Object.keys(bumps)){
+            const groupProjects = groupProjectsMap[key];
+            if (groupProjects) projects.push(...groupProjects);
+            else projects.push(key);
+        }
+        return projects;
+    }
+    function formatPackageTags(projects, npmNameMap) {
+        return projects.map((p)=>`\`${npmNameMap[p] ?? p}\``).join(', ');
+    }
+    function renderVersionTable(projectsVersionData, npmNameMap) {
+        const rows = Object.entries(projectsVersionData).filter(([, data])=>data.newVersion && data.newVersion !== data.currentVersion).map(([name, data])=>`| \`${npmNameMap[name] ?? name}\` | \`${data.currentVersion}\` | \`${data.newVersion}\` |`);
         if (0 === rows.length) return '';
         const lines = [
             '| Package | Current | New |',
@@ -21271,13 +21289,18 @@ Instead, \`yield\` should either be called with a value, or not be called at all
         ];
         return lines.join('\n');
     }
-    function renderChangesSection(plans) {
+    function renderChangesSection(plans, releaseGroups, npmNameMap) {
+        const groupProjectsMap = buildGroupProjectsMap(releaseGroups);
         const breaking = [];
         const features = [];
         const fixes = [];
-        for (const plan of plans)if ('major' === plan.highestBump) breaking.push(`- ${plan.description}`);
-        else if ('minor' === plan.highestBump) features.push(`- ${plan.description}`);
-        else fixes.push(`- ${plan.description}`);
+        for (const plan of plans){
+            const tags = formatPackageTags(resolveAffectedProjects(plan.bumps, groupProjectsMap), npmNameMap);
+            const entry = `- ${plan.description} (${tags})`;
+            if ('major' === plan.highestBump) breaking.push(entry);
+            else if ('minor' === plan.highestBump) features.push(entry);
+            else fixes.push(entry);
+        }
         if (0 === breaking.length && 0 === features.length && 0 === fixes.length) return '';
         const sections = [];
         if (breaking.length > 0) sections.push(`### Breaking Changes\n\n${breaking.join('\n')}`);
@@ -21285,9 +21308,9 @@ Instead, \`yield\` should either be called with a value, or not be called at all
         if (fixes.length > 0) sections.push(`### Fixes & Improvements\n\n${fixes.join('\n')}`);
         return `## Changes\n\n${sections.join('\n\n')}`;
     }
-    function composePrBody(banner, projectsVersionData, plans) {
-        const versionTable = renderVersionTable(projectsVersionData);
-        const changesSection = renderChangesSection(plans);
+    function composePrBody(banner, projectsVersionData, plans, releaseGroups, npmNameMap) {
+        const versionTable = renderVersionTable(projectsVersionData, npmNameMap);
+        const changesSection = renderChangesSection(plans, releaseGroups, npmNameMap);
         const parts = [];
         if (banner) {
             parts.push(banner);
@@ -21413,7 +21436,14 @@ Instead, \`yield\` should either be called with a value, or not be called at all
             return;
         }
         await $`git push origin ${branch} --force`;
-        const body = composePrBody(banner, projectsVersionData, plans);
+        const projectGraph = (0, project_graph_js_namespaceObject.readCachedProjectGraph)();
+        const projectNameToNpmName = {};
+        for (const projectName of Object.keys(projectsVersionData))projectNameToNpmName[projectName] = projectGraph.nodes[projectName]?.data.metadata?.js?.packageName ?? projectName;
+        const releaseGroups = releaseGraph.releaseGroups.map((g)=>({
+                name: g.name,
+                projects: g.projects
+            }));
+        const body = composePrBody(banner, projectsVersionData, plans, releaseGroups, projectNameToNpmName);
         await (0, promises_namespaceObject.writeFile)('pr-body.md', body);
         let prNumber = '';
         try {
