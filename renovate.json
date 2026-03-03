@@ -12,7 +12,7 @@
   "packageRules": [
     {
       "description": "Group all non-major dependency updates together",
-      "groupName": "Dependencies (Non-Major)",
+      "groupName": "Non-Major Dependencies",
       "matchUpdateTypes": ["minor", "patch"],
       "matchCurrentVersion": "!/^0/",
       "automerge": false
@@ -26,7 +26,7 @@
     },
     {
       "description": "Mark peer dependency major updates as breaking changes",
-      "groupName": "Peer Dependencies (Major)",
+      "groupName": "Major Peer Dependencies",
       "matchDepTypes": ["peerDependencies"],
       "matchUpdateTypes": ["major"],
       "commitBody": "Nx-version-bump: major"
@@ -55,7 +55,7 @@
     },
     {
       "description": "Group all non-major RightCapital package updates together",
-      "groupName": "RightCapital Packages (Non-Major)",
+      "groupName": "Non-Major RightCapital Packages",
       "matchUpdateTypes": ["minor", "patch"],
       "matchPackagePrefixes": ["@rightcapital"],
       "automerge": false
