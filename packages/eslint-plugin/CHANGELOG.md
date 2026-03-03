@@ -1,3 +1,23 @@
+## 64.1.0 (2026-03-03)
+
+### 🚀 Features
+
+- add rule `require-named-wrapped-component` ([a625db6](https://github.com/RightCapitalHQ/frontend-style-guide/commit/a625db6))
+
+### 🩹 Fixes
+
+- Add README and LICENSE for packages ([c1890d3](https://github.com/RightCapitalHQ/frontend-style-guide/commit/c1890d3))
+- fix(deps): update dependencies (non-major) ([48b5a46](https://github.com/RightCapitalHQ/frontend-style-guide/commit/48b5a46))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.18
+
+### ❤️ Thank You
+
+- Jiahao Guo @frantic1048
+- Pink Champagne @PinkChampagne17
+
 ## 64.0.0 (2026-02-28)
 
 ### 🩹 Fixes
