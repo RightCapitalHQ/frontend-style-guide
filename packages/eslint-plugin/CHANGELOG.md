@@ -1,3 +1,14 @@
+## 64.1.1 (2026-03-04)
+
+### 🩹 Fixes
+
+- docs(eslint-plugin): update auto-generated rule docs ([e3130d8](https://github.com/RightCapitalHQ/frontend-style-guide/commit/e3130d8))
+
+### ❤️ Thank You
+
+- Claude Opus 4.6
+- Pink Champagne @PinkChampagne17
+
 ## 64.1.0 (2026-03-03)
 
 ### 🚀 Features
