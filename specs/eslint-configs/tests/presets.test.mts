@@ -79,10 +79,6 @@ describe.concurrent('trimConfigPluginVersion()', () => {
       '@rightcapital:@rightcapital/eslint-plugin',
     ],
     [
-      '@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra@1.49.0',
-      '@eslint-react/hooks-extra:eslint-plugin-react-hooks-extra',
-    ],
-    [
       'rightcapital:@rightcapital/eslint-plugin@42.1.0',
       'rightcapital:@rightcapital/eslint-plugin',
     ],
