@@ -9,8 +9,9 @@ import { pickPlugins } from '../../utils.js';
  * Common rules for React, working with TypeScript.
  */
 const config: readonly ConfigObject[] = [
-  eslintPluginReact.configs.recommended,
+  eslintPluginReact.configs['recommended-type-checked'],
   eslintPluginReactHooks.configs.flat.recommended,
+  eslintPluginReact.configs['disable-conflict-eslint-plugin-react-hooks'],
   {
     languageOptions: {
       globals: {
@@ -26,12 +27,7 @@ const config: readonly ConfigObject[] = [
     ]),
     rules: {
       // naming convention
-      '@eslint-react/naming-convention/component-name': ['error', 'PascalCase'],
-      '@eslint-react/naming-convention/filename': [
-        'error',
-        { rule: 'kebab-case' },
-      ],
-      '@eslint-react/naming-convention/use-state': 'error',
+      '@eslint-react/use-state': 'error',
 
       // JSX
       '@eslint-react/no-useless-fragment': 'error',
@@ -48,12 +44,28 @@ const config: readonly ConfigObject[] = [
       // https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop
       // https://eslint-react.xyz/docs/rules/no-forward-ref
       '@eslint-react/no-forward-ref': 'off',
+      // React 19 feature, use() replaces useContext()
+      // https://react.dev/blog/2024/12/05/react-19#use
+      // https://eslint-react.xyz/docs/rules/no-use-context
+      '@eslint-react/no-use-context': 'off',
 
       // MEMO: There are too many false positives with this rule.
-      '@eslint-react/hooks-extra/no-direct-set-state-in-use-effect': 'off',
+      '@eslint-react/set-state-in-effect': 'off',
 
       // MEMO: Too opinionated thus we disable it
-      '@eslint-react/hooks-extra/no-unnecessary-use-prefix': 'off',
+      '@eslint-react/no-unnecessary-use-prefix': 'off',
+
+      // Rules moved from recommended to strict in v2, re-enabled to maintain v1 parity
+      '@eslint-react/no-unstable-context-value': 'warn',
+      '@eslint-react/no-unstable-default-props': 'warn',
+      '@eslint-react/no-unused-state': 'warn',
+      '@eslint-react/no-misused-capture-owner-stack': 'error',
+      '@eslint-react/dom/no-missing-button-type': 'warn',
+      '@eslint-react/dom/no-missing-iframe-sandbox': 'warn',
+      '@eslint-react/dom/no-unsafe-target-blank': 'warn',
+
+      // Experimental RSC rule, not applicable to our projects
+      '@eslint-react/rsc/function-definition': 'off',
 
       // A11y
       // Enforce that all elements that require alternative text have meaningful information
