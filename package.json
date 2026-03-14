@@ -44,7 +44,7 @@
     "commitizen": "4.3.1",
     "concurrently": "9.2.1",
     "eslint": "catalog:",
-    "eslint-plugin-eslint-plugin": "7.3.1",
+    "eslint-plugin-eslint-plugin": "7.3.2",
     "execa": "9.6.1",
     "husky": "9.1.7",
     "nx": "22.0.2",
