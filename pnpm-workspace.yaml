@@ -4,6 +4,6 @@ packages:
   - .github/actions/*
 
 catalog:
-  '@eslint/core': 1.1.0
-  eslint: 10.0.2
+  '@eslint/core': 1.1.1
+  eslint: 10.0.3
   prettier: 3.8.1
