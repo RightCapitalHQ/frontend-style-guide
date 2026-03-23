@@ -5,6 +5,5 @@ export type ESLintReactPluginNames =
   | '@eslint-react'
   | '@eslint-react/rsc'
   | '@eslint-react/dom'
-  | '@eslint-react/hooks-extra'
   | '@eslint-react/naming-convention'
   | '@eslint-react/web-api';

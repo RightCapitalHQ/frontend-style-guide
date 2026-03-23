@@ -9,7 +9,8 @@ import { pickPlugins } from '../../utils.js';
  * Common rules for React, working with TypeScript.
  */
 const config: readonly ConfigObject[] = [
-  eslintPluginReact.configs.recommended,
+  eslintPluginReact.configs['recommended-type-checked'],
+  eslintPluginReact.configs['disable-conflict-eslint-plugin-react-hooks'],
   eslintPluginReactHooks.configs.flat.recommended,
   {
     languageOptions: {
@@ -23,15 +24,11 @@ const config: readonly ConfigObject[] = [
       '@stylistic',
       'react-hooks',
       'jsx-a11y',
+      'unicorn',
     ]),
     rules: {
       // naming convention
-      '@eslint-react/naming-convention/component-name': ['error', 'PascalCase'],
-      '@eslint-react/naming-convention/filename': [
-        'error',
-        { rule: 'kebab-case' },
-      ],
-      '@eslint-react/naming-convention/use-state': 'error',
+      'unicorn/filename-case': ['error', { case: 'kebabCase' }],
 
       // JSX
       '@eslint-react/no-useless-fragment': 'error',
@@ -48,12 +45,27 @@ const config: readonly ConfigObject[] = [
       // https://react.dev/blog/2024/12/05/react-19#ref-as-a-prop
       // https://eslint-react.xyz/docs/rules/no-forward-ref
       '@eslint-react/no-forward-ref': 'off',
+      // React 19 feature, replaces `useContext` with `use`
+      // https://eslint-react.xyz/docs/rules/no-use-context
+      '@eslint-react/no-use-context': 'off',
 
       // MEMO: There are too many false positives with this rule.
-      '@eslint-react/hooks-extra/no-direct-set-state-in-use-effect': 'off',
+      '@eslint-react/set-state-in-effect': 'off',
 
       // MEMO: Too opinionated thus we disable it
-      '@eslint-react/hooks-extra/no-unnecessary-use-prefix': 'off',
+      '@eslint-react/no-unnecessary-use-prefix': 'off',
+
+      // Rules in strict but not in recommended, re-enabled to match our desired strictness
+      '@eslint-react/no-unstable-context-value': 'error',
+      '@eslint-react/no-unstable-default-props': 'error',
+      '@eslint-react/no-unused-state': 'error',
+      '@eslint-react/no-misused-capture-owner-stack': 'error',
+      '@eslint-react/dom/no-missing-button-type': 'error',
+      '@eslint-react/dom/no-missing-iframe-sandbox': 'error',
+      '@eslint-react/dom/no-unsafe-target-blank': 'error',
+
+      // Experimental RSC rule, not applicable to our projects
+      '@eslint-react/rsc/function-definition': 'off',
 
       // A11y
       // Enforce that all elements that require alternative text have meaningful information
