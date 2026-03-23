@@ -1,3 +1,14 @@
+## 65.0.0 (2026-03-23)
+
+### ⚠️  Breaking Changes
+
+- update @eslint-react/eslint-plugin to v3 and revise rules ([5b940f3](https://github.com/RightCapitalHQ/frontend-style-guide/commit/5b940f3))
+
+### ❤️ Thank You
+
+- Claude Opus 4.6
+- Jiahao Guo @frantic1048
+
 ## 64.1.1 (2026-03-04)
 
 ### 🩹 Fixes
