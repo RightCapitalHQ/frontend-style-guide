@@ -1,5 +1,3 @@
-/* v8 ignore else -- @preserve -- Bug with vitest coverage where it sees an else branch that doesn't exist */
-
 /*! formdata-polyfill. MIT License. Jimmy Wärting <https://jimmy.warting.se/opensource> */
 
 /*! ws. MIT License. Einar Otto Stangvik <einaros@gmail.com> */

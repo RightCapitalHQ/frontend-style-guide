@@ -40295,27 +40295,6 @@ Instead, \`yield\` should either be called with a value, or not be called at all
         return packages;
     }
     var github = __webpack_require__("../../../node_modules/.pnpm/@actions+github@6.0.0/node_modules/@actions/github/lib/github.js");
-    class RequestError extends Error {
-        name;
-        status;
-        request;
-        response;
-        constructor(message, statusCode, options){
-            super(message, {
-                cause: options.cause
-            });
-            this.name = "HttpError";
-            this.status = Number.parseInt(statusCode);
-            if (Number.isNaN(this.status)) this.status = 0;
-            /* v8 ignore else -- @preserve -- Bug with vitest coverage where it sees an else branch that doesn't exist */ if ("response" in options) this.response = options.response;
-            const requestCopy = Object.assign({}, options.request);
-            if (options.request.headers.authorization) requestCopy.headers = Object.assign({}, options.request.headers, {
-                authorization: options.request.headers.authorization.replace(/(?<! ) .*$/, " [REDACTED]")
-            });
-            requestCopy.url = requestCopy.url.replace(/\bclient_secret=\w+/g, "client_secret=[REDACTED]").replace(/\baccess_token=\w+/g, "access_token=[REDACTED]");
-            this.request = requestCopy;
-        }
-    }
     async function extractLatestNotes(changelogPath) {
         let content;
         try {
@@ -40340,7 +40319,7 @@ Instead, \`yield\` should either be called with a value, or not be called at all
             });
             return true;
         } catch (error) {
-            if (error instanceof RequestError && 404 === error.status) return false;
+            if (null != error && 'object' == typeof error && 'status' in error && 404 === error.status) return false;
             throw error;
         }
     }

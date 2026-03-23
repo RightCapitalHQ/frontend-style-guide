@@ -3,7 +3,6 @@ import { join } from 'node:path';
 
 import * as core from '@actions/core';
 import { context, getOctokit } from '@actions/github';
-import { RequestError } from '@octokit/request-error';
 
 import type { IPackageInfo } from './discover.js';
 
@@ -46,7 +45,12 @@ async function releaseExists(
   } catch (error) {
     // 404 means no release exists.
     // Re-throw anything else (auth errors, rate limits, etc.)
-    if (error instanceof RequestError && error.status === 404) {
+    if (
+      error != null &&
+      typeof error === 'object' &&
+      'status' in error &&
+      error.status === 404
+    ) {
       return false;
     }
     throw error;
