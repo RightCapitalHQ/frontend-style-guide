@@ -34228,6 +34228,22 @@ var __webpack_exports__ = {};
         if (options && false === options.trimWhitespace) return val;
         return val.trim();
     }
+    function getBooleanInput(name, options) {
+        const trueValue = [
+            'true',
+            'True',
+            'TRUE'
+        ];
+        const falseValue = [
+            'false',
+            'False',
+            'FALSE'
+        ];
+        const val = getInput(name, options);
+        if (trueValue.includes(val)) return true;
+        if (falseValue.includes(val)) return false;
+        throw new TypeError(`Input does not meet YAML 1.2 "Core Schema" specification: ${name}\nSupport boolean input list: \`true | True | TRUE | false | False | FALSE\``);
+    }
     function setOutput(name, value) {
         const filePath = process.env['GITHUB_OUTPUT'] || '';
         if (filePath) return file_command_issueFileCommand('OUTPUT', file_command_prepareKeyValueMessage(name, value));
@@ -34246,7 +34262,6 @@ var __webpack_exports__ = {};
     function core_info(message) {
         process.stdout.write(message + external_os_.EOL);
     }
-    var github = __webpack_require__("../../../node_modules/.pnpm/@actions+github@6.0.0/node_modules/@actions/github/lib/github.js");
     function isPlainObject(value) {
         if ('object' != typeof value || null === value) return false;
         const prototype = Object.getPrototypeOf(value);
@@ -40251,225 +40266,143 @@ Instead, \`yield\` should either be called with a value, or not be called at all
     createExeca(mapNode);
     const $ = createExeca(mapScriptAsync, {}, deepScriptOptions, setScriptSync);
     const { sendMessage: execa_sendMessage, getOneMessage: execa_getOneMessage, getEachMessage: execa_getEachMessage, getCancelSignal: execa_getCancelSignal } = getIpcExport();
-    const index_js_namespaceObject = require("nx/release/index.js");
-    const project_graph_js_namespaceObject = require("nx/src/project-graph/project-graph.js");
-    function buildGroupProjectsMap(releaseGroups) {
-        const map = {};
-        for (const group of releaseGroups)map[group.name] = group.projects;
-        return map;
-    }
-    function resolveAffectedProjects(bumps, groupProjectsMap) {
-        const projects = [];
-        for (const key of Object.keys(bumps)){
-            const groupProjects = groupProjectsMap[key];
-            if (groupProjects) projects.push(...groupProjects);
-            else projects.push(key);
-        }
-        return projects;
-    }
-    function formatPackageTags(projects, npmNameMap) {
-        return projects.map((p)=>`\`${npmNameMap[p] ?? p}\``).join(', ');
-    }
-    function renderVersionTable(projectsVersionData, npmNameMap) {
-        const rows = Object.entries(projectsVersionData).filter(([, data])=>data.newVersion && data.newVersion !== data.currentVersion).map(([name, data])=>`| \`${npmNameMap[name] ?? name}\` | \`${data.currentVersion}\` | \`${data.newVersion}\` |`);
-        if (0 === rows.length) return '';
-        const lines = [
-            '| Package | Current | New |',
-            '|---------|---------|-----|',
-            ...rows
-        ];
-        return lines.join('\n');
-    }
-    function renderChangesSection(plans, releaseGroups, npmNameMap) {
-        const groupProjectsMap = buildGroupProjectsMap(releaseGroups);
-        const breaking = [];
-        const features = [];
-        const fixes = [];
-        for (const plan of plans){
-            const tags = formatPackageTags(resolveAffectedProjects(plan.bumps, groupProjectsMap), npmNameMap);
-            const entry = `- ${plan.description} (${tags})`;
-            if ('major' === plan.highestBump) breaking.push(entry);
-            else if ('minor' === plan.highestBump) features.push(entry);
-            else fixes.push(entry);
-        }
-        if (0 === breaking.length && 0 === features.length && 0 === fixes.length) return '';
-        const sections = [];
-        if (breaking.length > 0) sections.push(`### Breaking Changes\n\n${breaking.join('\n')}`);
-        if (features.length > 0) sections.push(`### New Features\n\n${features.join('\n')}`);
-        if (fixes.length > 0) sections.push(`### Fixes & Improvements\n\n${fixes.join('\n')}`);
-        return `## Changes\n\n${sections.join('\n\n')}`;
-    }
-    function composePrBody(banner, projectsVersionData, plans, releaseGroups, npmNameMap) {
-        const versionTable = renderVersionTable(projectsVersionData, npmNameMap);
-        const changesSection = renderChangesSection(plans, releaseGroups, npmNameMap);
-        const parts = [];
-        if (banner) {
-            parts.push(banner);
-            parts.push('');
-        }
-        parts.push('## Release Summary');
-        parts.push('');
-        if (versionTable) parts.push(versionTable);
-        if (changesSection) parts.push(changesSection);
-        return parts.join('\n');
-    }
     const external_node_fs_promises_namespaceObject = require("node:fs/promises");
-    const BUMP_PRIORITY = {
-        major: 0,
-        minor: 1,
-        patch: 2
-    };
-    function getHighestBump(bumpValues) {
-        let highest = 'patch';
-        let highestPriority = BUMP_PRIORITY.patch;
-        for (const bump of bumpValues){
-            const priority = BUMP_PRIORITY[bump];
-            if (void 0 !== priority && priority < highestPriority) {
-                highest = bump;
-                highestPriority = priority;
-            }
-        }
-        return highest;
+    const nx_json_js_namespaceObject = require("nx/src/config/nx-json.js");
+    const project_graph_js_namespaceObject = require("nx/src/project-graph/project-graph.js");
+    async function discoverPackages() {
+        const nxJson = (0, nx_json_js_namespaceObject.readNxJson)();
+        const projectGraph = await (0, project_graph_js_namespaceObject.createProjectGraphAsync)();
+        const tagPattern = nxJson?.release?.releaseTag?.pattern ?? '{projectName}_v{version}';
+        const groups = nxJson?.release?.groups;
+        if (!groups) throw new Error('No release groups found in nx.json');
+        const projectNames = Array.from(new Set(Object.values(groups).flatMap((group)=>group.projects)));
+        const packages = await Promise.all(projectNames.map(async (projectName)=>{
+            const node = projectGraph.nodes[projectName];
+            if (!node) throw new Error(`Project "${projectName}" not found in project graph`);
+            const { root } = node.data;
+            const npmName = node.data.metadata?.js?.packageName ?? projectName;
+            const packageJsonPath = (0, external_node_path_namespaceObject.join)(root, 'package.json');
+            const packageJson = JSON.parse(await (0, external_node_fs_promises_namespaceObject.readFile)(packageJsonPath, 'utf8'));
+            const expectedTag = tagPattern.replace('{projectName}', npmName).replace('{version}', packageJson.version);
+            return {
+                projectName,
+                npmName,
+                version: packageJson.version,
+                root,
+                expectedTag
+            };
+        }));
+        return packages;
     }
-    function parseVersionPlan(content) {
-        const lines = content.split('\n');
-        let firstDelim = -1;
-        let secondDelim = -1;
-        for(let i = 0; i < lines.length; i += 1)if (lines[i]?.trim() === '---') if (-1 === firstDelim) firstDelim = i;
-        else {
-            secondDelim = i;
-            break;
+    var github = __webpack_require__("../../../node_modules/.pnpm/@actions+github@6.0.0/node_modules/@actions/github/lib/github.js");
+    class RequestError extends Error {
+        name;
+        status;
+        request;
+        response;
+        constructor(message, statusCode, options){
+            super(message, {
+                cause: options.cause
+            });
+            this.name = "HttpError";
+            this.status = Number.parseInt(statusCode);
+            if (Number.isNaN(this.status)) this.status = 0;
+            /* v8 ignore else -- @preserve -- Bug with vitest coverage where it sees an else branch that doesn't exist */ if ("response" in options) this.response = options.response;
+            const requestCopy = Object.assign({}, options.request);
+            if (options.request.headers.authorization) requestCopy.headers = Object.assign({}, options.request.headers, {
+                authorization: options.request.headers.authorization.replace(/(?<! ) .*$/, " [REDACTED]")
+            });
+            requestCopy.url = requestCopy.url.replace(/\bclient_secret=\w+/g, "client_secret=[REDACTED]").replace(/\baccess_token=\w+/g, "access_token=[REDACTED]");
+            this.request = requestCopy;
         }
-        if (-1 === firstDelim || -1 === secondDelim) return null;
-        const bumps = {};
-        const bumpValues = [];
-        for(let i = firstDelim + 1; i < secondDelim; i += 1){
-            const line = lines[i]?.trim();
-            if (line) {
-                const match = line.match(/^"?([^":]+)"?\s*:\s*(\S+)/);
-                if (match?.[1] && match[2]) {
-                    const [, pkg, bump] = match;
-                    bumps[pkg] = bump;
-                    bumpValues.push(bump);
-                }
-            }
-        }
-        const description = lines.slice(secondDelim + 1).join('\n').trim();
-        if (!description) return null;
-        return {
-            bumps,
-            description,
-            highestBump: getHighestBump(bumpValues)
-        };
     }
-    async function readVersionPlans() {
-        const dir = '.nx/version-plans';
-        let files;
+    async function extractLatestNotes(changelogPath) {
+        let content;
         try {
-            files = (await (0, external_node_fs_promises_namespaceObject.readdir)(dir)).filter((f)=>f.endsWith('.md')).sort();
+            content = await (0, external_node_fs_promises_namespaceObject.readFile)(changelogPath, 'utf8');
         } catch  {
-            return [];
+            return '';
         }
-        const contents = await Promise.all(files.map((file)=>(0, external_node_fs_promises_namespaceObject.readFile)((0, external_node_path_namespaceObject.join)(dir, file), 'utf8')));
-        return contents.map((content)=>parseVersionPlan(content)).filter((plan)=>null !== plan);
+        const lines = content.split('\n');
+        let found = false;
+        const noteLines = [];
+        for (const line of lines)if (line.startsWith('## ')) {
+            if (found) break;
+            found = true;
+        } else if (found) noteLines.push(line);
+        return noteLines.join('\n').trim();
+    }
+    async function releaseExists(octokit, tag) {
+        try {
+            await octokit.rest.repos.getReleaseByTag({
+                ...github.context.repo,
+                tag
+            });
+            return true;
+        } catch (error) {
+            if (error instanceof RequestError && 404 === error.status) return false;
+            throw error;
+        }
+    }
+    async function createGitHubReleases(packages, token, dryRun) {
+        const octokit = (0, github.getOctokit)(token);
+        for (const pkg of packages)if (dryRun) core_info(`[dry-run] Would create GitHub release for ${pkg.expectedTag}`);
+        else if (await releaseExists(octokit, pkg.expectedTag)) core_info(`GitHub release for ${pkg.expectedTag} already exists, skipping`);
+        else {
+            const changelogPath = (0, external_node_path_namespaceObject.join)(pkg.root, 'CHANGELOG.md');
+            const notes = await extractLatestNotes(changelogPath);
+            await octokit.rest.repos.createRelease({
+                ...github.context.repo,
+                tag_name: pkg.expectedTag,
+                name: pkg.expectedTag,
+                body: notes
+            });
+            core_info(`Created GitHub release for ${pkg.expectedTag}`);
+        }
+    }
+    async function getExistingTags() {
+        const { stdout } = await $`git tag --list`;
+        return new Set(stdout.split('\n').filter(Boolean));
+    }
+    async function createAndPushTags(packages, dryRun) {
+        const existingTags = await getExistingTags();
+        const tagsToCreate = packages.filter((pkg)=>!existingTags.has(pkg.expectedTag));
+        for (const pkg of packages)if (existingTags.has(pkg.expectedTag)) core_info(`Tag ${pkg.expectedTag} already exists, skipping`);
+        for (const pkg of tagsToCreate)if (dryRun) core_info(`[dry-run] Would create tag ${pkg.expectedTag}`);
+        else {
+            await $`git tag ${pkg.expectedTag}`;
+            core_info(`Created tag ${pkg.expectedTag}`);
+        }
+        if (tagsToCreate.length > 0 && !dryRun) {
+            const newTags = tagsToCreate.map((pkg)=>pkg.expectedTag);
+            await $`git push origin ${newTags}`;
+            core_info(`Pushed ${tagsToCreate.length} new tag(s)`);
+        }
+        return tagsToCreate.map((pkg)=>pkg.expectedTag);
     }
     async function run() {
-        const branch = getInput('branch', {
-            required: true
-        });
-        const base = getInput('base', {
-            required: true
-        });
-        const prTitle = getInput('pr-title', {
-            required: true
-        });
-        const banner = getInput('banner');
-        const commitMessage = getInput('commit-message') || 'chore(release): prepare release';
-        const label = getInput('label') || 'release';
         const token = getInput('token', {
             required: true
         });
         core_setSecret(token);
-        const octokit = (0, github.getOctokit)(token);
-        await $`git config user.email npm-publisher@rightcapital.com`;
-        await $`git config user.name ${'GitHub Actions[bot]'}`;
-        await $`git checkout -B ${branch}`;
-        const plans = await readVersionPlans();
-        const { projectsVersionData, workspaceVersion, releaseGraph } = await (0, index_js_namespaceObject.releaseVersion)({
-            dryRun: false,
-            verbose: false,
-            gitCommit: false,
-            gitTag: false,
-            stageChanges: false,
-            deleteVersionPlans: false
-        });
-        await (0, index_js_namespaceObject.releaseChangelog)({
-            dryRun: false,
-            verbose: false,
-            versionData: projectsVersionData,
-            version: workspaceVersion,
-            releaseGraph,
-            gitCommit: false,
-            gitTag: false,
-            stageChanges: false,
-            gitPush: false,
-            createRelease: false,
-            deleteVersionPlans: true
-        });
-        await $`pnpm install --no-frozen-lockfile`;
-        await $`git add .`;
-        try {
-            await $`git commit -m ${commitMessage}`;
-        } catch  {
-            core_info('No version changes detected, skipping release PR.');
-            return;
-        }
-        await $`git push origin ${branch} --force`;
-        const projectGraph = (0, project_graph_js_namespaceObject.readCachedProjectGraph)();
-        const projectNameToNpmName = {};
-        for (const projectName of Object.keys(projectsVersionData))projectNameToNpmName[projectName] = projectGraph.nodes[projectName]?.data.metadata?.js?.packageName ?? projectName;
-        const releaseGroups = releaseGraph.releaseGroups.map((g)=>({
-                name: g.name,
-                projects: g.projects
-            }));
-        const body = composePrBody(banner, projectsVersionData, plans, releaseGroups, projectNameToNpmName);
-        const { data: prs } = await octokit.rest.pulls.list({
-            ...github.context.repo,
-            head: `${github.context.repo.owner}:${branch}`,
-            base,
-            state: 'open'
-        });
-        let prNumber = prs[0]?.number;
-        let prUrl = '';
-        if (prNumber) {
-            await octokit.rest.pulls.update({
-                ...github.context.repo,
-                pull_number: prNumber,
-                body
-            });
-            prUrl = prs[0].html_url;
+        const publish = getBooleanInput('publish');
+        const createRelease = getBooleanInput('create-release');
+        const dryRun = getBooleanInput('dry-run');
+        const packages = await discoverPackages();
+        core_info(`Discovered ${packages.length} package(s): ${packages.map((p)=>p.npmName).join(', ')}`);
+        const newTags = await createAndPushTags(packages, dryRun);
+        setOutput('new-tags', JSON.stringify(newTags));
+        if (0 === newTags.length) core_info('No new tags created');
+        if (createRelease) await createGitHubReleases(packages, token, dryRun);
+        if (publish) if (dryRun) {
+            core_info('[dry-run] Would publish to npm');
+            setOutput('published', 'false');
         } else {
-            const { data: pr } = await octokit.rest.pulls.create({
-                ...github.context.repo,
-                base,
-                head: branch,
-                title: prTitle,
-                body
-            });
-            await octokit.rest.issues.addLabels({
-                ...github.context.repo,
-                issue_number: pr.number,
-                labels: [
-                    label
-                ]
-            });
-            prUrl = pr.html_url;
-            prNumber = pr.number;
+            await $`pnpm exec nx release publish`;
+            core_info('Published packages to npm');
+            setOutput('published', 'true');
         }
-        setOutput('pr-url', prUrl);
-        setOutput('pr-number', prNumber);
-        core_info(`PR URL: ${prUrl}`);
-        core_info(`PR Number: ${prNumber}`);
+        else setOutput('published', 'false');
     }
     run().catch((error)=>{
         setFailed(error instanceof Error ? error.message : String(error));

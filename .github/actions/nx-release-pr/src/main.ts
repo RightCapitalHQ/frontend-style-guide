@@ -1,6 +1,5 @@
-import { writeFile } from 'node:fs/promises';
-
 import * as core from '@actions/core';
+import { context, getOctokit } from '@actions/github';
 import { $ } from 'execa';
 import { releaseChangelog, releaseVersion } from 'nx/release/index.js';
 import { readCachedProjectGraph } from 'nx/src/project-graph/project-graph.js';
@@ -17,8 +16,9 @@ async function run(): Promise<void> {
     core.getInput('commit-message') || 'chore(release): prepare release';
   const label = core.getInput('label') || 'release';
   const token = core.getInput('token', { required: true });
+  core.setSecret(token);
 
-  const gh$ = $({ env: { GH_TOKEN: token } });
+  const octokit = getOctokit(token);
 
   // Configure git user
   await $`git config user.email npm-publisher@rightcapital.com`;
@@ -98,34 +98,42 @@ async function run(): Promise<void> {
     releaseGroups,
     projectNameToNpmName,
   );
-  await writeFile('pr-body.md', body);
 
   // Check for existing PR
-  let prNumber = '';
-  try {
-    const { stdout } =
-      await gh$`gh pr list --head ${branch} --json number --jq ${`.[0].number // empty`}`;
-    prNumber = stdout.trim();
-  } catch {
-    // No existing PR found
-  }
+  const { data: prs } = await octokit.rest.pulls.list({
+    ...context.repo,
+    head: `${context.repo.owner}:${branch}`,
+    base,
+    state: 'open',
+  });
+  let prNumber = prs[0]?.number;
 
   let prUrl = '';
 
   if (!prNumber) {
     // Create new PR
-    const result =
-      await gh$`gh pr create --base ${base} --head ${branch} --title ${prTitle} --body-file pr-body.md --label ${label}`;
-    prUrl = result.stdout.trim();
-    const match = prUrl.match(/\/pull\/(\d+)$/);
-    if (match?.[1]) {
-      [, prNumber] = match;
-    }
+    const { data: pr } = await octokit.rest.pulls.create({
+      ...context.repo,
+      base,
+      head: branch,
+      title: prTitle,
+      body,
+    });
+    await octokit.rest.issues.addLabels({
+      ...context.repo,
+      issue_number: pr.number,
+      labels: [label],
+    });
+    prUrl = pr.html_url;
+    prNumber = pr.number;
   } else {
     // Update existing PR
-    await gh$`gh pr edit ${prNumber} --body-file pr-body.md`;
-    const result = await gh$`gh pr view ${prNumber} --json url --jq ${'.url'}`;
-    prUrl = result.stdout.trim();
+    await octokit.rest.pulls.update({
+      ...context.repo,
+      pull_number: prNumber,
+      body,
+    });
+    prUrl = prs[0].html_url;
   }
 
   core.setOutput('pr-url', prUrl);
