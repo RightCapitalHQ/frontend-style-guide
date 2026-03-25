@@ -78,30 +78,8 @@ jobs:
   check-renovate-version-plan:
     needs: install
     if: startsWith(github.event.pull_request.head.ref, 'renovate/') && github.base_ref == github.event.repository.default_branch
-    runs-on: ubuntu-latest
-    steps:
-      # fetch-depth: 2 is required because the action uses
-      # `git commit --amend` (loses the parent ref in a depth-1 shallow clone,
-      # producing an orphan commit).
-      - uses: actions/checkout@v6
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          fetch-depth: 2
-          token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
-      - name: Fetch base branch
-        run: git fetch origin ${{ github.base_ref }}
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v6
-        with:
-          node-version-file: .node-version
-          cache: pnpm
-      - run: pnpm install
-
-      - name: Rebuild GitHub Actions dist
-        run: pnpm exec nx run-many --targets=build --projects='tag:scope:github-action'
-
-      - name: Check and generate version plan for Renovate
-        uses: ./.github/actions/renovate-auto-version-plan
+    uses: RightCapitalHQ/actions/.github/workflows/nx-release-auto-plan.yml@nx-release-auto-plan/v0.3.0
+    secrets: inherit
 
   prerelease:
     if: >-
@@ -119,9 +97,14 @@ jobs:
       ]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ secrets.RC_BOT_APP_ID }}
+          private-key: ${{ secrets.RC_BOT_PRIVATE_KEY }}
       - name: Trigger prerelease workflow
         env:
-          GH_TOKEN: ${{ secrets.REPO_AUTOMATION_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
           BRANCH_NAME: ${{ github.head_ref }}
           RUN_NUMBER: ${{ github.run_number }}
           RUN_ATTEMPT: ${{ github.run_attempt }}

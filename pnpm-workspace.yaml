@@ -1,7 +1,6 @@
 packages:
   - packages/*
   - specs/**
-  - .github/actions/*
 
 catalog:
   '@eslint/core': 1.1.1
