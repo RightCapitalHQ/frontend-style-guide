@@ -36,9 +36,6 @@ pnpm run check
 # Interactive commit with conventional commit prompts
 pnpm run commit
 
-# Build internal GitHub Actions (must be done after changing action source)
-pnpm --filter nx-release-pr run build
-pnpm --filter renovate-auto-version-plan run build
 ```
 
 ## Architecture
@@ -56,12 +53,9 @@ pnpm --filter renovate-auto-version-plan run build
 - `specs/eslint-configs` - Integration tests for ESLint configurations
 - `specs/lint-eslint-config-rules` - Tests for the lint-eslint-config-rules CLI
 
-### Internal GitHub Actions
+### Shared GitHub Actions
 
-- `.github/actions/nx-release-pr` - Creates/updates a release PR when version plans are pushed to main
-- `.github/actions/renovate-auto-version-plan` - Auto-generates Nx version plans for Renovate PRs
-
-Both are TypeScript projects built with rslib into CJS bundles (`dist/index.js`). They use `"module": "preserve"` in tsconfig and output CJS (not ESM) to avoid a TDZ error from `signal-exit`'s ESM scope hoisting.
+The `nx-release-pr`, `nx-release`, and `nx-release-auto-plan` actions are consumed from [RightCapitalHQ/actions](https://github.com/RightCapitalHQ/actions) as shared reusable actions/workflows.
 
 ### Build System
 

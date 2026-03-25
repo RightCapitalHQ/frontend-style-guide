@@ -26,31 +26,10 @@ jobs:
       github.event_name == 'pull_request'
       && github.event.pull_request.merged == true
       && github.event.pull_request.head.ref == 'release'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      id-token: write
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-          ref: main
-          token: ${{ secrets.REPO_AUTOMATION_TOKEN }}
-
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v6
-        with:
-          node-version-file: .node-version
-          registry-url: https://registry.npmjs.org/
-          cache: pnpm
-
-      - run: pnpm install
-
-      - uses: ./.github/actions/nx-release
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          NPM_CONFIG_PROVENANCE: true
+    uses: RightCapitalHQ/actions/.github/workflows/nx-release.yml@nx-release/v0.3.0
+    with:
+      publish: true
+    secrets: inherit
 
   prerelease:
     if: inputs.prerelease

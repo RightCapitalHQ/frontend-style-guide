@@ -1,6 +1,0 @@
-{
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "name": "renovate-auto-version-plan",
-  "tags": ["scope:github-action"],
-  "targets": {}
-}
