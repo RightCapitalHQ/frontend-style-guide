@@ -1,3 +1,14 @@
+## 65.0.1 (2026-03-25)
+
+### 🩹 Fixes
+
+- fix ordering of disable-conflict preset for react-hooks ([34d3207](https://github.com/RightCapitalHQ/frontend-style-guide/commit/34d3207))
+
+### ❤️ Thank You
+
+- Claude Opus 4.6
+- Jiahao Guo @frantic1048
+
 ## 65.0.0 (2026-03-23)
 
 ### ⚠️  Breaking Changes
