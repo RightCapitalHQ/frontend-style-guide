@@ -5258,16 +5258,16 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
     ],
     "react-hooks/component-hook-factories": [
-      2,
+      0,
     ],
     "react-hooks/config": [
       2,
     ],
     "react-hooks/error-boundaries": [
-      2,
+      0,
     ],
     "react-hooks/exhaustive-deps": [
-      1,
+      0,
     ],
     "react-hooks/gating": [
       2,
@@ -5276,7 +5276,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
     ],
     "react-hooks/immutability": [
-      2,
+      0,
     ],
     "react-hooks/incompatible-library": [
       1,
@@ -5285,28 +5285,28 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
     ],
     "react-hooks/purity": [
-      2,
+      0,
     ],
     "react-hooks/refs": [
-      2,
+      0,
     ],
     "react-hooks/rules-of-hooks": [
-      2,
+      0,
     ],
     "react-hooks/set-state-in-effect": [
-      2,
+      0,
     ],
     "react-hooks/set-state-in-render": [
-      2,
+      0,
     ],
     "react-hooks/static-components": [
-      2,
+      0,
     ],
     "react-hooks/unsupported-syntax": [
-      1,
+      0,
     ],
     "react-hooks/use-memo": [
-      2,
+      0,
     ],
     "require-await": [
       0,
