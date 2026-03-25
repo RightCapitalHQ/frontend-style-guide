@@ -10,8 +10,8 @@ import { pickPlugins } from '../../utils.js';
  */
 const config: readonly ConfigObject[] = [
   eslintPluginReact.configs['recommended-type-checked'],
-  eslintPluginReact.configs['disable-conflict-eslint-plugin-react-hooks'],
   eslintPluginReactHooks.configs.flat.recommended,
+  eslintPluginReact.configs['disable-conflict-eslint-plugin-react-hooks'],
   {
     languageOptions: {
       globals: {
