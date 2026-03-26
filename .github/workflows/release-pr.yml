@@ -7,7 +7,7 @@ on:
 
 jobs:
   create-release-pr:
-    uses: RightCapitalHQ/actions/.github/workflows/nx-release-pr.yml@nx-release-pr/v0.3.0
+    uses: RightCapitalHQ/actions/.github/workflows/nx-release-pr.yml@nx-release-pr/v0.4.0
     with:
       release-branch: release
       base: main
