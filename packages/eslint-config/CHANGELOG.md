@@ -1,3 +1,13 @@
+## 65.0.2 (2026-03-26)
+
+### 🩹 Fixes
+
+- fix(deps): update non-major dependencies ([ad3a9c9](https://github.com/RightCapitalHQ/frontend-style-guide/commit/ad3a9c9))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.19
+
 ## 65.0.1 (2026-03-25)
 
 ### 🩹 Fixes
