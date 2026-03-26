@@ -34,17 +34,17 @@
     {
       "description": "Mark ESLint rule and plugin updates as breaking changes",
       "groupName": "ESLint Rules and Plugins",
-      "matchPackagePatterns": [
-        "^eslint-config-",
-        "^eslint-plugin-",
-        "typescript-eslint",
-        "^@typescript-eslint/",
-        "^@eslint-react/",
-        "^@rushstack/eslint-patch$",
-        "^@stylistic/eslint-",
-        "^eslint-import-resolver-typescript$"
-      ],
-      "commitBody": "Nx-version-bump: major"
+      "commitBody": "Nx-version-bump: major",
+      "matchPackageNames": [
+        "/^eslint-config-/",
+        "/^eslint-plugin-/",
+        "/typescript-eslint/",
+        "/^@typescript-eslint//",
+        "/^@eslint-react//",
+        "/^@rushstack/eslint-patch$/",
+        "/^@stylistic/eslint-/",
+        "/^eslint-import-resolver-typescript$/"
+      ]
     },
     {
       "description": "Group ESLint core package updates together",
@@ -57,8 +57,8 @@
       "description": "Group all non-major RightCapital package updates together",
       "groupName": "Non-Major RightCapital Packages",
       "matchUpdateTypes": ["minor", "patch"],
-      "matchPackagePrefixes": ["@rightcapital"],
-      "automerge": false
+      "automerge": false,
+      "matchPackageNames": ["@rightcapital{/,}**"]
     },
     {
       "description": "Skip problematic eslint-plugin-jsx-a11y 6.8.0 and 6.9.0 versions",
