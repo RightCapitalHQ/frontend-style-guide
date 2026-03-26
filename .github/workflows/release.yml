@@ -26,7 +26,7 @@ jobs:
       github.event_name == 'pull_request'
       && github.event.pull_request.merged == true
       && github.event.pull_request.head.ref == 'release'
-    uses: RightCapitalHQ/actions/.github/workflows/nx-release.yml@nx-release/v0.4.0
+    uses: RightCapitalHQ/actions/.github/workflows/nx-release.yml@nx-release/v0.4.1
     with:
       publish: true
     secrets: inherit

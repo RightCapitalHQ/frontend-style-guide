@@ -78,7 +78,7 @@ jobs:
   check-renovate-version-plan:
     needs: install
     if: startsWith(github.event.pull_request.head.ref, 'renovate/') && github.base_ref == github.event.repository.default_branch
-    uses: RightCapitalHQ/actions/.github/workflows/nx-release-auto-plan.yml@nx-release-auto-plan/v0.4.0
+    uses: RightCapitalHQ/actions/.github/workflows/nx-release-auto-plan.yml@nx-release-auto-plan/v0.4.1
     secrets: inherit
 
   prerelease:
