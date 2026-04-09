@@ -1,3 +1,13 @@
+## 2.1.5 (2026-04-09)
+
+### 🩹 Fixes
+
+- chore(deps): update non-major dependencies ([08ca53e](https://github.com/RightCapitalHQ/frontend-style-guide/commit/08ca53e))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.20
+
 ## 2.1.4 (2026-03-26)
 
 ### 🩹 Fixes

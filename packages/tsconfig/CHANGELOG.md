@@ -1,3 +1,9 @@
+## 1.2.20 (2026-04-09)
+
+### 🩹 Fixes
+
+- chore(deps): update non-major dependencies ([08ca53e](https://github.com/RightCapitalHQ/frontend-style-guide/commit/08ca53e))
+
 ## 1.2.19 (2026-03-26)
 
 ### 🩹 Fixes
