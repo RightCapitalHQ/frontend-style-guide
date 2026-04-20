@@ -14,13 +14,7 @@ for (const dirent of specDirs) {
     const cwd = path.join(dirent.parentPath, dirent.name);
     const result = await lintESLintConfigRules(cwd);
     expect(result.usedDeprecatedRuleIds).toEqual(
-      new Set([
-        'indent-legacy',
-        'no-new-object',
-
-        // from extended configs
-        'no-buffer-constructor',
-      ]),
+      new Set(['indent-legacy', 'no-new-object']),
     );
     expect(result.usedUnknownRuleIds).toEqual(
       new Set(['unknown-rule-off', '@prefixed/unknown-rule-off']),
