@@ -79,16 +79,13 @@ const editorConfig: readonly ConfigObject[] = [
       // https://typescript-eslint.io/rules/no-non-null-assertion
       '@typescript-eslint/no-non-null-assertion': 'error',
 
+      // enforce PascalCase for interface names (core `camelcase` only bans snake_case)
+      // https://typescript-eslint.io/rules/naming-convention/
       '@typescript-eslint/naming-convention': [
         'error',
         {
-          // interface starts with `I`
           selector: 'interface',
           format: ['PascalCase'],
-          custom: {
-            regex: '^I[A-Z]',
-            match: true,
-          },
         },
       ],
 
@@ -98,6 +95,19 @@ const editorConfig: readonly ConfigObject[] = [
       // https://typescript-eslint.io/rules/no-shadow/
       'no-shadow': 'off',
       '@typescript-eslint/no-shadow': 'error',
+
+      // covered by typed-aware `@typescript-eslint/only-throw-error` from `recommendedTypeChecked`
+      // https://typescript-eslint.io/rules/only-throw-error/
+      'no-throw-literal': 'off',
+
+      // covered by `@typescript-eslint/no-array-constructor` from `typescript-eslint/recommended`
+      // https://typescript-eslint.io/rules/no-array-constructor/
+      'no-array-constructor': 'off',
+
+      // TypeScript itself catches references to undeclared variables;
+      // typescript-eslint explicitly recommends disabling `no-undef` for TS files
+      // https://typescript-eslint.io/troubleshooting/typed-linting/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+      'no-undef': 'off',
 
       // https://typescript-eslint.io/rules/no-empty-function/
       'no-empty-function': 'off',

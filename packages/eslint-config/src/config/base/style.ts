@@ -12,10 +12,6 @@ const config: readonly ConfigObject[] = [
       // require camel case names
       camelcase: ['error', { properties: 'never', ignoreDestructuring: false }],
 
-      // require function expressions to have a name
-      // https://eslint.org/docs/rules/func-names
-      'func-names': 'warn',
-
       // require an empty line between class members
       // https://eslint.style/rules/default/lines-between-class-members
       '@stylistic/lines-between-class-members': ['error', 'always'],
@@ -48,11 +44,6 @@ const config: readonly ConfigObject[] = [
           newIsCap: true,
           newIsCapExceptions: [],
           capIsNew: false,
-          capIsNewExceptions: [
-            'Immutable.Map',
-            'Immutable.Set',
-            'Immutable.List',
-          ],
         },
       ],
 
@@ -62,10 +53,6 @@ const config: readonly ConfigObject[] = [
       // disallow use of bitwise operators
       // https://eslint.org/docs/rules/no-bitwise
       'no-bitwise': 'error',
-
-      // disallow use of the continue statement
-      // https://eslint.org/docs/rules/no-continue
-      'no-continue': 'error',
 
       // disallow if as the only statement in an else block
       // https://eslint.org/docs/rules/no-lonely-if
@@ -82,9 +69,9 @@ const config: readonly ConfigObject[] = [
       // https://eslint.org/docs/latest/rules/no-object-constructor
       'no-object-constructor': 'error',
 
-      // disallow use of unary operators, ++ and --
+      // disallow use of unary operators, ++ and -- (allowed in for-loop afterthoughts)
       // https://eslint.org/docs/rules/no-plusplus
-      'no-plusplus': 'error',
+      'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
 
       // disallow certain syntax forms
       // https://eslint.org/docs/rules/no-restricted-syntax
@@ -113,13 +100,13 @@ const config: readonly ConfigObject[] = [
         },
       ],
 
-      // disallow dangling underscores in identifiers
+      // disallow dangling underscores in identifiers (allowed after `this`)
       // https://eslint.org/docs/rules/no-underscore-dangle
       'no-underscore-dangle': [
         'error',
         {
           allow: [],
-          allowAfterThis: false,
+          allowAfterThis: true,
           allowAfterSuper: false,
           enforceInMethodNames: true,
         },

@@ -12,10 +12,6 @@ const config: readonly ConfigObject[] = [
       // https://eslint.org/docs/rules/array-callback-return
       'array-callback-return': ['error', { allowImplicit: true }],
 
-      // treat var statements as if they were block scoped
-      // https://eslint.org/docs/rules/block-scoped-var
-      'block-scoped-var': 'error',
-
       // require return statements to either always or never specify values
       // https://eslint.org/docs/rules/consistent-return
       'consistent-return': 'error',
@@ -47,14 +43,6 @@ const config: readonly ConfigObject[] = [
         'anyOrder',
         { enforceForTSTypes: true },
       ],
-
-      // make sure for-in loops have an if statement
-      // https://eslint.org/docs/rules/guard-for-in
-      'guard-for-in': 'error',
-
-      // enforce a maximum number of classes per file
-      // https://eslint.org/docs/rules/max-classes-per-file
-      'max-classes-per-file': ['error', 1],
 
       // disallow the use of alert, confirm, and prompt
       // https://eslint.org/docs/rules/no-alert
@@ -117,10 +105,6 @@ const config: readonly ConfigObject[] = [
       // https://eslint.org/docs/rules/no-implied-eval
       'no-implied-eval': 'error',
 
-      // disallow usage of __iterator__ property
-      // https://eslint.org/docs/rules/no-iterator
-      'no-iterator': 'error',
-
       // disallow use of labels for anything other than loops and switches
       // https://eslint.org/docs/rules/no-labels
       'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
@@ -128,10 +112,6 @@ const config: readonly ConfigObject[] = [
       // disallow unnecessary nested blocks
       // https://eslint.org/docs/rules/no-lone-blocks
       'no-lone-blocks': 'error',
-
-      // disallow creation of functions within loops
-      // https://eslint.org/docs/rules/no-loop-func
-      'no-loop-func': 'error',
 
       // disallow use of multiline strings
       // https://eslint.org/docs/rules/no-multi-str
@@ -179,15 +159,9 @@ const config: readonly ConfigObject[] = [
             'request', // for Express requests
             'res', // for Express responses
             'response', // for Express responses
-            '$scope', // for Angular 1 scopes
-            'staticContext', // for ReactRouter context
           ],
         },
       ],
-
-      // disallow usage of __proto__ property
-      // https://eslint.org/docs/rules/no-proto
-      'no-proto': 'error',
 
       // disallow declaring the same variable more than once
       // https://eslint.org/docs/rules/no-redeclare
@@ -239,11 +213,6 @@ const config: readonly ConfigObject[] = [
         {
           property: '__defineSetter__',
           message: 'Please use Object.defineProperty instead.',
-        },
-        {
-          object: 'Math',
-          property: 'pow',
-          message: 'Use the exponentiation operator (**) instead.',
         },
       ],
 
@@ -311,10 +280,6 @@ const config: readonly ConfigObject[] = [
       // https://eslint.org/docs/rules/no-void
       'no-void': 'error',
 
-      // disallow use of the with statement
-      // https://eslint.org/docs/rules/no-with
-      'no-with': 'error',
-
       // require using Error objects as Promise rejection reasons
       // https://eslint.org/docs/rules/prefer-promise-reject-errors
       'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
@@ -330,10 +295,6 @@ const config: readonly ConfigObject[] = [
       // require use of the second argument for parseInt()
       // https://eslint.org/docs/rules/radix
       radix: 'error',
-
-      // requires to declare all vars on top of their containing scope
-      // https://eslint.org/docs/rules/vars-on-top
-      'vars-on-top': 'error',
 
       // require or disallow Yoda conditions
       // https://eslint.org/docs/rules/yoda
