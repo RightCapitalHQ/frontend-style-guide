@@ -25,7 +25,7 @@
     "update:eslint-docs": "nx build && eslint-doc-generator && pnpm run -w fix:prettier"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "8.58.1",
+    "@typescript-eslint/utils": "8.58.2",
     "zod": "4.3.6"
   },
   "devDependencies": {
@@ -33,8 +33,8 @@
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "9.6.1",
     "@types/node": "24.12.2",
-    "@typescript-eslint/parser": "8.58.1",
-    "@typescript-eslint/rule-tester": "8.58.1",
+    "@typescript-eslint/parser": "8.58.2",
+    "@typescript-eslint/rule-tester": "8.58.2",
     "@vitest/coverage-v8": "4.1.4",
     "@vitest/ui": "4.1.4",
     "eslint": "catalog:",
