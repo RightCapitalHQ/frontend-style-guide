@@ -36,9 +36,7 @@ const main = async () => {
     },
   });
 
-  const { help, version, cwd, json } = args.values as {
-    [key in keyof typeof args.values]: NonNullable<(typeof args.values)[key]>;
-  };
+  const { help, version, cwd, json } = args.values;
 
   if (help || version) {
     // MEMO: use JSON modules when it's stable to simplify this
