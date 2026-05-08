@@ -2,9 +2,6 @@
   "files": [],
   "references": [
     {
-      "path": "../eslint-plugin"
-    },
-    {
       "path": "./tsconfig.lib.json"
     },
     {
