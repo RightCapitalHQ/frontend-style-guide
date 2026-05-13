@@ -1,3 +1,10 @@
+## 68.0.0 (2026-05-13)
+
+### ⚠️  Breaking Changes
+
+- fix(deps): update eslint rules and plugins ([5736287](https://github.com/RightCapitalHQ/frontend-style-guide/commit/5736287))
+- fix(deps): update eslint rules and plugins ([e525a32](https://github.com/RightCapitalHQ/frontend-style-guide/commit/e525a32))
+
 ## 67.0.0 (2026-04-21)
 
 ### 🚀 Features
