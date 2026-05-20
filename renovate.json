@@ -71,6 +71,12 @@
       "matchPackageNames": ["eslint"],
       "matchUpdateTypes": ["major"],
       "enabled": false
+    },
+    {
+      "description": "Keep RightCapitalHQ/actions reusable workflow updates grouped separately",
+      "groupName": "RightCapital actions",
+      "matchDepNames": ["RightCapitalHQ/actions/**"],
+      "minimumReleaseAge": null
     }
   ]
 }
