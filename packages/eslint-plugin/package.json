@@ -32,15 +32,15 @@
     "@eslint/core": "catalog:",
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "9.6.1",
-    "@types/node": "24.12.2",
+    "@types/node": "24.12.4",
     "@typescript-eslint/parser": "8.59.4",
     "@typescript-eslint/rule-tester": "8.59.4",
-    "@vitest/coverage-v8": "4.1.4",
-    "@vitest/ui": "4.1.4",
+    "@vitest/coverage-v8": "4.1.7",
+    "@vitest/ui": "4.1.7",
     "eslint": "catalog:",
-    "eslint-doc-generator": "3.3.2",
+    "eslint-doc-generator": "3.6.0",
     "typescript": "5.9.3",
-    "vitest": "4.1.4"
+    "vitest": "4.1.7"
   },
   "peerDependencies": {
     "eslint": "9.x || 10.x"
