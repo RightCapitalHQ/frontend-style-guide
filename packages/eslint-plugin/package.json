@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@typescript-eslint/utils": "8.59.4",
-    "zod": "4.3.6"
+    "zod": "4.4.3"
   },
   "devDependencies": {
     "@eslint/core": "catalog:",
@@ -45,7 +45,7 @@
   "peerDependencies": {
     "eslint": "9.x || 10.x"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@10.33.4",
   "engines": {
     "node": ">=16.0.0"
   },

@@ -13,8 +13,8 @@ catalogs:
       specifier: 10.0.3
       version: 10.0.3
     prettier:
-      specifier: 3.8.1
-      version: 3.8.1
+      specifier: 3.8.3
+      version: 3.8.3
 
 importers:
 
@@ -67,7 +67,7 @@ importers:
         version: 22.6.5
       prettier:
         specifier: 'catalog:'
-        version: 3.8.1
+        version: 3.8.3
       tsx:
         specifier: 4.21.0
         version: 4.21.0
@@ -152,7 +152,7 @@ importers:
         version: 10.0.3(jiti@2.6.1)
       prettier:
         specifier: 'catalog:'
-        version: 3.8.1
+        version: 3.8.3
 
   packages/eslint-plugin:
     dependencies:
@@ -160,8 +160,8 @@ importers:
         specifier: 8.59.4
         version: 8.59.4(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)
       zod:
-        specifier: 4.3.6
-        version: 4.3.6
+        specifier: 4.4.3
+        version: 4.4.3
     devDependencies:
       '@eslint/core':
         specifier: 'catalog:'
@@ -192,7 +192,7 @@ importers:
         version: 10.0.3(jiti@2.6.1)
       eslint-doc-generator:
         specifier: 3.3.2
-        version: 3.3.2(eslint@10.0.3(jiti@2.6.1))(prettier@3.8.1)(typescript@5.9.3)
+        version: 3.3.2(eslint@10.0.3(jiti@2.6.1))(prettier@3.8.3)(typescript@5.9.3)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -229,10 +229,10 @@ importers:
     dependencies:
       prettier:
         specifier: ^3.0.0
-        version: 3.8.1
+        version: 3.8.3
       prettier-plugin-packagejson:
         specifier: 3.0.2
-        version: 3.0.2(prettier@3.8.1)
+        version: 3.0.2(prettier@3.8.3)
     devDependencies:
       '@rightcapital/tsconfig':
         specifier: workspace:*
@@ -271,7 +271,7 @@ importers:
         version: 30.3.0
       prettier:
         specifier: 'catalog:'
-        version: 3.8.1
+        version: 3.8.3
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -3567,8 +3567,8 @@ packages:
       prettier:
         optional: true
 
-  prettier@3.8.1:
-    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
+  prettier@3.8.3:
+    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4211,8 +4211,8 @@ packages:
     peerDependencies:
       zod: ^3.25.0 || ^4.0.0
 
-  zod@4.3.6:
-    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
 snapshots:
 
@@ -5293,7 +5293,7 @@ snapshots:
       eslint: 10.0.3(jiti@2.6.1)
       ts-pattern: 5.9.0
       typescript: 5.9.3
-      zod: 4.3.6
+      zod: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -6618,7 +6618,7 @@ snapshots:
     dependencies:
       eslint: 10.0.3(jiti@2.6.1)
 
-  eslint-doc-generator@3.3.2(eslint@10.0.3(jiti@2.6.1))(prettier@3.8.1)(typescript@5.9.3):
+  eslint-doc-generator@3.3.2(eslint@10.0.3(jiti@2.6.1))(prettier@3.8.3)(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 8.59.4(eslint@10.0.3(jiti@2.6.1))(typescript@5.9.3)
       ajv: 8.17.1
@@ -6637,7 +6637,7 @@ snapshots:
       table: 6.9.0
       type-fest: 5.4.4
     optionalDependencies:
-      prettier: 3.8.1
+      prettier: 3.8.3
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -6766,8 +6766,8 @@ snapshots:
       '@babel/parser': 7.29.0
       eslint: 10.0.3(jiti@2.6.1)
       hermes-parser: 0.25.1
-      zod: 4.3.6
-      zod-validation-error: 4.0.2(zod@4.3.6)
+      zod: 4.4.3
+      zod-validation-error: 4.0.2(zod@4.4.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -7863,13 +7863,13 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-packagejson@3.0.2(prettier@3.8.1):
+  prettier-plugin-packagejson@3.0.2(prettier@3.8.3):
     dependencies:
       sort-package-json: 3.6.0
     optionalDependencies:
-      prettier: 3.8.1
+      prettier: 3.8.3
 
-  prettier@3.8.1: {}
+  prettier@3.8.3: {}
 
   pretty-format@30.3.0:
     dependencies:
@@ -8543,8 +8543,8 @@ snapshots:
 
   yoctocolors@2.1.1: {}
 
-  zod-validation-error@4.0.2(zod@4.3.6):
+  zod-validation-error@4.0.2(zod@4.4.3):
     dependencies:
-      zod: 4.3.6
+      zod: 4.4.3
 
-  zod@4.3.6: {}
+  zod@4.4.3: {}
