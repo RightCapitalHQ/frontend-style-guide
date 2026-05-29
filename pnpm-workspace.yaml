@@ -3,6 +3,6 @@ packages:
   - specs/**
 
 catalog:
-  '@eslint/core': 1.1.1
-  eslint: 10.0.3
+  '@eslint/core': 1.2.1
+  eslint: 10.4.0
   prettier: 3.8.3
