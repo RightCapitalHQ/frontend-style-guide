@@ -819,7 +819,11 @@ exports[`Resolved config matches snapshot > javascript.js 1`] = `
       0,
       {
         "args": "after-used",
+        "caughtErrors": "all",
+        "ignoreClassWithStaticInitBlock": false,
         "ignoreRestSiblings": true,
+        "ignoreUsingDeclarations": false,
+        "reportUsedIgnorePattern": false,
         "vars": "all",
       },
     ],
@@ -1048,7 +1052,7 @@ exports[`Resolved config matches snapshot > javascript.js 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -982,13 +982,10 @@
+@@ -986,13 +986,10 @@
         2,
         Object {
           "withDash": false,
@@ -2099,7 +2103,11 @@ exports[`Resolved config matches snapshot > typescript.ts 1`] = `
       0,
       {
         "args": "after-used",
+        "caughtErrors": "all",
+        "ignoreClassWithStaticInitBlock": false,
         "ignoreRestSiblings": true,
+        "ignoreUsingDeclarations": false,
+        "reportUsedIgnorePattern": false,
         "vars": "all",
       },
     ],
@@ -2342,7 +2350,7 @@ exports[`Resolved config matches snapshot > typescript.ts 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -1204,13 +1204,10 @@
+@@ -1208,13 +1208,10 @@
         2,
         Object {
           "withDash": false,
@@ -5027,7 +5035,11 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       0,
       {
         "args": "after-used",
+        "caughtErrors": "all",
+        "ignoreClassWithStaticInitBlock": false,
         "ignoreRestSiblings": true,
+        "ignoreUsingDeclarations": false,
+        "reportUsedIgnorePattern": false,
         "vars": "all",
       },
     ],
@@ -5332,7 +5344,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2895,13 +2895,10 @@
+@@ -2899,13 +2899,10 @@
         2,
         Object {
           "withDash": false,
