@@ -126,7 +126,7 @@ importers:
         specifier: 16.5.0
         version: 16.5.0
       typescript:
-        specifier: 5.x
+        specifier: 5.x || 6.x
         version: 5.9.3
       typescript-eslint:
         specifier: 8.59.4
