@@ -52,7 +52,7 @@
   },
   "peerDependencies": {
     "eslint": "9.x || 10.x",
-    "typescript": "5.x"
+    "typescript": "5.x || 6.x"
   },
   "peerDependenciesMeta": {
     "typescript": {
