@@ -3562,67 +3562,51 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@typescript-eslint:@typescript-eslint/eslint-plugin",
     "@rightcapital:@rightcapital/eslint-plugin",
     "unused-imports:unused-imports",
-    "@eslint-react:eslint-plugin-react-x",
-    "@eslint-react/rsc:eslint-plugin-react-rsc",
-    "@eslint-react/dom:eslint-plugin-react-dom",
-    "@eslint-react/web-api:eslint-plugin-react-web-api",
-    "@eslint-react/naming-convention:eslint-plugin-react-naming-convention",
+    "@eslint-react:@eslint-react/eslint-plugin",
     "react-hooks:eslint-plugin-react-hooks",
     "jsx-a11y:eslint-plugin-jsx-a11y",
   ],
   "rules": {
-    "@eslint-react/component-hook-factories": [
-      2,
-    ],
-    "@eslint-react/dom/no-dangerously-set-innerhtml": [
+    "@eslint-react/dom-no-dangerously-set-innerhtml": [
       1,
     ],
-    "@eslint-react/dom/no-dangerously-set-innerhtml-with-children": [
+    "@eslint-react/dom-no-dangerously-set-innerhtml-with-children": [
       2,
     ],
-    "@eslint-react/dom/no-find-dom-node": [
+    "@eslint-react/dom-no-find-dom-node": [
       2,
     ],
-    "@eslint-react/dom/no-flush-sync": [
+    "@eslint-react/dom-no-flush-sync": [
       2,
     ],
-    "@eslint-react/dom/no-hydrate": [
+    "@eslint-react/dom-no-hydrate": [
       2,
     ],
-    "@eslint-react/dom/no-missing-button-type": [
+    "@eslint-react/dom-no-missing-button-type": [
       2,
     ],
-    "@eslint-react/dom/no-missing-iframe-sandbox": [
+    "@eslint-react/dom-no-missing-iframe-sandbox": [
       2,
     ],
-    "@eslint-react/dom/no-namespace": [
+    "@eslint-react/dom-no-render": [
       2,
     ],
-    "@eslint-react/dom/no-render": [
+    "@eslint-react/dom-no-render-return-value": [
       2,
     ],
-    "@eslint-react/dom/no-render-return-value": [
-      2,
-    ],
-    "@eslint-react/dom/no-script-url": [
+    "@eslint-react/dom-no-script-url": [
       1,
     ],
-    "@eslint-react/dom/no-string-style-prop": [
-      0,
-    ],
-    "@eslint-react/dom/no-unknown-property": [
-      0,
-    ],
-    "@eslint-react/dom/no-unsafe-iframe-sandbox": [
+    "@eslint-react/dom-no-unsafe-iframe-sandbox": [
       1,
     ],
-    "@eslint-react/dom/no-unsafe-target-blank": [
+    "@eslint-react/dom-no-unsafe-target-blank": [
       2,
     ],
-    "@eslint-react/dom/no-use-form-state": [
+    "@eslint-react/dom-no-use-form-state": [
       2,
     ],
-    "@eslint-react/dom/no-void-elements-with-children": [
+    "@eslint-react/dom-no-void-elements-with-children": [
       2,
     ],
     "@eslint-react/error-boundaries": [
@@ -3631,19 +3615,41 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/exhaustive-deps": [
       1,
     ],
-    "@eslint-react/jsx-key-before-spread": [
+    "@eslint-react/jsx-no-children-prop": [
       1,
+    ],
+    "@eslint-react/jsx-no-children-prop-with-children": [
+      2,
     ],
     "@eslint-react/jsx-no-comment-textnodes": [
       1,
     ],
-    "@eslint-react/naming-convention/context-name": [
+    "@eslint-react/jsx-no-key-after-spread": [
+      2,
+    ],
+    "@eslint-react/jsx-no-leaked-dollar": [
       1,
     ],
-    "@eslint-react/naming-convention/id-name": [
+    "@eslint-react/jsx-no-leaked-semicolon": [
       1,
     ],
-    "@eslint-react/naming-convention/ref-name": [
+    "@eslint-react/jsx-no-namespace": [
+      2,
+    ],
+    "@eslint-react/jsx-no-useless-fragment": [
+      2,
+      {
+        "allowEmptyFragment": false,
+        "allowExpressions": true,
+      },
+    ],
+    "@eslint-react/naming-convention-context-name": [
+      1,
+    ],
+    "@eslint-react/naming-convention-id-name": [
+      1,
+    ],
+    "@eslint-react/naming-convention-ref-name": [
       1,
     ],
     "@eslint-react/no-access-state-in-setstate": [
@@ -3706,9 +3712,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/no-nested-lazy-component-declarations": [
       2,
     ],
-    "@eslint-react/no-redundant-should-component-update": [
-      2,
-    ],
     "@eslint-react/no-set-state-in-component-did-mount": [
       1,
     ],
@@ -3745,17 +3748,10 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/no-use-context": [
       0,
     ],
-    "@eslint-react/no-useless-fragment": [
-      2,
-      {
-        "allowEmptyFragment": false,
-        "allowExpressions": true,
-      },
-    ],
     "@eslint-react/purity": [
       1,
     ],
-    "@eslint-react/rsc/function-definition": [
+    "@eslint-react/rsc-function-definition": [
       0,
     ],
     "@eslint-react/rules-of-hooks": [
@@ -3767,6 +3763,9 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/set-state-in-render": [
       2,
     ],
+    "@eslint-react/static-components": [
+      2,
+    ],
     "@eslint-react/unsupported-syntax": [
       2,
     ],
@@ -3776,16 +3775,19 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/use-state": [
       1,
     ],
-    "@eslint-react/web-api/no-leaked-event-listener": [
+    "@eslint-react/web-api-no-leaked-event-listener": [
       1,
     ],
-    "@eslint-react/web-api/no-leaked-interval": [
+    "@eslint-react/web-api-no-leaked-fetch": [
       1,
     ],
-    "@eslint-react/web-api/no-leaked-resize-observer": [
+    "@eslint-react/web-api-no-leaked-interval": [
       1,
     ],
-    "@eslint-react/web-api/no-leaked-timeout": [
+    "@eslint-react/web-api-no-leaked-resize-observer": [
+      1,
+    ],
+    "@eslint-react/web-api-no-leaked-timeout": [
       1,
     ],
     "@rightcapital/jsx-no-unused-expressions": [
@@ -5174,9 +5176,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "radix": [
       2,
     ],
-    "react-hooks/component-hook-factories": [
-      0,
-    ],
     "react-hooks/config": [
       2,
     ],
@@ -5190,7 +5189,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       2,
     ],
     "react-hooks/globals": [
-      2,
+      0,
     ],
     "react-hooks/immutability": [
       0,
@@ -5217,7 +5216,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
       0,
     ],
     "react-hooks/static-components": [
-      0,
+      2,
     ],
     "react-hooks/unsupported-syntax": [
       0,
@@ -5344,7 +5343,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2899,13 +2899,10 @@
+@@ -2898,13 +2898,10 @@
         2,
         Object {
           "withDash": false,

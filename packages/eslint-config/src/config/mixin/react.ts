@@ -31,7 +31,7 @@ const config: readonly ConfigObject[] = [
       'unicorn/filename-case': ['error', { case: 'kebabCase' }],
 
       // JSX
-      '@eslint-react/no-useless-fragment': 'error',
+      '@eslint-react/jsx-no-useless-fragment': 'error',
       '@rightcapital/no-explicit-type-on-function-component-identifier':
         'error',
       '@stylistic/jsx-self-closing-comp': 'error',
@@ -60,12 +60,12 @@ const config: readonly ConfigObject[] = [
       '@eslint-react/no-unstable-default-props': 'error',
       '@eslint-react/no-unused-state': 'error',
       '@eslint-react/no-misused-capture-owner-stack': 'error',
-      '@eslint-react/dom/no-missing-button-type': 'error',
-      '@eslint-react/dom/no-missing-iframe-sandbox': 'error',
-      '@eslint-react/dom/no-unsafe-target-blank': 'error',
+      '@eslint-react/dom-no-missing-button-type': 'error',
+      '@eslint-react/dom-no-missing-iframe-sandbox': 'error',
+      '@eslint-react/dom-no-unsafe-target-blank': 'error',
 
       // Experimental RSC rule, not applicable to our projects
-      '@eslint-react/rsc/function-definition': 'off',
+      '@eslint-react/rsc-function-definition': 'off',
 
       // A11y
       // Enforce that all elements that require alternative text have meaningful information
