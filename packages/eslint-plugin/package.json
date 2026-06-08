@@ -35,12 +35,12 @@
     "@types/node": "24.12.4",
     "@typescript-eslint/parser": "8.59.4",
     "@typescript-eslint/rule-tester": "8.59.4",
-    "@vitest/coverage-v8": "4.1.7",
-    "@vitest/ui": "4.1.7",
+    "@vitest/coverage-v8": "4.1.8",
+    "@vitest/ui": "4.1.8",
     "eslint": "catalog:",
     "eslint-doc-generator": "3.6.0",
     "typescript": "5.9.3",
-    "vitest": "4.1.7"
+    "vitest": "4.1.8"
   },
   "peerDependencies": {
     "eslint": "9.x || 10.x"
