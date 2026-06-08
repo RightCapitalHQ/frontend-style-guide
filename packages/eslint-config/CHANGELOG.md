@@ -1,3 +1,22 @@
+## 69.0.0 (2026-06-08)
+
+### 🩹 Fixes
+
+- chore(deps): update non-major dependencies to v10.34.1 ([4e9a2b6](https://github.com/RightCapitalHQ/frontend-style-guide/commit/4e9a2b6))
+- chore(deps): update pnpm to v11 ([58b91c0](https://github.com/RightCapitalHQ/frontend-style-guide/commit/58b91c0))
+- fix(deps): update non-major dependencies ([f8e208b](https://github.com/RightCapitalHQ/frontend-style-guide/commit/f8e208b))
+
+### ⚠️  Breaking Changes
+
+- fix(deps): update eslint rules and plugins to v8.59.4 ([3ff16a7](https://github.com/RightCapitalHQ/frontend-style-guide/commit/3ff16a7))
+- fix(deps): update eslint rules and plugins ([a8302af](https://github.com/RightCapitalHQ/frontend-style-guide/commit/a8302af))
+- fix(deps): update eslint rules and plugins ([f4e5291](https://github.com/RightCapitalHQ/frontend-style-guide/commit/f4e5291))
+- chore(deps): update peerdependency typescript to v6 ([3e76e81](https://github.com/RightCapitalHQ/frontend-style-guide/commit/3e76e81))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.21
+
 ## 68.0.0 (2026-05-13)
 
 ### ⚠️  Breaking Changes
