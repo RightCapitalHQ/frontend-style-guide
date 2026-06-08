@@ -1,3 +1,11 @@
+## 1.2.21 (2026-06-08)
+
+### 🩹 Fixes
+
+- chore(deps): update non-major dependencies to v10.34.1 ([4e9a2b6](https://github.com/RightCapitalHQ/frontend-style-guide/commit/4e9a2b6))
+- chore(deps): update pnpm to v11 ([58b91c0](https://github.com/RightCapitalHQ/frontend-style-guide/commit/58b91c0))
+- fix(deps): update non-major dependencies ([f8e208b](https://github.com/RightCapitalHQ/frontend-style-guide/commit/f8e208b))
+
 ## 1.2.20 (2026-04-09)
 
 ### 🩹 Fixes
