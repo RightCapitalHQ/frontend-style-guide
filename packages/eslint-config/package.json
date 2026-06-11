@@ -7,6 +7,10 @@
     "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
     "directory": "packages/eslint-config"
   },
+  "bugs": {
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide/issues"
+  },
+  "homepage": "https://github.com/RightCapitalHQ/frontend-style-guide/tree/main/packages/eslint-config#readme",
   "license": "MIT",
   "type": "module",
   "exports": "./lib/index.js",
