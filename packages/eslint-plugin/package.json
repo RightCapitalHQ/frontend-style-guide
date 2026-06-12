@@ -32,7 +32,7 @@
     "@eslint/core": "catalog:",
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "9.6.1",
-    "@types/node": "24.12.4",
+    "@types/node": "24.13.1",
     "@typescript-eslint/parser": "8.60.0",
     "@typescript-eslint/rule-tester": "8.60.0",
     "@vitest/coverage-v8": "4.1.8",
