@@ -55,5 +55,9 @@
   "packageManager": "pnpm@11.5.0",
   "engines": {
     "node": "^22.13.0 || >=24"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide/issues"
+  },
+  "homepage": "https://github.com/RightCapitalHQ/frontend-style-guide#readme"
 }
