@@ -2,10 +2,14 @@
   "name": "@rightcapital/prettier-config",
   "version": "8.0.5",
   "description": "Prettier Config for RightCapital",
+  "homepage": "https://github.com/RightCapitalHQ/frontend-style-guide#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
     "directory": "packages/prettier-config"
+  },
+  "bugs": {
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide/issues"
   },
   "license": "MIT",
   "type": "commonjs",
