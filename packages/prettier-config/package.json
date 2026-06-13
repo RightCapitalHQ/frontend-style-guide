@@ -1,6 +1,9 @@
 {
   "name": "@rightcapital/prettier-config",
   "version": "8.0.5",
+  "bugs": {
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide/issues"
+  },
   "description": "Prettier Config for RightCapital",
   "repository": {
     "type": "git",
