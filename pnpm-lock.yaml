@@ -13,8 +13,8 @@ catalogs:
       specifier: 10.4.1
       version: 10.4.1
     prettier:
-      specifier: 3.8.3
-      version: 3.8.3
+      specifier: 3.8.4
+      version: 3.8.4
 
 importers:
 
@@ -67,7 +67,7 @@ importers:
         version: 22.7.5
       prettier:
         specifier: 'catalog:'
-        version: 3.8.3
+        version: 3.8.4
       tsx:
         specifier: 4.22.4
         version: 4.22.4
@@ -152,7 +152,7 @@ importers:
         version: 10.4.1(jiti@2.6.1)
       prettier:
         specifier: 'catalog:'
-        version: 3.8.3
+        version: 3.8.4
 
   packages/eslint-plugin:
     dependencies:
@@ -192,7 +192,7 @@ importers:
         version: 10.4.1(jiti@2.6.1)
       eslint-doc-generator:
         specifier: 3.6.0
-        version: 3.6.0(eslint@10.4.1(jiti@2.6.1))(prettier@3.8.3)(typescript@5.9.3)
+        version: 3.6.0(eslint@10.4.1(jiti@2.6.1))(prettier@3.8.4)(typescript@5.9.3)
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -229,10 +229,10 @@ importers:
     dependencies:
       prettier:
         specifier: ^3.0.0
-        version: 3.8.3
+        version: 3.8.4
       prettier-plugin-packagejson:
         specifier: 3.0.2
-        version: 3.0.2(prettier@3.8.3)
+        version: 3.0.2(prettier@3.8.4)
     devDependencies:
       '@rightcapital/tsconfig':
         specifier: workspace:*
@@ -271,7 +271,7 @@ importers:
         version: 30.4.1
       prettier:
         specifier: 'catalog:'
-        version: 3.8.3
+        version: 3.8.4
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -3567,8 +3567,8 @@ packages:
       prettier:
         optional: true
 
-  prettier@3.8.3:
-    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
+  prettier@3.8.4:
+    resolution: {integrity: sha512-N2MylSdi48+5N/6S5j+maeHbUSIzzZ5uOcX5Hm4QpV8Dkb1HFjfAKTKX6yNPJQD9AhcT3ifHNB66tWTTJDi11Q==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6624,7 +6624,7 @@ snapshots:
     dependencies:
       eslint: 10.4.1(jiti@2.6.1)
 
-  eslint-doc-generator@3.6.0(eslint@10.4.1(jiti@2.6.1))(prettier@3.8.3)(typescript@5.9.3):
+  eslint-doc-generator@3.6.0(eslint@10.4.1(jiti@2.6.1))(prettier@3.8.4)(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 8.61.0(eslint@10.4.1(jiti@2.6.1))(typescript@5.9.3)
       ajv: 8.17.1
@@ -6643,7 +6643,7 @@ snapshots:
       table: 6.9.0
       type-fest: 5.4.4
     optionalDependencies:
-      prettier: 3.8.3
+      prettier: 3.8.4
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -7920,13 +7920,13 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier-plugin-packagejson@3.0.2(prettier@3.8.3):
+  prettier-plugin-packagejson@3.0.2(prettier@3.8.4):
     dependencies:
       sort-package-json: 3.6.0
     optionalDependencies:
-      prettier: 3.8.3
+      prettier: 3.8.4
 
-  prettier@3.8.3: {}
+  prettier@3.8.4: {}
 
   pretty-format@30.4.1:
     dependencies:
