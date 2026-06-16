@@ -16,6 +16,8 @@ catalogs:
       specifier: 3.8.4
       version: 3.8.4
 
+pnpmfileChecksum: sha256-9E1UeDgqZ/gxiWw8KNXFodEiNo0cYgJ/a7Nn78zg12k=
+
 importers:
 
   .:

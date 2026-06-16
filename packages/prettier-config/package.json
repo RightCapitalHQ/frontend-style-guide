@@ -2,12 +2,22 @@
   "name": "@rightcapital/prettier-config",
   "version": "8.0.5",
   "description": "Prettier Config for RightCapital",
+  "keywords": [
+    "prettier",
+    "prettier-config",
+    "rightcapital"
+  ],
+  "homepage": "https://github.com/RightCapitalHQ/frontend-style-guide/tree/main/packages/prettier-config#readme",
+  "bugs": {
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
     "directory": "packages/prettier-config"
   },
   "license": "MIT",
+  "author": "RightCapital <npm-publisher@rightcapital.com>",
   "type": "commonjs",
   "exports": "./lib/index.js",
   "main": "./lib/index.js",

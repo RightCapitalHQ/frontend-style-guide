@@ -2,12 +2,22 @@
   "name": "@rightcapital/eslint-config",
   "version": "69.0.0",
   "description": "ESLint Config for RightCapital",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "rightcapital"
+  ],
+  "homepage": "https://github.com/RightCapitalHQ/frontend-style-guide/tree/main/packages/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
     "directory": "packages/eslint-config"
   },
   "license": "MIT",
+  "author": "RightCapital <npm-publisher@rightcapital.com>",
   "type": "module",
   "exports": "./lib/index.js",
   "main": "./lib/index.js",
