@@ -42,7 +42,7 @@
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "9.6.1",
     "@types/node": "24.13.1",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "peerDependencies": {
     "eslint": "9.x || 10.x"
