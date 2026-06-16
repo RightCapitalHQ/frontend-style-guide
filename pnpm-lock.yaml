@@ -144,6 +144,9 @@ importers:
       '@types/eslint-plugin-jsx-a11y':
         specifier: 6.10.1
         version: 6.10.1(jiti@2.6.1)
+      '@types/node':
+        specifier: 24.13.1
+        version: 24.13.1
       '@types/semver':
         specifier: 7.7.1
         version: 7.7.1
@@ -237,6 +240,9 @@ importers:
       '@rightcapital/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
+      '@types/node':
+        specifier: 24.13.1
+        version: 24.13.1
       typescript:
         specifier: 6.0.3
         version: 6.0.3

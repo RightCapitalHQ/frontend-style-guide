@@ -2,7 +2,8 @@
   "compilerOptions": {
     "jsx": "preserve",
     "esModuleInterop": true,
-    "module": "NodeNext"
+    "module": "NodeNext",
+    "types": ["node", "react"]
   },
   "include": ["src/**/*", "*.mts", "*.ts"],
   "references": [

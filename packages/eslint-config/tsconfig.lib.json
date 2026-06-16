@@ -2,7 +2,8 @@
   "extends": "@rightcapital/tsconfig",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "types": ["node"]
   },
   "include": ["src"],
   "references": [
