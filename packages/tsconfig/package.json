@@ -2,12 +2,22 @@
   "name": "@rightcapital/tsconfig",
   "version": "1.2.21",
   "description": "TypeScript Config for RightCapital",
+  "keywords": [
+    "typescript",
+    "tsconfig",
+    "rightcapital"
+  ],
+  "homepage": "https://github.com/RightCapitalHQ/frontend-style-guide/tree/main/packages/tsconfig#readme",
+  "bugs": {
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
-    "directory": "packages/prettier-config"
+    "directory": "packages/tsconfig"
   },
   "license": "MIT",
+  "author": "RightCapital <npm-publisher@rightcapital.com>",
   "type": "commonjs",
   "exports": {
     ".": "./src/tsconfig.json",
