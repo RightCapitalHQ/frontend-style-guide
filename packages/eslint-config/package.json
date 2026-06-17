@@ -33,7 +33,7 @@
     "prepack": "nx build"
   },
   "dependencies": {
-    "@eslint-react/eslint-plugin": "5.8.16",
+    "@eslint-react/eslint-plugin": "5.8.17",
     "@rightcapital/eslint-plugin": "workspace:*",
     "@stylistic/eslint-plugin": "5.10.0",
     "@typescript-eslint/parser": "8.61.0",
