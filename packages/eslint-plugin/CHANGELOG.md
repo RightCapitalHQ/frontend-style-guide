@@ -1,3 +1,20 @@
+## 70.0.0 (2026-06-19)
+
+### 🩹 Fixes
+
+- chore(deps): update non-major dependencies to v11.5.2 ([02e5305](https://github.com/RightCapitalHQ/frontend-style-guide/commit/02e5305))
+
+### ⚠️  Breaking Changes
+
+- fix(deps): update eslint rules and plugins to v65 ([24fed86](https://github.com/RightCapitalHQ/frontend-style-guide/commit/24fed86))
+- fix(deps): update eslint rules and plugins to v5.8.17 ([62f4959](https://github.com/RightCapitalHQ/frontend-style-guide/commit/62f4959))
+- fix(deps): update eslint rules and plugins ([39f02fd](https://github.com/RightCapitalHQ/frontend-style-guide/commit/39f02fd))
+- fix(deps): update eslint rules and plugins ([b001611](https://github.com/RightCapitalHQ/frontend-style-guide/commit/b001611))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.22
+
 ## 69.0.0 (2026-06-08)
 
 ### 🩹 Fixes
