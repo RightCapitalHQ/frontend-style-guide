@@ -1,3 +1,13 @@
+## 2.1.7 (2026-06-19)
+
+### 🩹 Fixes
+
+- chore(deps): update non-major dependencies to v11.5.2 ([02e5305](https://github.com/RightCapitalHQ/frontend-style-guide/commit/02e5305))
+
+### 🧱 Updated Dependencies
+
+- Updated tsconfig to 1.2.22
+
 ## 2.1.6 (2026-06-08)
 
 ### 🩹 Fixes
