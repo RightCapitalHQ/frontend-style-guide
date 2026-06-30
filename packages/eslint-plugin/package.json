@@ -38,15 +38,15 @@
     "@eslint/core": "catalog:",
     "@rightcapital/tsconfig": "workspace:*",
     "@types/eslint": "9.6.1",
-    "@types/node": "24.13.1",
+    "@types/node": "24.13.2",
     "@typescript-eslint/parser": "8.61.0",
     "@typescript-eslint/rule-tester": "8.61.0",
-    "@vitest/coverage-v8": "4.1.8",
-    "@vitest/ui": "4.1.8",
+    "@vitest/coverage-v8": "4.1.9",
+    "@vitest/ui": "4.1.9",
     "eslint": "catalog:",
     "eslint-doc-generator": "3.6.0",
     "typescript": "6.0.3",
-    "vitest": "4.1.8"
+    "vitest": "4.1.9"
   },
   "peerDependencies": {
     "eslint": "9.x || 10.x"
