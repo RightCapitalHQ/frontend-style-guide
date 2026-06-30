@@ -27,7 +27,7 @@
     "src"
   ],
   "scripts": {},
-  "packageManager": "pnpm@11.5.2",
+  "packageManager": "pnpm@11.9.0",
   "engines": {
     "node": ">=16.0.0"
   },
