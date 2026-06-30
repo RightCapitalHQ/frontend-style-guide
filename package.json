@@ -37,7 +37,7 @@
     "@commitlint/config-conventional": "21.0.2",
     "@commitlint/cz-commitlint": "21.0.2",
     "@commitlint/types": "21.0.1",
-    "@nx/js": "22.7.5",
+    "@nx/js": "23.0.1",
     "@rightcapital/eslint-config": "workspace:*",
     "@rightcapital/prettier-config": "workspace:*",
     "@types/node": "24.13.1",
@@ -47,7 +47,7 @@
     "eslint-plugin-eslint-plugin": "7.4.0",
     "execa": "9.6.1",
     "husky": "9.1.7",
-    "nx": "22.7.5",
+    "nx": "23.0.1",
     "prettier": "catalog:",
     "tsx": "4.22.4",
     "typescript": "6.0.3"
