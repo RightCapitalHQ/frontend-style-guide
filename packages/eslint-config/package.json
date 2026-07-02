@@ -46,7 +46,7 @@
     "eslint-plugin-n": "18.1.0",
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-simple-import-sort": "13.0.0",
-    "eslint-plugin-unicorn": "65.0.1",
+    "eslint-plugin-unicorn": "69.0.0",
     "eslint-plugin-unused-imports": "4.4.1",
     "globals": "16.5.0",
     "typescript-eslint": "8.61.0"
