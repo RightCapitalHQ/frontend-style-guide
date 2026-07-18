@@ -10,5 +10,5 @@ allowBuilds:
 
 catalog:
   '@eslint/core': 1.2.1
-  eslint: 10.6.0
+  eslint: 10.7.0
   prettier: 3.8.4
