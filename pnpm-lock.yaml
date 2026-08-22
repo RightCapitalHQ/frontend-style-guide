@@ -100,6 +100,9 @@ importers:
       eslint-import-resolver-typescript:
         specifier: 4.4.5
         version: 4.4.5(eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.61.0(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.8.0(jiti@2.6.1)))(eslint@10.8.0(jiti@2.6.1))
+      eslint-plugin-browser-security:
+        specifier: 2.0.1
+        version: 2.0.1(@typescript-eslint/utils@8.61.0(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3)
       eslint-plugin-import-x:
         specifier: 4.16.2
         version: 4.16.2(@typescript-eslint/utils@8.61.0(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.8.0(jiti@2.6.1))
@@ -1389,6 +1392,22 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
+  '@interlace/eslint-devkit@1.16.1':
+    resolution: {integrity: sha512-H054U+drfMafcFPCfVL7U87JLEgXVQ3gq+ibjfwVTMV3tQDibWjk+IEHDQRqDnl8eQ9PElGIipJ/UuM8juMR+Q==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@typescript-eslint/utils': ^7.0.0 || ^8.0.0
+      eslint: ^8.40.0 || ^9.0.0 || ^10.0.0
+      oxc-resolver: ^11.24.2
+      typescript: '>=4.8.4'
+    peerDependenciesMeta:
+      '@typescript-eslint/utils':
+        optional: true
+      oxc-resolver:
+        optional: true
+      typescript:
+        optional: true
+
   '@jest/diff-sequences@30.0.1':
     resolution: {integrity: sha512-n5H8QLDJ47QqbCNn5SuFjCRDrOLEZ0h8vAHCK5RL9Ls7Xa8AQLa/YxAc9UjFqoEDM48muwtBGjtMY5cr0PLDCw==}
     engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
@@ -2614,6 +2633,12 @@ packages:
       eslint-plugin-import-x:
         optional: true
 
+  eslint-plugin-browser-security@2.0.1:
+    resolution: {integrity: sha512-NMknpuKgBemkATUJlr/ebV2Nx+wZEv6GRYXm2+h8WCKm1XSQrNh4+QGRG4nJKFJHPVQ7K396e28a3pM8wmCYCg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      eslint: ^8.40.0 || ^9.0.0 || ^10.0.0
+
   eslint-plugin-es-x@7.8.0:
     resolution: {integrity: sha512-7Ds8+wAAoV3T+LAKeu39Y5BzXCrGKrcISfgKEqTS4BDN8SFEDQd0S43jiQ8vIa3wUKD07qitZdfzlenSi8/0qQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -2765,6 +2790,7 @@ packages:
   eslint@9.39.2:
     resolution: {integrity: sha512-LEyamqS7W5HB3ujJyvi0HQK/dtVINZvd5mAAp9eT5S/ujByGjiZLCzPcHVzuXbpJDJF/cxwHlfceVUDZ2lnSTw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -5529,6 +5555,13 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
+  '@interlace/eslint-devkit@1.16.1(@typescript-eslint/utils@8.61.0(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3)':
+    dependencies:
+      eslint: 10.8.0(jiti@2.6.1)
+    optionalDependencies:
+      '@typescript-eslint/utils': 8.61.0(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3)
+      typescript: 6.0.3
+
   '@jest/diff-sequences@30.0.1': {}
 
   '@jest/diff-sequences@30.4.0': {}
@@ -6849,6 +6882,15 @@ snapshots:
       eslint-plugin-import-x: 4.16.2(@typescript-eslint/utils@8.61.0(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.8.0(jiti@2.6.1))
     transitivePeerDependencies:
       - supports-color
+
+  eslint-plugin-browser-security@2.0.1(@typescript-eslint/utils@8.61.0(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3):
+    dependencies:
+      '@interlace/eslint-devkit': 1.16.1(@typescript-eslint/utils@8.61.0(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.8.0(jiti@2.6.1))(typescript@6.0.3)
+      eslint: 10.8.0(jiti@2.6.1)
+    transitivePeerDependencies:
+      - '@typescript-eslint/utils'
+      - oxc-resolver
+      - typescript
 
   eslint-plugin-es-x@7.8.0(eslint@10.8.0(jiti@2.6.1)):
     dependencies:

@@ -2,6 +2,7 @@ import type { ConfigObject } from '@eslint/core';
 
 import jsConfig from './config/javascript.js';
 import linterConfig from './config/linter.js';
+import browserSecurityConfig from './config/mixin/browser-security.js';
 import disableExpensiveRulesConfig from './config/mixin/disable-expensive-rules.js';
 import nodeConfig from './config/mixin/node.js';
 import reactConfig from './config/mixin/react.js';
@@ -14,6 +15,10 @@ const recommendedConfig = utils.defineConfig(
   {
     files: ['**/*.{js,cjs,mjs,jsx}'],
     extends: [...jsConfig],
+  },
+  {
+    files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
+    extends: [...browserSecurityConfig],
   },
   {
     files: ['**/*.{ts,cts,mts,tsx}'],
@@ -67,6 +72,7 @@ const configs = {
   ts: tsConfig,
   node: nodeConfig,
   react: reactConfig,
+  browserSecurity: browserSecurityConfig,
   script: scriptConfig,
   disableExpensiveRules: disableExpensiveRulesConfig,
 } as const satisfies Record<string, readonly ConfigObject[]>;

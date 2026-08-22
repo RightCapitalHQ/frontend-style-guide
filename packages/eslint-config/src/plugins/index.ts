@@ -3,6 +3,7 @@ import eslintPluginReact from '@eslint-react/eslint-plugin';
 import eslintPluginRightcapital from '@rightcapital/eslint-plugin';
 import eslintPluginStylistic from '@stylistic/eslint-plugin';
 import type { TSESLint } from '@typescript-eslint/utils';
+import eslintPluginBrowserSecurity from 'eslint-plugin-browser-security';
 import eslintPluginImportX from 'eslint-plugin-import-x';
 import eslintPluginA11y from 'eslint-plugin-jsx-a11y';
 import eslintPluginLodash from 'eslint-plugin-lodash';
@@ -40,6 +41,7 @@ export const eslintReactPluginNames = Object.keys(
 export const plugins = definePlugins({
   '@typescript-eslint': typescriptEslint.plugin as TSESLint.FlatConfig.Plugin,
   '@rightcapital': eslintPluginRightcapital,
+  'browser-security': eslintPluginBrowserSecurity,
   'import-x': eslintPluginImportX,
   'simple-import-sort': eslintPluginSimpleImportSort,
   n,
