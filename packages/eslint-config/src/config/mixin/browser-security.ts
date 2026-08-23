@@ -36,7 +36,9 @@ const config: readonly ConfigObject[] = [
       // https://github.com/ofri-peretz/eslint/blob/main/packages/eslint-plugin-browser-security/docs/rules/no-credentials-in-query-params.md
       'browser-security/no-credentials-in-query-params': 'error',
 
-      // require Secure/HttpOnly/SameSite when setting cookies from JavaScript
+      // require Secure and SameSite when setting cookies from JavaScript.
+      // HttpOnly is deliberately absent: a cookie set through document.cookie
+      // cannot be HttpOnly, which is the point of the flag.
       // https://github.com/ofri-peretz/eslint/blob/main/packages/eslint-plugin-browser-security/docs/rules/require-cookie-secure-attrs.md
       'browser-security/require-cookie-secure-attrs': 'error',
 
