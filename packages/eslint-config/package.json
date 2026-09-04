@@ -56,8 +56,8 @@
     "@rightcapital/tsconfig": "workspace:*",
     "@types/confusing-browser-globals": "1.0.3",
     "@types/eslint-plugin-jsx-a11y": "6.10.1",
-    "@types/node": "24.13.1",
-    "@types/semver": "7.7.1",
+    "@types/node": "24.13.3",
+    "@types/semver": "7.8.0",
     "eslint": "catalog:",
     "prettier": "catalog:"
   },
