@@ -46,7 +46,7 @@
     "eslint": "catalog:",
     "eslint-doc-generator": "3.6.0",
     "typescript": "6.0.3",
-    "vitest": "4.1.8"
+    "vitest": "4.1.11"
   },
   "peerDependencies": {
     "eslint": "9.x || 10.x"
