@@ -16,8 +16,6 @@ catalogs:
       specifier: 3.8.4
       version: 3.8.4
 
-pnpmfileChecksum: sha256-9E1UeDgqZ/gxiWw8KNXFodEiNo0cYgJ/a7Nn78zg12k=
-
 importers:
 
   .:
@@ -128,7 +126,7 @@ importers:
         specifier: 16.5.0
         version: 16.5.0
       typescript:
-        specifier: 5.x || 6.x
+        specifier: 5.x || 6.x || 7.x
         version: 6.0.3
       typescript-eslint:
         specifier: 8.61.0
@@ -2765,6 +2763,7 @@ packages:
   eslint@9.39.2:
     resolution: {integrity: sha512-LEyamqS7W5HB3ujJyvi0HQK/dtVINZvd5mAAp9eT5S/ujByGjiZLCzPcHVzuXbpJDJF/cxwHlfceVUDZ2lnSTw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
