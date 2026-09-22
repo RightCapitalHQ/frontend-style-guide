@@ -15,10 +15,10 @@
     "concurrently": "10.0.3",
     "eslint": "catalog:",
     "eslint-config-prettier": "10.1.8",
-    "execa": "9.6.1",
+    "execa": "10.0.1",
     "jest-diff": "30.4.1",
     "prettier": "catalog:",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vitest": "4.1.8"
   }
 }
