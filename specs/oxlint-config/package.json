@@ -1,0 +1,23 @@
+{
+  "name": "@rightcapital/style-guide-spec-oxlint-config",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fix": "prettier --write .",
+    "lint": "prettier -c .",
+    "test": "vitest",
+    "test:packed": "vitest --run --config vitest.packed.config.mts"
+  },
+  "devDependencies": {
+    "@rightcapital/oxlint-config": "workspace:*",
+    "@rightcapital/prettier-config": "workspace:*",
+    "@rightcapital/tsconfig": "workspace:*",
+    "@types/node": "24.13.1",
+    "execa": "9.6.1",
+    "oxlint": "1.80.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "prettier": "catalog:",
+    "typescript": "7.0.2",
+    "vitest": "4.1.8"
+  }
+}
