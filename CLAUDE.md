@@ -44,6 +44,7 @@ pnpm run commit
 
 - `packages/eslint-config` - ESLint flat config (v9+) with presets: `recommended`, `js`, `ts`, `react`, `node`, `script`, `disableExpensiveRules`
 - `packages/eslint-plugin` - Custom ESLint rules (e.g., `jsx-no-unused-expressions`, `no-explicit-type-on-function-component-identifier`, `no-ignore-return-value-of-react-hooks`)
+- `packages/oxlint-config` - Oxlint config with a `createConfig()` builder API (no rule is enabled unless `recommended` is set)
 - `packages/prettier-config` - Prettier configuration
 - `packages/tsconfig` - Shared TypeScript configuration
 - `packages/lint-eslint-config-rules` - CLI tool for validating ESLint config rules
@@ -52,6 +53,7 @@ pnpm run commit
 
 - `specs/eslint-configs` - Integration tests for ESLint configurations
 - `specs/lint-eslint-config-rules` - Tests for the lint-eslint-config-rules CLI
+- `specs/oxlint-config` - Tests for the Oxlint config: config snapshots, lint fixtures, and `pnpm run test:packed` (installs the packed package from the registry, run separately in CI)
 
 ### Shared GitHub Actions
 
@@ -92,7 +94,7 @@ Versioning uses Nx Release with version plans (markdown files in `.nx/version-pl
 Two release groups:
 
 - **eslint** (fixed) - `eslint-config` and `eslint-plugin` always release together at the same version
-- **other** (independent) - `prettier-config`, `tsconfig`, `lint-eslint-config-rules` release independently
+- **other** (independent) - `prettier-config`, `tsconfig`, `lint-eslint-config-rules`, `oxlint-config` release independently
 
 CI enforcement:
 

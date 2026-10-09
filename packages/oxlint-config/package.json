@@ -1,0 +1,60 @@
+{
+  "name": "@rightcapital/oxlint-config",
+  "version": "0.0.0",
+  "description": "Oxlint Config for RightCapital",
+  "keywords": [
+    "oxlint",
+    "oxlint-config",
+    "rightcapital"
+  ],
+  "homepage": "https://github.com/RightCapitalHQ/frontend-style-guide/tree/main/packages/oxlint-config#readme",
+  "bugs": {
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RightCapitalHQ/frontend-style-guide.git",
+    "directory": "packages/oxlint-config"
+  },
+  "license": "MIT",
+  "author": "RightCapital <npm-publisher@rightcapital.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prebuild": "pnpm run clean",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "prepack": "nx build"
+  },
+  "devDependencies": {
+    "@rightcapital/tsconfig": "workspace:*",
+    "@types/node": "24.13.1",
+    "oxlint": "1.80.0",
+    "oxlint-tsgolint": "7.0.2001",
+    "typescript": "7.0.2"
+  },
+  "peerDependencies": {
+    "oxlint": "^1.80.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "typescript": "^7.0.2"
+  },
+  "packageManager": "pnpm@11.5.2",
+  "engines": {
+    "node": "^20.19.0 || >=22.18.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

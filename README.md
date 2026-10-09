@@ -9,7 +9,7 @@
 
 <!-- Badges area end -->
 
-RightCapital's frontend style guide monorepo — shared configs for ESLint, Prettier, TypeScript, and related tooling.
+RightCapital's frontend style guide monorepo — shared configs for ESLint, Oxlint, Prettier, TypeScript, and related tooling.
 
 ## Packages
 
@@ -17,6 +17,7 @@ RightCapital's frontend style guide monorepo — shared configs for ESLint, Pret
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | [`@rightcapital/eslint-config`](packages/eslint-config)                       | [![npm](https://img.shields.io/npm/v/@rightcapital/eslint-config)](https://www.npmjs.com/package/@rightcapital/eslint-config)                       | ESLint flat config with JS, TS, and React support |
 | [`@rightcapital/eslint-plugin`](packages/eslint-plugin)                       | [![npm](https://img.shields.io/npm/v/@rightcapital/eslint-plugin)](https://www.npmjs.com/package/@rightcapital/eslint-plugin)                       | Custom ESLint rules                               |
+| [`@rightcapital/oxlint-config`](packages/oxlint-config)                       | [![npm](https://img.shields.io/npm/v/@rightcapital/oxlint-config)](https://www.npmjs.com/package/@rightcapital/oxlint-config)                       | Oxlint config with a `createConfig()` builder API |
 | [`@rightcapital/prettier-config`](packages/prettier-config)                   | [![npm](https://img.shields.io/npm/v/@rightcapital/prettier-config)](https://www.npmjs.com/package/@rightcapital/prettier-config)                   | Shared Prettier configuration                     |
 | [`@rightcapital/tsconfig`](packages/tsconfig)                                 | [![npm](https://img.shields.io/npm/v/@rightcapital/tsconfig)](https://www.npmjs.com/package/@rightcapital/tsconfig)                                 | Shared TypeScript configuration                   |
 | [`@rightcapital/lint-eslint-config-rules`](packages/lint-eslint-config-rules) | [![npm](https://img.shields.io/npm/v/@rightcapital/lint-eslint-config-rules)](https://www.npmjs.com/package/@rightcapital/lint-eslint-config-rules) | CLI to check for deprecated/unknown ESLint rules  |
@@ -58,6 +59,28 @@ export default defineConfig(
 ```
 
 See [`packages/eslint-config`](packages/eslint-config) for the full list of exported configs and utils.
+
+## Oxlint
+
+### Prerequisites
+
+- `oxlint`, `oxlint-tsgolint` and `typescript` (7.x), installed directly in your project
+
+### Usage
+
+```sh
+pnpm add -D @rightcapital/oxlint-config oxlint oxlint-tsgolint typescript
+```
+
+In your `oxlint.config.ts`:
+
+```ts
+import { createConfig } from '@rightcapital/oxlint-config';
+
+export default createConfig({ runtime: 'node', recommended: true });
+```
+
+No rule is enabled unless `recommended` is set or you list it yourself. See [`packages/oxlint-config`](packages/oxlint-config) for multi-runtime projects, all options and the Node.js requirement.
 
 ## Prettier
 

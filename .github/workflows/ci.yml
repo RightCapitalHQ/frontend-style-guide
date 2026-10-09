@@ -38,6 +38,10 @@ jobs:
       - name: Test
         run: pnpm run test
 
+      # installs the packed package from the registry, so it is not part of `pnpm run test`
+      - name: Test packed oxlint-config
+        run: pnpm --filter ./specs/oxlint-config run test:packed
+
   check-workflow-files:
     needs: install
     runs-on: ubuntu-latest

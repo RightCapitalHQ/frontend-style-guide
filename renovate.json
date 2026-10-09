@@ -47,6 +47,12 @@
       ]
     },
     {
+      "description": "Keep oxlint and oxlint-tsgolint compatible, updates change the enabled rules",
+      "groupName": "Oxlint",
+      "matchPackageNames": ["oxlint", "oxlint-tsgolint"],
+      "commitBody": "Nx-version-bump: minor"
+    },
+    {
       "description": "Group ESLint core package updates together",
       "groupName": "ESLint Core",
       "matchPackageNames": ["eslint", "@eslint/core"],

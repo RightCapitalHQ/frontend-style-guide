@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "allowJs": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "lib": ["es2023", "dom"],
+    "types": ["node"]
+  },
+  "include": ["src", "tests", "scripts", "*.config.ts"]
+}
