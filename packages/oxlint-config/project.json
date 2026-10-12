@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "oxlint-config",
+  "projectType": "library",
+  "sourceRoot": "packages/oxlint-config/src",
+  "targets": {}
+}

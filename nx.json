@@ -46,7 +46,12 @@
         "projectsRelationship": "fixed"
       },
       "other": {
-        "projects": ["prettier-config", "tsconfig", "lint-eslint-config-rules"],
+        "projects": [
+          "prettier-config",
+          "tsconfig",
+          "lint-eslint-config-rules",
+          "oxlint-config"
+        ],
         "projectsRelationship": "independent"
       }
     },
