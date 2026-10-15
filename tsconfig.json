@@ -22,6 +22,12 @@
     },
     {
       "path": "./packages/lint-eslint-config-rules"
+    },
+    {
+      "path": "./specs/oxlint-config"
+    },
+    {
+      "path": "./packages/oxlint-config"
     }
   ]
 }

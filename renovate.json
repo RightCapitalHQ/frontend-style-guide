@@ -47,6 +47,12 @@
       ]
     },
     {
+      "description": "Mark Oxlint updates as breaking changes, they change the enabled rules",
+      "groupName": "Oxlint",
+      "commitBody": "Nx-version-bump: major",
+      "matchPackageNames": ["oxlint", "oxlint-tsgolint"]
+    },
+    {
       "description": "Group ESLint core package updates together",
       "groupName": "ESLint Core",
       "matchPackageNames": ["eslint", "@eslint/core"],

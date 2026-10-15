@@ -1,0 +1,17 @@
+{
+  "extends": "@rightcapital/tsconfig",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./node_modules/.cache/tsc",
+    "types": ["node"]
+  },
+  "include": ["tests", "*.mts"],
+  "references": [
+    {
+      "path": "../../packages/prettier-config"
+    },
+    {
+      "path": "../../packages/oxlint-config"
+    }
+  ]
+}

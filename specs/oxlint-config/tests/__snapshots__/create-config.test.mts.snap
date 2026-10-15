@@ -1,0 +1,490 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`createConfig > browser runtime with React 1`] = `
+{
+  "categories": {
+    "correctness": "error",
+  },
+  "ignorePatterns": [
+    "**/node_modules/**",
+  ],
+  "options": {
+    "typeAware": true,
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.tsx",
+      ],
+      "rules": {
+        "react/exhaustive-deps": "error",
+        "react/rules-of-hooks": "error",
+      },
+    },
+    {
+      "env": {
+        "node": true,
+      },
+      "files": [
+        "./*.{js,cjs,mjs,ts,cts,mts}",
+      ],
+      "rules": {
+        "node/no-new-require": "error",
+        "node/no-path-concat": "error",
+        "unicorn/no-process-exit": "error",
+        "unicorn/prefer-import-meta-properties": "error",
+      },
+    },
+    {
+      "files": [
+        "./*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
+        "**/eslint.config.{js,cjs,mjs,ts,cts,mts}",
+        "**/oxlint.config.{js,cjs,mjs,ts,cts,mts}",
+      ],
+      "rules": {
+        "eslint/no-console": "off",
+        "eslint/no-unused-expressions": [
+          "error",
+          {
+            "allowTaggedTemplates": true,
+          },
+        ],
+        "unicorn/no-process-exit": "off",
+      },
+    },
+    {
+      "excludeFiles": [
+        "**/*.{ts,cts,mts,tsx}",
+      ],
+      "files": [
+        "**/*",
+      ],
+      "rules": {
+        "eslint/no-undef": "error",
+      },
+    },
+    {
+      "env": {
+        "browser": true,
+      },
+      "files": [
+        "**/*",
+      ],
+      "rules": {
+        "react/exhaustive-deps": "error",
+        "react/rules-of-hooks": "error",
+      },
+    },
+    {
+      "env": {
+        "commonjs": true,
+      },
+      "files": [
+        "**/*.cjs",
+        "**/*.cts",
+      ],
+    },
+  ],
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "oxc",
+    "import",
+    "node",
+    "react",
+    "jsx-a11y",
+  ],
+  "rules": {
+    "eslint/no-console": "warn",
+    "eslint/no-var": "error",
+    "eslint/prefer-const": "error",
+    "typescript/await-thenable": "error",
+    "typescript/consistent-type-definitions": [
+      "error",
+      "interface",
+    ],
+    "typescript/consistent-type-imports": "error",
+    "typescript/no-floating-promises": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/no-non-null-assertion": "error",
+    "typescript/no-unnecessary-type-assertion": "error",
+    "unicorn/prefer-array-some": "error",
+    "unicorn/prefer-includes": "error",
+    "unicorn/prefer-node-protocol": "error",
+    "unicorn/text-encoding-identifier-case": "error",
+  },
+}
+`;
+
+exports[`createConfig > presets on overrides, project rules, overrides and ignores 1`] = `
+{
+  "categories": {
+    "correctness": "error",
+  },
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "generated/**",
+  ],
+  "options": {
+    "typeAware": true,
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.tsx",
+      ],
+      "rules": {
+        "react/exhaustive-deps": "error",
+        "react/rules-of-hooks": "error",
+      },
+    },
+    {
+      "env": {
+        "node": true,
+      },
+      "files": [
+        "./*.{js,cjs,mjs,ts,cts,mts}",
+      ],
+      "rules": {
+        "node/no-new-require": "error",
+        "node/no-path-concat": "error",
+        "unicorn/no-process-exit": "error",
+        "unicorn/prefer-import-meta-properties": "error",
+      },
+    },
+    {
+      "files": [
+        "./*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
+        "**/eslint.config.{js,cjs,mjs,ts,cts,mts}",
+        "**/oxlint.config.{js,cjs,mjs,ts,cts,mts}",
+      ],
+      "rules": {
+        "eslint/no-console": "off",
+        "eslint/no-unused-expressions": [
+          "error",
+          {
+            "allowTaggedTemplates": true,
+          },
+        ],
+        "unicorn/no-process-exit": "off",
+      },
+    },
+    {
+      "env": {
+        "commonjs": true,
+      },
+      "files": [
+        "**/*.cjs",
+        "**/*.cts",
+      ],
+    },
+    {
+      "files": [
+        "**/*",
+      ],
+      "rules": {
+        "eslint/no-console": "off",
+      },
+    },
+    {
+      "excludeFiles": [
+        "**/*.{ts,cts,mts,tsx}",
+      ],
+      "files": [
+        "src/**",
+      ],
+      "rules": {
+        "eslint/no-undef": "error",
+      },
+    },
+    {
+      "env": {
+        "browser": true,
+      },
+      "files": [
+        "src/**",
+      ],
+      "rules": {
+        "react/exhaustive-deps": "error",
+        "react/rules-of-hooks": "error",
+      },
+    },
+    {
+      "excludeFiles": [
+        "**/*.{ts,cts,mts,tsx}",
+      ],
+      "files": [
+        "tests/**",
+      ],
+      "rules": {
+        "eslint/no-undef": "error",
+      },
+    },
+    {
+      "env": {
+        "browser": true,
+        "node": true,
+      },
+      "files": [
+        "tests/**",
+      ],
+      "rules": {
+        "node/no-new-require": "error",
+        "node/no-path-concat": "error",
+        "unicorn/no-process-exit": "error",
+        "unicorn/prefer-import-meta-properties": "error",
+      },
+    },
+    {
+      "excludeFiles": [
+        "**/*.{ts,cts,mts,tsx}",
+      ],
+      "files": [
+        "lambda/**",
+      ],
+      "rules": {
+        "eslint/no-undef": "error",
+      },
+    },
+    {
+      "env": {
+        "node": true,
+      },
+      "files": [
+        "lambda/**",
+      ],
+      "rules": {
+        "node/no-new-require": "error",
+        "node/no-path-concat": "error",
+        "unicorn/no-process-exit": "error",
+        "unicorn/prefer-import-meta-properties": "error",
+      },
+    },
+    {
+      "excludeFiles": [
+        "**/*.{ts,cts,mts,tsx}",
+      ],
+      "files": [
+        "scripts/**",
+        "**/*.config.ts",
+      ],
+      "rules": {
+        "eslint/no-undef": "error",
+      },
+    },
+    {
+      "env": {
+        "node": true,
+      },
+      "files": [
+        "scripts/**",
+        "**/*.config.ts",
+      ],
+      "rules": {
+        "eslint/no-console": "off",
+        "eslint/no-unused-expressions": [
+          "error",
+          {
+            "allowTaggedTemplates": true,
+          },
+        ],
+        "node/no-new-require": "error",
+        "node/no-path-concat": "error",
+        "unicorn/no-process-exit": "off",
+        "unicorn/prefer-import-meta-properties": "error",
+      },
+    },
+    {
+      "files": [
+        "src/legacy/**",
+      ],
+      "rules": {
+        "eslint/no-var": "off",
+      },
+    },
+  ],
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "oxc",
+    "import",
+    "node",
+    "react",
+    "jsx-a11y",
+  ],
+  "rules": {
+    "eslint/no-console": "warn",
+    "eslint/no-var": "error",
+    "eslint/prefer-const": "error",
+    "typescript/await-thenable": "error",
+    "typescript/consistent-type-definitions": [
+      "error",
+      "interface",
+    ],
+    "typescript/consistent-type-imports": "error",
+    "typescript/no-floating-promises": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/no-non-null-assertion": "error",
+    "typescript/no-unnecessary-type-assertion": "error",
+    "unicorn/prefer-array-some": "error",
+    "unicorn/prefer-includes": "error",
+    "unicorn/prefer-node-protocol": "error",
+    "unicorn/text-encoding-identifier-case": "error",
+  },
+}
+`;
+
+exports[`createConfig > recommended enables the rule policy 1`] = `
+{
+  "categories": {
+    "correctness": "error",
+  },
+  "ignorePatterns": [
+    "**/node_modules/**",
+  ],
+  "options": {
+    "typeAware": true,
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.tsx",
+      ],
+      "rules": {
+        "react/exhaustive-deps": "error",
+        "react/rules-of-hooks": "error",
+      },
+    },
+    {
+      "env": {
+        "node": true,
+      },
+      "files": [
+        "./*.{js,cjs,mjs,ts,cts,mts}",
+      ],
+      "rules": {
+        "node/no-new-require": "error",
+        "node/no-path-concat": "error",
+        "unicorn/no-process-exit": "error",
+        "unicorn/prefer-import-meta-properties": "error",
+      },
+    },
+    {
+      "files": [
+        "./*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}",
+        "**/eslint.config.{js,cjs,mjs,ts,cts,mts}",
+        "**/oxlint.config.{js,cjs,mjs,ts,cts,mts}",
+      ],
+      "rules": {
+        "eslint/no-console": "off",
+        "eslint/no-unused-expressions": [
+          "error",
+          {
+            "allowTaggedTemplates": true,
+          },
+        ],
+        "unicorn/no-process-exit": "off",
+      },
+    },
+    {
+      "excludeFiles": [
+        "**/*.{ts,cts,mts,tsx}",
+      ],
+      "files": [
+        "**/*",
+      ],
+      "rules": {
+        "eslint/no-undef": "error",
+      },
+    },
+    {
+      "env": {
+        "node": true,
+      },
+      "files": [
+        "**/*",
+      ],
+      "rules": {
+        "node/no-new-require": "error",
+        "node/no-path-concat": "error",
+        "unicorn/no-process-exit": "error",
+        "unicorn/prefer-import-meta-properties": "error",
+      },
+    },
+    {
+      "env": {
+        "commonjs": true,
+      },
+      "files": [
+        "**/*.cjs",
+        "**/*.cts",
+      ],
+    },
+  ],
+  "plugins": [
+    "typescript",
+    "unicorn",
+    "oxc",
+    "import",
+    "node",
+    "react",
+    "jsx-a11y",
+  ],
+  "rules": {
+    "eslint/no-console": "warn",
+    "eslint/no-var": "error",
+    "eslint/prefer-const": "error",
+    "typescript/await-thenable": "error",
+    "typescript/consistent-type-definitions": [
+      "error",
+      "interface",
+    ],
+    "typescript/consistent-type-imports": "error",
+    "typescript/no-floating-promises": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/no-non-null-assertion": "error",
+    "typescript/no-unnecessary-type-assertion": "error",
+    "unicorn/prefer-array-some": "error",
+    "unicorn/prefer-includes": "error",
+    "unicorn/prefer-node-protocol": "error",
+    "unicorn/text-encoding-identifier-case": "error",
+  },
+}
+`;
+
+exports[`createConfig > single runtime needs no overrides 1`] = `
+{
+  "categories": {
+    "correctness": "off",
+  },
+  "ignorePatterns": [
+    "**/node_modules/**",
+  ],
+  "options": {
+    "typeAware": true,
+  },
+  "overrides": [
+    {
+      "env": {
+        "node": true,
+      },
+      "files": [
+        "**/*",
+      ],
+    },
+    {
+      "env": {
+        "commonjs": true,
+      },
+      "files": [
+        "**/*.cjs",
+        "**/*.cts",
+      ],
+    },
+  ],
+  "plugins": [
+    "node",
+  ],
+  "rules": {},
+}
+`;
