@@ -2,8 +2,8 @@ import { basename } from 'node:path';
 
 import parser from '@typescript-eslint/parser';
 
-import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester';
-import { requireNamedWrappedComponentRule } from './require-named-wrapped-component';
+import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester.ts';
+import { requireNamedWrappedComponentRule } from './require-named-wrapped-component.ts';
 
 type RuleOptions = [{ hocNames: string[] }];
 
@@ -17,7 +17,7 @@ const ruleTester = new VitestRuleTester({
     },
   },
 });
-const ruleName = basename(__dirname);
+const ruleName = basename(import.meta.dirname);
 
 const defaultOptions: RuleOptions = [{ hocNames: ['observer'] }];
 

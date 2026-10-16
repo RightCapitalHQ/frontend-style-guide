@@ -6,7 +6,7 @@
       "options": {
         "build": {
           "targetName": "build",
-          "configName": "tsconfig.lib.json"
+          "configName": "tsconfig.src.json"
         },
         "typecheck": {
           "targetName": "typecheck"
@@ -14,11 +14,21 @@
       }
     }
   ],
+  "sync": {
+    "generatorOptions": {
+      "@nx/js:typescript-sync": {
+        "runtimeTsConfigFileNames": ["tsconfig.src.json"]
+      }
+    }
+  },
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"],
-      "outputs": ["{projectRoot}/lib"],
+      "outputs": [
+        "{projectRoot}/lib",
+        "{projectRoot}/tsconfig.src.tsbuildinfo"
+      ],
       "cache": true
     },
     "typecheck": {

@@ -1,7 +1,7 @@
-import eslintConfigRightcapital from '@rightcapital/eslint-config';
+import { configs, utils } from '@rightcapital/eslint-config';
 import eslintPluginEslintPlugin from 'eslint-plugin-eslint-plugin';
 
-const { defineConfig, pickPlugins } = eslintConfigRightcapital.utils;
+const { defineConfig, pickPlugins } = utils;
 
 export default defineConfig(
   {
@@ -22,7 +22,13 @@ export default defineConfig(
       'specs',
     ],
   },
-  ...eslintConfigRightcapital.configs.recommended,
+  ...configs.recommended,
+
+  {
+    rules: {
+      'import-x/extensions': 'off',
+    },
+  },
 
   {
     files: ['**/*.{ts,cts,mts,tsx}'],
@@ -42,10 +48,7 @@ export default defineConfig(
       'scripts/**/*.{js,cjs,mjs}',
       '.github/actions/**/*.{js,cjs,mjs,ts,cts,mts}',
     ],
-    extends: [
-      ...eslintConfigRightcapital.configs.script,
-      ...eslintConfigRightcapital.configs.node,
-    ],
+    extends: [...configs.script, ...configs.node],
   },
 
   // -----------------------
@@ -70,6 +73,6 @@ export default defineConfig(
   // @rightcapital/lint-eslint-config-rules
   {
     files: ['packages/lint-eslint-config-rules/**/*.ts'],
-    extends: [...eslintConfigRightcapital.configs.script],
+    extends: [...configs.script],
   },
 );

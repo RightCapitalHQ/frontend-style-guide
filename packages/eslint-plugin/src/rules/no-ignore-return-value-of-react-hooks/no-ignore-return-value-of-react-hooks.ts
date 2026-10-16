@@ -6,8 +6,8 @@ import {
   isNodeOfTypes,
 } from '@typescript-eslint/utils/ast-utils';
 
-import { isCallOf } from '../../helpers/ast/function/is-call-of';
-import { createRule } from '../../helpers/create-rule';
+import { isCallOf } from '../../helpers/ast/function/is-call-of.ts';
+import { createRule } from '../../helpers/create-rule.ts';
 
 // https://react.dev/reference/react/hooks
 // https://react.dev/reference/react-dom/hooks
@@ -46,7 +46,7 @@ const getParentSkippingMemberExpressionChains = (
 };
 
 export const noIgnoreReturnValueOfReactHooksRule = createRule({
-  name: basename(__dirname),
+  name: basename(import.meta.dirname),
   meta: {
     type: 'problem',
     docs: {

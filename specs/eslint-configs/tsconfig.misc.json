@@ -1,0 +1,25 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM"],
+    "types": ["node", "react"],
+    "verbatimModuleSyntax": false,
+    "rootDir": ".",
+    "outDir": "./node_modules/.cache/rightcapital/typecheck",
+    "emitDeclarationOnly": true,
+    "rewriteRelativeImportExtensions": false
+  },
+  "include": ["src", "tests", "*.mts", "*.ts"],
+  "references": [
+    {
+      "path": "../../packages/eslint-config/tsconfig.src.json"
+    },
+    {
+      "path": "../../packages/eslint-config/tsconfig.misc.json"
+    },
+    {
+      "path": "../../packages/prettier-config/tsconfig.src.json"
+    }
+  ]
+}

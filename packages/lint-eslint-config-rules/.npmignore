@@ -1,4 +1,4 @@
 src/
 project.json
-tsconfig.json
-tsconfig.tsbuildinfo
+tsconfig*.json
+*.tsbuildinfo

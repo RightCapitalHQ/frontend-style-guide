@@ -39,20 +39,17 @@ pnpm add -D @rightcapital/eslint-config
 In your `eslint.config.mjs` ([or equivalent](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file-formats)):
 
 ```js
-import eslintConfigRightcapital from '@rightcapital/eslint-config';
+import { configs, utils } from '@rightcapital/eslint-config';
 
-const { defineConfig } = eslintConfigRightcapital.utils;
+const { defineConfig } = utils;
 
 export default defineConfig(
-  ...eslintConfigRightcapital.configs.recommended,
+  ...configs.recommended,
 
   // add more configs for specific files or packages if needed
   {
     files: ['scripts/**/*.{js,cjs,mjs}'],
-    extends: [
-      ...eslintConfigRightcapital.configs.node,
-      ...eslintConfigRightcapital.configs.script,
-    ],
+    extends: [...configs.node, ...configs.script],
   },
 );
 ```
@@ -63,6 +60,7 @@ See [`packages/eslint-config`](packages/eslint-config) for the full list of expo
 
 ### Prerequisites
 
+- Node.js `^22.13.0 || >=24`
 - `prettier`
 
 ### Usage
@@ -73,10 +71,12 @@ Install config package to your project:
 pnpm add -D @rightcapital/prettier-config
 ```
 
-In your project's `prettier.config.cjs`:
+In your project's `prettier.config.mjs`:
 
 ```js
-module.exports = require('@rightcapital/prettier-config');
+import config from '@rightcapital/prettier-config';
+
+export default config;
 ```
 
 See [`packages/prettier-config`](packages/prettier-config) for details.

@@ -1,8 +1,8 @@
 {
-  "compilerOptions": { "composite": true },
+  "extends": "../../tsconfig.base.json",
   "files": [],
   "references": [
-    { "path": "./tsconfig.lib.json" },
-    { "path": "./tsconfig.scripts.json" }
+    { "path": "./tsconfig.src.json" },
+    { "path": "./tsconfig.misc.json" }
   ]
 }

@@ -1,3 +1,5 @@
+import { fileURLToPath } from 'node:url';
+
 import type { Options } from 'prettier';
 
 const config: Options = {
@@ -7,7 +9,9 @@ const config: Options = {
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',
-  plugins: [require.resolve('prettier-plugin-packagejson')],
+  plugins: [fileURLToPath(import.meta.resolve('prettier-plugin-packagejson'))],
 };
 
-export = config;
+export default config;
+// Keep native require() consumers receiving the config object instead of an ESM namespace.
+export { config as 'module.exports' };

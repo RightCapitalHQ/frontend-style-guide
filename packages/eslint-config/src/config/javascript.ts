@@ -1,8 +1,8 @@
 import type { ConfigObject } from '@eslint/core';
 
-import { isInEditorEnv } from '../helpers/is-in-editor-env.js';
-import { pickPlugins } from '../utils.js';
-import baseConfig from './base/index.js';
+import { isInEditorEnv } from '../helpers/is-in-editor-env.ts';
+import { pickPlugins } from '../utils.ts';
+import baseConfig from './base/index.ts';
 
 /**
  * Common rules for JavaScript files.

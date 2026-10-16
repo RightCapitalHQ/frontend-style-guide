@@ -3,8 +3,8 @@ import eslintPluginReact from '@eslint-react/eslint-plugin';
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
-import { eslintReactPluginNames } from '../../plugins/index.js';
-import { pickPlugins } from '../../utils.js';
+import { eslintReactPluginNames } from '../../plugins/index.ts';
+import { pickPlugins } from '../../utils.ts';
 /**
  * Common rules for React, working with TypeScript.
  */

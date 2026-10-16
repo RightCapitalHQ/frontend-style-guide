@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 
-import { lintESLintConfigRules, sortedRuleIds } from './index.js';
+import { lintESLintConfigRules, sortedRuleIds } from './index.ts';
 
 export interface IESLintConfigRulesLintResultJSON {
   knownRuleIds: string[];

@@ -1,6 +1,6 @@
 import type { ConfigObject } from '@eslint/core';
 
-import { pickPlugins } from '../../utils.js';
+import { pickPlugins } from '../../utils.ts';
 
 // extracted from eslint-config-airbnb-base@15.0.0
 // https://github.com/airbnb/javascript/blob/eslint-config-airbnb-base-v15.0.0/packages/eslint-config-airbnb-base/rules/imports.js

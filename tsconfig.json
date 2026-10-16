@@ -1,19 +1,9 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "composite": true,
-    "lib": ["es2023"],
-    "module": "node16",
-    "target": "es2022",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node16",
-    "outDir": "./node_modules/.cache/rightcapital/frontend-style-guide-scripts"
-  },
-  "include": ["commitlint.config.ts"],
+  "files": [],
   "references": [
+    {
+      "path": "./packages/eslint-config"
+    },
     {
       "path": "./packages/eslint-plugin"
     },
@@ -22,6 +12,15 @@
     },
     {
       "path": "./packages/lint-eslint-config-rules"
+    },
+    {
+      "path": "./specs/eslint-configs"
+    },
+    {
+      "path": "./specs/lint-eslint-config-rules"
+    },
+    {
+      "path": "./tsconfig.misc.json"
     }
   ]
 }

@@ -1,26 +1,12 @@
 {
+  "extends": "@rightcapital/tsconfig",
   "compilerOptions": {
-    "composite": true,
-
-    "lib": ["es2023"],
-    "module": "nodenext",
-    "target": "es2022",
-
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
-
-    "strict": true,
-    "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
-
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "nodenext"
+    "moduleDetection": "force"
   }
 }

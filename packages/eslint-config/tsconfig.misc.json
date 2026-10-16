@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./node_modules/.cache/rightcapital/typecheck",
+    "types": ["node"],
+    "emitDeclarationOnly": true,
+    "rewriteRelativeImportExtensions": false
+  },
+  "include": ["scripts"],
+  "references": [
+    {
+      "path": "./tsconfig.src.json"
+    }
+  ]
+}
