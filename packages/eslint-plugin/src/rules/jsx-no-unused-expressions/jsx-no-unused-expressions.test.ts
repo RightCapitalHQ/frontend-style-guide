@@ -2,8 +2,8 @@ import { basename } from 'node:path';
 
 import parser from '@typescript-eslint/parser';
 
-import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester';
-import { jsxNoUnusedExpressionsRule } from './jsx-no-unused-expressions';
+import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester.ts';
+import { jsxNoUnusedExpressionsRule } from './jsx-no-unused-expressions.ts';
 
 const ruleTester = new VitestRuleTester({
   languageOptions: {
@@ -16,7 +16,7 @@ const ruleTester = new VitestRuleTester({
   },
 });
 
-ruleTester.run(basename(__dirname), jsxNoUnusedExpressionsRule, {
+ruleTester.run(basename(import.meta.dirname), jsxNoUnusedExpressionsRule, {
   valid: [
     {
       name: 'Assigned to a variable',

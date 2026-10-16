@@ -1,14 +1,9 @@
 {
-  "compilerOptions": {
-    "jsx": "preserve",
-    "esModuleInterop": true,
-    "module": "NodeNext",
-    "types": ["node", "react"]
-  },
-  "include": ["src/**/*", "*.mts", "*.ts"],
+  "extends": "../../tsconfig.base.json",
+  "files": [],
   "references": [
-    {
-      "path": "../../packages/prettier-config"
-    }
+    { "path": "../../packages/prettier-config" },
+    { "path": "../../packages/eslint-config" },
+    { "path": "./tsconfig.misc.json" }
   ]
 }

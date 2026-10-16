@@ -3,10 +3,10 @@ import { basename } from 'node:path';
 import { AST_NODE_TYPES } from '@typescript-eslint/utils';
 import { isNodeOfType } from '@typescript-eslint/utils/ast-utils';
 
-import { createRule } from '../../helpers/create-rule';
+import { createRule } from '../../helpers/create-rule.ts';
 
 export const jsxNoUnusedExpressionsRule = createRule({
-  name: basename(__dirname),
+  name: basename(import.meta.dirname),
   meta: {
     type: 'problem',
     schema: [],

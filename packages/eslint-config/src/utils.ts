@@ -1,8 +1,8 @@
 import { defineConfig as coreDefineConfig } from 'eslint/config';
 import globals from 'globals';
 
-import { isInGitHooksOrLintStaged } from './helpers/is-in-editor-env.js';
-import { plugins } from './plugins/index.js';
+import { isInGitHooksOrLintStaged } from './helpers/is-in-editor-env.ts';
+import { plugins } from './plugins/index.ts';
 
 /**
  * Generate a plugins object from a list of ESLint plugin names

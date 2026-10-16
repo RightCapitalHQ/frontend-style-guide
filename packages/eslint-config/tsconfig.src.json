@@ -1,5 +1,5 @@
 {
-  "extends": "@rightcapital/tsconfig",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./lib",
@@ -8,7 +8,7 @@
   "include": ["src"],
   "references": [
     {
-      "path": "../eslint-plugin/tsconfig.lib.json"
+      "path": "../eslint-plugin/tsconfig.src.json"
     }
   ]
 }

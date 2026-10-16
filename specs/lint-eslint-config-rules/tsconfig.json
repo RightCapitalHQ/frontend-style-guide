@@ -1,11 +1,8 @@
 {
-  "compilerOptions": {
-    "module": "NodeNext",
-    "types": ["node"]
-  },
+  "extends": "../../tsconfig.base.json",
+  "files": [],
   "references": [
-    {
-      "path": "../../packages/lint-eslint-config-rules"
-    }
+    { "path": "../../packages/lint-eslint-config-rules" },
+    { "path": "./tsconfig.misc.json" }
   ]
 }

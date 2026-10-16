@@ -10,7 +10,7 @@ import {
   isNodeOfTypes,
 } from '@typescript-eslint/utils/ast-utils';
 
-import { createRule } from '../../helpers/create-rule';
+import { createRule } from '../../helpers/create-rule.ts';
 
 const isFunctionComponentName = (name: string) => /^[A-Z]/.test(name);
 
@@ -101,7 +101,7 @@ export const disallowedTypeNames = [
 ];
 
 export const noExplicitTypeOnFunctionComponentIdentifierRule = createRule({
-  name: basename(__dirname),
+  name: basename(import.meta.dirname),
   meta: {
     type: 'problem',
     fixable: 'code',

@@ -4,6 +4,8 @@
 
 Custom ESLint rules used at RightCapital.
 
+Requires Node.js `^22.13.0 || >=24`. The package is ESM-only.
+
 ## Installation
 
 ```sh

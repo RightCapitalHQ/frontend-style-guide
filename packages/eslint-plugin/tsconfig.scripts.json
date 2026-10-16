@@ -1,9 +1,0 @@
-{
-  "extends": "@rightcapital/tsconfig",
-  "compilerOptions": {
-    "verbatimModuleSyntax": false,
-    "outDir": "./node_modules/.cache/rightcapital/eslint-plugin-scripts"
-  },
-  "include": ["*.ts", "*.mts", "*.cts"],
-  "exclude": ["src"]
-}

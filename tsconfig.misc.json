@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./node_modules/.cache/rightcapital/typecheck",
+    "emitDeclarationOnly": true,
+    "rewriteRelativeImportExtensions": false
+  },
+  "include": ["*.ts", "*.mts", "*.cts"],
+  "references": [
+    {
+      "path": "./packages/prettier-config/tsconfig.src.json"
+    }
+  ]
+}

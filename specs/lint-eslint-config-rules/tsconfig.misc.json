@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "rootDir": ".",
+    "outDir": "./node_modules/.cache/rightcapital/typecheck",
+    "emitDeclarationOnly": true,
+    "rewriteRelativeImportExtensions": false
+  },
+  "include": ["*.mts"],
+  "references": [
+    {
+      "path": "../../packages/lint-eslint-config-rules/tsconfig.src.json"
+    }
+  ]
+}

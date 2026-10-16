@@ -3,11 +3,11 @@ import { basename } from 'node:path';
 import parser from '@typescript-eslint/parser';
 import type { InvalidTestCase } from '@typescript-eslint/rule-tester';
 
-import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester.js';
+import { VitestRuleTester } from '../../helpers/test/vitest-rule-tester.ts';
 import {
   disallowedTypeNames,
   noExplicitTypeOnFunctionComponentIdentifierRule,
-} from './no-explicit-type-on-function-component-identifier.js';
+} from './no-explicit-type-on-function-component-identifier.ts';
 
 const ruleTester = new VitestRuleTester({
   languageOptions: {
@@ -28,7 +28,7 @@ const functionComponentTypes = [
 ];
 
 ruleTester.run(
-  basename(__dirname),
+  basename(import.meta.dirname),
   noExplicitTypeOnFunctionComponentIdentifierRule,
   {
     valid: [

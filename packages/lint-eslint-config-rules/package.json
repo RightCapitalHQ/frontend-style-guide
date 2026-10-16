@@ -21,17 +21,21 @@
   "author": "RightCapital <npm-publisher@rightcapital.com>",
   "type": "module",
   "exports": {
-    ".": "./lib/index.js",
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
     "./package.json": "./package.json"
   },
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "bin": {
     "lint-eslint-config-rules": "./lib/cli.js"
   },
   "scripts": {
     "prebuild": "pnpm run clean",
-    "build": "tsc --build",
-    "clean": "tsc --build --clean",
+    "build": "tsc --build tsconfig.src.json",
+    "clean": "tsc --build tsconfig.src.json --clean",
     "prepack": "nx build"
   },
   "dependencies": {

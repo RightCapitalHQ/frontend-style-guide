@@ -1,6 +1,6 @@
 import { defineConfig } from 'eslint/config';
 
-import { recommendedJsxConfig } from './recommended-jsx';
+import { recommendedJsxConfig } from './recommended-jsx.ts';
 
 export const recommendedReactConfig = defineConfig({
   extends: [recommendedJsxConfig],

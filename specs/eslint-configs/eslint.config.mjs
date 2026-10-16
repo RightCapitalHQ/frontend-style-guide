@@ -1,21 +1,18 @@
-import eslintConfigRightcapital from '@rightcapital/eslint-config';
+import { configs, utils } from '@rightcapital/eslint-config';
 
-const { defineConfig } = eslintConfigRightcapital.utils;
+const { defineConfig } = utils;
 
 export default defineConfig(
   {
     files: ['src/javascript.js'],
-    extends: [...eslintConfigRightcapital.configs.js],
+    extends: [...configs.js],
   },
   {
     files: ['src/typescript.ts'],
-    extends: [...eslintConfigRightcapital.configs.ts],
+    extends: [...configs.ts],
   },
   {
     files: ['src/typescript-react.tsx'],
-    extends: [
-      ...eslintConfigRightcapital.configs.ts,
-      ...eslintConfigRightcapital.configs.react,
-    ],
+    extends: [...configs.ts, ...configs.react],
   },
 );

@@ -13,7 +13,7 @@ import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import unusedImportsEslintPlugin from 'eslint-plugin-unused-imports';
 import * as typescriptEslint from 'typescript-eslint';
 
-import type { ESLintReactPluginNames } from './types/eslint-react-plugin-names.generated.js';
+import type { ESLintReactPluginNames } from './types/eslint-react-plugin-names.generated.ts';
 
 const definePlugins = <TPluginName extends string>(
   plugins: Record<TPluginName, Pick<TSESLint.FlatConfig.Plugin, 'rules'>>,

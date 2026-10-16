@@ -18,8 +18,14 @@
   },
   "license": "MIT",
   "author": "RightCapital <npm-publisher@rightcapital.com>",
-  "type": "commonjs",
-  "exports": "./lib/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
@@ -42,7 +48,7 @@
   },
   "packageManager": "pnpm@11.5.2",
   "engines": {
-    "node": ">=16.0.0"
+    "node": "^22.13.0 || >=24"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

@@ -1,8 +1,8 @@
-import eslintConfigRightcapital from '@rightcapital/eslint-config';
+import { configs, utils } from '@rightcapital/eslint-config';
 
-const { defineConfig } = eslintConfigRightcapital.utils;
+const { defineConfig } = utils;
 
-export default defineConfig(...eslintConfigRightcapital.configs.recommended, {
+export default defineConfig(...configs.recommended, {
   rules: {
     // deprecated rules
     'indent-legacy': 'off',

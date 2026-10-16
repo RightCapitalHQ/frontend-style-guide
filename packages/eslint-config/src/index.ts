@@ -1,13 +1,13 @@
 import type { ConfigObject } from '@eslint/core';
 
-import jsConfig from './config/javascript.js';
-import linterConfig from './config/linter.js';
-import disableExpensiveRulesConfig from './config/mixin/disable-expensive-rules.js';
-import nodeConfig from './config/mixin/node.js';
-import reactConfig from './config/mixin/react.js';
-import scriptConfig from './config/mixin/script.js';
-import tsConfig from './config/typescript.js';
-import utils from './utils.js';
+import jsConfig from './config/javascript.ts';
+import linterConfig from './config/linter.ts';
+import disableExpensiveRulesConfig from './config/mixin/disable-expensive-rules.ts';
+import nodeConfig from './config/mixin/node.ts';
+import reactConfig from './config/mixin/react.ts';
+import scriptConfig from './config/mixin/script.ts';
+import tsConfig from './config/typescript.ts';
+import utils from './utils.ts';
 
 const recommendedConfig = utils.defineConfig(
   ...linterConfig,

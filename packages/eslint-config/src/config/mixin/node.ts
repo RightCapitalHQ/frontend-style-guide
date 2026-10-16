@@ -1,7 +1,7 @@
 import type { ConfigObject } from '@eslint/core';
 import globals from 'globals';
 
-import { pickPlugins } from '../../utils.js';
+import { pickPlugins } from '../../utils.ts';
 /**
  * Common rules for JavaScript files.
  */

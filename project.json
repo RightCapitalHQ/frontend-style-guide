@@ -7,7 +7,15 @@
       "executor": "nx:noop"
     },
     "typecheck": {
-      "command": "tsc --build --emitDeclarationOnly tsconfig.json"
+      "command": "tsc --build --emitDeclarationOnly tsconfig.misc.json",
+      "inputs": [
+        "{workspaceRoot}/*.ts",
+        "{workspaceRoot}/*.mts",
+        "{workspaceRoot}/*.cts",
+        "{workspaceRoot}/tsconfig.misc.json",
+        "{workspaceRoot}/tsconfig.base.json",
+        "^production"
+      ]
     }
   }
 }

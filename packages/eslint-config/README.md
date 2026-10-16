@@ -20,20 +20,17 @@ pnpm add -D @rightcapital/eslint-config
 In your `eslint.config.mjs` ([or equivalent](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file-formats)):
 
 ```js
-import eslintConfigRightcapital from '@rightcapital/eslint-config';
+import { configs, utils } from '@rightcapital/eslint-config';
 
-const { defineConfig } = eslintConfigRightcapital.utils;
+const { defineConfig } = utils;
 
 export default defineConfig(
-  ...eslintConfigRightcapital.configs.recommended,
+  ...configs.recommended,
 
   // add more configs for specific files or packages if needed
   {
     files: ['scripts/**/*.{js,cjs,mjs}'],
-    extends: [
-      ...eslintConfigRightcapital.configs.node,
-      ...eslintConfigRightcapital.configs.script,
-    ],
+    extends: [...configs.node, ...configs.script],
   },
 );
 ```
@@ -59,7 +56,7 @@ export default defineConfig(
 - `defineConfig` — re-exported util from [`typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config) for easier compositing of ESLint config, with automatic plugin inference (when the plugin is known to `@rightcapital/eslint-config`).
 
   ```js
-  const { defineConfig } = eslintConfigRightcapital.utils;
+  const { defineConfig } = utils;
 
   export default defineConfig({
     plugins: {

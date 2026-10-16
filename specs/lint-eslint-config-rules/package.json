@@ -2,6 +2,7 @@
   "name": "@rightcapital/lint-eslint-config-rules-specs",
   "private": true,
   "scripts": {
+    "lint": "pnpm --filter './fixtures/*' exec eslint --max-warnings=0 eslint.config.mjs",
     "test": "vitest"
   },
   "devDependencies": {

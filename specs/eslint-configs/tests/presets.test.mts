@@ -8,7 +8,7 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import { ESLint } from 'eslint';
 import { diff } from 'jest-diff';
 
-const rootDir = resolve(__dirname, '..');
+const rootDir = resolve(import.meta.dirname, '..');
 const srcDir = resolve(rootDir, 'src');
 
 const sampleFiles = (await readdir(srcDir)).map((filename) =>
@@ -88,7 +88,7 @@ describe.concurrent('trimConfigPluginVersion()', () => {
     ],
     ['@stylistic', '@stylistic'],
     ['lodash:eslint-plugin-lodash', 'lodash:eslint-plugin-lodash'],
-  ])('trim %s -> %s', ([input, expected], { expect }) => {
+  ] as const)('trim %s -> %s', ([input, expected], { expect }) => {
     expect(trimConfigPluginVersion(input)).toBe(expected);
   });
 });
@@ -102,7 +102,7 @@ describe.concurrent('trimConfigPluginVersion()', () => {
 describe('Resolved config matches snapshot', () => {
   for (const [file, config, editorModeConfig] of parsedConfigs) {
     test(file, () => {
-      const trimConfigForSnapshot = (rawConfig) => ({
+      const trimConfigForSnapshot = (rawConfig: typeof config) => ({
         ...rawConfig,
         // These fields contain unnecessary information for snapshot
         parser: '<OMITTED>',
@@ -127,7 +127,7 @@ describe('Resolved config matches snapshot', () => {
       });
       expect(trimConfigForSnapshot(config)).toMatchSnapshot();
 
-      const trimConfigForDiff = (rawConfig) => ({
+      const trimConfigForDiff = (rawConfig: typeof config) => ({
         ...rawConfig,
         // These fields contain unnecessary information for diff
         plugins: rawConfig.plugins.map(trimConfigPluginVersion),

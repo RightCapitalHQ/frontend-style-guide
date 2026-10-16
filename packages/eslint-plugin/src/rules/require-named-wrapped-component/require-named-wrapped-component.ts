@@ -8,8 +8,8 @@ import {
 import type { JSONSchema4 } from '@typescript-eslint/utils/json-schema';
 import { z } from 'zod';
 
-import { isAnonymousFunction } from '../../helpers/ast/function/is-anonymous-function';
-import { createRule } from '../../helpers/create-rule';
+import { isAnonymousFunction } from '../../helpers/ast/function/is-anonymous-function.ts';
+import { createRule } from '../../helpers/create-rule.ts';
 
 const optionSchema = z.object({
   hocNames: z.array(z.string()),
@@ -117,9 +117,9 @@ function generateFix(
     // Arrow function: (props) => { ... } or props => expr
     // Use AST param ranges to avoid confusing body parentheses as parameter parentheses.
     let paramsText = '';
-    if (funcNode.params.length > 0) {
-      const firstParam = funcNode.params[0];
-      const lastParam = funcNode.params[funcNode.params.length - 1];
+    const firstParam = funcNode.params[0];
+    const lastParam = funcNode.params[funcNode.params.length - 1];
+    if (firstParam && lastParam) {
       const tokenBeforeFirstParam = sourceCode.getTokenBefore(firstParam);
       const tokenAfterLastParam = sourceCode.getTokenAfter(lastParam);
 
@@ -177,7 +177,7 @@ function generateFix(
 
     const functionToken = tokens[functionTokenIndex];
     const nextToken = tokens[functionTokenIndex + 1];
-    if (!nextToken) {
+    if (!functionToken || !nextToken) {
       return null;
     }
 
@@ -227,7 +227,7 @@ function generateFix(
  */
 export const requireNamedWrappedComponentRule = createRule<Options, MessageIds>(
   {
-    name: basename(__dirname),
+    name: basename(import.meta.dirname),
     meta: {
       docs: {
         description:
@@ -307,7 +307,7 @@ export const requireNamedWrappedComponentRule = createRule<Options, MessageIds>(
             fix: variableName
               ? (fixer) =>
                   generateFix(fixer, context.sourceCode, firstArg, variableName)
-              : undefined,
+              : null,
           });
         },
       };
