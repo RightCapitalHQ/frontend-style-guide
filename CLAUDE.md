@@ -43,7 +43,7 @@ pnpm run commit
 ### Package Structure
 
 - `packages/eslint-config` - ESLint flat config (v9+) with presets: `recommended`, `js`, `ts`, `react`, `node`, `script`, `disableExpensiveRules`
-- `packages/eslint-plugin` - Custom ESLint rules (e.g., `jsx-no-unused-expressions`, `no-explicit-type-on-function-component-identifier`, `no-ignore-return-value-of-react-hooks`)
+- `packages/eslint-plugin` - Custom ESLint rules (e.g., `no-explicit-type-on-function-component-identifier`, `require-named-wrapped-component`)
 - `packages/prettier-config` - Prettier configuration
 - `packages/tsconfig` - Shared TypeScript configuration
 - `packages/lint-eslint-config-rules` - CLI tool for validating ESLint config rules

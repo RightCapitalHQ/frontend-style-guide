@@ -2,11 +2,8 @@ import type { RuleDefinition } from '@eslint/core';
 import type { ESLint } from 'eslint';
 
 import packageJson from '../package.json' with { type: 'json' };
-import { recommendedJsxConfig } from './configs/recommended-jsx.ts';
 import { recommendedReactConfig } from './configs/recommended-react.ts';
-import { jsxNoUnusedExpressionsRule } from './rules/jsx-no-unused-expressions/jsx-no-unused-expressions.ts';
 import { noExplicitTypeOnFunctionComponentIdentifierRule } from './rules/no-explicit-type-on-function-component-identifier/no-explicit-type-on-function-component-identifier.ts';
-import { noIgnoreReturnValueOfReactHooksRule } from './rules/no-ignore-return-value-of-react-hooks/no-ignore-return-value-of-react-hooks.ts';
 import { requireNamedWrappedComponentRule } from './rules/require-named-wrapped-component/require-named-wrapped-component.ts';
 
 // eslint-doc-generator can't resolve default export
@@ -16,13 +13,10 @@ export const meta: ESLint.Plugin['meta'] = {
 };
 
 export const configs: ESLint.Plugin['configs'] = {
-  'recommended-jsx': recommendedJsxConfig,
   'recommended-react': recommendedReactConfig,
 };
 
 export const rules = {
-  'jsx-no-unused-expressions': jsxNoUnusedExpressionsRule,
-  'no-ignore-return-value-of-react-hooks': noIgnoreReturnValueOfReactHooksRule,
   'no-explicit-type-on-function-component-identifier':
     noExplicitTypeOnFunctionComponentIdentifierRule,
   'require-named-wrapped-component': requireNamedWrappedComponentRule,
