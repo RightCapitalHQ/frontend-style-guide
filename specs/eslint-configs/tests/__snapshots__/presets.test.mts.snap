@@ -3790,9 +3790,6 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 1`] = `
     "@eslint-react/web-api-no-leaked-timeout": [
       1,
     ],
-    "@rightcapital/jsx-no-unused-expressions": [
-      2,
-    ],
     "@rightcapital/no-explicit-type-on-function-component-identifier": [
       2,
     ],
@@ -5343,7 +5340,7 @@ exports[`Resolved config matches snapshot > typescript-react.tsx 2`] = `
 "- Editor mode: false  - 3
 + Editor mode: true   + 0
 
-@@ -2898,13 +2898,10 @@
+@@ -2895,13 +2895,10 @@
         2,
         Object {
           "withDash": false,

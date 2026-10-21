@@ -35,7 +35,6 @@ const config: readonly ConfigObject[] = [
       '@rightcapital/no-explicit-type-on-function-component-identifier':
         'error',
       '@stylistic/jsx-self-closing-comp': 'error',
-      '@rightcapital/jsx-no-unused-expressions': 'error',
 
       // React 19 feature, not applicable to projects using React 18 or below
       // https://react.dev/blog/2024/12/05/react-19#context-as-a-provider
