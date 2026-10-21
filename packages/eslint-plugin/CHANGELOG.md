@@ -1,3 +1,13 @@
+## 71.0.0 (2026-10-21)
+
+### ⚠️  Breaking Changes
+
+- Remove `@rightcapital/jsx-no-unused-expressions` and `@rightcapital/no-ignore-return-value-of-react-hooks` rules, along with the `recommended-jsx` plugin config from `@rightcapital/eslint-plugin`. ([45ebd0e](https://github.com/RightCapitalHQ/frontend-style-guide/commit/45ebd0e))
+
+### ❤️ Thank You
+
+- Pink Champagne @PinkChampagne17
+
 ## 70.0.0 (2026-10-16)
 
 ### 🩹 Fixes
